@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Linux Mint 如何加入 Source Repository | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Linux Mint 如何加入 Source Repository | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Linux Mint 如何加入 Source Repository | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Linux Mint 如何加入 Source Repository ">
+	<meta property="og:description" content=" Linux Mint 如何加入 Source Repository " />
+	<meta name="twitter:description" content=" Linux Mint 如何加入 Source Repository " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/mint/apt/add-source-repository/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-10-27">2014-10-27</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/mint/">mint</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/mint/apt/add-source-repository/" itemprop="url"><span itemprop="name">Linux Mint 如何加入 Source Repository</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Linux_Mint_如何加入_Source_Repository">Linux Mint 如何加入 Source Repository</h1><h2 id="測試環境">測試環境</h2><ul>
+<li>「<a href="http://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」</li>
+<li>「Cinnamon 2.2.16」</li>
+</ul>
+<h2 id="前言">前言</h2><p>本來打算執行下面的指令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> cinnamon</span><br></pre></td></tr></table></figure>
+<p>結果出現一個提示訊息，跟我說，系統沒有加入Source Repository。<br>本來的作法，只要編輯「/etc/apt/sources.list」，加入Source Repository就行了。<br>或是在「/etc/apt/sources.list.d」加入一個檔案，加入Source Repository就行了。<br>但懶得去找Mint的Source Repository的網址，基本上也因為不好找。<br>不過無意間，讓我找到一個簡單的方法。</p>
+<h2 id="聯想到「synaptic」">聯想到「synaptic」</h2><p>印象中「synaptic」有圖形界面可以管理「Apt Repository」。<br>所以就先安裝了「synaptic」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install synaptic</span><br></pre></td></tr></table></figure>
+<p>執行「synaptic」後，執行功能選單「Settings / Repositories」。<br>就會出現一個新的視窗「Software Sources」。</p>
+<p>在「Official Repositories」這個「Section」最下方有一個選項「Enable source code repositories」<br>只要勾選就行了。他基本上就會在「/etc/apt/sources.list.d」加入一個檔案「official-source-repositories.list」。<br>裡面就有所有相關的設定了。</p>
+<p>可以驗證看看</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/apt/sources.list.d/official-source-repositories.list</span><br></pre></td></tr></table></figure>
+<p>然後只要</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update;</span><br></pre></td></tr></table></figure>
+<p>就可以執行我原本要執行的指令了</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> cinnamon</span><br></pre></td></tr></table></figure>
+<p>不過記得要先安裝「dpkg-dev」這個套件，這樣上面指令下載下來的「deb」檔，才會自動解開</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install dpkg-dev</span><br></pre></td></tr></table></figure>
+<p>還有一個要注意的，就是執行前，先把「Synaptic Package Manager」關掉，不然會被「Lock」住。</p>
+<h2 id="「mintsources」">「mintsources」</h2><p>後來發現，原來「System Settings / Administration / Software Source」就可以啟動「Software Sources」這個功能了。</p>
+<p>或是執行下面的指令也可以啟動「Software Sources」這個視窗。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mintsources</span><br></pre></td></tr></table></figure>
+<p>也可以執行下面的指令，至於指令為什麼可以這麼下，會在「<a href="/blog/read/linux/mint/cinnamon/cinnamon-settings/">另一篇</a>」來闡述。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cinnamon-settings mintsource</span><br></pre></td></tr></table></figure>
+<h2 id="探索「mintsources」">探索「mintsources」</h2><p>查詢「mintsources」放在哪</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ whereis mintsources</span><br></pre></td></tr></table></figure>
+<p>會出現<br><figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">mintsources:</span> <span class="regexp">/usr/</span>bin<span class="regexp">/mintsources /</span>usr<span class="regexp">/bin/</span>X11<span class="regexp">/mintsources /</span>usr<span class="regexp">/share/</span>mintsources</span><br></pre></td></tr></table></figure></p>
+<p>查看「/usr/bin/mintsources」<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vi /usr/bin/mintsources</span><br><span class="line">`</span><br></pre></td></tr></table></figure></p>
+<p>會知道「mintsources」是用Python寫成的</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ file /usr/bin/mintsources</span><br></pre></td></tr></table></figure>
+<p>會看到「/usr/bin/mintsources」是一個「symbolic link」。</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/usr/</span>bin/<span class="string">mintsources:</span> symbolic link to `software-sources<span class="string">'</span></span><br></pre></td></tr></table></figure>
+<p>確認一下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls /usr/bin/mintsources <span class="operator">-l</span></span><br></pre></td></tr></table></figure>
+<p>查看「/usr/bin/mintsources 」屬於哪個套件</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>dpkg -<span class="constant">S</span> /usr/bin/mintsources</span><br></pre></td></tr></table></figure>
+<p>會知道「/usr/bin/mintsources 」是屬於「mintsources」這個套件</p>
+<p>確認「mintsources」這個套件是否安裝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg <span class="operator">-l</span> mintsources</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --<span class="preprocessor">get</span>-<span class="keyword">selections </span><span class="title">| grep mintsources</span></span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --get-selections mintsources</span><br></pre></td></tr></table></figure>
+<p>查詢「mintsources」這個套件的資訊</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg <span class="operator">-s</span> mintsources</span><br></pre></td></tr></table></figure>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/apt/">apt</a>, <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/mint/cinnamon/cinnamon-settings/" title="cinnamon-settings module">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/workspace/cinnamon/" title="如何新增和切換 Cinnamon 的 Workspace">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> 如何製作「deb檔(Debian Package)」 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" 如何製作「deb檔(Debian Package)」 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" 如何製作「deb檔(Debian Package)」 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" 如何製作「deb檔(Debian Package)」 ">
+	<meta property="og:description" content=" 如何製作「deb檔(Debian Package)」 " />
+	<meta name="twitter:description" content=" 如何製作「deb檔(Debian Package)」 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-build-package/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-05-06">2015-05-06</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/package/">package</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/package/how-to-build-package/" itemprop="url"><span itemprop="name">如何製作「deb檔(Debian Package)」</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="如何製作「deb檔(Debian_Package)」">如何製作「deb檔(Debian Package)」</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
+<h2 id="執行步驟">執行步驟</h2><h3 id="準備工作環境">準備工作環境</h3><p>建立工作環境資料夾</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>mkdir ~<span class="regexp">/Templates/build</span>-debian-package -p</span><br></pre></td></tr></table></figure>
+<p>切換到工作環境資料夾</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/Templates/build</span>-debian-package</span><br></pre></td></tr></table></figure>
+<h3 id="建立套件最上層資料夾">建立套件最上層資料夾</h3><p>建立一個資料夾「try」，這個是「套件最上層資料夾」，所有的檔案都要放在這裡面</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> <span class="keyword">try</span> -<span class="keyword">p</span></span><br></pre></td></tr></table></figure>
+<h3 id="建立「DEBIAN」資料夾">建立「DEBIAN」資料夾</h3><p>建立「try/DEBIAN」資料夾，這個資料夾是建立「Debian Package」的依據資料夾。</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> <span class="keyword">try</span>/DEBIAN -<span class="keyword">p</span></span><br></pre></td></tr></table></figure>
+<h3 id="建立「control」檔">建立「control」檔</h3><p>建立「try/DEBIAN/control」檔，這個檔是建立「Debian Package」的依據檔案。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch <span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control</span><br></pre></td></tr></table></figure>
+<h3 id="觀看目錄結構">觀看目錄結構</h3><p>觀看一下剛剛建立的目錄結構</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line">└── DEBIAN</span><br><span class="line">    └── control</span><br><span class="line"></span><br><span class="line"><span class="number">1</span> directory, <span class="number">1</span> file</span><br></pre></td></tr></table></figure>
+<h3 id="開始製作「Debian_Package」">開始製作「Debian Package」</h3><p>可以執行</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>或是執行</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg --build <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>或是執行</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-deb -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>或是執行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-<span class="keyword">deb</span> --build <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示一個訊息</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">deb:</span> <span class="string">error:</span> no <span class="keyword">package</span> information <span class="keyword">in</span> `<span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control<span class="string">'</span></span><br></pre></td></tr></table></figure>
+<h3 id="在「control」加上「Package:」">在「control」加上「Package:」</h3><p>我們先在「control」這個檔加上下面這一行</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Package</span>: <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>可以用擅長的編輯器編輯。</p>
+<p>也可以直接執行下面的指令直接產生。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ echo <span class="string">'Package: try'</span> &gt; <span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control</span><br></pre></td></tr></table></figure>
+<p>觀看內容</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Package</span>: <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>再次執行下面指令，製作「Debian Package」</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>這時候就會顯示下面的訊息</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">2</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing description</span><br><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">2</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing maintainer</span><br><span class="line">dpkg-<span class="string">deb:</span> <span class="string">error:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">2</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing version</span><br></pre></td></tr></table></figure>
+<h3 id="在「control」加上「Version:」">在「control」加上「Version:」</h3><p>我們在「control」這個檔，附加上下面這一行</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br></pre></td></tr></table></figure>
+<p>可以用擅長的編輯器編輯。</p>
+<p>也可以直接執行下面的指令直接產生。</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>echo <span class="string">'Version: 0.1'</span> <span class="prompt">&gt;&gt; </span>try/<span class="constant">DEBIAN</span>/control</span><br></pre></td></tr></table></figure>
+<p>觀看內容</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br></pre></td></tr></table></figure>
+<p>再次執行下面指令，製作「Debian Package」</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>這時候就會顯示下面的訊息</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">3</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing description</span><br><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">3</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing maintainer</span><br><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> parsing file <span class="string">'try/DEBIAN/control'</span> near line <span class="number">3</span> <span class="keyword">package</span> <span class="string">'try'</span>:</span><br><span class="line"> missing architecture</span><br><span class="line">dpkg-<span class="string">deb:</span> <span class="string">warning:</span> ignoring <span class="number">3</span> warnings about the control file(s)</span><br><span class="line"></span><br><span class="line">dpkg-<span class="string">deb:</span> building <span class="keyword">package</span> `<span class="keyword">try</span><span class="string">' in `try.deb'</span>.</span><br></pre></td></tr></table></figure>
+<p>並且產生一個檔，叫做「try.deb」</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>可以看到</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span></span><br><span class="line"><span class="keyword">try</span>.<span class="keyword">deb</span></span><br></pre></td></tr></table></figure>
+<h2 id="把一些欄位補足">把一些欄位補足</h2><p>依據上面的提示訊息，把「architecture」「description」「maintainer」這幾個欄位補足吧</p>
+<p>執行下面的指令</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo <span class="string">'Architecture: all'</span> <span class="prompt">&gt;&gt; </span>try/<span class="constant">DEBIAN</span>/control</span><br><span class="line">echo <span class="string">'Description: This is a test package.'</span> <span class="prompt">&gt;&gt; </span>try/<span class="constant">DEBIAN</span>/control</span><br><span class="line">echo <span class="string">'Maintainer: developer &lt;developer@hell.heaven&gt;'</span> <span class="prompt">&gt;&gt; </span>try/<span class="constant">DEBIAN</span>/control</span><br></pre></td></tr></table></figure>
+<p>觀看內容</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat <span class="keyword">try</span><span class="regexp">/DEBIAN/</span>control</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br><span class="line"><span class="attribute">Architecture</span>: <span class="string">all</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">This is a test package.</span></span><br><span class="line"><span class="attribute">Maintainer</span>: <span class="string">developer &lt;developer@hell.heaven&gt;</span></span><br></pre></td></tr></table></figure>
+<p>再次執行下面指令，製作「Debian Package」</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>這時候就會顯示下面的訊息</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">deb:</span> building <span class="keyword">package</span> `<span class="keyword">try</span><span class="string">' in `try.deb'</span>.</span><br></pre></td></tr></table></figure>
+<h3 id="觀看「deb檔」的訊息">觀看「deb檔」的訊息</h3><p>執行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -I <span class="keyword">try</span>.<span class="keyword">deb</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> debian <span class="keyword">package</span>, version <span class="number">2.0</span>.</span><br><span class="line">size <span class="number">594</span> <span class="string">bytes:</span> control archive=<span class="number">241</span> bytes.</span><br><span class="line">    <span class="number">127</span> bytes,     <span class="number">5</span> lines      control</span><br><span class="line"><span class="string">Package:</span> <span class="keyword">try</span></span><br><span class="line"><span class="string">Version:</span> <span class="number">0.1</span></span><br><span class="line"><span class="string">Architecture:</span> all</span><br><span class="line"><span class="string">Description:</span> This is a test <span class="keyword">package</span>.</span><br><span class="line"><span class="string">Maintainer:</span> developer &lt;developer<span class="annotation">@hell</span>.heaven&gt;</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">f</span> <span class="keyword">try</span>.<span class="keyword">deb</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br><span class="line"><span class="attribute">Architecture</span>: <span class="string">all</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">This is a test package.</span></span><br><span class="line"><span class="attribute">Maintainer</span>: <span class="string">developer &lt;developer@hell.heaven&gt;</span></span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="built_in">c</span> <span class="keyword">try</span>.deb</span><br></pre></td></tr></table></figure>
+<p>會顯示(以下的「user/user」會依據你的「帳號」和「所屬群組」而定)</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drwxrwxr-x user/user           <span class="number">0</span> <span class="number">2015</span>-<span class="number">05</span>-<span class="number">06</span> <span class="number">15</span>:<span class="number">57</span> ./</span><br></pre></td></tr></table></figure>
+<h3 id="測試安裝">測試安裝</h3><p>執行<br><figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -<span class="built_in">i</span> <span class="keyword">try</span>.deb</span><br></pre></td></tr></table></figure></p>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[sudo] password <span class="keyword">for</span> <span class="string">user:</span></span><br></pre></td></tr></table></figure>
+<p>輸入正確密碼，按下「Enter」</p>
+<p>會顯示下面的訊息</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">Selecting</span> previously unselected package <span class="keyword">try</span>.</span><br><span class="line">(<span class="variable">Reading</span> database ... <span class="number">947302</span> files <span class="keyword">and</span> directories currently installed.)</span><br><span class="line"><span class="variable">Preparing</span> to unpack <span class="keyword">try</span>.deb ...</span><br><span class="line"><span class="variable">Unpacking</span> <span class="keyword">try</span> (<span class="number">0.1</span>) ...</span><br><span class="line"><span class="variable">Setting</span> up <span class="keyword">try</span> (<span class="number">0.1</span>) ...</span><br></pre></td></tr></table></figure>
+<h3 id="觀看安裝到系統的狀況">觀看安裝到系統的狀況</h3><p>執行</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -l <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Desired=Unknown/<span class="operator"><span class="keyword">Install</span>/Remove/<span class="keyword">Purge</span>/Hold</span><br><span class="line">| <span class="keyword">Status</span>=<span class="keyword">Not</span>/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend</span><br><span class="line">|/ Err?=(<span class="keyword">none</span>)/Reinst-<span class="keyword">required</span> (<span class="keyword">Status</span>,Err: uppercase=bad)</span><br><span class="line">||/ <span class="keyword">Name</span>                         <span class="keyword">Version</span>             Architecture        Description</span><br><span class="line">+++-============================-===================-===================-==============================================================</span><br><span class="line">ii  try                          <span class="number">0.1</span>                 all                 This <span class="keyword">is</span> a <span class="keyword">test</span> <span class="keyword">package</span>.</span></span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg --<span class="built_in">get</span>-selections | <span class="keyword">grep</span> <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">...</span>略<span class="keyword">...</span></span><br><span class="line"><span class="keyword">try</span>                                             install</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -s <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Status</span>: <span class="string">install ok installed</span></span><br><span class="line"><span class="attribute">Maintainer</span>: <span class="string">developer &lt;developer@hell.heaven&gt;</span></span><br><span class="line"><span class="attribute">Architecture</span>: <span class="string">all</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">This is a test package.</span></span><br></pre></td></tr></table></figure>
+<p>觀看「/var/lib/dpkg/status」的紀錄</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">status</span> | <span class="title">grep</span> '<span class="title">Package</span>: <span class="title">try</span>' -<span class="title">A</span> 5</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Status</span>: <span class="string">install ok installed</span></span><br><span class="line"><span class="attribute">Maintainer</span>: <span class="string">developer &lt;developer@hell.heaven&gt;</span></span><br><span class="line"><span class="attribute">Architecture</span>: <span class="string">all</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">This is a test package.</span></span><br></pre></td></tr></table></figure>
+<p>觀看「/var/lib/dpkg/available」的紀錄</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">available</span> | <span class="title">grep</span> '<span class="title">Package</span>: <span class="title">try</span>' -<span class="title">A</span> 5</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Package</span>: <span class="string">try</span></span><br><span class="line"><span class="attribute">Maintainer</span>: <span class="string">developer &lt;developer@hell.heaven&gt;</span></span><br><span class="line"><span class="attribute">Architecture</span>: <span class="string">all</span></span><br><span class="line"><span class="attribute">Version</span>: <span class="string">0.1</span></span><br><span class="line"><span class="attribute">Size</span>: <span class="string">594</span></span><br><span class="line"><span class="attribute">Description</span>: <span class="string">This is a test package.</span></span><br></pre></td></tr></table></figure>
+<p>觀看「try」這個套件，安裝了哪些檔案在系統上</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -L <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br></pre></td></tr></table></figure>
+<h3 id="加入一個檔案">加入一個檔案</h3><p>產生一個「try.txt」。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch &gt; <span class="keyword">try</span>/<span class="keyword">try</span>.txt</span><br></pre></td></tr></table></figure>
+<p>然後編寫內容</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">echo</span> <span class="keyword">hi</span> &gt; <span class="keyword">try</span>/<span class="keyword">try</span>.txt</span><br></pre></td></tr></table></figure>
+<p>觀看一下目前的目錄結構</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>tree</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── <span class="keyword">try</span></span><br><span class="line">│   ├── DEBIAN</span><br><span class="line">│   │   └── control</span><br><span class="line">│   └── <span class="keyword">try</span>.txt</span><br><span class="line">└── <span class="keyword">try</span>.deb</span><br><span class="line"></span><br><span class="line"><span class="number">2</span> directories, <span class="number">3</span> files</span><br></pre></td></tr></table></figure>
+<p>然後執行</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="tag">b</span> try</span><br></pre></td></tr></table></figure>
+<p>執行安裝</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -<span class="built_in">i</span> <span class="keyword">try</span>.deb</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(Reading database ... <span class="number">947302</span> <span class="keyword">files</span> <span class="built_in">and</span> directories currently installed.)</span><br><span class="line">Preparing <span class="keyword">to</span> unpack <span class="keyword">try</span>.<span class="keyword">deb</span> ...</span><br><span class="line">Unpacking <span class="keyword">try</span> (<span class="number">0.1</span>) over (<span class="number">0.1</span>) ...</span><br><span class="line">Setting <span class="keyword">up</span> <span class="keyword">try</span> (<span class="number">0.1</span>) ...</span><br></pre></td></tr></table></figure>
+<p>觀看「try」這個套件，安裝了哪些檔案在系統上</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -L <span class="keyword">try</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight erlang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/<span class="keyword">try</span>.txt</span><br></pre></td></tr></table></figure>
+<p>觀看「/」底下，是否有「try.txt」這個檔</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> /try.txt -<span class="keyword">l</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-rw-rw-r-- <span class="number">1</span> user user <span class="number">3</span> May  <span class="number">6</span> <span class="number">18</span>:<span class="number">38</span> /<span class="keyword">try</span>.txt</span><br></pre></td></tr></table></figure>
+<p>也就是「try」會對應到「/」，「try」底下有哪些檔案，就會裝到「/」底下，「DEBIAN」這個資料夾則是例外。</p>
+<h3 id="檔案命名">檔案命名</h3><p>剛利用「dpkg -b try」製作「Debian Package」，會產生一個「try.deb」檔。</p>
+<p>然後也可以有不同的方式</p>
+<p>先產生一個 [build]的資料夾，可以隨意命名，不見得要叫「build」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir build</span><br></pre></td></tr></table></figure>
+<p>觀看一下目前的檔案結構</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>tree</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">.</span><br><span class="line">├── build</span><br><span class="line">├── <span class="keyword">try</span></span><br><span class="line">│   ├── DEBIAN</span><br><span class="line">│   │   └── control</span><br><span class="line">│   └── <span class="keyword">try</span>.txt</span><br><span class="line">└── <span class="keyword">try</span>.deb</span><br><span class="line"></span><br><span class="line"><span class="number">3</span> directories, <span class="number">3</span> files</span><br></pre></td></tr></table></figure>
+<p>執行下面的指令</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -<span class="tag">b</span> try build</span><br></pre></td></tr></table></figure>
+<p>會顯示下面的訊息</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-<span class="string">deb:</span> building <span class="keyword">package</span> `<span class="keyword">try</span><span class="string">' in `build/try_0.1_all.deb'</span>.</span><br></pre></td></tr></table></figure>
+<p>也就是會在「build」這個資料夾，產生「try_0.1_all.deb」，<br>格式是「Package_Version_Architecture.deb」。<br>也就是依據剛剛的「try/DEBIAN/control」裡面設定的資料來命名的。<br>當「dpkg -b try」後面接「資料夾」參數時候，就會依照這樣的規則去命名。</p>
+<p>更多的命名規則可以執行下面的指令</p>
+<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></p>
+<p>會看到其中有一段</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-b, <span class="comment">--build directory [archive|directory]</span></span><br><span class="line">       Creates <span class="operator">a</span> debian archive <span class="built_in">from</span> <span class="operator">the</span> filesystem tree stored <span class="operator">in</span> <span class="built_in">directory</span>. <span class="built_in">directory</span> must have <span class="operator">a</span> DEBIAN subdirectory,  which</span><br><span class="line">       <span class="operator">contains</span>  <span class="operator">the</span>  control  information  <span class="built_in">files</span> such <span class="keyword">as</span> <span class="operator">the</span> control <span class="built_in">file</span> itself. This <span class="built_in">directory</span> will <span class="operator">not</span> appear <span class="operator">in</span> <span class="operator">the</span> binary</span><br><span class="line">       package<span class="string">'s filesystem archive, but instead the files in it will be put in the binary package'</span>s control information area.</span><br><span class="line"></span><br><span class="line">       Unless you specify <span class="comment">--nocheck, dpkg-deb will read DEBIAN/control and parse it. It will check it  for  syntax  errors  and</span></span><br><span class="line">       other problems, <span class="operator">and</span> display <span class="operator">the</span> name <span class="operator">of</span> <span class="operator">the</span> binary package being built.  dpkg-deb will also check <span class="operator">the</span> permissions <span class="operator">of</span> <span class="operator">the</span></span><br><span class="line">       maintainer scripts <span class="operator">and</span> other <span class="built_in">files</span> found <span class="operator">in</span> <span class="operator">the</span> DEBIAN control information <span class="built_in">directory</span>.</span><br><span class="line"></span><br><span class="line">       If no archive is specified <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="operator">the</span> package <span class="keyword">into</span> <span class="operator">the</span> <span class="built_in">file</span> <span class="built_in">directory</span>.deb.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> archive <span class="built_in">to</span> be created already exists <span class="keyword">it</span> will be overwritten.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> <span class="keyword">second</span> argument is <span class="operator">a</span> <span class="built_in">directory</span> <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="built_in">to</span> <span class="operator">the</span>  <span class="built_in">file</span>  package_version_arch.deb,  <span class="operator">or</span>  package_ver‐</span><br><span class="line">       sion.deb  <span class="keyword">if</span>  no Architecture field is present <span class="operator">in</span> <span class="operator">the</span> package control <span class="built_in">file</span>. When <span class="operator">a</span> target <span class="built_in">directory</span> is specified, rather</span><br><span class="line">       than <span class="operator">a</span> <span class="built_in">file</span>, <span class="operator">the</span> <span class="comment">--nocheck option may not be used (since dpkg-deb needs to read and parse the package  control  file  to</span></span><br><span class="line">       determine which filename <span class="built_in">to</span> use).</span><br></pre></td></tr></table></figure>
+<h3 id="control欄位說明文件">control欄位說明文件</h3><p>執行下面的指令，就可以看到control的欄位說明</p>
+<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/deb-control.5.html" target="_blank" rel="external">deb-control</a></p>
+<p>可以看到</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">REQUIRED FIELDS</span><br><span class="line">       Package: package-<span class="property">name</span></span><br><span class="line">              The value <span class="keyword">of</span> this field determines <span class="keyword">the</span> package <span class="property">name</span>, <span class="keyword">and</span> <span class="keyword">is</span> used <span class="keyword">to</span> generate <span class="type">file</span> names <span class="keyword">by</span> most installation tools.</span><br><span class="line"></span><br><span class="line">       Version: <span class="property">version</span>-<span class="type">string</span></span><br><span class="line">              Typically, this <span class="keyword">is</span> <span class="keyword">the</span> original package's <span class="property">version</span> <span class="type">number</span> <span class="keyword">in</span> whatever form <span class="keyword">the</span> program's author uses. It may also include</span><br><span class="line">              a Debian revision <span class="type">number</span> (<span class="keyword">for</span> non-native packages). The exact format <span class="keyword">and</span> sorting algorithm  are  described  <span class="keyword">in</span>  deb-ver‐</span><br><span class="line">              sion(<span class="number">5</span>).</span><br><span class="line"></span><br><span class="line">       Maintainer: fullname-email</span><br><span class="line">              Should  be <span class="keyword">in</span> <span class="keyword">the</span> format `Joe Bloggs &lt;jbloggs@foo.com&gt;', <span class="keyword">and</span> <span class="keyword">is</span> typically <span class="keyword">the</span> person who created <span class="keyword">the</span> package, <span class="keyword">as</span> opposed</span><br><span class="line">              <span class="keyword">to</span> <span class="keyword">the</span> author <span class="keyword">of</span> <span class="keyword">the</span> software <span class="keyword">that</span> was packaged.</span><br><span class="line"></span><br><span class="line">       Description: short-description</span><br><span class="line">               long-description</span><br><span class="line">              The format <span class="keyword">for</span> <span class="keyword">the</span> package description <span class="keyword">is</span> a short brief summary <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> <span class="keyword">first</span> line (<span class="keyword">after</span> <span class="keyword">the</span> <span class="string">"Description"</span>  field).  The</span><br><span class="line">              following  lines  should  be used <span class="keyword">as</span> a longer, more detailed description. Each line <span class="keyword">of</span> <span class="keyword">the</span> long description must be pre‐</span><br><span class="line">              ceded <span class="keyword">by</span> a <span class="constant">space</span>, <span class="keyword">and</span> blank lines <span class="keyword">in</span> <span class="keyword">the</span> long description must <span class="keyword">contain</span> a single '.' following <span class="keyword">the</span> preceding <span class="constant">space</span>.</span><br></pre></td></tr></table></figure>
+<p>和</p>
+<figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">OPTIONAL FIELDS</span><br><span class="line"></span><br><span class="line">	...略...</span><br><span class="line"></span><br><span class="line">       <span class="keyword">Architecture</span>: arch|<span class="keyword">all</span></span><br><span class="line">              The  <span class="keyword">architecture</span>  specifies  which  <span class="keyword">type</span>  <span class="keyword">of</span>  hardware  this <span class="keyword">package</span> was compiled <span class="keyword">for</span>. Common architectures are `i386',</span><br><span class="line">              `m68k', `sparc', `alpha', `powerpc' etc. Note that the <span class="keyword">all</span> option <span class="keyword">is</span> meant <span class="keyword">for</span> packages that are  <span class="keyword">architecture</span>  indepen‐</span><br><span class="line">              dent. Some examples <span class="keyword">of</span> this are shell <span class="keyword">and</span> Perl scripts, <span class="keyword">and</span> documentation.</span><br><span class="line"></span><br><span class="line">	...略...</span><br></pre></td></tr></table></figure>
+<p>不過我測試安裝的時候，「Architecture」應該是必填，不然會出錯。</p>
+<p>還有執行 「dpkg -l try」會出現四個欄位，<br>「Name」「Version」「Architecture」「Description」。<br>「Architecture」在其中之一。</p>
+<h2 id="更多參考">更多參考</h2><p>這篇我主要是因為閱讀了「<a href="http://blog.roodo.com/rocksaying/archives/11239791.html" target="_blank" rel="external">這篇</a>」後的「啟發」，</p>
+<p>不然現在的工具都是在上面架上一層。</p>
+<p>先了解這基本的原理後，<br>再來了解，更多的工具的使用，<br>還有怎麼重新編譯「Source Package」。</p>
+<p>還有「DEBIAN」底下的其他檔的功用。</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">control</span></span><br><span class="line">conffiles</span><br><span class="line">preinst</span><br><span class="line">postinst</span><br><span class="line">prerm</span><br><span class="line">postrm</span><br><span class="line">triggers</span><br></pre></td></tr></table></figure>
+<p>另外附上最近發現的影片</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=EnyQ9ZWHEh8" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (1)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-1-KuuZ9JwLdg0" target="_blank" rel="external">note</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=GlojdL8P-4o" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (2)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-2-0NrG7UCgL6p" target="_blank" rel="external">note</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=DpTEEpf2hzM" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (3)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-3-ylzTYm8PxCq" target="_blank" rel="external">note</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=MR0AQV174Ls" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (4)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-4-37qXm4zDFbJ" target="_blank" rel="external">note</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=iE92-bfAWEk" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (5)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-5-FsvIrUHC7iR" target="_blank" rel="external">note</a>)</li>
+<li><p><a href="https://www.youtube.com/watch?v=iniSJoLg-HU" target="_blank" rel="external">[TOSSUG] Debian 套件打包工作坊 / Debian packaging workshop (6)</a> - (<a href="https://tossug.hackpad.com/Debian-packaging-workshop-6-DWXo6WnLeOf" target="_blank" rel="external">note</a>)</p>
+</li>
+<li><p>Debian Policy Manual / <a href="https://www.debian.org/doc/debian-policy/ap-pkg-binarypkg.html" target="_blank" rel="external">Appendix B - Binary packages (from old Packaging Manual)</a></p>
+</li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/fedora/release/22/info/" title="Fedora 22 Released">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/package/dpkg-deb-build/" title="dpkg-deb --build 的使用">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

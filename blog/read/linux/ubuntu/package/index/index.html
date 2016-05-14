@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，一些套件相關的技巧 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，一些套件相關的技巧 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，一些套件相關的技巧 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，一些套件相關的技巧 ">
+	<meta property="og:description" content=" Ubuntu環境下，一些套件相關的技巧 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，一些套件相關的技巧 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/package/index/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-12-30">2014-12-30</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/package/">package</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/package/index/" itemprop="url"><span itemprop="name">Ubuntu環境下，一些套件相關的技巧</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，一些套件相關的技巧">Ubuntu環境下，一些套件相關的技巧</h1><h2 id="列表">列表</h2><ul>
+<li><a href="/blog/read/linux/ubuntu/package/apt-get/">apt-get 的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/apt-get-install/">apt-get install 的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/apt-get-download/">apt-get download 的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/apt-get-source/">apt-get source 的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/dpkg-deb-build/">dpkg -b 的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-install-package/">Ubuntu環境下，如何安裝套件</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-figure-out-package-installed/">Ubuntu環境下，如何知道某個套件是否已經安裝</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-find-out-what-package-a-file-belongs-to/">Ubuntu環境下，如何查詢某個檔案，屬於哪個套件</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-find-out-package-changelog/">Ubuntu環境下，如何查詢某個套件的「changelog」</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-find-out-package-dependency/">Ubuntu環境下，如何查詢某個套件相依哪些套件</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-find-out-package-reverse-dependency/">Ubuntu環境下，如何查詢某個套件被哪些套件相依</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-download-package/">Ubuntu環境下，如何下載「Package」</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-download-source-package/">Ubuntu環境下，如何下載「Source Package」</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/apt-get-autoremove/">關於「apt-get autoremove」</a></li>
+<li><a href="/blog/read/linux/ubuntu/package/how-to-build-package/">如何製作「deb檔(Debian Package)」</a></li>
+</ul>
+<h2 id="更多參考">更多參考</h2><ul>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/SoftwareManagement" target="_blank" rel="external">Software Management</a></li>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/AptGet/Howto" target="_blank" rel="external">AptGet Howto</a></li>
+<li>Ubuntu Community Help Wiki / Repositories / <a href="https://help.ubuntu.com/community/Repositories/CommandLine" target="_blank" rel="external">CommandLine</a></li>
+<li>Ubuntu Community Help Wiki / Repositories / <a href="https://help.ubuntu.com/community/Repositories/Ubuntu" target="_blank" rel="external">Ubuntu</a></li>
+<li>APT HOWTO / <a href="https://www.debian.org/doc/manuals/apt-howto/ch-apt-get.zh-tw.html" target="_blank" rel="external">第 3 章 - 套裝軟體管理</a></li>
+<li>Wikipedia / <a href="http://en.wikipedia.org/wiki/Advanced_Packaging_Tool" target="_blank" rel="external">Advanced Packaging Tool</a></li>
+<li>Wikipedia / <a href="http://zh.wikipedia.org/zh-tw/%E9%AB%98%E7%BA%A7%E5%8C%85%E8%A3%85%E5%B7%A5%E5%85%B7" target="_blank" rel="external">高级包装工具</a></li>
+<li>Debian Reference / <a href="https://www.debian.org/doc/manuals/debian-reference/ch02.en.html" target="_blank" rel="external">Chapter 2. Debian package management</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/PackageManagement" target="_blank" rel="external">PackageManagement</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/DebianPackageManagement" target="_blank" rel="external">DebianPackageManagement</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">DebianPackage</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/Package" target="_blank" rel="external">Package</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/SourcePackage" target="_blank" rel="external">SourcePackage</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/SourcePackage" target="_blank" rel="external">ListInstalledPackages</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/SecureApt" target="_blank" rel="external">SecureApt</a></li>
+<li>Debian FAQ / <a href="https://www.debian.org/doc/manuals/debian-faq/ch-pkg_basics" target="_blank" rel="external">Chapter 7 - Basics of the Debian package management system</a></li>
+<li>Debian FAQ / <a href="https://www.debian.org/doc/manuals/debian-faq/ch-pkgtools.en.html" target="_blank" rel="external">Chapter 8 - The Debian package management tools</a></li>
+<li>Debian FAQ / <a href="https://www.debian.org/doc/manuals/debian-faq/ch-uptodate.en.html" target="_blank" rel="external">Chapter 9 - Keeping your Debian system up-to-date </a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/index/">index</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/package/how-to-figure-out-package-installed/" title="Ubuntu環境下，如何知道某個套件是否已經安裝">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/package/apt-get/" title="apt-get 的使用">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

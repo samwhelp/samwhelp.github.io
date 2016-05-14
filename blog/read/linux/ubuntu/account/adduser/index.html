@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何使用下指令的方式新增使用者 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 ">
+	<meta property="og:description" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/account/adduser/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-10-16">2014-10-16</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/account/">account</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/account/adduser/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何使用下指令的方式新增使用者</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何使用下指令的方式新增使用者">Ubuntu環境下，如何使用下指令的方式新增使用者</h1><h2 id="前提">前提</h2><p>這篇是參與<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327650#forumpost327650" target="_blank" rel="external">這裡的討論</a>，重新整理而來。</p>
+<p>站在管理者的角度，假設要新增一位使用者「cooker」。</p>
+<h2 id="新增使用者">新增使用者</h2><p>執行以下的指令，就可以新增一位使用者叫做「cooker」。過程中會詢問，要為「cooker」設定的密碼。和一些額外的資訊。請依照提示執行。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser cooker</span><br></pre></td></tr></table></figure></p>
+<h2 id="更改密碼">更改密碼</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd cooker</span><br></pre></td></tr></table></figure>
+<h2 id="參考文章">參考文章</h2><ul>
+<li>Ubuntu / Community Help Wiki / <a href="https://help.ubuntu.com/community/SystemAdministration" target="_blank" rel="external">SystemAdministration</a> / <a href="https://help.ubuntu.com/community/AddUsersHowto" target="_blank" rel="external">AddUsersHowto</a></li>
+<li><a href="http://note.drx.tw/" target="_blank" rel="external">凍仁的筆記</a> / <a href="http://note.drx.tw/2008/03/ubuntuadduser-part1.html" target="_blank" rel="external">adduser - 新增使用者指令</a></li>
+</ul>
+<h2 id="套件探索">套件探索</h2><h3 id="探索「adduser」">探索「adduser」</h3><p>查詢「adduser」屬於哪個套件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S adduser</span><br></pre></td></tr></table></figure></p>
+<p>看起來是屬於「adduser」這個套件。</p>
+<p>準備等會要工作的資料夾<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/adduser -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/adduser</span><br><span class="line">$ mkdir download <span class="built_in">source</span></span><br></pre></td></tr></table></figure></p>
+<p>下載「adduser」這個「<a href="http://packages.ubuntu.com/trusty/adduser" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download adduser</span><br><span class="line">$ dpkg -x adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb adduser</span><br><span class="line">$ ar xf adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br></pre></td></tr></table></figure></p>
+<p>觀看「etc」底下有什麼檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls /adduser/etc</span><br></pre></td></tr></table></figure></p>
+<p>發現只有「deluser.conf」，沒有「adduser.conf」。</p>
+<p>所以觀看「postinst」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi DEBIAN/postinst</span><br></pre></td></tr></table></figure>
+<p>原來是安裝後，會根據「/etc/adduser.conf」是否存在，才會複製一份到「/etc」底下。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ ! <span class="operator">-e</span> <span class="string">"/etc/adduser.conf"</span> ]; <span class="keyword">then</span></span><br><span class="line">    cp /usr/share/adduser/adduser.conf /etc/adduser.conf</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure></p>
+<p>不過「DEBIAN/postinst」後面還有，尚未弄懂。</p>
+<p>觀看「usr/sbin」有哪些執行檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls adduser/usr/sbin <span class="operator">-l</span></span><br></pre></td></tr></table></figure></p>
+<p>共有四個檔。<br>「adduser」和「deluser」。<br>「addgroup」symbolic link「adduser」。<br>「delgroup」symbolic link「deluser」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ vi adduser/usr/sbin/adduser</span><br><span class="line">$ vi adduser/usr/sbin/deluser</span><br></pre></td></tr></table></figure>
+<p>發現是「perl」寫的。</p>
+<p>查看有哪些「manual」可以查閱。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls adduser/usr/share/man/man5</span><br><span class="line">$ ls adduser/usr/share/man/man8</span><br></pre></td></tr></table></figure></p>
+<p>所以可以查閱的manual如下。</p>
+<h3 id="man_5">man 5</h3><ul>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/adduser.conf.5.html" target="_blank" rel="external">adduser.conf</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/deluser.conf.5.html" target="_blank" rel="external">deluser.conf</a></li>
+</ul>
+<h3 id="man_8">man 8</h3><ul>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/adduser.8.html" target="_blank" rel="external">adduser</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/deluser.8.html" target="_blank" rel="external">deluser</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/addgroup.8.html" target="_blank" rel="external">addgroup</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/delgroup.8.html" target="_blank" rel="external">delgroup</a></li>
+</ul>
+<p>額外的參考<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls adduser/usr/share/doc/adduser/examples/</span><br></pre></td></tr></table></figure></p>
+<p>下載「adduser」這個「<a href="http://packages.ubuntu.com/source/trusty/adduser" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/adduser/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> adduser</span><br></pre></td></tr></table></figure></p>
+<p>觀看「control」檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi adduser-<span class="number">3.113</span>+nmu3ubuntu3/debian/control</span><br></pre></td></tr></table></figure></p>
+<h3 id="探索「useradd」">探索「useradd」</h3><p>查看「useradd」屬於哪個套件。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>dpkg -<span class="constant">S</span> useradd</span><br></pre></td></tr></table></figure></p>
+<p>看起來是屬於「passwd」這個套件。</p>
+<p>準備等會要工作的資料夾<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/passwd -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/passwd</span><br><span class="line">$ mkdir download <span class="built_in">source</span></span><br></pre></td></tr></table></figure></p>
+<p>下載「passwd」這個「<a href="http://packages.ubuntu.com/trusty/passwd" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download passwd</span><br><span class="line">$ dpkg -x passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb passwd</span><br><span class="line">$ ar xf passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br></pre></td></tr></table></figure></p>
+<p>下載「passwd」的「<a href="http://packages.ubuntu.com/source/trusty/shadow" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/passwd/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> passwd</span><br></pre></td></tr></table></figure></p>
+<p>「passwd」的「source package」是「shadow」。</p>
+<p>觀看「control」檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi shadow-<span class="number">4.1</span>.<span class="number">5.1</span>/debian/control</span><br></pre></td></tr></table></figure></p>
+<p>回到「download」資料夾。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/tmp/passwd</span><span class="regexp">/download</span></span><br></pre></td></tr></table></figure></p>
+<p>查看有哪些「manual」可以查閱。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ls passwd/usr/share/man/man1 -<span class="number">1</span></span><br><span class="line">$ ls passwd/usr/share/man/man5 -<span class="number">1</span></span><br><span class="line">$ ls passwd/usr/share/man/man8 -<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="man_1">man 1</h3><ul>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chage.1.html" target="_blank" rel="external">chage</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chfn.1.html" target="_blank" rel="external">chfn</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chshman.1.html" target="_blank" rel="external">chshman</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/expiry.1.html" target="_blank" rel="external">expiry</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/gpasswd.1.html" target="_blank" rel="external">gpasswd</a></li>
+<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/passwd.1.html" target="_blank" rel="external">passwd</a></li>
+</ul>
+<h3 id="man_5-1">man 5</h3><ul>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/gshadow.5.html" target="_blank" rel="external">gshadow</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/passwd.5.html" target="_blank" rel="external">passwd</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/shadow.5.html" target="_blank" rel="external">shadow</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/subgid.5.html" target="_blank" rel="external">subgid</a></li>
+<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/subuid.5.html" target="_blank" rel="external">subuid</a></li>
+</ul>
+<h3 id="man_8-1">man 8</h3><ul>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/chgpasswd.8.html" target="_blank" rel="external">chgpasswd</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/chpasswd.8.html" target="_blank" rel="external">chpasswd</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/cpgr.8.html" target="_blank" rel="external">cpgr</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/cppw.8.html" target="_blank" rel="external">cppw</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupadd.8.html" target="_blank" rel="external">groupadd</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupdel.8.html" target="_blank" rel="external">groupdel</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupmod.8.html" target="_blank" rel="external">groupmod</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpck.8.html" target="_blank" rel="external">grpck</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpconv.8.html" target="_blank" rel="external">grpconv</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpunconv.8.html" target="_blank" rel="external">grpunconv</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/newusers.8.html" target="_blank" rel="external">newusers</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwck.8.html" target="_blank" rel="external">pwck</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwconv.8.html" target="_blank" rel="external">pwconv</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwunconv.8.html" target="_blank" rel="external">pwunconv</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/shadowconfig.8.html" target="_blank" rel="external">shadowconfig</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/useradd.8.html" target="_blank" rel="external">useradd</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/userdel.8.html" target="_blank" rel="external">userdel</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/usermod.8.html" target="_blank" rel="external">usermod</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/vigr.8.html" target="_blank" rel="external">vigr</a></li>
+<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/vipw.8.html" target="_blank" rel="external">vipw</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/font/start/" title="Ubuntu環境下，了解如何設定字型">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/site/start/" title="開站拉！">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

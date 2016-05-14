@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，了解如何設定字型 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，了解如何設定字型 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，了解如何設定字型 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，了解如何設定字型 ">
+	<meta property="og:description" content=" Ubuntu環境下，了解如何設定字型 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，了解如何設定字型 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/font/start/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-10-17">2014-10-17</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/font/">font</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/font/start/" itemprop="url"><span itemprop="name">Ubuntu環境下，了解如何設定字型</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，了解如何設定字型">Ubuntu環境下，了解如何設定字型</h1><h2 id="緣起">緣起</h2><ul>
+<li><a href="http://blog.roodo.com/rocksaying/archives/12397861.html" target="_blank" rel="external">http://blog.roodo.com/rocksaying/archives/12397861.html</a></li>
+<li><a href="http://blog.roodo.com/rocksaying/archives/3124027.html" target="_blank" rel="external">http://blog.roodo.com/rocksaying/archives/3124027.html</a></li>
+<li><a href="http://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html" target="_blank" rel="external">http://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html</a></li>
+</ul>
+<p>剛好這幾天看了上面三頁，然後突然玩起勁來，把以前關於如何在Ubuntu設定font，沒去搞懂的概念，搞懂了。整個豁然開朗，讚的拉！寫下來留給尚未搞懂的人一些參考。<br>在說明以前，建議可以先把下列的詞彙，稍微了解一下。</p>
+<p>註:font設定這幾篇，是在前些時候寫的草稿，一直拖到今天，才完稿:p</p>
+<h3 id="術語">術語</h3><ul>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">襯線體</a> - <a href="http://en.wikipedia.org/wiki/Serif" target="_blank" rel="external">serif</a> - 白體 - <a href="http://zh.wikipedia.org/zh-tw/%E6%98%8E%E9%AB%94" target="_blank" rel="external">明體</a>(<a href="http://zh.wikipedia.org/zh-tw/%E5%AE%8B%E9%AB%94" target="_blank" rel="external">宋體</a>)</p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E7%84%A1%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">無襯線體</a> - <a href="http://en.wikipedia.org/wiki/Sans-serif" target="_blank" rel="external">sans-serif</a> - 黑體 - <a href="http://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a></p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a> vs <a href="http://zh.wikipedia.org/zh-tw/%E7%B2%97%E9%AB%94" target="_blank" rel="external">粗體(bold)</a></p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E6%A8%99%E6%A5%B7%E9%AB%94" target="_blank" rel="external">楷體</a></p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E5%AD%97%E4%BD%94" target="_blank" rel="external">字體</a>(typeface) vs <a href="http://zh.wikipedia.org/zh-tw/%E5%AD%97%E5%9E%8B" target="_blank" rel="external">字型</a>(font)</p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/Mac_OS_X%E5%AD%97%E4%BD%93%E5%88%97%E8%A1%A8" target="_blank" rel="external">Mac OS X字體列表</a></p>
+</li>
+<li><p><a href="http://zh.wikipedia.org/zh-tw/%E7%AD%89%E5%AF%AC%E5%AD%97%E9%AB%94" target="_blank" rel="external">等寬字型(Monospaced Font)</a> vs <a href="http://zh.wikipedia.org/zh-tw/%E6%AF%94%E4%BE%8B%E5%AD%97%E9%AB%94" target="_blank" rel="external">比例字體(Proportional Font)</a></p>
+</li>
+</ul>
+<h2 id="系統設定字型">系統設定字型</h2><ul>
+<li><p><a href="/blog/read/linux/ubuntu/font/fontconfig/">Ubuntu環境下，探究 fontconfig 相關的套件</a></p>
+</li>
+<li><p><a href="/blog/read/linux/ubuntu/font/font-package/">Ubuntu環境下，一些字型套件</a></p>
+</li>
+</ul>
+<h2 id="軟體設定字型">軟體設定字型</h2><ul>
+<li><a href="/blog/read/linux/ubuntu/font/software/">Ubuntu環境下，一些軟體設定字型的方式</a></li>
+</ul>
+<h2 id="工具使用">工具使用</h2><ul>
+<li><a href="/blog/read/linux/ubuntu/font/fc-match/">fc-match的使用</a></li>
+<li><a href="/blog/read/linux/ubuntu/font/font-noto/">fc-cache的使用（範例：手動安裝思源字型）</a></li>
+<li><a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a></li>
+</ul>
+<h2 id="小技巧">小技巧</h2><p>查看目前系統已經安裝的中文字型<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-list :lang=zh</span><br></pre></td></tr></table></figure></p>
+<h2 id="參與的討論">參與的討論</h2><h3 id="原理懂了，善用工具，可以解決大部分遇到的問題。">原理懂了，善用工具，可以解決大部分遇到的問題。</h3><ul>
+<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318762#forumpost318762" target="_blank" rel="external">14.04 中文字型被更改了</a> （註：參與這篇討論，我尚未深入探究font設定的一些細節。而以下的討論，則是在我已經理解後的事了。所以大概可以知道一些問題點出在哪。進而找到解決方案。）</p>
+</li>
+<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327720#forumpost327720" target="_blank" rel="external">Konsole內的文字排位問題</a></p>
+</li>
+<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327406#forumpost327406" target="_blank" rel="external">Ubuntu-GNOME 14.04.1最上方的選單列字級無法放大</a></p>
+</li>
+<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=326348#forumpost326348" target="_blank" rel="external">[求救]我的conky無法顯示中文！！</a></p>
+</li>
+</ul>
+<h2 id="參考文章">參考文章</h2><ul>
+<li><a href="http://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">Howto Custom Fonts with Fontconfig</a></li>
+<li><a href="http://wiki.ubuntu.com.cn/%E5%AD%97%E4%BD%93" target="_blank" rel="external">http://wiki.ubuntu.com.cn/字体</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/font/">font</a>, <a class="tag-link" href="/blog/find/tag/fontconfig/">fontconfig</a>, <a class="tag-link" href="/blog/find/tag/index/">index</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/font/software/" title="Ubuntu環境下，一些軟體設定字型的方式">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/account/adduser/" title="Ubuntu環境下，如何使用下指令的方式新增使用者">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

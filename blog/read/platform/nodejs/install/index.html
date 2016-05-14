@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何安裝nvm以及nodejs | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何安裝nvm以及nodejs | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何安裝nvm以及nodejs | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何安裝nvm以及nodejs ">
+	<meta property="og:description" content=" Ubuntu環境下，如何安裝nvm以及nodejs " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何安裝nvm以及nodejs " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/platform/nodejs/install/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-10-20">2014-10-20</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/platform/">platform</a>, <a class="category-link" href="/blog/find/category/platform/nodejs/">nodejs</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/platform/nodejs/install/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何安裝nvm以及nodejs</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何安裝nvm以及nodejs">Ubuntu環境下，如何安裝nvm以及nodejs</h1><h2 id="測試環境">測試環境</h2><p>撰寫本文時，測試的環境是</p>
+<ul>
+<li>「Xubuntu 14.04 64位元」</li>
+<li>「nvm v0.17.2」</li>
+<li>「nodejs v0.10.32」</li>
+</ul>
+<h2 id="安裝步驟">安裝步驟</h2><ul>
+<li>安裝「nvm」。</li>
+<li>透過「nvm」安裝「nodejs」。</li>
+</ul>
+<h2 id="安裝「nvm」。">安裝「nvm」。</h2><p>查詢「<a href="https://www.google.com.tw/#q=nvm" target="_blank" rel="external">nvm</a>」，應該第一筆就會找到「<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>」放在「github」上的「網址」。<br>可以直接參考該頁的說明來安裝「nvm」。裡面有一行指令可以快速安裝。<br>以下單純討論「Manual install」的方式，因為想要安裝到非預設的資料。</p>
+<p>下面這段指令，會用到「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git.1.html" target="_blank" rel="external">git</a>」，所以請先確認已經安裝「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」，安裝方式請參考「<a href="http://samwhelp.github.io/blog/read/git/install/">這篇</a>」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/App/Nvm -p</span><br><span class="line"><span class="built_in">cd</span> ~/App/Nvm/</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/creationix/nvm.git Git</span><br><span class="line"><span class="built_in">cd</span> Git</span><br><span class="line">git checkout `git describe --abbrev=<span class="number">0</span> --tags`</span><br></pre></td></tr></table></figure>
+<p>若使用「bash」的話，執行下面這一行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"source ~/App/Nvm/Git/nvm.sh"</span> &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure>
+<p>若使用「zsh」的話，執行下面這一行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"source ~/App/Nvm/Git/nvm.sh"</span> &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+<p><strong>上面的動作，就已經把「nvm」安裝完成。</strong></p>
+<p>當你重新登入「shell」。「shell」會執行自己的「profile」，也就是會執行到「source ~/App/Nvm/Git/nvm.sh」這一段。例如我慣用的「Terminal」是「Konsole」。這時候我只要關閉目前的「Konsole」，重新開啟就行了。或是「不重新開啟」，直接開啟新的「Konsole視窗」。</p>
+<p>你可以執行，來確認「nvm」是否安裝成功。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm --version</span><br></pre></td></tr></table></figure>
+<p>若安裝成功，應該會出現下面的字樣(會依照當下安裝的版本，有所不同，以下請當參考）。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.17</span><span class="number">.2</span></span><br></pre></td></tr></table></figure>
+<p>執行下面的指令，了解「nvm」有哪些參數可以下。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+<h2 id="透過「nvm」安裝「nodejs」">透過「nvm」安裝「nodejs」</h2><p>了解「nodejs」目前有哪有些版本，可以安裝。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls-remote</span><br></pre></td></tr></table></figure>
+<p>通常我會到「<a href="http://nodejs.org/" target="_blank" rel="external">nodejs官網</a>」首頁，了解目前stable的版本號。你會看到「Current Version: v0.10.32」</p>
+<p>所以執行下面的指令，就可以透過「nvm」安裝「nodejs」了。(注意這個方式是安裝「binary package」，而非下載「source package」，編譯後安裝)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install v0.<span class="number">10.32</span></span><br></pre></td></tr></table></figure>
+<p>或是省略前面的「v」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install <span class="number">0.10</span>.<span class="number">32</span></span><br></pre></td></tr></table></figure>
+<p>上面兩個方式，是準確的指定某個版本號。</p>
+<p>你也可以使用，下面兩個其中一個指令，安裝「v0.10」系列最新的。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install v0.<span class="number">10</span></span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install <span class="number">0.10</span></span><br></pre></td></tr></table></figure>
+<p>寫此篇時，「v0.10」系列，最新的是「v0.10.32」，所以上面的指令就會安裝「v0.10.32」。</p>
+<p>另外寫此篇時，看官方的文件，有紀錄到可以執行下面的指令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure>
+<p>不過我試不出來，會出現下面的訊息。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Version <span class="string">'stable'</span> not found - <span class="keyword">try</span> `nvm <span class="keyword">ls</span>-remote` <span class="keyword">to</span> <span class="built_in">browse</span> available versions.</span><br></pre></td></tr></table></figure></p>
+<p>然後有看到「<a href="http://blog.wu-boy.com/2013/01/node-version-manager/" target="_blank" rel="external">一篇文章</a>」，有討論這個問題(<a href="https://github.com/creationix/nvm/pull/188" target="_blank" rel="external">1</a>)(<a href="https://github.com/creationix/nvm/pull/136" target="_blank" rel="external">2</a>)(<a href="https://github.com/creationix/nvm/pull/74" target="_blank" rel="external">3</a>)。<br>有興趣可以嘗試上面那篇文章作者改過的這個「<a href="https://github.com/appleboy/nvm" target="_blank" rel="external">版本</a>」摟。</p>
+<p>當我們透過「nvm」安裝好「nodejs」後，因為可能同時安裝了很多版本的「nodejs」。<br>所以我們要透過下面的指令來作切換目前要使用的「nodejs」版本。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm use v0.<span class="number">10.32</span></span><br></pre></td></tr></table></figure>
+<p>上面省略「v」和「v0.10」系列的模式，一樣可用。</p>
+<p>當然在執行上面的指令前，我們通常會先觀看，目前透過「nvm」裝了哪些版本的「nodejs」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls</span><br></pre></td></tr></table></figure>
+<p>可能會看到下面的字樣，前面有箭頭的就是目前使用的版本，而列出來的所有項目，則是目前透過「nvm」裝了哪些版本的「nodejs」。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">	v0<span class="number">.10</span><span class="number">.32</span></span><br><span class="line">-&gt;	v0<span class="number">.11</span><span class="number">.14</span></span><br></pre></td></tr></table></figure>
+<p>而為了讓未來重新登入「shell」時，會使用一個預設的「nodejs」版本。</p>
+<p>我們可以執行一下的指令，來設定。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm <span class="built_in">alias</span> default v0.<span class="number">10.32</span></span><br></pre></td></tr></table></figure>
+<p>這時候你再次執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls</span><br></pre></td></tr></table></figure>
+<p>就會看到多了「default」那一行。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">	v0<span class="number">.10</span><span class="number">.32</span></span><br><span class="line">-&gt;	v0<span class="number">.11</span><span class="number">.14</span></span><br><span class="line"><span class="keyword">default</span> -&gt; v0<span class="number">.10</span><span class="number">.32</span></span><br></pre></td></tr></table></figure>
+<p>這樣未來重新登入「shell」時，就會直接使用「v0.10.32」這個版本的「nodejs」。</p>
+<p>你可以執行下面的指令，來觀看目前「nodejs」的版本。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+<p>會顯示<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v0<span class="number">.10</span><span class="number">.32</span></span><br></pre></td></tr></table></figure></p>
+<p>一樣也可以執行「nvm ls」來觀看。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls</span><br></pre></td></tr></table></figure></p>
+<p>或是執行<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm current</span><br></pre></td></tr></table></figure></p>
+<p>就會顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">v0<span class="number">.10</span><span class="number">.32</span></span><br></pre></td></tr></table></figure>
+<p>另外安裝「nodejs」成功了，基本上也同時安裝了「<a href="https://www.npmjs.org/" target="_blank" rel="external">npm</a>」。<br>你可以確認看看，執行</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> -v</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm --version</span><br></pre></td></tr></table></figure>
+<p>會出現</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.4</span><span class="number">.28</span></span><br></pre></td></tr></table></figure>
+<h2 id="使用「nvm」下載「nodejs」的「source_package」，編譯後，安裝。">使用「nvm」下載「nodejs」的「source package」，編譯後，安裝。</h2><p>跟上面的安裝「binary package」的指令差不多，只多了個「-s」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install <span class="operator">-s</span> v0.<span class="number">10.31</span></span><br></pre></td></tr></table></figure>
+<p>注意記得要編譯成功，記得先安裝編譯相依的套件。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential libssl-dev curl git</span><br></pre></td></tr></table></figure>
+<p>好拉，安裝「nodejs」完畢後，來去「<a href="http://nodeschool.io/" target="_blank" rel="external">NodeSchool</a>」學習吧!</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> learnyounode</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>learnyounode</span><br></pre></td></tr></table></figure>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/nodejs/">nodejs</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/tool/editor/brackets/extension/" title="Brackets Extension">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/git/install/" title="Ubuntu環境下，如何安裝git">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

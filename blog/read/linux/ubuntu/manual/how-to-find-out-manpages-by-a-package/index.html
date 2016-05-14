@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) ">
+	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-05-02">2015-05-02</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page)</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man_page)">Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page)</h1><h2 id="方式一">方式一</h2><p>從「Debian Reference / Chapter 12. Programming / <a href="https://www.debian.org/doc/manuals/debian-reference/ch12.en.html#_utility_programs_for_shell_script" target="_blank" rel="external">12.1.6. Utility programs for shell script</a>」學到的技巧。</p>
+<p>以「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件為例。</p>
+<p>執行</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> coreutils | grep '/<span class="keyword">man</span>/<span class="keyword">man</span>.*/'</span><br></pre></td></tr></table></figure>
+<p>就會顯示</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/man/man1/expr.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/cat.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/fold.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/true.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/wc.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/echo.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/unexpand.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sort.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/vdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/dir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/nohup.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/<span class="tag">dd</span>.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/tee.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/md5sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/readlink.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/users.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/date.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/id.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/unlink.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sha224sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/mkdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/base64.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/cut.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/dircolors.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/split.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/nice.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/csplit.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/whoami.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/chgrp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/df.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/du.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/cksum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/numfmt.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/head.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/stty.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/dirname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/ptx.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sha1sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/factor.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/cp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/shuf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/chmod.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/pr.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/chcon.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/truncate.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/tty.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/who.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/logname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/link.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/printenv.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/basename.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/nl.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/uniq.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/ls.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/od.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/comm.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/stdbuf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/stat.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/pwd.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/printf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/pinky.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/uname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/runcon.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/tac.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/mktemp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/mv.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/yes.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/fmt.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sha512sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/false.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/rm.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/shred.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/tail.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sync.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/arch.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/ln.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/join.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/timeout.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/install.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/touch.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sleep.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/groups.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/hostid.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/test.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/rmdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/expand.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/mknod.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/chown.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/nproc.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sha384sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/mkfifo.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/env.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/<span class="tag">tr</span>.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/sha256sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/tsort.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/pathchk.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/paste.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/seq.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man8/chroot.<span class="number">8</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/[.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">/usr/share/man/man1/md5sum<span class="class">.textutils</span>.<span class="number">1</span>.gz</span><br></pre></td></tr></table></figure>
+<p>或是從「Debian Reference / Chapter 2. Debian package management / <a href="https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_advanced_package_management_operations" target="_blank" rel="external">2.4. Advanced package management operations</a>」這裡</p>
+<p>執行</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> corutils | egrep '/usr/share/<span class="keyword">man</span>/<span class="keyword">man</span>.*/.+'</span><br></pre></td></tr></table></figure>
+<h2 id="方式二">方式二</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">coreutils</span>.<span class="title">list</span> | <span class="title">grep</span> '/<span class="title">man</span>/<span class="title">man</span>.*/'</span></span><br></pre></td></tr></table></figure>
+<h2 id="方式二-1">方式二</h2><p>我在「<a href="http://samwhelp.github.io/book-ubuntu-exploration/book/content/package/coreutils/info.html">探索套件</a>」的時候，都是用這個方式</p>
+<p>下載「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件。</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="keyword">get</span> download coreutils</span><br></pre></td></tr></table></figure>
+<p>解開剛剛下載的套件檔案</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x coreutils_8<span class="number">.21</span>-<span class="number">1u</span>buntu5<span class="number">.1</span>_amd64.deb coreutils</span><br></pre></td></tr></table></figure>
+<p>利用tree來觀看有哪些檔案</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>tree coreutils/usr/share/man</span><br></pre></td></tr></table></figure>
+<p>就會顯示</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">coreutils/usr/share/man</span><br><span class="line">├── man1</span><br><span class="line">│   ├── [.<span class="number">1</span><span class="class">.gz</span> -&gt; test.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── arch.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── base64.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── basename.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── cat.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── chcon.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── chgrp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── chmod.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── chown.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── cksum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── comm.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── cp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── csplit.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── cut.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── date.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── <span class="tag">dd</span>.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── df.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── dir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── dircolors.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── dirname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── du.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── echo.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── env.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── expand.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── expr.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── factor.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── false.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── fmt.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── fold.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── groups.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── head.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── hostid.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── id.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── install.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── join.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── link.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── ln.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── logname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── ls.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── md5sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── md5sum<span class="class">.textutils</span>.<span class="number">1</span><span class="class">.gz</span> -&gt; md5sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── mkdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── mkfifo.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── mknod.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── mktemp.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── mv.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── nice.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── nl.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── nohup.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── nproc.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── numfmt.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── od.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── paste.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── pathchk.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── pinky.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── pr.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── printenv.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── printf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── ptx.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── pwd.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── readlink.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── rm.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── rmdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── runcon.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── seq.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sha1sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sha224sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sha256sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sha384sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sha512sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── shred.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── shuf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sleep.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sort.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── split.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── stat.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── stdbuf.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── stty.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sum.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── sync.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── tac.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── tail.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── tee.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── test.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── timeout.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── touch.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── <span class="tag">tr</span>.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── true.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── truncate.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── tsort.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── tty.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── uname.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── unexpand.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── uniq.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── unlink.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── users.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── vdir.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── wc.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── who.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   ├── whoami.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">│   └── yes.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line">└── man8</span><br><span class="line">    └── chroot.<span class="number">8</span><span class="class">.gz</span></span><br><span class="line"></span><br><span class="line"><span class="number">2</span> directories, <span class="number">102</span> files</span><br></pre></td></tr></table></figure>
+<h2 id="查詢">查詢</h2><p>然後就利用man指令查詢，或是到網頁上查詢</p>
+<h3 id="指令查詢">指令查詢</h3><p>例如:「chroot」</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>man chroot</span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="number">8</span> chroot</span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man coreutils<span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
+<h3 id="網頁查詢">網頁查詢</h3><p> <a href="http://manpages.ubuntu.com/manpages/trusty/man8/chroot.8.html" target="_blank" rel="external">Ubuntu Manual 網址</a></p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
+<p>用瀏覽器查看</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>firefox <span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
+<h2 id="更多參考">更多參考</h2><p>以上方式的原理，可以參考這篇<a href="/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-from-packge/">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</a>。</p>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/howto/">howto</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/package/how-to-install-package/" title="Ubuntu環境下，如何安裝套件">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/manual/index/" title="Ubuntu環境下，一些查詢使用手冊相關的技巧">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

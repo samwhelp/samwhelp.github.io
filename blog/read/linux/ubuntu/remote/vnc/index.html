@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何讓VNC開機自動運行 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何讓VNC開機自動運行 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何讓VNC開機自動運行 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何讓VNC開機自動運行 ">
+	<meta property="og:description" content=" Ubuntu環境下，如何讓VNC開機自動運行 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何讓VNC開機自動運行 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/remote/vnc/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-03-02">2015-03-02</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/remote/">remote</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/remote/vnc/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何讓VNC開機自動運行</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何讓VNC開機自動運行">Ubuntu環境下，如何讓VNC開機自動運行</h1><h2 id="前言">前言</h2><p>這篇是從回答「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=334586#forumpost334586" target="_blank" rel="external">這篇</a>」，整理而來。</p>
+<h2 id="測試環境">測試環境</h2><ul>
+<li>Lubuntu 14.04 32位元測試的</li>
+</ul>
+<h2 id="新增_Service">新增 Service</h2><p>產生一個「service」檔案「/etc/init.d/vnc」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/init.d/vnc</span><br></pre></td></tr></table></figure>
+<p>貼入以下內容</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/bash</span></span><br><span class="line">PATH=<span class="string">"<span class="variable">$PATH</span>:/usr/bin/"</span></span><br><span class="line"><span class="built_in">export</span> USER=<span class="string">"sam"</span></span><br><span class="line">DISPLAY=<span class="string">"1"</span></span><br><span class="line">DEPTH=<span class="string">"16"</span></span><br><span class="line">GEOMETRY=<span class="string">"1024x768"</span></span><br><span class="line">OPTIONS=<span class="string">"-depth <span class="variable">$&#123;DEPTH&#125;</span> -geometry <span class="variable">$&#123;GEOMETRY&#125;</span> :<span class="variable">$&#123;DISPLAY&#125;</span> -localhost"</span></span><br><span class="line">. /lib/lsb/init-functions</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"<span class="variable">$1</span>"</span> <span class="keyword">in</span></span><br><span class="line">        start)</span><br><span class="line">                <span class="built_in">log</span>_action_begin_msg <span class="string">"Starting vncserver for user '<span class="variable">$&#123;USER&#125;</span>' on localhost:<span class="variable">$&#123;DISPLAY&#125;</span>"</span></span><br><span class="line">                su <span class="variable">$&#123;USER&#125;</span> -c <span class="string">"/usr/bin/vncserver <span class="variable">$&#123;OPTIONS&#125;</span>"</span></span><br><span class="line">        ;;</span><br><span class="line"></span><br><span class="line">        stop)</span><br><span class="line">                <span class="built_in">log</span>_action_begin_msg <span class="string">"Stopping vncserver for user '<span class="variable">$&#123;USER&#125;</span>' on localhost:<span class="variable">$&#123;DISPLAY&#125;</span>"</span></span><br><span class="line">                su <span class="variable">$&#123;USER&#125;</span> -c <span class="string">"/usr/bin/vncserver -kill :<span class="variable">$&#123;DISPLAY&#125;</span>"</span></span><br><span class="line">        ;;</span><br><span class="line"></span><br><span class="line">        restart)</span><br><span class="line">                <span class="variable">$0</span> stop</span><br><span class="line">                <span class="variable">$0</span> start</span><br><span class="line">        ;;</span><br><span class="line"></span><br><span class="line">        *)</span><br><span class="line">                <span class="built_in">echo</span> <span class="string">"Usage: /etc/init.d/vnc (start|stop|restart)"</span></span><br><span class="line">                <span class="built_in">exit</span> <span class="number">1</span></span><br><span class="line">        ;;</span><br><span class="line"><span class="keyword">esac</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>將「/etc/init.d/vnc」存檔。</p>
+<p>然後將「/etc/init.d/vnc」改為可執行權限。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chomod +x /etc/init.d/vnc</span><br></pre></td></tr></table></figure>
+<p>另外我有修改「~/.vnc/xstartup」這個檔。</p>
+<p>因為我是在這篇「<a href="/blog/read/linux/lxqt/install/">如何安裝LXQt</a>」裝好的環境測試的，所以改成「startlxqt &amp;」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="shebang">#!/bin/sh</span><br><span class="line"></span></span><br><span class="line"><span class="comment"># Uncomment the following two lines for normal desktop:</span></span><br><span class="line"><span class="comment"># unset SESSION_MANAGER</span></span><br><span class="line"><span class="comment"># exec /etc/X11/xinit/xinitrc</span></span><br><span class="line"></span><br><span class="line">[ -x /etc/vnc/xstartup ] &amp;&amp; <span class="built_in">exec</span> /etc/vnc/xstartup</span><br><span class="line">[ -r <span class="variable">$HOME</span>/.Xresources ] &amp;&amp; xrdb <span class="variable">$HOME</span>/.Xresources</span><br><span class="line">xsetroot -solid grey</span><br><span class="line">vncconfig -iconic &amp;</span><br><span class="line"><span class="comment">#x-terminal-emulator -geometry 80x24+10+10 -ls -title "$VNCDESKTOP Desktop" &amp;</span></span><br><span class="line"><span class="comment">#x-window-manager &amp;</span></span><br><span class="line">startlxqt &amp;</span><br></pre></td></tr></table></figure>
+<p>存檔後，就可已執行下面的命令來測測試</p>
+<h2 id="測試">測試</h2><p>啟動服務</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service vnc start</span><br><span class="line"><span class="comment"># sudo /etc/init.d/vnc start</span></span><br></pre></td></tr></table></figure>
+<p>用client連線測試</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vncviewer localhost:<span class="number">5901</span></span><br></pre></td></tr></table></figure>
+<p>重起服務</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service vnc restart</span><br><span class="line"><span class="comment"># sudo /etc/init.d/vnc restart</span></span><br></pre></td></tr></table></figure>
+<p>關閉服務</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service vnc stop</span><br><span class="line"><span class="comment"># sudo /etc/init.d/vnc stop</span></span><br></pre></td></tr></table></figure>
+<h2 id="設定開機自動啟動">設定開機自動啟動</h2><p>執行下面的指令</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d vnc defaults</span><br></pre></td></tr></table></figure>
+<p>可以看到下面訊息</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d: warning: /etc/init.d/vnc missing LSB information</span><br><span class="line">update-rc.d: see &lt;http://wiki.debian.org/LSBInitScripts&gt;</span><br><span class="line"> Adding system startup <span class="keyword">for</span> /etc/init.d/vnc ...</span><br><span class="line">   /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
+<p>也就是會產生下面幾個檔</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/etc/rc0.d/K20vnc</span><br><span class="line">/etc/rc1.d/K20vnc</span><br><span class="line">/etc/rc6.d/K20vnc</span><br><span class="line">/etc/rc2.d/S20vnc</span><br><span class="line">/etc/rc3.d/S20vnc</span><br><span class="line">/etc/rc4.d/S20vnc</span><br><span class="line">/etc/rc5.d/S20vnc</span><br></pre></td></tr></table></figure>
+<p>查看一下</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls <span class="operator">-l</span> /etc/rc?.d/*vnc</span><br></pre></td></tr></table></figure>
+<p>應該會顯示雷同下面的列表</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">13</span> Feb <span class="number">26</span> <span class="number">16</span>:<span class="number">08</span> /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
+<p>這時候重開機，應該就會自動啟動vncserver了。</p>
+<p>若要移除上面產生的檔只要執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> vnc remove</span><br></pre></td></tr></table></figure>
+<p>另外還有幾篇可以參考的文章</p>
+<ul>
+<li><a href="http://ucnote.logdown.com/posts/168337-raspberry-pi-remote-desktop-using-vnc" target="_blank" rel="external">Raspberry Pi 遠端桌面 — 使用 VNC</a></li>
+<li><a href="http://ubuntuguide.org/wiki/Ubuntu_Trusty_Remote_Access#X11VNC_Server" target="_blank" rel="external">Ubuntu Trusty Remote Access</a> &lt;– 這一篇是用「~/.config/autostart/」這個資料夾 autostart 的機制。</li>
+<li><a href="http://www.debuntu.org/how-to-managing-services-with-update-rc-d/" target="_blank" rel="external">How-To: Managing services with update-rc.d</a></li>
+<li>Ubuntu Wiki / <a href="https://wiki.ubuntu.com/TIPs_of_use_ubuntu" target="_blank" rel="external">TIPs_of_use_ubuntu</a></li>
+<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/update-rc.d.8.html" target="_blank" rel="external">update-rc.d</a></li>
+<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/insserv.8.html" target="_blank" rel="external">insserv</a></li>
+<li>$ less /etc/init.d/README</li>
+<li>$ less /etc/init.d/skeleton</li>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/VNC" target="_blank" rel="external">VNC</a></li>
+<li>Ubuntu Community Help Wiki / VNC / <a href="https://help.ubuntu.com/community/VNC/Servers" target="_blank" rel="external">Servers</a></li>
+<li>Ubuntu Community Help Wiki / VNC / <a href="https://help.ubuntu.com/community/VNC/Clients" target="_blank" rel="external">Clients</a></li>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UpstartHowto" target="_blank" rel="external">UpstartHowto</a></li>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UbuntuBootupHowto" target="_blank" rel="external">UpstartHowto</a></li>
+<li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/InitScriptList" target="_blank" rel="external">InitScriptList</a></li>
+<li><a href="http://upstart.ubuntu.com/cookbook" target="_blank" rel="external">Upstart Cookbook</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/howto/">howto</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/disk/info/" title="Ubuntu環境下，查詢硬碟資訊的指令">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/debian/driver/virtualbox-guest-dkms/" title="安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

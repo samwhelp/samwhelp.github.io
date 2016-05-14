@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> 各個程式語言環境的「Version Manager」 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" 各個程式語言環境的「Version Manager」 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" 各個程式語言環境的「Version Manager」 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" 各個程式語言環境的「Version Manager」 ">
+	<meta property="og:description" content=" 各個程式語言環境的「Version Manager」 " />
+	<meta name="twitter:description" content=" 各個程式語言環境的「Version Manager」 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/tool/management/version-manager/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-11-09">2014-11-09</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/tool/">tool</a>, <a class="category-link" href="/blog/find/category/tool/management/">management</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/tool/management/version-manager/" itemprop="url"><span itemprop="name">各個程式語言環境的「Version Manager」</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="各個程式語言環境的「Version_Manager」">各個程式語言環境的「Version Manager」</h1><h2 id="nodejs">nodejs</h2><ul>
+<li><a href="/blog/read/platform/nodejs/nvm/">nvm</a></li>
+</ul>
+<h2 id="ruby">ruby</h2><ul>
+<li><a href="/blog/read/lang/ruby/rvm/">rvm</a></li>
+<li><a href="/blog/read/lang/ruby/rbenv/">rbenv</a></li>
+</ul>
+<h2 id="python">python</h2><ul>
+<li><a href="/blog/read/lang/python/pyenv/">pyenv</a></li>
+<li><a href="/blog/read/lang/python/virtualenv/">virtualenv</a></li>
+</ul>
+<h2 id="perl">perl</h2><ul>
+<li><a href="/blog/read/lang/perl/plenv/">plenv</a></li>
+<li><a href="/blog/read/lang/perl/perlbrew/">perlbrew</a></li>
+</ul>
+<h2 id="php">php</h2><ul>
+<li><a href="/blog/read/lang/php/phpenv/">phpenv</a></li>
+<li><a href="/blog/read/lang/php/phpbrew/">phpbrew</a></li>
+<li><a href="/blog/read/lang/php/virtphp/">virtphp</a></li>
+</ul>
+<h2 id="關鍵詞彙">關鍵詞彙</h2><p>###「vm」</p>
+<ul>
+<li>「<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>」 - 「<a href="https://nodejs.org/" target="_blank" rel="external">nodejs</a>」</li>
+<li>「<a href="http://rvm.io/" target="_blank" rel="external">rvm</a>」- 「<a href="https://www.ruby-lang.org/" target="_blank" rel="external">ruby</a>」</li>
+</ul>
+<h3 id="「env」">「env」</h3><p>都是從「rbenv」衍生出來的。</p>
+<ul>
+<li>「<a href="https://github.com/sstephenson/rbenv" target="_blank" rel="external">rbenv</a>」-「<a href="http://www.ruby-lang.org/" target="_blank" rel="external">ruby</a>」</li>
+<li>「<a href="https://github.com/yyuu/pyenv" target="_blank" rel="external">pyenv</a>」-「<a href="https://www.python.org/" target="_blank" rel="external">python</a>」</li>
+<li>「<a href="https://github.com/tokuhirom/plenv/" target="_blank" rel="external">plenv</a>」-「<a href="https://www.perl.org/" target="_blank" rel="external">perl</a>」</li>
+<li>「<a href="https://github.com/phpenv/phpenv" target="_blank" rel="external">phpenv</a>」-「<a href="http://php.net/" target="_blank" rel="external">php</a>」</li>
+</ul>
+<h3 id="「brew」">「brew」</h3><ul>
+<li><p>「<a href="https://github.com/utahta/pythonbrew" target="_blank" rel="external">pythonbrew</a>」-「<a href="https://www.python.org/" target="_blank" rel="external">python</a>」</p>
+</li>
+<li><p>「<a href="https://github.com/gugod/App-perlbrew" target="_blank" rel="external">perlbrew</a>」-「<a href="https://www.perl.org/" target="_blank" rel="external">perl</a>」</p>
+</li>
+<li><p>「<a href="https://github.com/phpbrew/phpbrew" target="_blank" rel="external">phpbrew</a>」-「<a href="http://php.net/" target="_blank" rel="external">php</a>」</p>
+</li>
+</ul>
+<p>###「virtual」</p>
+<ul>
+<li>「<a href="https://github.com/pypa/virtualenv" target="_blank" rel="external">virtualenv</a>」-「<a href="https://www.python.org/" target="_blank" rel="external">python</a>」</li>
+<li>「<a href="https://github.com/virtphp/virtphp" target="_blank" rel="external">virtphp</a>」-「<a href="http://php.net/" target="_blank" rel="external">php</a>」</li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/index/">index</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/music/epic-music/" title="Epic Music">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/lang/ruby/rbenv/" title="rbenv">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

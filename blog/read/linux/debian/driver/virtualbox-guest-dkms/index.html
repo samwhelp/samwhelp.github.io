@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 ">
+	<meta property="og:description" content=" 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 " />
+	<meta name="twitter:description" content=" 安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/debian/driver/virtualbox-guest-dkms/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-02-11">2015-02-11</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/debian/">debian</a>, <a class="category-link" href="/blog/find/category/linux/debian/driver/">driver</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/debian/driver/virtualbox-guest-dkms/" itemprop="url"><span itemprop="name">安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="安裝_Debian_8_(jessie)_在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」">安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」</h1><h2 id="背景">背景</h2><p>撰寫這篇和測試的時候，Debian 8 (jessie)還在「testing」狀態。</p>
+<h2 id="前言">前言</h2><p>為何要安裝「virtualbox-guest-dkms」，<br>因為一開始「裝在virtualbox裡的系統」，支援的螢幕解析度不高，<br>所以「裝在virtualbox裡的系統」要安裝「額外的驅動程式」。<br>也就是「virtualbox-guest-dkms」。</p>
+<p>另外也請參考「<a href="/blog/read/linux/ubuntu/driver/ubuntu-drivers/">Ubuntu環境下，如何使用下指令的方式查詢「額外驅動程式</a>」這篇的說明。</p>
+<h2 id="下載安裝ISO">下載安裝ISO</h2><p>查詢「<a href="https://www.google.com.tw/#q=debian+8+iso" target="_blank" rel="external">debian 8 iso</a>」，<br>來到「<a href="https://www.debian.org/CD/http-ftp/" target="_blank" rel="external">Downloading Debian CD/DVD images via HTTP/FTP</a>」，<br>裡面有個連結「<a href="http://cdimage.debian.org/cdimage/weekly-builds/" target="_blank" rel="external">Official CD/DVD images of the “testing” distribution (regenerated weekly)</a>」<br>就可以找到「testing」狀態的「<a href="http://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/" target="_blank" rel="external">ISO</a>」。</p>
+<p>下面以「KDE」為例子。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c http://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/debian-testing-i386-kde-CD-<span class="number">1</span>.iso</span><br></pre></td></tr></table></figure>
+<h2 id="安裝到「VirtualBox」">安裝到「VirtualBox」</h2><p>略…不是本篇要提的重點，這個就不提了。</p>
+<h2 id="安裝「virtualbox-guest-dkms」">安裝「virtualbox-guest-dkms」</h2><p>參考「Debian Wiki / VirtualBox / <a href="https://wiki.debian.org/VirtualBox#Debian_.22Jessie.22_.28testing.29" target="_blank" rel="external">Debian “Jessie” (testing)</a>」。</p>
+<p>有一個關鍵的步驟「Add the “contrib” component to /etc/apt/sources.list」。</p>
+<h3 id="以下是參考步驟：">以下是參考步驟：</h3><p>一開始使用者，沒有加入sudo。<br>先用切換到root的方式。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ su root</span><br></pre></td></tr></table></figure>
+<p>會詢問你root的密碼，這個在安裝到「VirtualBox」的那一段，安裝程式就會導引你設定root的密碼了。<br>所以這時候就要輸入，哪時候設定的密碼。</p>
+<p>切換到「/etc/apt」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> /etc/apt</span><br></pre></td></tr></table></figure>
+<p>編輯「/etc/apt/sources.list」</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">vi</span> sources.<span class="keyword">list</span></span><br></pre></td></tr></table></figure>
+<p>以下舉例，看你是使用那個「[url=<a href="https://www.debian.org/mirror/list]Debian" target="_blank" rel="external">https://www.debian.org/mirror/list]Debian</a> mirror site[/url]」。</p>
+<p>原本</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="string">http:</span><span class="comment">//ftp.tw.debian.org/debian/ jessie main</span></span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb <span class="string">http:</span><span class="comment">//ftp.tw.debian.org/debian/ jessie main contrib</span></span><br></pre></td></tr></table></figure>
+<p>另外記得把下面這一行註解掉，這樣套件來源就不會從CD去找</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deb cdrom:[Debian GNU/Linux testing Jessie - Official Snapshot i386 kde-CD Binary-<span class="number">1</span> <span class="number">20150209</span>-<span class="number">04</span>:<span class="number">48</span>]/ jessie main</span><br></pre></td></tr></table></figure>
+<p>改成</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># deb cdrom:[Debian GNU/Linux testing Jessie - Official Snapshot i386 kde-CD Binary-<span class="number">1</span> <span class="number">20150209</span>-<span class="number">04</span>:<span class="number">48</span>]/ jessie main</span></span><br></pre></td></tr></table></figure>
+<p>存檔後，更新套件資訊</p>
+<figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br></pre></td></tr></table></figure>
+<p>然後安裝「virtualbox-guest-dkms」</p>
+<figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="keyword">get</span> install virtualbox-guest-dkms</span><br></pre></td></tr></table></figure>
+<p>安裝完畢後，重新開機(VirtualBox裡的系統重新開機)。</p>
+<h2 id="設定螢幕大小">設定螢幕大小</h2><p>然後到開始功能選單</p>
+<p>找到「Applications / Settings / System Settings」。</p>
+<p>啟動「System Settings」視窗，</p>
+<p>找到「Hardware / Display and Monitor」。</p>
+<p>切換到「Display Configuration」畫面。</p>
+<p>會看到「VBOX0」。</p>
+<p>下面有三個ICON，選右邊第三個，點下去，會跳出一個對話框，</p>
+<p>分成兩攔，左邊是「1600x1200」之類的，選最大的哪個數字，</p>
+<p>右邊有一個「auto」和「60.0Hz」，選「auto」。</p>
+<p>設定好後，按下「Display Configuration」畫面，右下方的「Apply」按鈕。</p>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/remote/vnc/" title="Ubuntu環境下，如何讓VNC開機自動運行">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/lxqt/install/" title="如何安裝LXQt">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

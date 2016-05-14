@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 ">
+	<meta property="og:description" content=" Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何使用calibre ebook-convert recipe的功能 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/tool/ebook/calibre/ebook-convert-recipe/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-01-26">2015-01-26</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/tool/">tool</a>, <a class="category-link" href="/blog/find/category/tool/ebook/">ebook</a>, <a class="category-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/tool/ebook/calibre/ebook-convert-recipe/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何使用calibre ebook-convert recipe的功能</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何使用calibre_ebook-convert_recipe的功能">Ubuntu環境下，如何使用calibre ebook-convert recipe的功能</h1><h2 id="測試環境">測試環境</h2><p>撰寫本文時，測試的環境是</p>
+<ul>
+<li>「Xubuntu 14.04 64位元」</li>
+<li>「calibre v1.25.0」</li>
+</ul>
+<h2 id="緣起">緣起</h2><p>在撰寫「<a href="/blog/read/platform/gitbook/start/">Ubuntu環境下，快速開始使用gitbook</a>」這篇時，發現「gitbook」是使用「<a href="http://manpages.ubuntu.com/manpages/precise/en/man1/ebook-convert.1.html" target="_blank" rel="external">ebook-convert</a>」這個「<a href="http://manual.calibre-ebook.com/cli/ebook-convert.html" target="_blank" rel="external">工具</a>」來產生「pdf」「epub」「mobi」這三個格式的檔案。</p>
+<p>然後看到有一個參數「–list-recipes」，蠻特別的。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--list-recipes</span></span><br><span class="line">       List builtin recipe names.  You  can  <span class="built_in">create</span>  <span class="operator">an</span>  ebook  <span class="built_in">from</span>  <span class="operator">a</span></span><br><span class="line">       builtin  recipe  like  this:  ebook-<span class="built_in">convert</span> <span class="string">"Recipe Name.recipe"</span></span><br><span class="line">       output.epub</span><br></pre></td></tr></table></figure>
+<p>所以執行了一下，顯示的訊息，又引起我的好奇心了。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ebook-<span class="built_in">convert</span> <span class="comment">--list-recipes</span></span><br></pre></td></tr></table></figure>
+<p>顯示的訊息</p>
+<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">	...略...</span><br><span class="line"></span><br><span class="line">	中時電子報</span><br><span class="line">	人民日报</span><br><span class="line">	日本経済新聞（朝刊・夕刊）</span><br><span class="line">	日経新聞電子版<span class="comment">(Free, MAX)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(MAX)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(Social)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(スポーツ)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(生活)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(産業)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(経済)</span></span><br><span class="line">	日経新聞電子版<span class="comment">(総合)</span></span><br><span class="line">	星島日報 <span class="comment">(香港)</span></span><br><span class="line">	時事通信</span><br><span class="line">	毎日新聞</span><br><span class="line">	毎日新聞<span class="comment">(Science)</span></span><br><span class="line">	河北新報</span><br><span class="line">	联合早报网 zaobao.com</span><br><span class="line">	聯合新聞網</span><br><span class="line">	自由電子報</span><br><span class="line">	蘋果日報 <span class="comment">(香港)</span></span><br><span class="line"></span><br><span class="line">	...略...</span><br><span class="line"></span><br><span class="line"><span class="number">1544</span> recipes available</span><br></pre></td></tr></table></figure>
+<p>所以使用「<a href="https://www.google.com.tw/#q=calibre+recipe&amp;tbs=lr:lang_1zh-TW&amp;lr=lang_zh-TW" target="_blank" rel="external">calibre recipe</a>」查詢了一下資料，看到「<a href="http://vk1968.blogspot.tw/2013/04/calibre-kindle.html" target="_blank" rel="external">這篇</a>」和「<a href="http://www.opensource.net.tw/node/35" target="_blank" rel="external">這篇</a>」參考文章。</p>
+<p>原來可以這樣使用。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ebook-convert <span class="string">"聯合新聞網.recipe"</span> udn.pdf</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ebook-convert <span class="string">"聯合新聞網.recipe"</span> udn.epub</span><br></pre></td></tr></table></figure>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ebook-convert <span class="string">"聯合新聞網.recipe"</span> udn.mobi</span><br></pre></td></tr></table></figure>
+<p>不過抓出來的，有些內容是亂碼，我猜應該是網頁編碼不一致的問題。</p>
+<h2 id="深入探索">深入探索</h2><p>若已經有安裝「<a href="http://packages.ubuntu.com/trusty/calibre" target="_blank" rel="external">calibre</a>」這個套件。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install calibre</span><br></pre></td></tr></table></figure>
+<p>切換到「/usr/share/calibre/」這個資料夾。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd <span class="regexp">/usr/</span>share<span class="regexp">/calibre/</span></span><br></pre></td></tr></table></figure>
+<p>可以看到兩個檔「builtin_recipes.xml」和「builtin_recipes.zip」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls <span class="built_in">builtin</span>_recipes.*</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">builtin_recipes.<span class="keyword">xml</span>  <span class="title">builtin_recipes</span>.zip</span><br></pre></td></tr></table></figure>
+<p>查看「builtin_recipes.xml」內容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep zh_TW ./<span class="built_in">builtin</span>_recipes.xml</span><br></pre></td></tr></table></figure>
+<p>可以看到</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;recipe description=<span class="string">"United Daily (Taiwan)"</span> language=<span class="string">"zh_TW"</span></span><br><span class="line">author=<span class="string">"Eddie Lau"</span> title=<span class="string">"聯合新聞網"</span> needs_subscription=<span class="string">"no"</span> <span class="property">id</span>=<span class="string">"builtin:united_daily"</span>/&gt;</span><br></pre></td></tr></table></figure>
+<p>解開「builtin_recipes.zip」到「/tmp/recipe」。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ unzip <span class="built_in">builtin</span>_recipes.zip <span class="operator">-d</span> /tmp/recipe</span><br></pre></td></tr></table></figure>
+<p>利用「united_daily」查詢相關的檔案。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ls /tmp/recipe/united_daily*</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/tmp/</span>recipe<span class="regexp">/united_daily.recipe</span></span><br></pre></td></tr></table></figure>
+<p>觀看「united_daily.recipe」</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="operator">less</span> /tmp/recipe/united_daily.recipe</span><br></pre></td></tr></table></figure>
+<h2 id="custom_recipe">custom recipe</h2><p>以下以「<a href="http://www.ubuntu-tw.org/modules/newbb/rss.php" target="_blank" rel="external">http://www.ubuntu-tw.org/modules/newbb/rss.php</a>」這個「RSS Feed」為例。</p>
+<p>根據「<a href="http://www.opensource.net.tw/node/35" target="_blank" rel="external">這篇</a>」提到的，可以利用「calibre」的「GUI」來產生自己的「recipe」。</p>
+<p>產生的檔案會放在「~/.config/calibre/custom_recipes」這個資料夾。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/.config/calibre</span><span class="regexp">/custom_recipes</span><br><span class="line">$ ls</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">index</span><span class="class">.json</span>  <span class="tag">UbuntuTw_1000</span><span class="class">.recipe</span></span><br></pre></td></tr></table></figure>
+<p>觀看「UbuntuTw_1000.recipe」的內容</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat <span class="constant">UbuntuTw_1000</span>.recipe</span><br></pre></td></tr></table></figure>
+<p>「UbuntuTw_1000.recipe」的內容如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BasicUserRecipe1422253355</span><span class="params">(AutomaticNewsRecipe)</span>:</span></span><br><span class="line">    title          = <span class="string">u'UbuntuTw'</span></span><br><span class="line">    oldest_article = <span class="number">7</span></span><br><span class="line">    max_articles_per_feed = <span class="number">100</span></span><br><span class="line">    auto_cleanup = <span class="keyword">True</span></span><br><span class="line"></span><br><span class="line">    feeds          = [(<span class="string">u'UbuntuTw'</span>, <span class="string">u'http://www.ubuntu-tw.org/modules/newbb/rss.php'</span>)]</span><br></pre></td></tr></table></figure>
+<p>除了可以使用GUI的「Fetch news」的功能，<br>也可以執行下面的指令。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cd ~/.config/calibre/custom_recipes</span></span><br><span class="line"></span><br><span class="line">ebook-convert UbuntuTw_1000.recipe UbuntuTw.pdf</span><br><span class="line"></span><br><span class="line">ebook-convert UbuntuTw_1000.recipe UbuntuTw.epub</span><br><span class="line"></span><br><span class="line">ebook-convert UbuntuTw_1000.recipe UbuntuTw.mobi</span><br></pre></td></tr></table></figure>
+<h2 id="官方參考文件">官方參考文件</h2><ul>
+<li><a href="http://manual.calibre-ebook.com/news.html" target="_blank" rel="external">http://manual.calibre-ebook.com/news.html</a></li>
+<li><a href="http://manual.calibre-ebook.com/news_recipe.html" target="_blank" rel="external">http://manual.calibre-ebook.com/news_recipe.html</a></li>
+<li><a href="http://manual.calibre-ebook.com/conversion.html" target="_blank" rel="external">http://manual.calibre-ebook.com/conversion.html</a></li>
+<li><a href="http://manual.calibre-ebook.com/cli/ebook-convert.html" target="_blank" rel="external">http://manual.calibre-ebook.com/cli/ebook-convert.html</a></li>
+<li><a href="http://blog.calibre-ebook.com/2011/10/custom-news-fetching.html" target="_blank" rel="external">http://blog.calibre-ebook.com/2011/10/custom-news-fetching.html</a></li>
+</ul>
+<h2 id="Wiki">Wiki</h2><ul>
+<li><a href="http://zh.wikipedia.org/zh-tw/Calibre" target="_blank" rel="external">http://zh.wikipedia.org/zh-tw/Calibre</a></li>
+</ul>
+<h2 id="其他文章">其他文章</h2><ul>
+<li><a href="http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html" target="_blank" rel="external">http://blog.codinglabs.org/articles/convert-html-to-kindle-book.html</a></li>
+<li><a href="http://richardustc.github.io/blog/2013/06/calibre-recipe-howto/" target="_blank" rel="external">http://richardustc.github.io/blog/2013/06/calibre-recipe-howto/</a></li>
+<li><a href="https://mine260309.me/archives/1160" target="_blank" rel="external">https://mine260309.me/archives/1160</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/calibre/">calibre</a>, <a class="tag-link" href="/blog/find/tag/ebook/">ebook</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/platform/gitbook/plugin/" title="gitbook使用plugin">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/platform/gitbook/start/" title="Ubuntu環境下，快速開始使用gitbook">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

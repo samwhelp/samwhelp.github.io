@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Xubuntu Window Tiling (視窗平鋪) | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Xubuntu Window Tiling (視窗平鋪) | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Xubuntu Window Tiling (視窗平鋪) | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Xubuntu Window Tiling (視窗平鋪) ">
+	<meta property="og:description" content=" Xubuntu Window Tiling (視窗平鋪) " />
+	<meta name="twitter:description" content=" Xubuntu Window Tiling (視窗平鋪) " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/tiling/xubuntu/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-11-26">2015-11-26</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/tiling/xubuntu/" itemprop="url"><span itemprop="name">Xubuntu Window Tiling (視窗平鋪)</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Xubuntu_Window_Tiling_(視窗平鋪)">Xubuntu Window Tiling (視窗平鋪)</h1><h2 id="前言">前言</h2><p>今天研究了一下在「Xubuntu (XFCE)」下，「Window Tiling (視窗平鋪)」的功能。</p>
+<p>一開始找到了兩個方案。</p>
+<ul>
+<li>xfwm4-settings ( Settings / Window Manager / Keyboard / Tile Window * )</li>
+<li><a href="http://ssokolow.com/quicktile/" target="_blank" rel="external">QuickTile</a> (<a href="https://github.com/ssokolow/quicktile" target="_blank" rel="external">GitHub</a>)</li>
+</ul>
+<p>後來又找到一個「Tiling by drag window」，原本就有的功能，<br>有一個設定要調整，請看最下面的說明。</p>
+<ul>
+<li>xfwm4-settings ( Settings / Window Manager / Advanced / )個</li>
+</ul>
+<h2 id="找尋過程">找尋過程</h2><p>一開始想說，找看看「Xubuntu(Xfce)」下的快速鍵，<br>我知道的有兩個地方可以設定「快速鍵(Shortcuts)」。</p>
+<ul>
+<li><a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-keyboard-settings.1.html" target="_blank" rel="external">xfce4-keyboard-settings</a> ( Settings / Keyboard / Application Shortcuts )</li>
+<li><a href="http://manpages.ubuntu.com/manpages/trusty/man1/xfwm4-settings.1.html" target="_blank" rel="external">xfwm4-settings</a> ( Settings / Window Manager / Keyboard )</li>
+</ul>
+<p>一開始摸不著頭緒，所以想起<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=328262#forumpost328262" target="_blank" rel="external">以前</a>看過的的一篇文章「<a href="http://www.openfoundry.org/tw/foss-programs/9191-gnomekde-cinnamon-" target="_blank" rel="external">Gnome、KDE 與 Cinnamon 的平鋪視窗控制</a>」</p>
+<p>找到關鍵字「Tiling」，用「<a href="https://www.google.com.tw/#q=xfce+tilingg" target="_blank" rel="external">xfce tilingg</a>」，查了一下，找到上面兩個解決方案。</p>
+<p>後來又找到一個「Tiling by drag window」，原本就有的功能，</p>
+<p>只是因為一個設定的關係變成另一個功能，請看最下面的說明。</p>
+<h2 id="測試環境">測試環境</h2><p>Xubuntu 14.04 64 位元</p>
+<h2 id="方案_-_xfwm4-settings">方案 - xfwm4-settings</h2><p>在Xubuntu左上方，點選，下拉出「功能選單(開始功能表)」，</p>
+<p>然後點選「Settings / Window Manager (或是執行 <code>$ xfwm4-settings</code>)」。</p>
+<p>就會出現「Window Manager」這個設定對話框。</p>
+<p>選擇「Keyboard」這個頁籤。</p>
+<p>然後向下捲動，就會看到四個「Action」</p>
+<ul>
+<li>Tile window to the top</li>
+<li>Tile window to the bottom</li>
+<li>Tile window to the left</li>
+<li>Tile window to the right</li>
+</ul>
+<p>一開始是沒有綁定「快速鍵」，所以「shortcut」那一個欄位是空白。</p>
+<p>所以我自己做了以下的設定。</p>
+<ul>
+<li>Tile window to the top =&gt; <code>Super+K</code></li>
+<li>Tile window to the bottom =&gt; <code>Super+J</code></li>
+<li>Tile window to the left =&gt; <code>Super+H</code></li>
+<li>Tile window to the right =&gt; <code>Super+L</code></li>
+</ul>
+<p>「hjkl」跟vi的方向鍵一樣。</p>
+<p>而「Super」則是，「視窗鍵(window鍵)」。</p>
+<p>設定檔的路徑在「~/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml」。</p>
+<h2 id="方案_-_QuickTile">方案 - QuickTile</h2><p>事先安裝相依套件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install python python-gtk2 python-xlib python-dbus python-wnck</span><br></pre></td></tr></table></figure>
+<p>clone 「QuickTile」專案下來</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/ssokolow/quicktile.git</span><br></pre></td></tr></table></figure>
+<p>切換到「quicktile」這個資料夾</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> quicktile</span><br></pre></td></tr></table></figure>
+<p>安裝</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo ./setup.py install</span><br></pre></td></tr></table></figure>
+<p>就會安裝完畢</p>
+<p>主要有兩個檔</p>
+<ul>
+<li>「/etc/xdg/autostart/quicktile.desktop」 &lt;== 重新開機就會執行這個檔</li>
+<li>「/usr/local/bin/quicktile.py」&lt;== 上面的設定則會執行「quicktile.py」這個指令。</li>
+</ul>
+<p>第一次執行下面指令，產生預設的設定檔</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO: Wrote <span class="keyword">default</span> config <span class="keyword">file</span> to <span class="regexp">/home/u</span>ser<span class="regexp">/.config/</span>quicktile.cfg</span><br></pre></td></tr></table></figure>
+<p>也就是會在「~/.config/」這個資料夾，產生預設的設定檔「quicktile.cfg」。</p>
+<p>觀看「~/.config/quicktile.cfg」的內容</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat ~/.config/quicktile.cfg</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[general]</span></span><br><span class="line"><span class="setting">cfg_schema = <span class="value"><span class="number">1</span></span></span></span><br><span class="line"><span class="setting">UseWorkarea = <span class="value"><span class="keyword">True</span></span></span></span><br><span class="line"><span class="setting">ModMask = <span class="value">&lt;Ctrl&gt;&lt;Alt&gt;</span></span></span><br><span class="line"><span class="title"></span><br><span class="line">[keys]</span></span><br><span class="line"><span class="setting">C = <span class="value">move-to-center</span></span></span><br><span class="line"><span class="setting">H = <span class="value">horizontal-maximize</span></span></span><br><span class="line"><span class="setting">V = <span class="value">vertical-maximize</span></span></span><br><span class="line"><span class="setting">KP_0 = <span class="value">maximize</span></span></span><br><span class="line"><span class="setting">KP_1 = <span class="value">bottom-left</span></span></span><br><span class="line"><span class="setting">KP_2 = <span class="value">bottom</span></span></span><br><span class="line"><span class="setting">KP_3 = <span class="value">bottom-right</span></span></span><br><span class="line"><span class="setting">KP_4 = <span class="value">left</span></span></span><br><span class="line"><span class="setting">KP_5 = <span class="value">middle</span></span></span><br><span class="line"><span class="setting">KP_6 = <span class="value">right</span></span></span><br><span class="line"><span class="setting">KP_7 = <span class="value">top-left</span></span></span><br><span class="line"><span class="setting">KP_8 = <span class="value">top</span></span></span><br><span class="line"><span class="setting">KP_9 = <span class="value">top-right</span></span></span><br><span class="line"><span class="setting">KP_Enter = <span class="value">monitor-switch</span></span></span><br></pre></td></tr></table></figure>
+<p>執行下面的指令，將「<code>ModMask = &lt;Ctrl&gt;&lt;Alt&gt;</code>」改成「<code>ModMask = &lt;Ctrl&gt;&lt;Mod4&gt;</code>」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sed <span class="string">'s/ModMask = &lt;Ctrl&gt;&lt;Alt&gt;/ModMask = &lt;Ctrl&gt;&lt;Mod4&gt;/g'</span> ~/.config/quicktile.cfg -i.bak</span><br></pre></td></tr></table></figure>
+<p>就會將「~/.config/quicktile.cfg」先備份到「~/.config/quicktile.cfg.bak」</p>
+<p>然後改掉內容，如下</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[general]</span></span><br><span class="line"><span class="setting">cfg_schema = <span class="value"><span class="number">1</span></span></span></span><br><span class="line"><span class="setting">UseWorkarea = <span class="value"><span class="keyword">True</span></span></span></span><br><span class="line"><span class="setting">ModMask = <span class="value">&lt;Ctrl&gt;&lt;Mod4&gt;</span></span></span><br><span class="line"><span class="title"></span><br><span class="line">[keys]</span></span><br><span class="line"><span class="setting">C = <span class="value">move-to-center</span></span></span><br><span class="line"><span class="setting">H = <span class="value">horizontal-maximize</span></span></span><br><span class="line"><span class="setting">V = <span class="value">vertical-maximize</span></span></span><br><span class="line"><span class="setting">KP_0 = <span class="value">maximize</span></span></span><br><span class="line"><span class="setting">KP_1 = <span class="value">bottom-left</span></span></span><br><span class="line"><span class="setting">KP_2 = <span class="value">bottom</span></span></span><br><span class="line"><span class="setting">KP_3 = <span class="value">bottom-right</span></span></span><br><span class="line"><span class="setting">KP_4 = <span class="value">left</span></span></span><br><span class="line"><span class="setting">KP_5 = <span class="value">middle</span></span></span><br><span class="line"><span class="setting">KP_6 = <span class="value">right</span></span></span><br><span class="line"><span class="setting">KP_7 = <span class="value">top-left</span></span></span><br><span class="line"><span class="setting">KP_8 = <span class="value">top</span></span></span><br><span class="line"><span class="setting">KP_9 = <span class="value">top-right</span></span></span><br><span class="line"><span class="setting">KP_Enter = <span class="value">monitor-switch</span></span></span><br></pre></td></tr></table></figure>
+<p>執行下面的指令，就會起一個背景程式(指令行最後面可以加<code>&amp;</code>, 目前測試所以沒加)</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py <span class="operator">-d</span></span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py --daemonize</span><br></pre></td></tr></table></figure>
+<p>就會顯示</p>
+<figure class="highlight ceylon"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">class</span> <span class="string">'Xlib.protocol.request.QueryExtension'</span>&gt;</span><br></pre></td></tr></table></figure>
+<p>這時候就可以找一個目前使用的「視窗(應用程式)」來測試，</p>
+<p>同時按下「Ctrl」+「視窗鍵」+「數字鍵」，就會將該視窗平鋪在該位置。</p>
+<p>注意這裡指的「數字鍵」，是鍵盤右方的「數字鍵盤」，「9宮格位置」剛好對應「螢幕位置」。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> <span class="number">8</span> <span class="number">9</span></span><br><span class="line"><span class="number">4</span> <span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<p>剛剛只是測試，上面的指令「<code>quicktile.py --daemonize</code>」，重開機會自動執行，</p>
+<p>因為有這個檔「/etc/xdg/autostart/quicktile.desktop」。</p>
+<p>觀看「/etc/xdg/autostart/quicktile.desktop」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /etc/xdg/autostart/quicktile.desktop</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[Desktop Entry]</span></span><br><span class="line"><span class="setting">Encoding=<span class="value">UTF-<span class="number">8</span></span></span></span><br><span class="line"><span class="setting">Version=<span class="value"><span class="number">1.0</span></span></span></span><br><span class="line"><span class="setting">Name=<span class="value">QuickTile</span></span></span><br><span class="line"><span class="setting">GenericName=<span class="value">Window-Tiling Helper</span></span></span><br><span class="line"><span class="setting">Type=<span class="value">Application</span></span></span><br><span class="line"><span class="setting">Exec=<span class="value">quicktile.py --daemonize</span></span></span><br><span class="line"><span class="setting">Categories=<span class="value">Utility;</span></span></span><br></pre></td></tr></table></figure>
+<p>你也可以在「Settings / Session and Startup / Application Autostart」</p>
+<p>找到「QuickTile」這一個項目。</p>
+<p>「Settings / Session and Startup」的指令是「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-session-settings.1.html" target="_blank" rel="external">xfce4-session-settings</a>」</p>
+<p>所以也可以執行下面的指令啟動。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ xfce4-session-settings</span><br></pre></td></tr></table></figure>
+<h2 id="quicktile-py_更多用法">quicktile.py 更多用法</h2><p>直接執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">Known Commands       </span><br><span class="line"><span class="comment">--------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line">Ask the Window Manager to <span class="operator"><span class="keyword">begin</span> a keyboard-driven operation</span><br><span class="line"> <span class="keyword">trigger</span>-<span class="keyword">move</span>         </span><br><span class="line"> <span class="keyword">trigger</span>-<span class="keyword">resize</span>       </span><br><span class="line"></span><br><span class="line">Center the window <span class="keyword">in</span> the monitor it currently occupies</span><br><span class="line"> <span class="keyword">move</span>-<span class="keyword">to</span>-center       </span><br><span class="line"></span><br><span class="line"><span class="keyword">Cycle</span> the active window <span class="keyword">between</span> monitors <span class="keyword">while</span> preserving <span class="keyword">position</span></span><br><span class="line"> monitor-<span class="keyword">next</span>         </span><br><span class="line"> monitor-prev         </span><br><span class="line"> monitor-<span class="keyword">switch</span>       </span><br><span class="line"></span><br><span class="line"><span class="keyword">Cycle</span> the active window <span class="keyword">through</span> a <span class="keyword">list</span> <span class="keyword">of</span> positions <span class="keyword">and</span> shapes</span><br><span class="line"> bottom               </span><br><span class="line"> bottom-<span class="keyword">left</span>          </span><br><span class="line"> bottom-<span class="keyword">right</span>         </span><br><span class="line"> <span class="keyword">left</span>                 </span><br><span class="line"> middle               </span><br><span class="line"> <span class="keyword">right</span>                </span><br><span class="line"> top                  </span><br><span class="line"> top-<span class="keyword">left</span>             </span><br><span class="line"> top-<span class="keyword">right</span>            </span><br><span class="line"></span><br><span class="line"><span class="keyword">Move</span> the active window <span class="keyword">to</span> another workspace (<span class="keyword">next</span>/prev wrap around)</span><br><span class="line"> workspace-send-down  </span><br><span class="line"> workspace-send-<span class="keyword">left</span>  </span><br><span class="line"> workspace-send-<span class="keyword">next</span>  </span><br><span class="line"> workspace-send-prev  </span><br><span class="line"> workspace-send-<span class="keyword">right</span></span><br><span class="line"> workspace-send-up    </span><br><span class="line"></span><br><span class="line"><span class="keyword">Switch</span> the active workspace (<span class="keyword">next</span>/prev wrap around)</span><br><span class="line"> workspace-<span class="keyword">go</span>-down    </span><br><span class="line"> workspace-<span class="keyword">go</span>-<span class="keyword">left</span>    </span><br><span class="line"> workspace-<span class="keyword">go</span>-<span class="keyword">next</span>    </span><br><span class="line"> workspace-<span class="keyword">go</span>-prev    </span><br><span class="line"> workspace-<span class="keyword">go</span>-<span class="keyword">right</span>   </span><br><span class="line"> workspace-<span class="keyword">go</span>-up      </span><br><span class="line"></span><br><span class="line">Toggle <span class="string">"all windows minimized"</span> <span class="keyword">to</span> <span class="keyword">view</span> the desktop</span><br><span class="line"> <span class="keyword">show</span>-desktop         </span><br><span class="line"></span><br><span class="line">Toggle window state <span class="keyword">on</span> the active window</span><br><span class="line"> all-desktops         </span><br><span class="line"> <span class="keyword">always</span>-above         </span><br><span class="line"> <span class="keyword">always</span>-below         </span><br><span class="line"> bordered             </span><br><span class="line"> fullscreen           </span><br><span class="line"> horizontal-<span class="keyword">maximize</span>  </span><br><span class="line"> <span class="keyword">maximize</span>             </span><br><span class="line"> minimize             </span><br><span class="line"> shade                </span><br><span class="line"> vertical-<span class="keyword">maximize</span>    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">Use</span> <span class="comment">--help for a list of valid options.</span></span></span><br></pre></td></tr></table></figure>
+<p>所以就可以執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py show-desktop</span><br></pre></td></tr></table></figure>
+<p>就會將所有的視窗縮小到工具列，顯示桌面。(Xubuntu內建的快速鍵<code>Ctrl+Alt+D</code>)</p>
+<p>其他就自行把玩吧。</p>
+<h2 id="manual">manual</h2><p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py -h</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Usage</span>: <span class="string">quicktile.py [options] [action] ...</span></span><br><span class="line"></span><br><span class="line"><span class="stata">Options:</span><br><span class="line">  --<span class="keyword">version</span>          show <span class="keyword">program</span>'s <span class="keyword">version</span> number and <span class="keyword">exit</span></span><br><span class="line">  -<span class="keyword">h</span>, --<span class="keyword">help</span>         show this <span class="keyword">help</span> message and <span class="keyword">exit</span></span><br><span class="line">  -<span class="keyword">d</span>, --daemonize    Attempt to <span class="keyword">set</span> up <span class="keyword">global</span> keybindings using python-xlib</span><br><span class="line">                     and a <span class="keyword">D</span>-Bus service using dbus-python. <span class="keyword">Exit</span> <span class="keyword">if</span> neither</span><br><span class="line">                     succeeds</span><br><span class="line">  -b, --bindkeys     Deprecated alias <span class="keyword">for</span> --daemonize</span><br><span class="line">  --debug            <span class="keyword">Display</span> debug messages</span><br><span class="line">  --<span class="keyword">no</span>-workarea      Overlap panels but work better with non-rectangular</span><br><span class="line">                     desktops</span><br><span class="line"></span><br><span class="line">  Additional <span class="keyword">Help</span>:</span><br><span class="line">    --show-bindings  <span class="keyword">List</span> all configured keybinds</span><br><span class="line">    --show-actions   <span class="keyword">List</span> valid arguments <span class="keyword">for</span> <span class="keyword">use</span> without --daemonize</span></span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py --show-bindings</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">Keybindings defined for use with --daemonize:</span><br><span class="line"></span><br><span class="line">Modifier: &lt;Ctrl&gt;&lt;Mod4&gt;</span><br><span class="line"></span><br><span class="line">Key      Action              </span><br><span class="line">-------- -------------------</span><br><span class="line"> C        <span class="instruction"> move-to-center </span>     </span><br><span class="line"> H         horizontal-maximize</span><br><span class="line"> KP_0      maximize            </span><br><span class="line"> KP_1      bottom-left         </span><br><span class="line"> KP_2      bottom              </span><br><span class="line"> KP_3      bottom-right        </span><br><span class="line"> KP_4      left                </span><br><span class="line"> KP_5      middle              </span><br><span class="line"> KP_6      right               </span><br><span class="line"> KP_7      top-left            </span><br><span class="line"> KP_8      top                 </span><br><span class="line"> KP_9      top-right           </span><br><span class="line"> KP_Enter <span class="instruction"> monitor-switch </span>     </span><br><span class="line"> V         vertical-maximize</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py --show-actions</span><br></pre></td></tr></table></figure>
+<p>等同剛剛執行 <code>$ quicktile.py</code> 顯示的結果。</p>
+<p>也可以執行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py show-desktop --debug</span><br></pre></td></tr></table></figure>
+<p>加上「–debug」，可以看到額外的「除錯訊息」。</p>
+<h2 id="Tiling_by_drag_window">Tiling by drag window</h2><p>從「<a href="http://askubuntu.com/questions/483341/how-to-tile-window-by-mouse-to-left-right-edge-in-xfce-like-in-unity" target="_blank" rel="external">這篇討論</a>」，</p>
+<p>發現「Tiling by drag window」的方式。</p>
+<p>一開始我嘗試不出來，所以才先找快速鍵的方式。</p>
+<p>原來設定的方式，導致變成另一個功能，關鍵點如下，</p>
+<p>從「Settings / Window Manager / Advanced」</p>
+<p>在「Wrap workspaces when reaching the screen edge」，</p>
+<p>有一個選項「With a dragged window」不勾選。</p>
+<p>這樣用滑鼠拖拉視窗到左方，上方，下方，右方，</p>
+<p>就會有「Tiling」的效果。</p>
+<p>我原本有勾選「With a dragged window」，</p>
+<p>而且我有開多個「Workspace」，所以當拖拉視窗到左右邊界的時候，是會切換到不同的「Workspace」。</p>
+<p>我就在納悶，我以前用拖拉的方式可以，現在怎麼不行。</p>
+<p>原來是要更改這個設定。</p>
+<h2 id="Move_window_to_another_workspace">Move window to another workspace</h2><p>視窗移到不同的Workspace，我通常是在視窗標題列按下右鍵，選擇「Move to Another Workspace / n」。</p>
+<p>今天發現「( Settings / Window Manager / Keyboard / )」那也有綁定快速鍵，可以從那裡查詢。</p>
+<h2 id="相關討論">相關討論</h2><ul>
+<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=347738#forumpost347738" target="_blank" rel="external">Xubuntu(XFCE) Window Tiling (視窗平鋪)</a></li>
+<li><a href="https://www.google.com.tw/#q=xfce+windows+snapping" target="_blank" rel="external">xfce windows snapping</a>，也可以查到很多相關資料。例如「<a href="https://www.leaseweb.com/labs/2014/04/new-xfce-features-xubuntu-14-04-trusty-tahr/" target="_blank" rel="external">這篇url</a>」。</li>
+</ul>
+<h2 id="官方文件">官方文件</h2><ul>
+<li>Xfce / <a href="http://www.xfce.org/about/tour410" target="_blank" rel="external">Xfce 4.10 tour</a></li>
+<li><a href="http://docs.xfce.org" target="_blank" rel="external">Xfce Docs</a> / xfwm4 / <a href="http://docs.xfce.org/xfce/xfwm4/preferences" target="_blank" rel="external">preferences</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/info/doc/" title="info info 是屬於那個套件">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/fedora/release/22/info/" title="Fedora 22 Released">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 ">
+	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-find-out-what-package-a-file-belongs-to/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-01-05">2015-01-05</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/package/">package</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/package/how-to-find-out-what-package-a-file-belongs-to/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何查詢某個檔案，屬於哪個套件</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何查詢某個檔案，屬於哪個套件">Ubuntu環境下，如何查詢某個檔案，屬於哪個套件</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
+<h2 id="前提">前提</h2><p>以「uname」這個指令為例</p>
+<p>uname 用法範例</p>
+<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ uname -<span class="literal">a</span></span><br></pre></td></tr></table></figure>
+<h2 id="操作步驟">操作步驟</h2><p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S uname</span><br></pre></td></tr></table></figure>
+<p>會看到（依照系統安裝的套件而定）</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">manpages-<span class="string">posix:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1/uname<span class="number">.1</span>posix.gz</span><br><span class="line"><span class="string">coreutils:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1/uname<span class="number">.1</span>.gz</span><br><span class="line">manpages-<span class="string">dev:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man2/oldolduname<span class="number">.2</span>.gz</span><br><span class="line">python3<span class="number">.4</span>-<span class="string">examples:</span> <span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>python3<span class="number">.4</span><span class="regexp">/examples/</span>scripts/find-uname.py</span><br><span class="line">python2<span class="number">.7</span>-<span class="string">examples:</span> <span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>python2<span class="number">.7</span><span class="regexp">/examples/</span>Demo<span class="regexp">/scripts/</span>find-uname.py</span><br><span class="line"><span class="string">coreutils:</span> <span class="regexp">/bin/</span>uname</span><br><span class="line">klibc-<span class="string">utils:</span> <span class="regexp">/usr/</span>lib<span class="regexp">/klibc/</span>bin/uname</span><br><span class="line">manpages-<span class="string">dev:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man2/olduname<span class="number">.2</span>.gz</span><br><span class="line">manpages-posix-<span class="string">dev:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man3/uname<span class="number">.3</span>posix.gz</span><br><span class="line">manpages-<span class="string">dev:</span> <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man2/uname<span class="number">.2</span>.gz</span><br></pre></td></tr></table></figure>
+<p>然後執行</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>whereis uname</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">uname:</span> <span class="regexp">/bin/</span>uname <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man2<span class="regexp">/uname.2.gz /</span>usr<span class="regexp">/share/</span>man<span class="regexp">/man1/</span>uname<span class="number">.1</span>posix.gz <span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1<span class="regexp">/uname.1.gz /</span>usr<span class="regexp">/share/</span>man<span class="regexp">/man3/</span>uname<span class="number">.3</span>posix.gz</span><br></pre></td></tr></table></figure>
+<p>可以知道「uname」這個指令，是放在「/bin/uname」這個路徑。</p>
+<p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /bin/uname</span><br></pre></td></tr></table></figure>
+<p>會看到</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">coreutils:</span> <span class="regexp">/bin/</span>uname</span><br></pre></td></tr></table></figure>
+<p>最後就可以知道，「uanme」這個指令是屬於「coreutils」這個套件。</p>
+<p>注意要有安裝該套件，才有辦法使用「dpkg -S」查到。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/dpkg/info/coreutils.list | grep uname</span><br></pre></td></tr></table></figure>
+<h2 id="例外狀況">例外狀況</h2><p>另外有種狀況，即使你安裝了該套件，但有些檔案，你也查不到是屬於哪個套件了。<br>因為該檔案是透過「dpkg trigger」的機制安裝的。</p>
+<p>例如：你查不到「/etc/networks」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /etc/networks</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">query:</span> no path found matching pattern <span class="regexp">/etc/</span>networks</span><br></pre></td></tr></table></figure>
+<p>你可以觀看「/var/lib/dpkg/info/base-files.postinst」。</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postinst</span> | <span class="title">grep</span> <span class="title">networks</span></span></span><br></pre></td></tr></table></figure>
+<p>可以看到一行</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install_from_default <span class="regexp">/usr/</span>share<span class="regexp">/base-files/</span>networks      <span class="regexp">/etc/</span>networks</span><br></pre></td></tr></table></figure>
+<p>查看一下「/usr/share/base-files/networks」和「/etc/networks」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /usr/share/base-files/networks</span><br><span class="line">cat /etc/networks</span><br></pre></td></tr></table></figure>
+<p>所以用「dpkg -S」找不到檔案屬於哪個套件，可以嘗試到「/var/lib/dpkg/info/」去找。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ grep <span class="string">'/etc/networks'</span> /var/lib/dpkg/info/ -R</span><br></pre></td></tr></table></figure>
+<h2 id="附帶一提">附帶一提</h2><p>另外在「/var/lib/dpkg/info/」可以看到一些跟「base-files」有關的檔案</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ls /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>* -1</span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">conffiles</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">list</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">md5sums</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postinst</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postrm</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">preinst</span></span></span><br></pre></td></tr></table></figure>
+<p>你可以下載「<a href="http://packages.ubuntu.com/trusty/base-files" target="_blank" rel="external">base-files</a>」，「<a href="/book-ubuntu-exploration/book/content/package/base-files/info.html">解開來看</a>」。</p>
+<figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">apt</span>-<span class="preprocessor">get</span> download <span class="keyword">base-files</span><br><span class="line"></span><span class="label">dpkg</span> -e <span class="keyword">base-files_7.2ubuntu5.2_amd64.deb</span><br><span class="line"></span><span class="label">tree</span> DEBIAN</span><br></pre></td></tr></table></figure>
+<p>就會看到</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DEBIAN</span><br><span class="line">├── conffiles</span><br><span class="line">├── control</span><br><span class="line">├── md5sums</span><br><span class="line">├── postinst</span><br><span class="line">├── postrm</span><br><span class="line">└── preinst</span><br><span class="line"></span><br><span class="line"><span class="number">0</span> directories, <span class="number">6</span> files</span><br></pre></td></tr></table></figure>
+<p>確認一下「DEBIAN/postinst」是不是和「/var/lib/dpkg/info/base-files.postinst」一樣。</p>
+<p>執行</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>md5sum <span class="constant">DEBIAN</span>/postinst</span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">29</span>eac8bafe921c9e7a537<span class="built_in">cd</span>58e272fae  DEBIAN/postinst</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>md5sum /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postinst</span></span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">29</span>eac8bafe921c9e7a537cd58e272fae  /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postinst</span></span></span><br></pre></td></tr></table></figure>
+<p>另一個檔「/etc/default/locale」也是蠻特殊的，「dpkg -S」找不到。</p>
+<p>執行</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S <span class="regexp">/etc/</span><span class="keyword">default</span><span class="regexp">/locale</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-query: no path found matching pattern /etc/default/locale</span><br></pre></td></tr></table></figure>
+<p>所以</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>grep <span class="string">'/etc/default/locale'</span> /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/ -<span class="title">R</span></span></span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">dictionaries</span>-<span class="title">common</span>.<span class="title">config</span>:    <span class="comment"># If system is already installed use /etc/default/locale contents.</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">dictionaries</span>-<span class="title">common</span>.<span class="title">config</span>:    <span class="title">if</span> ( -<span class="title">e</span> "/<span class="title">etc</span>/<span class="title">default</span>/<span class="title">locale</span>" )&#123;</span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">language</span>-<span class="title">selector</span>-<span class="title">common</span>.<span class="title">postinst</span>:<span class="title">if</span> <span class="title">dpkg</span> --<span class="title">compare</span>-<span class="title">versions</span> "$2" <span class="title">lt</span>-<span class="title">nl</span> 0.85 &amp;&amp; [ -<span class="title">e</span> /<span class="title">etc</span>/<span class="title">default</span>/<span class="title">locale</span> ] \</span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">language</span>-<span class="title">selector</span>-<span class="title">common</span>.<span class="title">postinst</span>:   . /<span class="title">etc</span>/<span class="title">default</span>/<span class="title">locale</span></span></span><br></pre></td></tr></table></figure>
+<p>待研究…</p>
+<h2 id="例外狀況_-_alternatives">例外狀況 - alternatives</h2><p>另外有一種情況，是透過「update-alternatives」的方式。</p>
+<p>例如「/usr/bin/write」。</p>
+<p>執行</p>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="operator">type</span> <span class="operator">write</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="command">write</span> <span class="keyword">is</span> /usr/bin/<span class="command">write</span></span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ whereis <span class="command">write</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">write</span>: <span class="regexp">/usr/</span>bin<span class="regexp">/write /u</span>sr<span class="regexp">/bin/</span>X11<span class="regexp">/write /u</span>sr<span class="regexp">/share/m</span>an<span class="regexp">/man2/</span><span class="keyword">write</span>.<span class="number">2</span>.gz <span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an1<span class="regexp">/write.1posix.gz /u</span>sr<span class="regexp">/share/m</span>an<span class="regexp">/man1/</span><span class="keyword">write</span>.<span class="number">1</span>.gz <span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an3<span class="regexp">/write.3posix.gz</span></span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /usr/bin/<span class="command">write</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-<span class="string">query:</span> no path found matching pattern <span class="regexp">/usr/</span>bin/write</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">ls</span> /usr/bin/write -<span class="keyword">l</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">23</span> Apr <span class="number">21</span>  <span class="number">2014</span> /usr/bin/write -&gt; /etc/alternatives/write</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">ls</span> /etc/alternatives/write -<span class="keyword">l</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lrwxrwxrwx <span class="number">1</span> root root <span class="number">18</span> Apr <span class="number">21</span>  <span class="number">2014</span> /etc/alternatives/write -&gt; /usr/bin/bsd-write</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /usr/bin/bsd-<span class="command">write</span></span><br></pre></td></tr></table></figure>
+<p>顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">bsdmainutils:</span> <span class="regexp">/usr/</span>bin/bsd-write</span><br></pre></td></tr></table></figure>
+<p>最後就找到「bsdmainutils」這個套件。</p>
+<h2 id="參考">參考</h2><ul>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
+<li>Debian Wiki / <a href="https://wiki.debian.org/DpkgTriggers" target="_blank" rel="external">DpkgTriggers</a></li>
+<li>vim /usr/share/doc/dpkg-dev/triggers.txt.gz</li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-trigger.1.html" target="_blank" rel="external">dpkg-trigger</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/deb-triggers.5.html" target="_blank" rel="external">deb-triggers</a></li>
+</ul>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/howto/">howto</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/protocol/how-to-let-dolphin-support-mtp/" title="Ubuntu環境下，如何使「Dolphin」支援「MTP」">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/package/apt-get-autoremove/" title="關於「apt-get autoremove」">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

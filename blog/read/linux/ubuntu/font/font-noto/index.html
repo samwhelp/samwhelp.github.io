@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，手動安裝思源字型 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，手動安裝思源字型 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，手動安裝思源字型 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，手動安裝思源字型 ">
+	<meta property="og:description" content=" Ubuntu環境下，手動安裝思源字型 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，手動安裝思源字型 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/font/font-noto/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2014-10-18">2014-10-18</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/font/">font</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/font/font-noto/" itemprop="url"><span itemprop="name">Ubuntu環境下，手動安裝思源字型</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，手動安裝思源字型">Ubuntu環境下，手動安裝思源字型</h1><h2 id="Script">Script</h2><p>已經寫好的「<a href="https://github.com/samwhelp/fix-ubuntu-1404/blob/master/misc/app/font-noto/prototype.sh" target="_blank" rel="external">Script</a>」。</p>
+<h2 id="說明">說明</h2><p>下載「<a href="https://www.google.com/get/noto/" target="_blank" rel="external">Google版</a>」。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c https://noto-website.storage.googleapis.com/pkgs/Noto-hinted.zip</span><br></pre></td></tr></table></figure>
+<p>我是放在這個資料夾「/usr/local/share/fonts/Noto」，參考<a href="https://dl.dropboxusercontent.com/u/70170658/ubuntu-dual-boot/index.htm" target="_blank" rel="external">這篇</a>提到的。</p>
+<p>解壓縮<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ unzip Noto-hinted.zip <span class="operator">-d</span> Noto</span><br></pre></td></tr></table></figure></p>
+<p>移到「/usr/local/share/fonts/Noto」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mv Noto /usr/<span class="built_in">local</span>/share/fonts/</span><br></pre></td></tr></table></figure>
+<p>或是複製到「/usr/local/share/fonts/Noto」</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo cp Noto /usr/<span class="built_in">local</span>/share/fonts/ <span class="operator">-a</span></span><br></pre></td></tr></table></figure>
+<p>設定擁有者<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chown root.staff /usr/<span class="built_in">local</span>/share/fonts/Noto -R</span><br></pre></td></tr></table></figure></p>
+<p>或是執行，設定擁有者</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo chown root:staff /usr/<span class="built_in">local</span>/share/fonts/Noto -R</span><br></pre></td></tr></table></figure>
+<p>設定檔案權限</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod <span class="number">644</span> /usr/<span class="built_in">local</span>/share/fonts/Noto/* -R</span><br><span class="line">sudo chmod <span class="number">755</span> /usr/<span class="built_in">local</span>/share/fonts/Noto</span><br></pre></td></tr></table></figure>
+<p>安裝字型<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">fc</span>-cache -fv</span><br></pre></td></tr></table></figure></p>
+<p><strong>以上的步驟，就可以將字型安裝完成</strong></p>
+<p>你可以執行下面的指令驗證</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fc</span>-match <span class="operator">-a</span> | grep Noto</span><br></pre></td></tr></table></figure>
+<p>若要在「/etc/fonts/conf.d」做額外的設定，可以參考「<a href="http://blog.anthonywong.net/2014/07/28/%E6%80%9D%E6%BA%90noto-pan-cjk-%E5%AD%97%E9%AB%94-ubuntu/" target="_blank" rel="external">這篇</a>」和「<a href="">這篇</a>」，相關的gist - (<a href="https://gist.github.com/anthonywong/dd9a0f43e0ffc7a0c2ae" target="_blank" rel="external">1</a>), (<a href="https://gist.github.com/anthonywong/6105b996531e98399874" target="_blank" rel="external">2</a>)，或是根據「<a href="http://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">這篇</a>」的說明，改成自己的設定。<br>不過字型的名稱已經改變了，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK TC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK SC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK JP<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK KR<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>用下面的指令就可以查到<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-a</span> | grep CJK</span><br></pre></td></tr></table></figure></p>
+<p>另外在「<a href="https://launchpad.net/~createsc/+archive/ubuntu/3beol" target="_blank" rel="external">這個PPA</a>」也有看到一個套件「<a href="http://ppa.launchpad.net/createsc/3beol/ubuntu/pool/main/f/fonts-noto-cjk/" target="_blank" rel="external">fonts-noto-cjk</a>」，也可以參考他的設定</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c http://ppa.launchpad.net/createsc/<span class="number">3</span>beol/ubuntu/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20140912-<span class="number">1</span>~utopic0918~<span class="number">3</span>beol_all.deb</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x fonts-noto-cjk_20140912-<span class="number">1</span>\~utopic0918\~<span class="number">3</span>beol_all.deb fonts-noto-cjk</span><br><span class="line">$ vi fonts-noto-cjk/usr/share/fontconfig/conf.avail/<span class="number">90</span>-fonts-noto-cjk.conf</span><br></pre></td></tr></table></figure>
+<p>目前Ubuntu 14.04也有一個套件叫「<a href="http://packages.ubuntu.com/trusty/fonts-noto" target="_blank" rel="external">fonts-noto</a>」，不過目前應該沒有包含「CJK」字型。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download fonts-noto</span><br><span class="line">$ dpkg -x fonts-noto_2013-<span class="number">04</span>-<span class="number">11</span>-<span class="number">2</span>_all.deb fonts-noto</span><br><span class="line">$ ls fonts-noto/usr/share/fonts/truetype/noto/</span><br></pre></td></tr></table></figure>
+<h2 id="輔助工具">輔助工具</h2><p>在「「/etc/fonts/conf.d」裡面的設定檔，真的是「百家爭鳴」，<br>所以只好利用「<a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，產生一個設定檔，<br>裡面建議的路徑是「~/.fonts.conf」。</p>
+<p>不過目前「~/.fonts.conf」這個路徑，<br>要改放到「~/.config/fontconfig/fonts.conf」。</p>
+<p>當你執行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fc</span>-match</span><br></pre></td></tr></table></figure></p>
+<p>就會看到下面的訊息</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Fontconfig warning: <span class="string">"/etc/fonts/conf.d/50-user.conf"</span>,</span><br><span class="line">line <span class="number">14</span>: reading configurations from ~/<span class="class">.fonts</span><span class="class">.conf</span> is deprecated.</span><br><span class="line">please move it to ~/.config/fontconfig/fonts<span class="class">.conf</span> manually</span><br><span class="line">DejaVuSans<span class="class">.ttf</span>: <span class="string">"DejaVu Sans"</span> <span class="string">"Book"</span></span><br></pre></td></tr></table></figure>
+<p>觀看「/etc/fonts/conf.d/50-user.conf」的內容</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi /etc/fonts/conf.d/<span class="number">50</span>-user.conf</span><br></pre></td></tr></table></figure>
+<p>就會看到</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">fontconfig</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--</span><br><span class="line">            Load per-user customization files where stored on XDG Base Directory</span><br><span class="line">            specification compliant places. it should be usually:</span><br><span class="line">              $HOME/.config/fontconfig/conf.d</span><br><span class="line">              $HOME/.config/fontconfig/fonts.conf</span><br><span class="line">        --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span> <span class="attribute">prefix</span>=<span class="value">"xdg"</span>&gt;</span>fontconfig/conf.d<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span> <span class="attribute">prefix</span>=<span class="value">"xdg"</span>&gt;</span>fontconfig/fonts.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!-- the following elements will be removed in the future --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span> <span class="attribute">deprecated</span>=<span class="value">"yes"</span>&gt;</span>~/.fonts.conf.d<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span> <span class="attribute">deprecated</span>=<span class="value">"yes"</span>&gt;</span>~/.fonts.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">fontconfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>也就是說個人的設定，要使用「~/.config/fontconfig/fonts.conf」和「~/.config/fontconfig/conf.d」裡面的檔。<br>而「~/.fonts.conf」和「~/.fonts.conf.d」這兩個地方就不建議使用了。</p>
+<p>另外還有一個要注意的，就是，你有安裝「font-manager」這個套件。<br>當你執行這個程式的時候，會寫入「~/.config/fontconfig/fonts.conf」這個檔。</p>
+<p>內容如下（假設使用者的帳號是「user」）。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">fontconfig</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span><br><span class="line">    This file is maintained by Font Manager.</span><br><span class="line"></span><br><span class="line">    If you wish to make any changes it is suggested you do so using</span><br><span class="line"></span><br><span class="line">        /home/user/.config/font-manager/local.conf</span><br><span class="line"></span><br><span class="line">    Any changes made to this file will be automatically relocated there</span><br><span class="line">    at startup and any settings already in that file will be overwritten.</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/conf.d<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/directories.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/local.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/select.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">fontconfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>所以最佳的建議是寫到「~/.config/fontconfig/conf.d」裡面的檔案，可以參照「/etc/fonts/conf.d/」的作法。</p>
+<p>例如你可以把剛剛利用「<a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，所產生的內容。<br>寫到「~/.config/fontconfig/conf.d/70-select.conf」。</p>
+<p>若你要確認「~/.config/fontconfig/conf.d/10-select.conf」有沒有真的被載入。<br>只要在「~/.config/fontconfig/conf.d/70-select.conf」第一行，第一字，雖便亂填一個字。例如:a。這樣就會導致xml格式錯誤。</p>
+<p>然後在執行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match</span><br></pre></td></tr></table></figure></p>
+<p>你就會看到下面的錯誤訊息。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Fontconfig error: <span class="string">"/home/user/.config/fontconfig/conf.d/70-select.conf"</span>, <span class="built_in">line</span> <span class="number">1</span>: <span class="operator">not</span> well-formed (invalid <span class="keyword">token</span>)</span><br><span class="line">DejaVuSans.ttf: <span class="string">"DejaVu Sans"</span> <span class="string">"Book"</span></span><br></pre></td></tr></table></figure>
+<p>也就是說，我們可以確定「~/.config/fontconfig/conf.d/70-select.conf」是有被載入的。</p>
+<p>然後你要測試你的字型查找的順序是否跟你的設定檔相符合，可以用下面指令來測試</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> monospace | less</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> serif | less</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> sans-serif | less</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> mono | less</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> sans | less</span><br></pre></td></tr></table></figure>
+<p>也可以直接測試你某個「字型名稱」，確認查找的順序是不是你要的。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> 標楷體 | less</span><br></pre></td></tr></table></figure>
+<h2 id="結論">結論</h2><p>基本上，只要了設定檔的原理，還有查找的順序，就可以依照自己想要的設定去設摟，以上只是當作範例來說明，了解如何設定。</p>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/font/">font</a>, <a class="tag-link" href="/blog/find/tag/fontconfig/">fontconfig</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/font/fc-match/" title="fc-match的使用">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/ubuntu/font/font-package/" title="Ubuntu環境下，一些字型套件">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>

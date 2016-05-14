@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+	
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 | 鵝從未在裡面 </title>
+	<meta property="og:title" content=" Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 | 鵝從未在裡面 " />
+	<meta name="twitter:title" content=" Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 | 鵝從未在裡面 ">
+
+	<meta property="og:type" content="article">
+	<meta name="twitter:card" content="summary">
+
+	<meta name="description" content=" Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 ">
+	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 " />
+	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案 " />
+
+	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+
+	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+
+	
+	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	
+
+	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/index.html">
+
+	<link rel="stylesheet" href="/blog/asset/css/main.css">
+
+</head>
+
+
+<body>
+
+	
+	<header class="site-header">
+
+		
+		<nav class="nav-page">
+
+			<div class="row">
+
+				<ul>
+
+					
+
+					<li><a href="/blog/">Home</a></li>
+
+					
+
+					<li><a href="/blog/find/archive/">Sitemap</a></li>
+
+					
+
+					<li><a href="/blog/find/tag/index/">Index</a></li>
+
+					
+
+					<li><a href="/book/">Book</a></li>
+
+					
+
+				</ul>
+
+			</div>
+
+		</nav>
+
+
+		<div class="site-header-main">
+
+			<div class="row">
+
+				<h1><a href="/blog/">鵝從未在裡面</a></h1>
+
+				
+
+					<p>Everything will be all right in the end.</p>
+
+				
+
+			</div>
+
+		</div>
+
+		
+
+
+		<nav class="nav-cat">
+
+			<div class="row">
+
+				<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/git/">git</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/">lang</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/perl/">perl</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/php/">php</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/lang/ruby/">ruby</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/">linux</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/">debian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/debian/driver/">driver</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/fedora/">fedora</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/lxqt/">lxqt</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/">mint</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/cinnamon/">cinnamon</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/network/">network</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/mint/sound/">sound</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/">protocol</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/protocol/mtp/">mtp</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/reference/">reference</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/remote/">remote</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/account/">account</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/disk/">disk</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/driver/">driver</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/font/">font</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/info/">info</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/manual/">manual</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/package/">package</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/process/">process</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/shell/">shell</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/tiling/">tiling</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/linux/ubuntu/workspace/">workspace</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/music/">music</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/">platform</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gitbook/">gitbook</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/gjs/">gjs</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/platform/nodejs/">nodejs</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/">site</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/site/update/">update</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/">tool</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/browser/">browser</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/">ebook</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/ebook/calibre/">calibre</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/find/category/tool/management/">management</a></li></ul></li></ul>
+
+			</div>
+
+		</nav>
+
+
+
+
+	</header>
+
+
+	<div id="content" class="site-content">
+
+		
+		<div class="row content-post">
+			<article itemscope itemtype="http://schema.org/Article">
+
+				
+
+				
+
+				<p class="content-meta">
+					<span class="meta-date" itemprop="datePublished" content="2015-04-27">2015-04-27</span>
+
+					
+					  <span class="meta-cat">
+						<a class="category-link" href="/blog/find/category/linux/">linux</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/">ubuntu</a>, <a class="category-link" href="/blog/find/category/linux/ubuntu/package/">package</a>
+					  </span>
+					
+				</p>
+
+				
+
+					<h2 class="content-title">
+						<a href="/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/" itemprop="url"><span itemprop="name">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</span></a>
+					</h2>
+
+				
+
+
+				<div class="content" itemprop="articleBody">
+					<h1 id="Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</h1><h2 id="前提">前提</h2><p>以下以「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
+<h2 id="方式一">方式一</h2><p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -L hello</span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-query -L hello</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/usr</span><br><span class="line"><span class="regexp">/usr/</span>bin</span><br><span class="line"><span class="regexp">/usr/</span>bin/hello</span><br><span class="line"><span class="regexp">/usr/</span>share</span><br><span class="line"><span class="regexp">/usr/</span>share/info</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/info/</span>hello.info.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/doc</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/NEWS</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/copyright</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/changelog.Debian.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/man</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1/hello<span class="number">.1</span>.gz</span><br></pre></td></tr></table></figure>
+<h2 id="方式二">方式二</h2><p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/dpkg/info/hello.list</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ more /var/lib/dpkg/info/hello.list</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ less /var/lib/dpkg/info/hello.list</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/dpkg/info/hello.list | more</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/dpkg/info/hello.list | less</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/usr</span><br><span class="line"><span class="regexp">/usr/</span>bin</span><br><span class="line"><span class="regexp">/usr/</span>bin/hello</span><br><span class="line"><span class="regexp">/usr/</span>share</span><br><span class="line"><span class="regexp">/usr/</span>share/info</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/info/</span>hello.info.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/doc</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/NEWS</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/copyright</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/changelog.Debian.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/man</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1/hello<span class="number">.1</span>.gz</span><br></pre></td></tr></table></figure>
+<h2 id="方式三">方式三</h2><p>下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download hello</span><br></pre></td></tr></table></figure>
+<p>然後執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -c hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-deb -c hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/bin/</span><br><span class="line">-rwxr-xr-x root/root     <span class="number">22984</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/bin/hello</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/info/</span><br><span class="line">-rw-r--r-- root/root     <span class="number">11729</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/info/hello.info.gz</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/hello/</span><br><span class="line">-rw-r--r-- root/root      <span class="number">3108</span> <span class="number">2012</span>-<span class="number">04</span>-<span class="number">19</span> <span class="number">21</span>:<span class="number">51</span> ./usr/share/doc/hello/NEWS</span><br><span class="line">-rw-r--r-- root/root      <span class="number">2251</span> <span class="number">2012</span>-<span class="number">05</span>-<span class="number">28</span> <span class="number">04</span>:<span class="number">07</span> ./usr/share/doc/hello/copyright</span><br><span class="line">-rw-r--r-- root/root      <span class="number">1180</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/hello/changelog.Debian.gz</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/man1/</span><br><span class="line">-rw-r--r-- root/root       <span class="number">729</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/man1/hello<span class="number">.1</span>.gz</span><br></pre></td></tr></table></figure>
+<h2 id="方式四">方式四</h2><p>下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download hello</span><br></pre></td></tr></table></figure>
+<p>然後執行下面的指令解開套件</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb hello</span><br></pre></td></tr></table></figure>
+<p>或是</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-deb -x hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb hello</span><br></pre></td></tr></table></figure>
+<p>再來執行tree觀看</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree hello</span><br></pre></td></tr></table></figure>
+<p>就可以看到</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hello</span><br><span class="line">└── usr</span><br><span class="line">    ├── bin</span><br><span class="line">    │   └── hello</span><br><span class="line">    └── share</span><br><span class="line">        ├── doc</span><br><span class="line">        │   └── hello</span><br><span class="line">        │       ├── changelog<span class="class">.Debian</span><span class="class">.gz</span></span><br><span class="line">        │       ├── copyright</span><br><span class="line">        │       └── NEWS</span><br><span class="line">        ├── info</span><br><span class="line">        │   └── hello<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">        └── man</span><br><span class="line">            └── man1</span><br><span class="line">                └── hello.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line"></span><br><span class="line"><span class="number">8</span> directories, <span class="number">6</span> files</span><br></pre></td></tr></table></figure>
+<h2 id="更多參考">更多參考</h2><ul>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></li>
+<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/tree.1.html" target="_blank" rel="external">tree</a></li>
+<li>更多的「<a href="/book-ubuntu-exploration/book/content/package/hello/index.html">hello套件探索</a>」</li>
+</ul>
+<h2 id="額外一提">額外一提</h2><p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ whatis dpkg</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="operator">-f</span> dpkg</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg (<span class="number">1</span>)             - <span class="keyword">package</span> manager <span class="keyword">for</span> Debian</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ whatis dpkg-query</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="operator">-f</span> dpkg-query</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-query (<span class="number">1</span>)       - <span class="operator">a</span> tool <span class="built_in">to</span> query <span class="operator">the</span> dpkg database</span><br></pre></td></tr></table></figure>
+<p>執行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ whatis dpkg-deb</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="operator">-f</span> dpkg-deb</span><br></pre></td></tr></table></figure>
+<p>會顯示</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg-deb <span class="list">(<span class="number">1</span>)</span>         - Debian package archive <span class="list">(.deb)</span> manipulation tool</span><br></pre></td></tr></table></figure>
+
+				</div>
+
+				
+
+					<div class="content-tag">
+
+						 <a class="tag-link" href="/blog/find/tag/basic-skill/">basic-skill</a>, <a class="tag-link" href="/blog/find/tag/howto/">howto</a>, <a class="tag-link" href="/blog/find/tag/基本功/">基本功</a>
+
+					</div>
+
+				
+
+			</article>
+
+			<div class="content-nav">
+
+				
+					<a href="/blog/read/linux/ubuntu/package/how-to-download-source-package/" title="Ubuntu環境下，如何下載「Source Package」">&larr; Prev</a>
+				
+
+				
+					<a href="/blog/read/linux/debian/release/8/info/" title="Debian 8 "Jessie" Released">Next &rarr;</a>
+				
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+	
+	<footer class="site-footer">
+
+		<div class="row">
+
+			<p class="cr">&copy; 2016 samwhelp </p>
+
+			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a>, Theme: <a href="https://github.com/samwhelp/hexo-theme-nadya" target="_blank">Nadya</a> remastered from <a href="https://github.com/nadymain/hexo-theme-nadymain" target="_blank">NadyMain</a></p>
+
+		</div>
+
+	</footer>
+
+	
+
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-55644249-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+
+
+
+</body>
+</html>
