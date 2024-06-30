@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" mtr " />
 	<meta name="twitter:description" content=" mtr " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/mint/network/mtr/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,17 +137,17 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="mtr">mtr</h1><h2 id="測試環境">測試環境</h2><ul>
-<li>「<a href="http://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」</li>
+<li>「<a href="https://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」</li>
 <li>「Cinnamon 2.2.16」</li>
 </ul>
-<h2 id="緣起">緣起</h2><p>我在「<a href="http://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」，要執行下面這個指令</p>
+<h2 id="緣起">緣起</h2><p>我在「<a href="https://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」，要執行下面這個指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ traceroute www.google.com</span><br></pre></td></tr></table></figure>
 <p>結果出現下面的「提示訊息」。</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">The program <span class="string">'traceroute'</span> can be found <span class="keyword">in</span> the following <span class="string">packages:</span></span><br><span class="line"> * inetutils-traceroute</span><br><span class="line"> * traceroute</span><br><span class="line"><span class="string">Try:</span> sudo apt-get install \&lt;selected <span class="keyword">package</span>\&gt;</span><br></pre></td></tr></table></figure>
 <p>所以查了一下「<a href="https://www.google.com.tw/#q=inetutils-traceroute+vs+traceroute" target="_blank" rel="external">inetutils-traceroute vs traceroute</a>」。</p>
-<p>查到「<a href="http://linhost.info/2013/05/wheres-my-traceroute-in-ubuntu/" target="_blank" rel="external">一篇文章</a>」</p>
-<p>然後又用「<a href="https://www.google.com.tw/#q=mtr+ubuntu" target="_blank" rel="external">mtr ubuntu</a>」查到三篇參考文章「<a href="http://www.arthurtoday.com/2012/11/mtr-linux-tracert.html" target="_blank" rel="external">1</a>」「<a href="https://www.linode.com/docs/networking/diagnosing-network-issues-with-mtr" target="_blank" rel="external">1</a>」「<a href="https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues" target="_blank" rel="external">1</a>」</p>
-<p>原來Ubuntu環境下，還有一隻程式叫「<a href="http://manpages.ubuntu.com/manpages/trusty/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」可用，是屬於「<a href="http://packages.ubuntu.com/trusty/mtr-tiny" target="_blank" rel="external">mtr-tiny</a>」這個套件。</p>
+<p>查到「<a href="https://linhost.info/2013/05/wheres-my-traceroute-in-ubuntu/" target="_blank" rel="external">一篇文章</a>」</p>
+<p>然後又用「<a href="https://www.google.com.tw/#q=mtr+ubuntu" target="_blank" rel="external">mtr ubuntu</a>」查到三篇參考文章「<a href="https://www.arthurtoday.com/2012/11/mtr-linux-tracert.html" target="_blank" rel="external">1</a>」「<a href="https://www.linode.com/docs/networking/diagnosing-network-issues-with-mtr" target="_blank" rel="external">1</a>」「<a href="https://www.digitalocean.com/community/tutorials/how-to-use-traceroute-and-mtr-to-diagnose-network-issues" target="_blank" rel="external">1</a>」</p>
+<p>原來Ubuntu環境下，還有一隻程式叫「<a href="https://manpages.ubuntu.com/manpages/trusty/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」可用，是屬於「<a href="https://packages.ubuntu.com/trusty/mtr-tiny" target="_blank" rel="external">mtr-tiny</a>」這個套件。</p>
 <h1 id="測試">測試</h1><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mtr www.google.com</span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mtr <span class="number">192.168</span>.<span class="number">1.1</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mtr <span class="number">8.8</span>.<span class="number">8.8</span></span><br></pre></td></tr></table></figure>
@@ -156,22 +156,22 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mtr -h</span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mtr --help</span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man mtr</span><br></pre></td></tr></table></figure>
-<h2 id="探索套件">探索套件</h2><p>查看「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」所屬套件</p>
+<h2 id="探索套件">探索套件</h2><p>查看「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」所屬套件</p>
 <p>執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S mtr</span><br></pre></td></tr></table></figure>
 <p>或是</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /usr/bin/mtr</span><br></pre></td></tr></table></figure>
-<p>屬於「<a href="http://packages.ubuntu.com/trusty/mtr-tiny" target="_blank" rel="external">mtr-tiny</a>」這個套件</p>
+<p>屬於「<a href="https://packages.ubuntu.com/trusty/mtr-tiny" target="_blank" rel="external">mtr-tiny</a>」這個套件</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtr-<span class="string">tiny:</span> <span class="regexp">/usr/</span>bin/mtr</span><br></pre></td></tr></table></figure>
 <p>查詢「mtr-tiny」套件資訊</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg <span class="operator">-s</span> mtr-tiny</span><br></pre></td></tr></table></figure>
 <h2 id="Wiki">Wiki</h2><ul>
-<li><a href="http://en.wikipedia.org/wiki/MTR_%28software%29" target="_blank" rel="external">MTR (software)</a></li>
-<li><a href="http://zh.wikipedia.org/zh-tw/MTR_%28%E8%BB%9F%E9%AB%94%29" target="_blank" rel="external">MTR (軟體)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/MTR_%28software%29" target="_blank" rel="external">MTR (software)</a></li>
+<li><a href="https://zh.wikipedia.org/zh-tw/MTR_%28%E8%BB%9F%E9%AB%94%29" target="_blank" rel="external">MTR (軟體)</a></li>
 </ul>
 <h2 id="TODO">TODO</h2><ul>
-<li>區分「<a href="http://packages.ubuntu.com/trusty/inetutils-traceroute" target="_blank" rel="external">inetutils-traceroute</a>」「<a href="http://packages.ubuntu.com/trusty/traceroute" target="_blank" rel="external">traceroute</a>」這兩個套件，以及 <a href="http://manpages.ubuntu.com/manpages/hardy/man8/traceroute6.iputils.8.html" target="_blank" rel="external">traceroute6</a>這個指令和所屬套件「[iputils-tracepath])(<a href="http://packages.ubuntu.com/trusty/iputils-tracepath" target="_blank" rel="external">http://packages.ubuntu.com/trusty/iputils-tracepath</a>)</li>
-<li>「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」的使用</li>
+<li>區分「<a href="https://packages.ubuntu.com/trusty/inetutils-traceroute" target="_blank" rel="external">inetutils-traceroute</a>」「<a href="https://packages.ubuntu.com/trusty/traceroute" target="_blank" rel="external">traceroute</a>」這兩個套件，以及 <a href="https://manpages.ubuntu.com/manpages/hardy/man8/traceroute6.iputils.8.html" target="_blank" rel="external">traceroute6</a>這個指令和所屬套件「[iputils-tracepath])(<a href="https://packages.ubuntu.com/trusty/iputils-tracepath" target="_blank" rel="external">https://packages.ubuntu.com/trusty/iputils-tracepath</a>)</li>
+<li>「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/mtr.8.html" target="_blank" rel="external">mtr</a>」的使用</li>
 </ul>
 
 				</div>
@@ -212,7 +212,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

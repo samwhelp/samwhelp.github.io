@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" apt-get source 的使用 " />
 	<meta name="twitter:description" content=" apt-get source 的使用 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/apt-get-source/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -138,7 +138,7 @@
 				<div class="content" itemprop="articleBody">
 					<h1 id="apt-get_source_的使用">apt-get source 的使用</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
 <h2 id="使用範例">使用範例</h2><p>「apt-get source」的使用範例，請參考『<a href="/blog/read/linux/ubuntu/package/how-to-download-source-package/">如何下載「Source Package」</a>』這篇。</p>
-<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
+<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">source</span><br><span class="line">    source causes apt-<span class="built_in">get</span> <span class="built_in">to</span> fetch source packages. APT will examine <span class="operator">the</span> available packages <span class="built_in">to</span> decide which source package <span class="built_in">to</span></span><br><span class="line">    fetch. It will <span class="keyword">then</span> find <span class="operator">and</span> download <span class="keyword">into</span> <span class="operator">the</span> current <span class="built_in">directory</span> <span class="operator">the</span> newest available <span class="built_in">version</span> <span class="operator">of</span> that source package <span class="keyword">while</span></span><br><span class="line">    respecting <span class="operator">the</span> default release, <span class="built_in">set</span> <span class="operator">with</span> <span class="operator">the</span> option APT::Default-Release, <span class="operator">the</span> -t option <span class="operator">or</span> per package <span class="operator">with</span> <span class="operator">the</span> pkg/release</span><br><span class="line">    syntax, <span class="keyword">if</span> possible.</span><br><span class="line"></span><br><span class="line">    Source packages are tracked separately <span class="built_in">from</span> binary packages via deb-src <span class="keyword">lines</span> <span class="operator">in</span> <span class="operator">the</span> sources.list(<span class="number">5</span>) <span class="built_in">file</span>. This means that</span><br><span class="line">    you will need <span class="built_in">to</span> <span class="built_in">add</span> such <span class="operator">a</span> <span class="built_in">line</span> <span class="keyword">for</span> <span class="keyword">each</span> repository you want <span class="built_in">to</span> <span class="built_in">get</span> sources <span class="built_in">from</span>; otherwise you will probably <span class="built_in">get</span> either</span><br><span class="line">    <span class="operator">the</span> wrong (too old/too <span class="built_in">new</span>) source versions <span class="operator">or</span> <span class="constant">none</span> <span class="keyword">at</span> all.</span><br><span class="line"></span><br><span class="line">    If <span class="operator">the</span> <span class="comment">--compile option is specified then the package will be compiled to a binary .deb using dpkg-buildpackage for the</span></span><br><span class="line">    architecture <span class="keyword">as</span> defined <span class="keyword">by</span> <span class="operator">the</span> <span class="comment">--host-architecture option. If --download-only is specified then the source package will not</span></span><br><span class="line">    be unpacked.</span><br><span class="line"></span><br><span class="line">    A specific source <span class="built_in">version</span> can be retrieved <span class="keyword">by</span> postfixing <span class="operator">the</span> source name <span class="operator">with</span> <span class="operator">an</span> equals <span class="operator">and</span> <span class="keyword">then</span> <span class="operator">the</span> <span class="built_in">version</span> <span class="built_in">to</span> fetch,</span><br><span class="line">    similar <span class="built_in">to</span> <span class="operator">the</span> mechanism used <span class="keyword">for</span> <span class="operator">the</span> package <span class="built_in">files</span>. This enables exact matching <span class="operator">of</span> <span class="operator">the</span> source package name <span class="operator">and</span> <span class="built_in">version</span>,</span><br><span class="line">    implicitly enabling <span class="operator">the</span> APT::Get::Only-Source option.</span><br><span class="line"></span><br><span class="line">    Note that source packages are <span class="operator">not</span> installed <span class="operator">and</span> tracked <span class="operator">in</span> <span class="operator">the</span> dpkg database like binary packages; they are simply</span><br><span class="line">    downloaded <span class="built_in">to</span> <span class="operator">the</span> current <span class="built_in">directory</span>, like source tarballs.</span><br></pre></td></tr></table></figure>
 
@@ -180,7 +180,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何安裝nvm以及nodejs " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何安裝nvm以及nodejs " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/platform/nodejs/install/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -147,7 +147,7 @@
 <li>透過「nvm」安裝「nodejs」。</li>
 </ul>
 <h2 id="安裝「nvm」。">安裝「nvm」。</h2><p>查詢「<a href="https://www.google.com.tw/#q=nvm" target="_blank" rel="external">nvm</a>」，應該第一筆就會找到「<a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a>」放在「github」上的「網址」。<br>可以直接參考該頁的說明來安裝「nvm」。裡面有一行指令可以快速安裝。<br>以下單純討論「Manual install」的方式，因為想要安裝到非預設的資料。</p>
-<p>下面這段指令，會用到「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git.1.html" target="_blank" rel="external">git</a>」，所以請先確認已經安裝「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」，安裝方式請參考「<a href="http://samwhelp.github.io/blog/read/git/install/">這篇</a>」。</p>
+<p>下面這段指令，會用到「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git.1.html" target="_blank" rel="external">git</a>」，所以請先確認已經安裝「<a href="https://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」，安裝方式請參考「<a href="https://samwhelp.github.io/blog/read/git/install/">這篇</a>」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/App/Nvm -p</span><br><span class="line"><span class="built_in">cd</span> ~/App/Nvm/</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/creationix/nvm.git Git</span><br><span class="line"><span class="built_in">cd</span> Git</span><br><span class="line">git checkout `git describe --abbrev=<span class="number">0</span> --tags`</span><br></pre></td></tr></table></figure>
 <p>若使用「bash」的話，執行下面這一行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="string">"source ~/App/Nvm/Git/nvm.sh"</span> &gt;&gt; ~/.bashrc</span><br></pre></td></tr></table></figure>
@@ -163,7 +163,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 <h2 id="透過「nvm」安裝「nodejs」">透過「nvm」安裝「nodejs」</h2><p>了解「nodejs」目前有哪有些版本，可以安裝。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm ls-remote</span><br></pre></td></tr></table></figure>
-<p>通常我會到「<a href="http://nodejs.org/" target="_blank" rel="external">nodejs官網</a>」首頁，了解目前stable的版本號。你會看到「Current Version: v0.10.32」</p>
+<p>通常我會到「<a href="https://nodejs.org/" target="_blank" rel="external">nodejs官網</a>」首頁，了解目前stable的版本號。你會看到「Current Version: v0.10.32」</p>
 <p>所以執行下面的指令，就可以透過「nvm」安裝「nodejs」了。(注意這個方式是安裝「binary package」，而非下載「source package」，編譯後安裝)</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install v0.<span class="number">10.32</span></span><br></pre></td></tr></table></figure>
 <p>或是省略前面的「v」</p>
@@ -177,7 +177,7 @@
 <p>另外寫此篇時，看官方的文件，有紀錄到可以執行下面的指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install stable</span><br></pre></td></tr></table></figure>
 <p>不過我試不出來，會出現下面的訊息。<br><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Version <span class="string">'stable'</span> not found - <span class="keyword">try</span> `nvm <span class="keyword">ls</span>-remote` <span class="keyword">to</span> <span class="built_in">browse</span> available versions.</span><br></pre></td></tr></table></figure></p>
-<p>然後有看到「<a href="http://blog.wu-boy.com/2013/01/node-version-manager/" target="_blank" rel="external">一篇文章</a>」，有討論這個問題(<a href="https://github.com/creationix/nvm/pull/188" target="_blank" rel="external">1</a>)(<a href="https://github.com/creationix/nvm/pull/136" target="_blank" rel="external">2</a>)(<a href="https://github.com/creationix/nvm/pull/74" target="_blank" rel="external">3</a>)。<br>有興趣可以嘗試上面那篇文章作者改過的這個「<a href="https://github.com/appleboy/nvm" target="_blank" rel="external">版本</a>」摟。</p>
+<p>然後有看到「<a href="https://blog.wu-boy.com/2013/01/node-version-manager/" target="_blank" rel="external">一篇文章</a>」，有討論這個問題(<a href="https://github.com/creationix/nvm/pull/188" target="_blank" rel="external">1</a>)(<a href="https://github.com/creationix/nvm/pull/136" target="_blank" rel="external">2</a>)(<a href="https://github.com/creationix/nvm/pull/74" target="_blank" rel="external">3</a>)。<br>有興趣可以嘗試上面那篇文章作者改過的這個「<a href="https://github.com/appleboy/nvm" target="_blank" rel="external">版本</a>」摟。</p>
 <p>當我們透過「nvm」安裝好「nodejs」後，因為可能同時安裝了很多版本的「nodejs」。<br>所以我們要透過下面的指令來作切換目前要使用的「nodejs」版本。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm use v0.<span class="number">10.32</span></span><br></pre></td></tr></table></figure>
 <p>上面省略「v」和「v0.10」系列的模式，一樣可用。</p>
@@ -210,7 +210,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ nvm install <span class="operator">-s</span> v0.<span class="number">10.31</span></span><br></pre></td></tr></table></figure>
 <p>注意記得要編譯成功，記得先安裝編譯相依的套件。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install build-essential libssl-dev curl git</span><br></pre></td></tr></table></figure>
-<p>好拉，安裝「nodejs」完畢後，來去「<a href="http://nodeschool.io/" target="_blank" rel="external">NodeSchool</a>」學習吧!</p>
+<p>好拉，安裝「nodejs」完畢後，來去「<a href="https://nodeschool.io/" target="_blank" rel="external">NodeSchool</a>」學習吧!</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> -<span class="keyword">g</span> learnyounode</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>learnyounode</span><br></pre></td></tr></table></figure>
 
@@ -252,7 +252,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

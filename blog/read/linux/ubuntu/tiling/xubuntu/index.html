@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Xubuntu Window Tiling (視窗平鋪) " />
 	<meta name="twitter:description" content=" Xubuntu Window Tiling (視窗平鋪) " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/tiling/xubuntu/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -140,7 +140,7 @@
 <p>一開始找到了兩個方案。</p>
 <ul>
 <li>xfwm4-settings ( Settings / Window Manager / Keyboard / Tile Window * )</li>
-<li><a href="http://ssokolow.com/quicktile/" target="_blank" rel="external">QuickTile</a> (<a href="https://github.com/ssokolow/quicktile" target="_blank" rel="external">GitHub</a>)</li>
+<li><a href="https://ssokolow.com/quicktile/" target="_blank" rel="external">QuickTile</a> (<a href="https://github.com/ssokolow/quicktile" target="_blank" rel="external">GitHub</a>)</li>
 </ul>
 <p>後來又找到一個「Tiling by drag window」，原本就有的功能，<br>有一個設定要調整，請看最下面的說明。</p>
 <ul>
@@ -148,10 +148,10 @@
 </ul>
 <h2 id="找尋過程">找尋過程</h2><p>一開始想說，找看看「Xubuntu(Xfce)」下的快速鍵，<br>我知道的有兩個地方可以設定「快速鍵(Shortcuts)」。</p>
 <ul>
-<li><a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-keyboard-settings.1.html" target="_blank" rel="external">xfce4-keyboard-settings</a> ( Settings / Keyboard / Application Shortcuts )</li>
-<li><a href="http://manpages.ubuntu.com/manpages/trusty/man1/xfwm4-settings.1.html" target="_blank" rel="external">xfwm4-settings</a> ( Settings / Window Manager / Keyboard )</li>
+<li><a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-keyboard-settings.1.html" target="_blank" rel="external">xfce4-keyboard-settings</a> ( Settings / Keyboard / Application Shortcuts )</li>
+<li><a href="https://manpages.ubuntu.com/manpages/trusty/man1/xfwm4-settings.1.html" target="_blank" rel="external">xfwm4-settings</a> ( Settings / Window Manager / Keyboard )</li>
 </ul>
-<p>一開始摸不著頭緒，所以想起<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=328262#forumpost328262" target="_blank" rel="external">以前</a>看過的的一篇文章「<a href="http://www.openfoundry.org/tw/foss-programs/9191-gnomekde-cinnamon-" target="_blank" rel="external">Gnome、KDE 與 Cinnamon 的平鋪視窗控制</a>」</p>
+<p>一開始摸不著頭緒，所以想起<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=328262#forumpost328262" target="_blank" rel="external">以前</a>看過的的一篇文章「<a href="https://www.openfoundry.org/tw/foss-programs/9191-gnomekde-cinnamon-" target="_blank" rel="external">Gnome、KDE 與 Cinnamon 的平鋪視窗控制</a>」</p>
 <p>找到關鍵字「Tiling」，用「<a href="https://www.google.com.tw/#q=xfce+tilingg" target="_blank" rel="external">xfce tilingg</a>」，查了一下，找到上面兩個解決方案。</p>
 <p>後來又找到一個「Tiling by drag window」，原本就有的功能，</p>
 <p>只是因為一個設定的關係變成另一個功能，請看最下面的說明。</p>
@@ -224,7 +224,7 @@
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[Desktop Entry]</span></span><br><span class="line"><span class="setting">Encoding=<span class="value">UTF-<span class="number">8</span></span></span></span><br><span class="line"><span class="setting">Version=<span class="value"><span class="number">1.0</span></span></span></span><br><span class="line"><span class="setting">Name=<span class="value">QuickTile</span></span></span><br><span class="line"><span class="setting">GenericName=<span class="value">Window-Tiling Helper</span></span></span><br><span class="line"><span class="setting">Type=<span class="value">Application</span></span></span><br><span class="line"><span class="setting">Exec=<span class="value">quicktile.py --daemonize</span></span></span><br><span class="line"><span class="setting">Categories=<span class="value">Utility;</span></span></span><br></pre></td></tr></table></figure>
 <p>你也可以在「Settings / Session and Startup / Application Autostart」</p>
 <p>找到「QuickTile」這一個項目。</p>
-<p>「Settings / Session and Startup」的指令是「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-session-settings.1.html" target="_blank" rel="external">xfce4-session-settings</a>」</p>
+<p>「Settings / Session and Startup」的指令是「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-session-settings.1.html" target="_blank" rel="external">xfce4-session-settings</a>」</p>
 <p>所以也可以執行下面的指令啟動。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ xfce4-session-settings</span><br></pre></td></tr></table></figure>
 <h2 id="quicktile-py_更多用法">quicktile.py 更多用法</h2><p>直接執行</p>
@@ -249,7 +249,7 @@
 <p>也可以執行</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py show-desktop --debug</span><br></pre></td></tr></table></figure>
 <p>加上「–debug」，可以看到額外的「除錯訊息」。</p>
-<h2 id="Tiling_by_drag_window">Tiling by drag window</h2><p>從「<a href="http://askubuntu.com/questions/483341/how-to-tile-window-by-mouse-to-left-right-edge-in-xfce-like-in-unity" target="_blank" rel="external">這篇討論</a>」，</p>
+<h2 id="Tiling_by_drag_window">Tiling by drag window</h2><p>從「<a href="https://askubuntu.com/questions/483341/how-to-tile-window-by-mouse-to-left-right-edge-in-xfce-like-in-unity" target="_blank" rel="external">這篇討論</a>」，</p>
 <p>發現「Tiling by drag window」的方式。</p>
 <p>一開始我嘗試不出來，所以才先找快速鍵的方式。</p>
 <p>原來設定的方式，導致變成另一個功能，關鍵點如下，</p>
@@ -265,12 +265,12 @@
 <h2 id="Move_window_to_another_workspace">Move window to another workspace</h2><p>視窗移到不同的Workspace，我通常是在視窗標題列按下右鍵，選擇「Move to Another Workspace / n」。</p>
 <p>今天發現「( Settings / Window Manager / Keyboard / )」那也有綁定快速鍵，可以從那裡查詢。</p>
 <h2 id="相關討論">相關討論</h2><ul>
-<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=347738#forumpost347738" target="_blank" rel="external">Xubuntu(XFCE) Window Tiling (視窗平鋪)</a></li>
+<li><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=347738#forumpost347738" target="_blank" rel="external">Xubuntu(XFCE) Window Tiling (視窗平鋪)</a></li>
 <li><a href="https://www.google.com.tw/#q=xfce+windows+snapping" target="_blank" rel="external">xfce windows snapping</a>，也可以查到很多相關資料。例如「<a href="https://www.leaseweb.com/labs/2014/04/new-xfce-features-xubuntu-14-04-trusty-tahr/" target="_blank" rel="external">這篇url</a>」。</li>
 </ul>
 <h2 id="官方文件">官方文件</h2><ul>
-<li>Xfce / <a href="http://www.xfce.org/about/tour410" target="_blank" rel="external">Xfce 4.10 tour</a></li>
-<li><a href="http://docs.xfce.org" target="_blank" rel="external">Xfce Docs</a> / xfwm4 / <a href="http://docs.xfce.org/xfce/xfwm4/preferences" target="_blank" rel="external">preferences</a></li>
+<li>Xfce / <a href="https://www.xfce.org/about/tour410" target="_blank" rel="external">Xfce 4.10 tour</a></li>
+<li><a href="https://docs.xfce.org" target="_blank" rel="external">Xfce Docs</a> / xfwm4 / <a href="https://docs.xfce.org/xfce/xfwm4/preferences" target="_blank" rel="external">preferences</a></li>
 </ul>
 
 				</div>
@@ -311,7 +311,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

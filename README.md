@@ -1,4 +1,4 @@
 samwhelp.github.io
 ==================
 
-http://samwhelp.github.io
+https://samwhelp.github.io

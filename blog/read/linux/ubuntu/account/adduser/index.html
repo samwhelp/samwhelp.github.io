@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何使用下指令的方式新增使用者 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/account/adduser/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,18 +136,18 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="Ubuntu環境下，如何使用下指令的方式新增使用者">Ubuntu環境下，如何使用下指令的方式新增使用者</h1><h2 id="前提">前提</h2><p>這篇是參與<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327650#forumpost327650" target="_blank" rel="external">這裡的討論</a>，重新整理而來。</p>
+					<h1 id="Ubuntu環境下，如何使用下指令的方式新增使用者">Ubuntu環境下，如何使用下指令的方式新增使用者</h1><h2 id="前提">前提</h2><p>這篇是參與<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327650#forumpost327650" target="_blank" rel="external">這裡的討論</a>，重新整理而來。</p>
 <p>站在管理者的角度，假設要新增一位使用者「cooker」。</p>
 <h2 id="新增使用者">新增使用者</h2><p>執行以下的指令，就可以新增一位使用者叫做「cooker」。過程中會詢問，要為「cooker」設定的密碼。和一些額外的資訊。請依照提示執行。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo adduser cooker</span><br></pre></td></tr></table></figure></p>
 <h2 id="更改密碼">更改密碼</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo passwd cooker</span><br></pre></td></tr></table></figure>
 <h2 id="參考文章">參考文章</h2><ul>
 <li>Ubuntu / Community Help Wiki / <a href="https://help.ubuntu.com/community/SystemAdministration" target="_blank" rel="external">SystemAdministration</a> / <a href="https://help.ubuntu.com/community/AddUsersHowto" target="_blank" rel="external">AddUsersHowto</a></li>
-<li><a href="http://note.drx.tw/" target="_blank" rel="external">凍仁的筆記</a> / <a href="http://note.drx.tw/2008/03/ubuntuadduser-part1.html" target="_blank" rel="external">adduser - 新增使用者指令</a></li>
+<li><a href="https://note.drx.tw/" target="_blank" rel="external">凍仁的筆記</a> / <a href="https://note.drx.tw/2008/03/ubuntuadduser-part1.html" target="_blank" rel="external">adduser - 新增使用者指令</a></li>
 </ul>
 <h2 id="套件探索">套件探索</h2><h3 id="探索「adduser」">探索「adduser」</h3><p>查詢「adduser」屬於哪個套件<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S adduser</span><br></pre></td></tr></table></figure></p>
 <p>看起來是屬於「adduser」這個套件。</p>
 <p>準備等會要工作的資料夾<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/adduser -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/adduser</span><br><span class="line">$ mkdir download <span class="built_in">source</span></span><br></pre></td></tr></table></figure></p>
-<p>下載「adduser」這個「<a href="http://packages.ubuntu.com/trusty/adduser" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download adduser</span><br><span class="line">$ dpkg -x adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb adduser</span><br><span class="line">$ ar xf adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br></pre></td></tr></table></figure></p>
+<p>下載「adduser」這個「<a href="https://packages.ubuntu.com/trusty/adduser" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download adduser</span><br><span class="line">$ dpkg -x adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb adduser</span><br><span class="line">$ ar xf adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> adduser_3.<span class="number">113</span>+nmu3ubuntu3_all.deb</span><br></pre></td></tr></table></figure></p>
 <p>觀看「etc」底下有什麼檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls /adduser/etc</span><br></pre></td></tr></table></figure></p>
 <p>發現只有「deluser.conf」，沒有「adduser.conf」。</p>
 <p>所以觀看「postinst」。</p>
@@ -161,63 +161,63 @@
 <p>查看有哪些「manual」可以查閱。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls adduser/usr/share/man/man5</span><br><span class="line">$ ls adduser/usr/share/man/man8</span><br></pre></td></tr></table></figure></p>
 <p>所以可以查閱的manual如下。</p>
 <h3 id="man_5">man 5</h3><ul>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/adduser.conf.5.html" target="_blank" rel="external">adduser.conf</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/deluser.conf.5.html" target="_blank" rel="external">deluser.conf</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/adduser.conf.5.html" target="_blank" rel="external">adduser.conf</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/deluser.conf.5.html" target="_blank" rel="external">deluser.conf</a></li>
 </ul>
 <h3 id="man_8">man 8</h3><ul>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/adduser.8.html" target="_blank" rel="external">adduser</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/deluser.8.html" target="_blank" rel="external">deluser</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/addgroup.8.html" target="_blank" rel="external">addgroup</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/delgroup.8.html" target="_blank" rel="external">delgroup</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/adduser.8.html" target="_blank" rel="external">adduser</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/deluser.8.html" target="_blank" rel="external">deluser</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/addgroup.8.html" target="_blank" rel="external">addgroup</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/delgroup.8.html" target="_blank" rel="external">delgroup</a></li>
 </ul>
 <p>額外的參考<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls adduser/usr/share/doc/adduser/examples/</span><br></pre></td></tr></table></figure></p>
-<p>下載「adduser」這個「<a href="http://packages.ubuntu.com/source/trusty/adduser" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/adduser/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> adduser</span><br></pre></td></tr></table></figure></p>
+<p>下載「adduser」這個「<a href="https://packages.ubuntu.com/source/trusty/adduser" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/adduser/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> adduser</span><br></pre></td></tr></table></figure></p>
 <p>觀看「control」檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi adduser-<span class="number">3.113</span>+nmu3ubuntu3/debian/control</span><br></pre></td></tr></table></figure></p>
 <h3 id="探索「useradd」">探索「useradd」</h3><p>查看「useradd」屬於哪個套件。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>dpkg -<span class="constant">S</span> useradd</span><br></pre></td></tr></table></figure></p>
 <p>看起來是屬於「passwd」這個套件。</p>
 <p>準備等會要工作的資料夾<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/passwd -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/passwd</span><br><span class="line">$ mkdir download <span class="built_in">source</span></span><br></pre></td></tr></table></figure></p>
-<p>下載「passwd」這個「<a href="http://packages.ubuntu.com/trusty/passwd" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download passwd</span><br><span class="line">$ dpkg -x passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb passwd</span><br><span class="line">$ ar xf passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br></pre></td></tr></table></figure></p>
-<p>下載「passwd」的「<a href="http://packages.ubuntu.com/source/trusty/shadow" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/passwd/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> passwd</span><br></pre></td></tr></table></figure></p>
+<p>下載「passwd」這個「<a href="https://packages.ubuntu.com/trusty/passwd" target="_blank" rel="external">package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> download</span><br><span class="line">$ apt-get download passwd</span><br><span class="line">$ dpkg -x passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb passwd</span><br><span class="line">$ ar xf passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br><span class="line">$ dpkg <span class="operator">-e</span> passwd_1%<span class="number">3</span>a4.<span class="number">1.5</span>.<span class="number">1</span>-<span class="number">1</span>ubuntu9_amd64.deb</span><br></pre></td></tr></table></figure></p>
+<p>下載「passwd」的「<a href="https://packages.ubuntu.com/source/trusty/shadow" target="_blank" rel="external">source package</a>」，並解開。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/passwd/<span class="built_in">source</span></span><br><span class="line">apt-get <span class="built_in">source</span> passwd</span><br></pre></td></tr></table></figure></p>
 <p>「passwd」的「source package」是「shadow」。</p>
 <p>觀看「control」檔。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi shadow-<span class="number">4.1</span>.<span class="number">5.1</span>/debian/control</span><br></pre></td></tr></table></figure></p>
 <p>回到「download」資料夾。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cd ~<span class="regexp">/tmp/passwd</span><span class="regexp">/download</span></span><br></pre></td></tr></table></figure></p>
 <p>查看有哪些「manual」可以查閱。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ ls passwd/usr/share/man/man1 -<span class="number">1</span></span><br><span class="line">$ ls passwd/usr/share/man/man5 -<span class="number">1</span></span><br><span class="line">$ ls passwd/usr/share/man/man8 -<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="man_1">man 1</h3><ul>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chage.1.html" target="_blank" rel="external">chage</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chfn.1.html" target="_blank" rel="external">chfn</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/chshman.1.html" target="_blank" rel="external">chshman</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/expiry.1.html" target="_blank" rel="external">expiry</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/gpasswd.1.html" target="_blank" rel="external">gpasswd</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/passwd.1.html" target="_blank" rel="external">passwd</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/chage.1.html" target="_blank" rel="external">chage</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/chfn.1.html" target="_blank" rel="external">chfn</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/chshman.1.html" target="_blank" rel="external">chshman</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/expiry.1.html" target="_blank" rel="external">expiry</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/gpasswd.1.html" target="_blank" rel="external">gpasswd</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/passwd.1.html" target="_blank" rel="external">passwd</a></li>
 </ul>
 <h3 id="man_5-1">man 5</h3><ul>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/gshadow.5.html" target="_blank" rel="external">gshadow</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/passwd.5.html" target="_blank" rel="external">passwd</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/shadow.5.html" target="_blank" rel="external">shadow</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/subgid.5.html" target="_blank" rel="external">subgid</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/utopic/en/man5/subuid.5.html" target="_blank" rel="external">subuid</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/utopic/en/man5/gshadow.5.html" target="_blank" rel="external">gshadow</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/utopic/en/man5/passwd.5.html" target="_blank" rel="external">passwd</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/utopic/en/man5/shadow.5.html" target="_blank" rel="external">shadow</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/utopic/en/man5/subgid.5.html" target="_blank" rel="external">subgid</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/utopic/en/man5/subuid.5.html" target="_blank" rel="external">subuid</a></li>
 </ul>
 <h3 id="man_8-1">man 8</h3><ul>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/chgpasswd.8.html" target="_blank" rel="external">chgpasswd</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/chpasswd.8.html" target="_blank" rel="external">chpasswd</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/cpgr.8.html" target="_blank" rel="external">cpgr</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/cppw.8.html" target="_blank" rel="external">cppw</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupadd.8.html" target="_blank" rel="external">groupadd</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupdel.8.html" target="_blank" rel="external">groupdel</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/groupmod.8.html" target="_blank" rel="external">groupmod</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpck.8.html" target="_blank" rel="external">grpck</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpconv.8.html" target="_blank" rel="external">grpconv</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/grpunconv.8.html" target="_blank" rel="external">grpunconv</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/newusers.8.html" target="_blank" rel="external">newusers</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwck.8.html" target="_blank" rel="external">pwck</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwconv.8.html" target="_blank" rel="external">pwconv</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/pwunconv.8.html" target="_blank" rel="external">pwunconv</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/shadowconfig.8.html" target="_blank" rel="external">shadowconfig</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/useradd.8.html" target="_blank" rel="external">useradd</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/userdel.8.html" target="_blank" rel="external">userdel</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/usermod.8.html" target="_blank" rel="external">usermod</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/vigr.8.html" target="_blank" rel="external">vigr</a></li>
-<li>$ man 8 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/vipw.8.html" target="_blank" rel="external">vipw</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/chgpasswd.8.html" target="_blank" rel="external">chgpasswd</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/chpasswd.8.html" target="_blank" rel="external">chpasswd</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/cpgr.8.html" target="_blank" rel="external">cpgr</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/cppw.8.html" target="_blank" rel="external">cppw</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/groupadd.8.html" target="_blank" rel="external">groupadd</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/groupdel.8.html" target="_blank" rel="external">groupdel</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/groupmod.8.html" target="_blank" rel="external">groupmod</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/grpck.8.html" target="_blank" rel="external">grpck</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/grpconv.8.html" target="_blank" rel="external">grpconv</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/grpunconv.8.html" target="_blank" rel="external">grpunconv</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/newusers.8.html" target="_blank" rel="external">newusers</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/pwck.8.html" target="_blank" rel="external">pwck</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/pwconv.8.html" target="_blank" rel="external">pwconv</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/pwunconv.8.html" target="_blank" rel="external">pwunconv</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/shadowconfig.8.html" target="_blank" rel="external">shadowconfig</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/useradd.8.html" target="_blank" rel="external">useradd</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/userdel.8.html" target="_blank" rel="external">userdel</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/usermod.8.html" target="_blank" rel="external">usermod</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/vigr.8.html" target="_blank" rel="external">vigr</a></li>
+<li>$ man 8 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/vipw.8.html" target="_blank" rel="external">vipw</a></li>
 </ul>
 
 				</div>
@@ -258,7 +258,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

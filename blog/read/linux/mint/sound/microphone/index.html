@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Linux Mint 17 “Qiana” Cinnamon 的環境，如何讓 microphone (麥克風) 願意發聲。 " />
 	<meta name="twitter:description" content=" Linux Mint 17 “Qiana” Cinnamon 的環境，如何讓 microphone (麥克風) 願意發聲。 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/mint/sound/microphone/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,19 +137,19 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Linux_Mint_17_“Qiana”_Cinnamon_的環境，如何讓_microphone_(麥克風)_願意發聲。">Linux Mint 17 “Qiana” Cinnamon 的環境，如何讓 microphone (麥克風) 願意發聲。</h1><h2 id="測試環境">測試環境</h2><ul>
-<li>「<a href="http://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」</li>
+<li>「<a href="https://blog.linuxmint.com/?p=2626" target="_blank" rel="external">Linux Mint 17 “Qiana” Cinnamon</a>」</li>
 <li>「Cinnamon 2.2.16」</li>
 </ul>
 <h2 id="緣起">緣起</h2><p>發現我的麥克風沒有作用，在「System Settings / Hardware / Sound / Input」也無法設定。</p>
-<p>用「<a href="https://www.google.com.tw/#q=linux+mint+microphone+not+working" target="_blank" rel="external">linux mint microphone not working</a>」，找到兩篇文章「<a href="http://itsfoss.com/skype-microphone-working-linux-mint-17/" target="_blank" rel="external">1</a>」，「<a href="http://itsfoss.com/how-to-solve-microphone-not-working-in-skype-quick-tip/" target="_blank" rel="external">2</a>」。</p>
-<p>主要是<a href="(http://itsfoss.com/how-to-solve-microphone-not-working-in-skype-quick-tip/">第二篇</a>)的說明。</p>
-<h2 id="步驟">步驟</h2><h3 id="安裝「gnome-media」">安裝「gnome-media」</h3><p>文章中提到要執行「<a href="http://manpages.ubuntu.com/manpages/trusty/man1/gstreamer-properties.1.html" target="_blank" rel="external">gstreamer-properties</a>」這個指令，不過在Linux Mint 17 “Qiana” Cinnamon 的環境，預設並沒有安裝，<a href="https://www.google.com.tw/#q=gstreamer-properties" target="_blank" rel="external">查了一下</a>是屬於「<a href="http://packages.ubuntu.com/trusty/gnome-media" target="_blank" rel="external">gnome-media</a>」這個套件。</p>
+<p>用「<a href="https://www.google.com.tw/#q=linux+mint+microphone+not+working" target="_blank" rel="external">linux mint microphone not working</a>」，找到兩篇文章「<a href="https://itsfoss.com/skype-microphone-working-linux-mint-17/" target="_blank" rel="external">1</a>」，「<a href="https://itsfoss.com/how-to-solve-microphone-not-working-in-skype-quick-tip/" target="_blank" rel="external">2</a>」。</p>
+<p>主要是<a href="(https://itsfoss.com/how-to-solve-microphone-not-working-in-skype-quick-tip/">第二篇</a>)的說明。</p>
+<h2 id="步驟">步驟</h2><h3 id="安裝「gnome-media」">安裝「gnome-media」</h3><p>文章中提到要執行「<a href="https://manpages.ubuntu.com/manpages/trusty/man1/gstreamer-properties.1.html" target="_blank" rel="external">gstreamer-properties</a>」這個指令，不過在Linux Mint 17 “Qiana” Cinnamon 的環境，預設並沒有安裝，<a href="https://www.google.com.tw/#q=gstreamer-properties" target="_blank" rel="external">查了一下</a>是屬於「<a href="https://packages.ubuntu.com/trusty/gnome-media" target="_blank" rel="external">gnome-media</a>」這個套件。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install gnome-media</span><br></pre></td></tr></table></figure>
-<p>安裝完後，就可以執行「<a href="http://manpages.ubuntu.com/manpages/trusty/man1/gstreamer-properties.1.html" target="_blank" rel="external">gstreamer-properties</a>」這個指令。</p>
+<p>安裝完後，就可以執行「<a href="https://manpages.ubuntu.com/manpages/trusty/man1/gstreamer-properties.1.html" target="_blank" rel="external">gstreamer-properties</a>」這個指令。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ gstreamer-properties</span><br></pre></td></tr></table></figure>
 <p>然後就照文章的指引，<br>在「Audio / Default Input / Plugin: 」選「ALSA - Advanced Linux Sound Architecture」。<br>在「Device:」選擇你「麥克風裝置」的「型號」就行了。<br>可以按下「Test」那個按鈕來測試，是否有效。</p>
 <h3 id="安裝「gnome-alsamixer」">安裝「gnome-alsamixer」</h3><p>另外在系統原本的聲音設定「System Settings / Hardware / Sound / Input」還是沒有出現。</p>
-<p>這時候就要在安裝另一個套件「<a href="http://packages.ubuntu.com/trusty/gnome-alsamixer" target="_blank" rel="external">gnome-alsamixer</a>」。</p>
+<p>這時候就要在安裝另一個套件「<a href="https://packages.ubuntu.com/trusty/gnome-alsamixer" target="_blank" rel="external">gnome-alsamixer</a>」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install gnome-alsamixer</span><br></pre></td></tr></table></figure>
 <p>安裝完畢後可以執行「gnome-alsamixer」，<br>或是在程式選單也可以找到，用關鍵字「Alas」查，比較快找到摟，就會看到「GNOME ALSA Mixer」這個選項。<br>未來應該會常用到，為了方便，也可以在這個選項按下右鍵「Add to Panel」或「Add to favorites」。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gnome-alsamixer</span><br></pre></td></tr></table></figure>
@@ -193,7 +193,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

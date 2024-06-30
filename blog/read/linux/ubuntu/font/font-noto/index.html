@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，手動安裝思源字型 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，手動安裝思源字型 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/font/font-noto/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -154,14 +154,14 @@
 <p><strong>以上的步驟，就可以將字型安裝完成</strong></p>
 <p>你可以執行下面的指令驗證</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fc</span>-match <span class="operator">-a</span> | grep Noto</span><br></pre></td></tr></table></figure>
-<p>若要在「/etc/fonts/conf.d」做額外的設定，可以參考「<a href="http://blog.anthonywong.net/2014/07/28/%E6%80%9D%E6%BA%90noto-pan-cjk-%E5%AD%97%E9%AB%94-ubuntu/" target="_blank" rel="external">這篇</a>」和「<a href="">這篇</a>」，相關的gist - (<a href="https://gist.github.com/anthonywong/dd9a0f43e0ffc7a0c2ae" target="_blank" rel="external">1</a>), (<a href="https://gist.github.com/anthonywong/6105b996531e98399874" target="_blank" rel="external">2</a>)，或是根據「<a href="http://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">這篇</a>」的說明，改成自己的設定。<br>不過字型的名稱已經改變了，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK TC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK SC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK JP<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK KR<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p>若要在「/etc/fonts/conf.d」做額外的設定，可以參考「<a href="https://blog.anthonywong.net/2014/07/28/%E6%80%9D%E6%BA%90noto-pan-cjk-%E5%AD%97%E9%AB%94-ubuntu/" target="_blank" rel="external">這篇</a>」和「<a href="">這篇</a>」，相關的gist - (<a href="https://gist.github.com/anthonywong/dd9a0f43e0ffc7a0c2ae" target="_blank" rel="external">1</a>), (<a href="https://gist.github.com/anthonywong/6105b996531e98399874" target="_blank" rel="external">2</a>)，或是根據「<a href="https://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">這篇</a>」的說明，改成自己的設定。<br>不過字型的名稱已經改變了，如下：<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK TC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK SC<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK JP<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">string</span>&gt;</span>Noto Sans CJK KR<span class="tag">&lt;/<span class="title">string</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p>用下面的指令就可以查到<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-a</span> | grep CJK</span><br></pre></td></tr></table></figure></p>
-<p>另外在「<a href="https://launchpad.net/~createsc/+archive/ubuntu/3beol" target="_blank" rel="external">這個PPA</a>」也有看到一個套件「<a href="http://ppa.launchpad.net/createsc/3beol/ubuntu/pool/main/f/fonts-noto-cjk/" target="_blank" rel="external">fonts-noto-cjk</a>」，也可以參考他的設定</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c http://ppa.launchpad.net/createsc/<span class="number">3</span>beol/ubuntu/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20140912-<span class="number">1</span>~utopic0918~<span class="number">3</span>beol_all.deb</span><br></pre></td></tr></table></figure>
+<p>另外在「<a href="https://launchpad.net/~createsc/+archive/ubuntu/3beol" target="_blank" rel="external">這個PPA</a>」也有看到一個套件「<a href="https://ppa.launchpad.net/createsc/3beol/ubuntu/pool/main/f/fonts-noto-cjk/" target="_blank" rel="external">fonts-noto-cjk</a>」，也可以參考他的設定</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c https://ppa.launchpad.net/createsc/<span class="number">3</span>beol/ubuntu/pool/main/f/fonts-noto-cjk/fonts-noto-cjk_20140912-<span class="number">1</span>~utopic0918~<span class="number">3</span>beol_all.deb</span><br></pre></td></tr></table></figure>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x fonts-noto-cjk_20140912-<span class="number">1</span>\~utopic0918\~<span class="number">3</span>beol_all.deb fonts-noto-cjk</span><br><span class="line">$ vi fonts-noto-cjk/usr/share/fontconfig/conf.avail/<span class="number">90</span>-fonts-noto-cjk.conf</span><br></pre></td></tr></table></figure>
-<p>目前Ubuntu 14.04也有一個套件叫「<a href="http://packages.ubuntu.com/trusty/fonts-noto" target="_blank" rel="external">fonts-noto</a>」，不過目前應該沒有包含「CJK」字型。</p>
+<p>目前Ubuntu 14.04也有一個套件叫「<a href="https://packages.ubuntu.com/trusty/fonts-noto" target="_blank" rel="external">fonts-noto</a>」，不過目前應該沒有包含「CJK」字型。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download fonts-noto</span><br><span class="line">$ dpkg -x fonts-noto_2013-<span class="number">04</span>-<span class="number">11</span>-<span class="number">2</span>_all.deb fonts-noto</span><br><span class="line">$ ls fonts-noto/usr/share/fonts/truetype/noto/</span><br></pre></td></tr></table></figure>
-<h2 id="輔助工具">輔助工具</h2><p>在「「/etc/fonts/conf.d」裡面的設定檔，真的是「百家爭鳴」，<br>所以只好利用「<a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，產生一個設定檔，<br>裡面建議的路徑是「~/.fonts.conf」。</p>
+<h2 id="輔助工具">輔助工具</h2><p>在「「/etc/fonts/conf.d」裡面的設定檔，真的是「百家爭鳴」，<br>所以只好利用「<a href="https://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，產生一個設定檔，<br>裡面建議的路徑是「~/.fonts.conf」。</p>
 <p>不過目前「~/.fonts.conf」這個路徑，<br>要改放到「~/.config/fontconfig/fonts.conf」。</p>
 <p>當你執行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fc</span>-match</span><br></pre></td></tr></table></figure></p>
 <p>就會看到下面的訊息</p>
@@ -175,7 +175,7 @@
 <p>內容如下（假設使用者的帳號是「user」）。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="pi">&lt;?xml version="1.0"?&gt;</span></span><br><span class="line"><span class="doctype">&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">fontconfig</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--</span><br><span class="line">    This file is maintained by Font Manager.</span><br><span class="line"></span><br><span class="line">    If you wish to make any changes it is suggested you do so using</span><br><span class="line"></span><br><span class="line">        /home/user/.config/font-manager/local.conf</span><br><span class="line"></span><br><span class="line">    Any changes made to this file will be automatically relocated there</span><br><span class="line">    at startup and any settings already in that file will be overwritten.</span><br><span class="line">--&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/conf.d<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/directories.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/local.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">include</span> <span class="attribute">ignore_missing</span>=<span class="value">"yes"</span>&gt;</span>/home/user/.config/font-manager/select.conf<span class="tag">&lt;/<span class="title">include</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">fontconfig</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>所以最佳的建議是寫到「~/.config/fontconfig/conf.d」裡面的檔案，可以參照「/etc/fonts/conf.d/」的作法。</p>
-<p>例如你可以把剛剛利用「<a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，所產生的內容。<br>寫到「~/.config/fontconfig/conf.d/70-select.conf」。</p>
+<p>例如你可以把剛剛利用「<a href="https://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a>」這個工具，所產生的內容。<br>寫到「~/.config/fontconfig/conf.d/70-select.conf」。</p>
 <p>若你要確認「~/.config/fontconfig/conf.d/10-select.conf」有沒有真的被載入。<br>只要在「~/.config/fontconfig/conf.d/70-select.conf」第一行，第一字，雖便亂填一個字。例如:a。這樣就會導致xml格式錯誤。</p>
 <p>然後在執行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match</span><br></pre></td></tr></table></figure></p>
 <p>你就會看到下面的錯誤訊息。</p>
@@ -229,7 +229,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

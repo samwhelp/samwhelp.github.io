@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page) " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,7 +137,7 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man_page)">Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page)</h1><h2 id="方式一">方式一</h2><p>從「Debian Reference / Chapter 12. Programming / <a href="https://www.debian.org/doc/manuals/debian-reference/ch12.en.html#_utility_programs_for_shell_script" target="_blank" rel="external">12.1.6. Utility programs for shell script</a>」學到的技巧。</p>
-<p>以「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件為例。</p>
+<p>以「<a href="https://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件為例。</p>
 <p>執行</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> coreutils | grep '/<span class="keyword">man</span>/<span class="keyword">man</span>.*/'</span><br></pre></td></tr></table></figure>
 <p>就會顯示</p>
@@ -146,8 +146,8 @@
 <p>執行</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> corutils | egrep '/usr/share/<span class="keyword">man</span>/<span class="keyword">man</span>.*/.+'</span><br></pre></td></tr></table></figure>
 <h2 id="方式二">方式二</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">coreutils</span>.<span class="title">list</span> | <span class="title">grep</span> '/<span class="title">man</span>/<span class="title">man</span>.*/'</span></span><br></pre></td></tr></table></figure>
-<h2 id="方式二-1">方式二</h2><p>我在「<a href="http://samwhelp.github.io/book-ubuntu-exploration/book/content/package/coreutils/info.html">探索套件</a>」的時候，都是用這個方式</p>
-<p>下載「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件。</p>
+<h2 id="方式二-1">方式二</h2><p>我在「<a href="https://samwhelp.github.io/book-ubuntu-exploration/book/content/package/coreutils/info.html">探索套件</a>」的時候，都是用這個方式</p>
+<p>下載「<a href="https://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件。</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="keyword">get</span> download coreutils</span><br></pre></td></tr></table></figure>
 <p>解開剛剛下載的套件檔案</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x coreutils_8<span class="number">.21</span>-<span class="number">1u</span>buntu5<span class="number">.1</span>_amd64.deb coreutils</span><br></pre></td></tr></table></figure>
@@ -164,7 +164,7 @@
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man coreutils<span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
 <p>或是</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
-<h3 id="網頁查詢">網頁查詢</h3><p> <a href="http://manpages.ubuntu.com/manpages/trusty/man8/chroot.8.html" target="_blank" rel="external">Ubuntu Manual 網址</a></p>
+<h3 id="網頁查詢">網頁查詢</h3><p> <a href="https://manpages.ubuntu.com/manpages/trusty/man8/chroot.8.html" target="_blank" rel="external">Ubuntu Manual 網址</a></p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
 <p>用瀏覽器查看</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
@@ -210,7 +210,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

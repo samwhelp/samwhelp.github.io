@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何下載「Source Package」 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何下載「Source Package」 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-download-source-package/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,14 +137,14 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，如何下載「Source_Package」">Ubuntu環境下，如何下載「Source Package」</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
-<h2 id="前提">前提</h2><p>以「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
-<h2 id="方式一">方式一</h2><p>執行「apt-get source」下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件的「<a href="http://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">Source Package</a>」。</p>
+<h2 id="前提">前提</h2><p>以「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
+<h2 id="方式一">方式一</h2><p>執行「apt-get source」下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件的「<a href="https://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">Source Package</a>」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> hello</span><br></pre></td></tr></table></figure>
 <p>顯示下列的訊息</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Reading <span class="keyword">package</span> lists... Done</span><br><span class="line">Building dependency tree</span><br><span class="line">Reading state information... Done</span><br><span class="line">Need to get <span class="number">711</span> kB of source archives.</span><br><span class="line"><span class="string">Get:</span><span class="number">1</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (dsc) [1,290 B]</span></span><br><span class="line"><span class="string">Get:</span><span class="number">2</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (tar) [697 kB]</span></span><br><span class="line"><span class="string">Get:</span><span class="number">3</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (diff) [12.5 kB]</span></span><br><span class="line">Fetched <span class="number">711</span> kB <span class="keyword">in</span> <span class="number">0</span>s (<span class="number">762</span> kB/s)</span><br><span class="line"><span class="string">sh:</span> <span class="number">1</span>: dpkg-<span class="string">source:</span> not found</span><br><span class="line">Unpack command <span class="string">'dpkg-source -x hello_2.8-4.dsc'</span> failed.</span><br><span class="line">Check <span class="keyword">if</span> the <span class="string">'dpkg-dev'</span> <span class="keyword">package</span> is installed.</span><br><span class="line"><span class="string">E:</span> Child process failed</span><br></pre></td></tr></table></figure>
 <p>其中有一行訊息</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">Check</span> <span class="keyword">if</span> the <span class="string">'dpkg-dev'</span> <span class="keyword">package</span> <span class="keyword">is</span> installed.</span></span><br></pre></td></tr></table></figure>
-<p>從上面的訊息可以知道，少裝了「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件。</p>
+<p>從上面的訊息可以知道，少裝了「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件。</p>
 <p>基本上「hello」的「Source Package」是有下載下來</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
@@ -152,7 +152,7 @@
 <p>但是是在解開的時候出現問題。</p>
 <p>上面的訊息有一行</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unpack <span class="command"><span class="keyword">command</span> <span class="string">'dpkg-source -x hello_2.8-4.dsc'</span> <span class="title">failed</span>.</span></span><br></pre></td></tr></table></figure>
-<p>所以先安裝「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件</p>
+<p>所以先安裝「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install dpkg-dev</span><br></pre></td></tr></table></figure>
 <p>再執行一次</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> hello</span><br></pre></td></tr></table></figure>
@@ -162,7 +162,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">hello-2</span><span class="class">.8</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.debian</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.dsc</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8</span><span class="class">.orig</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-<h2 id="額外一提">額外一提</h2><p>通常安裝「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」這個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">Metapackage</a>」時，就會安裝「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件了。</p>
+<h2 id="額外一提">額外一提</h2><p>通常安裝「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」這個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">Metapackage</a>」時，就會安裝「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件了。</p>
 <p>可以執行下面的指令驗證看看</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache show build-essential | grep Depends:</span><br></pre></td></tr></table></figure>
 <p>就會顯示</p>
@@ -182,7 +182,7 @@
 <li>Debian Wiki / <a href="https://wiki.debian.org/SourcePackage" target="_blank" rel="external">SourcePackage</a></li>
 </ul>
 <h2 id="方式二">方式二</h2><p>直接到下面的頁面，找到網址下載，以下是以「14.04(trusty)」為例。</p>
-<p><a href="http://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">http://packages.ubuntu.com/source/trusty/hello</a></p>
+<p><a href="https://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">https://packages.ubuntu.com/source/trusty/hello</a></p>
 <p>用瀏覽器開啟頁面，</p>
 <p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/packages.ubuntu.com/source</span><span class="regexp">/trusty/hello</span></span><br></pre></td></tr></table></figure>
@@ -212,7 +212,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">hello-2</span><span class="class">.8</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.debian</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.dsc</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8</span><span class="class">.orig</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">list</span><span class="class">.txt</span></span><br></pre></td></tr></table></figure>
 <p>基本上，「方式二」這個流程，跟「方式一」是一樣的，只是利用一個指令就搞定了 :-)</p>
 <p>另外也可以到下面這個網址，觀看hello有哪些檔案。</p>
-<p><a href="http://archive.ubuntu.com/ubuntu/pool/main/h/hello/" target="_blank" rel="external">http://archive.ubuntu.com/ubuntu/pool/main/h/hello/</a></p>
+<p><a href="https://archive.ubuntu.com/ubuntu/pool/main/h/hello/" target="_blank" rel="external">https://archive.ubuntu.com/ubuntu/pool/main/h/hello/</a></p>
 <p>用瀏覽器開啟頁面，</p>
 <p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/archive.ubuntu.com/ubuntu</span><span class="regexp">/pool/main</span><span class="regexp">/h/hello</span><span class="regexp">/</span></span><br></pre></td></tr></table></figure>
@@ -257,7 +257,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

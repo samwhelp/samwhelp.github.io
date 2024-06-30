@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何使「Dolphin」支援「MTP」 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何使「Dolphin」支援「MTP」 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/protocol/how-to-let-dolphin-support-mtp/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -141,21 +141,21 @@
 <li>「Xubuntu 14.04 64位元」</li>
 </ul>
 <h2 id="緣起">緣起</h2><p>使用USB傳輸線，接了「Android」設備。</p>
-<p>在「Xubuntu」桌面，發現會出現「裝置(Device)」的圖示。<br>點選後，會呼叫「<a href="http://en.wikipedia.org/wiki/Dolphin_%28file_manager%29" target="_blank" rel="external">Dolphin</a>」 起來，是因為我把預設的File Manager改為「Dolphin」。<br>但重點是，並沒有開啟該裝置的資料夾，而我看「Dolphin」的「Devices」也沒有。</p>
-<p>所以這時候就改用「<a href="http://en.wikipedia.org/wiki/Thunar" target="_blank" rel="external">Thunar</a>」來觀看，果然就有看到「裝置(Device)」。</p>
+<p>在「Xubuntu」桌面，發現會出現「裝置(Device)」的圖示。<br>點選後，會呼叫「<a href="https://en.wikipedia.org/wiki/Dolphin_%28file_manager%29" target="_blank" rel="external">Dolphin</a>」 起來，是因為我把預設的File Manager改為「Dolphin」。<br>但重點是，並沒有開啟該裝置的資料夾，而我看「Dolphin」的「Devices」也沒有。</p>
+<p>所以這時候就改用「<a href="https://en.wikipedia.org/wiki/Thunar" target="_blank" rel="external">Thunar</a>」來觀看，果然就有看到「裝置(Device)」。</p>
 <p>我有接了兩個不同的「Android」設備。<br>在「Thunar」的檔案路徑可以看到兩種不同的「Protocol」。</p>
-<p><a href="http://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="external">MTP</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="external">MTP</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mtp://[usb:<span class="number">001</span>,<span class="number">010</span>]/</span><br></pre></td></tr></table></figure>
-<p><a href="http://en.wikipedia.org/wiki/GPhoto" target="_blank" rel="external">gphoto2</a></p>
+<p><a href="https://en.wikipedia.org/wiki/GPhoto" target="_blank" rel="external">gphoto2</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gphoto2://[usb:<span class="number">001</span>,<span class="number">010</span>]/</span><br></pre></td></tr></table></figure>
-<h2 id="解決方案">解決方案</h2><p>於是用「<a href="https://www.google.com.tw/#q=ubuntu+mtp+dolphin" target="_blank" rel="external">ubuntu mtp dolphin</a>」查詢。<br>參考「<a href="http://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Enable-Support-for-Android-MTP-in-KDE" target="_blank" rel="external">這篇</a>」和「<a href="http://www.muktware.com/2012/11/27/install-android-mtp-support-in-kde/" target="_blank" rel="external">這篇</a>」。</p>
+<h2 id="解決方案">解決方案</h2><p>於是用「<a href="https://www.google.com.tw/#q=ubuntu+mtp+dolphin" target="_blank" rel="external">ubuntu mtp dolphin</a>」查詢。<br>參考「<a href="https://www.linux-magazine.com/Online/Blogs/Productivity-Sauce/Enable-Support-for-Android-MTP-in-KDE" target="_blank" rel="external">這篇</a>」和「<a href="https://www.muktware.com/2012/11/27/install-android-mtp-support-in-kde/" target="_blank" rel="external">這篇</a>」。</p>
 <p>只要執行下面的指令就可以了(不需要加入「PPA」)。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install kio-mtp</span><br></pre></td></tr></table></figure>
 <h2 id="更多參考">更多參考</h2><ul>
-<li><a href="http://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="external">Media Transfer Protocol(MTP)</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Picture_Transfer_Protocol" target="_blank" rel="external">Picture_Transfer_Protocol(PTP)</a></li>
-<li><a href="http://en.wikipedia.org/wiki/USB_mass_storage_device_class" target="_blank" rel="external">USB mass storage device class</a></li>
-<li><a href="http://en.wikipedia.org/wiki/GPhoto" target="_blank" rel="external">gPhoto</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Media_Transfer_Protocol" target="_blank" rel="external">Media Transfer Protocol(MTP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Picture_Transfer_Protocol" target="_blank" rel="external">Picture_Transfer_Protocol(PTP)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/USB_mass_storage_device_class" target="_blank" rel="external">USB mass storage device class</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GPhoto" target="_blank" rel="external">gPhoto</a></li>
 </ul>
 <h2 id="查詢「kio」開頭的套件">查詢「kio」開頭的套件</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="operator"><span class="keyword">cache</span> <span class="keyword">search</span> ^kio-</span></span><br></pre></td></tr></table></figure>
 <p>結果</p>
@@ -202,7 +202,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

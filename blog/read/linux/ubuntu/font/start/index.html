@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，了解如何設定字型 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，了解如何設定字型 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/font/start/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,26 +137,26 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，了解如何設定字型">Ubuntu環境下，了解如何設定字型</h1><h2 id="緣起">緣起</h2><ul>
-<li><a href="http://blog.roodo.com/rocksaying/archives/12397861.html" target="_blank" rel="external">http://blog.roodo.com/rocksaying/archives/12397861.html</a></li>
-<li><a href="http://blog.roodo.com/rocksaying/archives/3124027.html" target="_blank" rel="external">http://blog.roodo.com/rocksaying/archives/3124027.html</a></li>
-<li><a href="http://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html" target="_blank" rel="external">http://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html</a></li>
+<li><a href="https://blog.roodo.com/rocksaying/archives/12397861.html" target="_blank" rel="external">https://blog.roodo.com/rocksaying/archives/12397861.html</a></li>
+<li><a href="https://blog.roodo.com/rocksaying/archives/3124027.html" target="_blank" rel="external">https://blog.roodo.com/rocksaying/archives/3124027.html</a></li>
+<li><a href="https://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html" target="_blank" rel="external">https://www.wfublog.com/2014/02/font-family-chinese-cross-platform.html</a></li>
 </ul>
 <p>剛好這幾天看了上面三頁，然後突然玩起勁來，把以前關於如何在Ubuntu設定font，沒去搞懂的概念，搞懂了。整個豁然開朗，讚的拉！寫下來留給尚未搞懂的人一些參考。<br>在說明以前，建議可以先把下列的詞彙，稍微了解一下。</p>
 <p>註:font設定這幾篇，是在前些時候寫的草稿，一直拖到今天，才完稿:p</p>
 <h3 id="術語">術語</h3><ul>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">襯線體</a> - <a href="http://en.wikipedia.org/wiki/Serif" target="_blank" rel="external">serif</a> - 白體 - <a href="http://zh.wikipedia.org/zh-tw/%E6%98%8E%E9%AB%94" target="_blank" rel="external">明體</a>(<a href="http://zh.wikipedia.org/zh-tw/%E5%AE%8B%E9%AB%94" target="_blank" rel="external">宋體</a>)</p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">襯線體</a> - <a href="https://en.wikipedia.org/wiki/Serif" target="_blank" rel="external">serif</a> - 白體 - <a href="https://zh.wikipedia.org/zh-tw/%E6%98%8E%E9%AB%94" target="_blank" rel="external">明體</a>(<a href="https://zh.wikipedia.org/zh-tw/%E5%AE%8B%E9%AB%94" target="_blank" rel="external">宋體</a>)</p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E7%84%A1%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">無襯線體</a> - <a href="http://en.wikipedia.org/wiki/Sans-serif" target="_blank" rel="external">sans-serif</a> - 黑體 - <a href="http://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a></p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E7%84%A1%E8%A5%AF%E7%B7%9A%E9%AB%94" target="_blank" rel="external">無襯線體</a> - <a href="https://en.wikipedia.org/wiki/Sans-serif" target="_blank" rel="external">sans-serif</a> - 黑體 - <a href="https://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a></p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a> vs <a href="http://zh.wikipedia.org/zh-tw/%E7%B2%97%E9%AB%94" target="_blank" rel="external">粗體(bold)</a></p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E9%BB%91%E9%AB%94%20%28%E5%AD%97%E9%AB%94%29" target="_blank" rel="external">黑體</a> vs <a href="https://zh.wikipedia.org/zh-tw/%E7%B2%97%E9%AB%94" target="_blank" rel="external">粗體(bold)</a></p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E6%A8%99%E6%A5%B7%E9%AB%94" target="_blank" rel="external">楷體</a></p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E6%A8%99%E6%A5%B7%E9%AB%94" target="_blank" rel="external">楷體</a></p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E5%AD%97%E4%BD%94" target="_blank" rel="external">字體</a>(typeface) vs <a href="http://zh.wikipedia.org/zh-tw/%E5%AD%97%E5%9E%8B" target="_blank" rel="external">字型</a>(font)</p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E5%AD%97%E4%BD%94" target="_blank" rel="external">字體</a>(typeface) vs <a href="https://zh.wikipedia.org/zh-tw/%E5%AD%97%E5%9E%8B" target="_blank" rel="external">字型</a>(font)</p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/Mac_OS_X%E5%AD%97%E4%BD%93%E5%88%97%E8%A1%A8" target="_blank" rel="external">Mac OS X字體列表</a></p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/Mac_OS_X%E5%AD%97%E4%BD%93%E5%88%97%E8%A1%A8" target="_blank" rel="external">Mac OS X字體列表</a></p>
 </li>
-<li><p><a href="http://zh.wikipedia.org/zh-tw/%E7%AD%89%E5%AF%AC%E5%AD%97%E9%AB%94" target="_blank" rel="external">等寬字型(Monospaced Font)</a> vs <a href="http://zh.wikipedia.org/zh-tw/%E6%AF%94%E4%BE%8B%E5%AD%97%E9%AB%94" target="_blank" rel="external">比例字體(Proportional Font)</a></p>
+<li><p><a href="https://zh.wikipedia.org/zh-tw/%E7%AD%89%E5%AF%AC%E5%AD%97%E9%AB%94" target="_blank" rel="external">等寬字型(Monospaced Font)</a> vs <a href="https://zh.wikipedia.org/zh-tw/%E6%AF%94%E4%BE%8B%E5%AD%97%E9%AB%94" target="_blank" rel="external">比例字體(Proportional Font)</a></p>
 </li>
 </ul>
 <h2 id="系統設定字型">系統設定字型</h2><ul>
@@ -171,23 +171,23 @@
 <h2 id="工具使用">工具使用</h2><ul>
 <li><a href="/blog/read/linux/ubuntu/font/fc-match/">fc-match的使用</a></li>
 <li><a href="/blog/read/linux/ubuntu/font/font-noto/">fc-cache的使用（範例：手動安裝思源字型）</a></li>
-<li><a href="http://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a></li>
+<li><a href="https://wenq.org/cloud/fcdesigner_local.html" target="_blank" rel="external">Fontconfig Designer</a></li>
 </ul>
 <h2 id="小技巧">小技巧</h2><p>查看目前系統已經安裝的中文字型<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-list :lang=zh</span><br></pre></td></tr></table></figure></p>
 <h2 id="參與的討論">參與的討論</h2><h3 id="原理懂了，善用工具，可以解決大部分遇到的問題。">原理懂了，善用工具，可以解決大部分遇到的問題。</h3><ul>
-<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318762#forumpost318762" target="_blank" rel="external">14.04 中文字型被更改了</a> （註：參與這篇討論，我尚未深入探究font設定的一些細節。而以下的討論，則是在我已經理解後的事了。所以大概可以知道一些問題點出在哪。進而找到解決方案。）</p>
+<li><p><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318762#forumpost318762" target="_blank" rel="external">14.04 中文字型被更改了</a> （註：參與這篇討論，我尚未深入探究font設定的一些細節。而以下的討論，則是在我已經理解後的事了。所以大概可以知道一些問題點出在哪。進而找到解決方案。）</p>
 </li>
-<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327720#forumpost327720" target="_blank" rel="external">Konsole內的文字排位問題</a></p>
+<li><p><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327720#forumpost327720" target="_blank" rel="external">Konsole內的文字排位問題</a></p>
 </li>
-<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327406#forumpost327406" target="_blank" rel="external">Ubuntu-GNOME 14.04.1最上方的選單列字級無法放大</a></p>
+<li><p><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=327406#forumpost327406" target="_blank" rel="external">Ubuntu-GNOME 14.04.1最上方的選單列字級無法放大</a></p>
 </li>
-<li><p><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=326348#forumpost326348" target="_blank" rel="external">[求救]我的conky無法顯示中文！！</a></p>
+<li><p><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=326348#forumpost326348" target="_blank" rel="external">[求救]我的conky無法顯示中文！！</a></p>
 </li>
 </ul>
 <h2 id="參考文章">參考文章</h2><ul>
-<li><a href="http://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">Howto Custom Fonts with Fontconfig</a></li>
-<li><a href="http://wiki.ubuntu.com.cn/%E5%AD%97%E4%BD%93" target="_blank" rel="external">http://wiki.ubuntu.com.cn/字体</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a></li>
+<li><a href="https://wiki.ubuntu-tw.org/index.php?title=HowtoCustomFontswithFontconfig" target="_blank" rel="external">Howto Custom Fonts with Fontconfig</a></li>
+<li><a href="https://wiki.ubuntu.com.cn/%E5%AD%97%E4%BD%93" target="_blank" rel="external">https://wiki.ubuntu.com.cn/字体</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a></li>
 </ul>
 
 				</div>
@@ -228,7 +228,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

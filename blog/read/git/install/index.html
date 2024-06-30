@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何安裝git " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何安裝git " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/git/install/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -138,21 +138,21 @@
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，如何安裝git">Ubuntu環境下，如何安裝git</h1><h2 id="測試環境">測試環境</h2><p>以下的說明，均在「Xubuntu 14.04 64位元」的環境下測試。</p>
 <h2 id="安裝指令">安裝指令</h2><figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install git</span><br></pre></td></tr></table></figure>
-<p>是的，這篇文章的標題，只需要一行指令就可以說明了。<br>感覺這篇有點在充數，呵呵，我自己不能說是「xx充數」。<br>基本上相關的安裝方式只要參考「<a href="http://git-scm.com/book/en/Getting-Started-Installing-Git" target="_blank" rel="external">這篇</a>（<a href="http://git-scm.com/book/zh-tw/%E9%96%8B%E5%A7%8B-%E5%AE%89%E8%A3%9DGit" target="_blank" rel="external">中文</a>）」，就知道怎麼安裝了。<br>並且本篇不討論用編譯原始碼的方式安裝git，只有討論用Ubuntu套件的方式安裝。</p>
+<p>是的，這篇文章的標題，只需要一行指令就可以說明了。<br>感覺這篇有點在充數，呵呵，我自己不能說是「xx充數」。<br>基本上相關的安裝方式只要參考「<a href="https://git-scm.com/book/en/Getting-Started-Installing-Git" target="_blank" rel="external">這篇</a>（<a href="https://git-scm.com/book/zh-tw/%E9%96%8B%E5%A7%8B-%E5%AE%89%E8%A3%9DGit" target="_blank" rel="external">中文</a>）」，就知道怎麼安裝了。<br>並且本篇不討論用編譯原始碼的方式安裝git，只有討論用Ubuntu套件的方式安裝。</p>
 <h2 id="套件探索">套件探索</h2><p>以下是套件探索的紀錄。有興趣深究的人，再繼續研讀下去吧。</p>
 <h2 id="查詢git相關的套件">查詢git相關的套件</h2><p>可以執行這個指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache search ^git-</span><br></pre></td></tr></table></figure>
 <p>或是下面這個</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install git- <span class="comment"># 此時按下「tab」鍵。應該就會出現「git-」開頭的列表。</span></span><br></pre></td></tr></table></figure>
-<h2 id="探索_「package:_git」_和_「source_package:_git」">探索 「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">package: git</a>」 和 「<a href="http://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package: git</a>」</h2><p>先準備等會要工作的環境。</p>
+<h2 id="探索_「package:_git」_和_「source_package:_git」">探索 「<a href="https://packages.ubuntu.com/trusty/git" target="_blank" rel="external">package: git</a>」 和 「<a href="https://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package: git</a>」</h2><p>先準備等會要工作的環境。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/git -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/git</span><br><span class="line">$ mkdir <span class="built_in">source</span> download</span><br></pre></td></tr></table></figure>
-<p>下載「git」的「<a href="http://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」，並且解開。</p>
+<p>下載「git」的「<a href="https://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git/<span class="built_in">source</span></span><br><span class="line">$ apt-get <span class="built_in">source</span> git</span><br><span class="line">$ <span class="built_in">cd</span> git-<span class="number">1.9</span>.<span class="number">1</span>/</span><br></pre></td></tr></table></figure>
-<p>觀看「control」檔，基本上，你可以發現「git」的「<a href="http://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」拆成了很多「package」。看<a href="http://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">網頁的說明</a>，也可以看到拆成那些「package」。</p>
+<p>觀看「control」檔，基本上，你可以發現「git」的「<a href="https://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」拆成了很多「package」。看<a href="https://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">網頁的說明</a>，也可以看到拆成那些「package」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi debian/control</span><br></pre></td></tr></table></figure>
-<p>下載「git」的「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">package</a>」，並且解開。</p>
+<p>下載「git」的「<a href="https://packages.ubuntu.com/trusty/git" target="_blank" rel="external">package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git/download</span><br><span class="line">$ apt-get download git</span><br><span class="line">$ dpkg -x git_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_amd64.deb git</span><br><span class="line">$ dpkg <span class="operator">-e</span> git_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_amd64.deb</span><br><span class="line"><span class="comment"># ar xf git_1%3a1.9.1-1_amd64.deb</span></span><br></pre></td></tr></table></figure>
-<p>觀看「control」檔。會發現「Depends: …略… git-man」，也就是說安裝「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」會連同安裝「<a href="http://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">git-man</a>」。</p>
+<p>觀看「control」檔。會發現「Depends: …略… git-man」，也就是說安裝「<a href="https://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」會連同安裝「<a href="https://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">git-man</a>」。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vi <span class="constant">DEBIAN</span>/control</span><br></pre></td></tr></table></figure>
 <p>若你已經安裝「git」了，也可以執行下面的指令，看到上面「control」檔紀錄的資訊。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg <span class="operator">-s</span> git</span><br></pre></td></tr></table></figure>
@@ -161,26 +161,26 @@
 <p>如何知道「git」這個「指令」屬於哪個「套件」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /usr/bin/git</span><br></pre></td></tr></table></figure>
 <p>你就會看到「<strong>git</strong>: /usr/bin/git」，「:」前面的那個「git」指的就是「/usr/bin/git」屬於「git」套件。</p>
-<h2 id="探索_「package:_git-core」">探索 「<a href="http://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">package: git-core</a>」</h2><p>先準備等會要工作的環境。</p>
+<h2 id="探索_「package:_git-core」">探索 「<a href="https://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">package: git-core</a>」</h2><p>先準備等會要工作的環境。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/git-core -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-core</span><br><span class="line">$ mkdir download</span><br></pre></td></tr></table></figure>
-<p>下載「git-core」的「<a href="http://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">package</a>」，並且解開。</p>
+<p>下載「git-core」的「<a href="https://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-core/download</span><br><span class="line">$ apt-get download git-core</span><br><span class="line">$ dpkg -x git-core_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb git-core</span><br><span class="line">$ dpkg <span class="operator">-e</span> git-core_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb</span><br><span class="line"><span class="comment"># ar xf git-core_1%3a1.9.1-1_all.deb</span></span><br></pre></td></tr></table></figure>
-<p>觀看「control」檔。會發現「Depends: git」，也就是說安裝「<a href="http://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">git-core</a>」會連同安裝「<a href="http://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」。</p>
+<p>觀看「control」檔。會發現「Depends: git」，也就是說安裝「<a href="https://packages.ubuntu.com/trusty/git-core" target="_blank" rel="external">git-core</a>」會連同安裝「<a href="https://packages.ubuntu.com/trusty/git" target="_blank" rel="external">git</a>」。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vi <span class="constant">DEBIAN</span>/control</span><br></pre></td></tr></table></figure>
 <p>另外看到「Description:」那有提到下面的文字。</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">...略...</span><br><span class="line">This <span class="keyword">is</span> <span class="keyword">a</span> transitional dummy package.  The <span class="string">'git-core'</span> package <span class="built_in">has</span> been</span><br><span class="line">renamed <span class="keyword">to</span> <span class="string">'git'</span>, which <span class="built_in">has</span> been installed automatically.  This</span><br><span class="line">git-core package <span class="keyword">is</span> now obsolete, <span class="built_in">and</span> can safely <span class="keyword">be</span> removed from the</span><br><span class="line"><span class="built_in">system</span> <span class="keyword">if</span> <span class="keyword">no</span> other package depends <span class="keyword">on</span> it.</span><br></pre></td></tr></table></figure>
 <p>「git-core」目前捨棄不用了，請直接使用「git」。<br>目前「git-core」只是個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">meta package</a>」或是「dummy package」。<br>作用是為了要讓以前有相依「git-core」的套件可以正常安裝。</p>
-<h2 id="探索_「package:_git-all」">探索 「<a href="http://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">package: git-all</a>」</h2><p>先準備等會要工作的環境。</p>
+<h2 id="探索_「package:_git-all」">探索 「<a href="https://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">package: git-all</a>」</h2><p>先準備等會要工作的環境。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/git-all -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-all</span><br><span class="line">$ mkdir download</span><br></pre></td></tr></table></figure>
-<p>下載「git-all」的「<a href="http://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">package</a>」，並且解開。</p>
+<p>下載「git-all」的「<a href="https://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-all/download</span><br><span class="line">$ apt-get download git-all</span><br><span class="line">$ dpkg -x git-all_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb git-all</span><br><span class="line">$ dpkg <span class="operator">-e</span> git-all_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb</span><br><span class="line"><span class="comment"># ar xf git-all_1%3a1.9.1-1_all.deb</span></span><br></pre></td></tr></table></figure>
 <p>觀看「control」檔。會發現「git (&gt;&gt; 1:1.9.1), git (&lt;&lt; 1:1.9.1-.), git-doc, git-el, git-arch, git-cvs, git-mediawiki, git-svn, git-email, git-gui, gitk, gitweb。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>vi <span class="constant">DEBIAN</span>/control</span><br></pre></td></tr></table></figure>
 <p>另外看到「Description:」那有提到下面的文字。<br><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">...</span>略<span class="attribute">...</span></span><br><span class="line">This is a dummy package which brings <span class="keyword">in</span> <span class="literal">all</span> subpackages<span class="built_in">.</span></span><br></pre></td></tr></table></figure></p>
-<p>也就是說「<a href="http://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">git-all</a>」只是個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">meta package</a>」，為了方便安裝「git」的「subpackages」，也就是上面探索「git」的「<a href="http://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」提到的拆成很多的「package」。</p>
-<h2 id="探索_「package:_git-man」">探索 「<a href="http://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">package: git-man</a>」</h2><p>先準備等會要工作的環境。</p>
+<p>也就是說「<a href="https://packages.ubuntu.com/trusty/git-all" target="_blank" rel="external">git-all</a>」只是個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">meta package</a>」，為了方便安裝「git」的「subpackages」，也就是上面探索「git」的「<a href="https://packages.ubuntu.com/source/trusty/git" target="_blank" rel="external">source package</a>」提到的拆成很多的「package」。</p>
+<h2 id="探索_「package:_git-man」">探索 「<a href="https://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">package: git-man</a>」</h2><p>先準備等會要工作的環境。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/git-man -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-man</span><br><span class="line">$ mkdir download</span><br></pre></td></tr></table></figure>
-<p>下載「git-man」的「<a href="http://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">package</a>」，並且解開。</p>
+<p>下載「git-man」的「<a href="https://packages.ubuntu.com/trusty/git-man" target="_blank" rel="external">package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-man/download</span><br><span class="line">$ apt-get download git-man</span><br><span class="line">$ dpkg -x git-man_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb git-man</span><br><span class="line">$ dpkg <span class="operator">-e</span> git-man_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb</span><br><span class="line"><span class="comment"># ar xf git-man_1%3a1.9.1-1_all.deb</span></span><br></pre></td></tr></table></figure>
 <p>觀看「control」檔。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi DEBIAN/control</span><br></pre></td></tr></table></figure>
@@ -188,176 +188,176 @@
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...略...</span><br><span class="line">This package provides reference documentation <span class="keyword">for</span> use <span class="keyword">by</span> <span class="operator">the</span> <span class="string">'man'</span></span><br><span class="line">utility <span class="operator">and</span> <span class="operator">the</span> <span class="string">'git help'</span> <span class="command"><span class="keyword">command</span>.</span></span><br></pre></td></tr></table></figure>
 <p>了解有哪些「manual」可以查詢。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ls git-man/usr/share/man/</span><br><span class="line">$ ls git-man/usr/share/man/man1 -<span class="number">1</span></span><br><span class="line">$ ls git-man/usr/share/man/man3 -<span class="number">1</span></span><br><span class="line">$ ls git-man/usr/share/man/man5 -<span class="number">1</span></span><br><span class="line">$ ls git-man/usr/share/man/man7 -<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
 <h3 id="man_1">man 1</h3><ul>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git.1.html" target="_blank" rel="external">git</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-add.1.html" target="_blank" rel="external">git-add</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-am.1.html" target="_blank" rel="external">git-am</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-annotate.1.html" target="_blank" rel="external">git-annotate</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-apply.1.html" target="_blank" rel="external">git-apply</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-archive.1.html" target="_blank" rel="external">git-archive</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-bisect.1.html" target="_blank" rel="external">git-bisect</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-blame.1.html" target="_blank" rel="external">git-blame</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-branch.1.html" target="_blank" rel="external">git-branch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-bundle.1.html" target="_blank" rel="external">git-bundle</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-cat-file.1.html" target="_blank" rel="external">git-cat-file</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-attr.1.html" target="_blank" rel="external">git-check-attr</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-ignore.1.html" target="_blank" rel="external">git-check-ignore</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-mailmap.1.html" target="_blank" rel="external">git-check-mailmap</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-checkout.1.html" target="_blank" rel="external">git-checkout</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-checkout-index.1.html" target="_blank" rel="external">git-checkout-index</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-ref-format.1.html" target="_blank" rel="external">git-check-ref-format</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-cherry.1.html" target="_blank" rel="external">git-cherry</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-cherry-pick.1.html" target="_blank" rel="external">git-cherry-pick</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-clean.1.html" target="_blank" rel="external">git-clean</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-clone.1.html" target="_blank" rel="external">git-clone</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-column.1.html" target="_blank" rel="external">git-column</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-commit.1.html" target="_blank" rel="external">git-commit</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-commit-tree.1.html" target="_blank" rel="external">git-commit-tree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-config.1.html" target="_blank" rel="external">git-config</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-count-objects.1.html" target="_blank" rel="external">git-count-objects</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential.1.html" target="_blank" rel="external">git-credential</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-cache.1.html" target="_blank" rel="external">git-credential-cache</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-cache--daemon.1.html" target="_blank" rel="external">git-credential-cache--daemon</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-store.1.html" target="_blank" rel="external">git-credential-store</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-daemon.1.html" target="_blank" rel="external">git-daemon</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-describe.1.html" target="_blank" rel="external">git-describe</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff.1.html" target="_blank" rel="external">git-diff</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-files.1.html" target="_blank" rel="external">git-diff-files</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-index.1.html" target="_blank" rel="external">git-diff-index</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-difftool.1.html" target="_blank" rel="external">git-difftool</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-tree.1.html" target="_blank" rel="external">git-diff-tree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fast-export.1.html" target="_blank" rel="external">git-fast-export</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fast-import.1.html" target="_blank" rel="external">git-fast-import</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fetch.1.html" target="_blank" rel="external">git-fetch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fetch-pack.1.html" target="_blank" rel="external">git-fetch-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-filter-branch.1.html" target="_blank" rel="external">git-filter-branch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fmt-merge-msg.1.html" target="_blank" rel="external">git-fmt-merge-msg</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-for-each-ref.1.html" target="_blank" rel="external">git-for-each-ref</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-format-patch.1.html" target="_blank" rel="external">git-format-patch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fsck.1.html" target="_blank" rel="external">git-fsck</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-fsck-objects.1.html" target="_blank" rel="external">git-fsck-objects</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-gc.1.html" target="_blank" rel="external">git-gc</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-get-tar-commit-id.1.html" target="_blank" rel="external">git-get-tar-commit-id</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-grep.1.html" target="_blank" rel="external">git-grep</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-hash-object.1.html" target="_blank" rel="external">git-hash-object</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-help.1.html" target="_blank" rel="external">git-help</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-backend.1.html" target="_blank" rel="external">git-http-backend</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-fetch.1.html" target="_blank" rel="external">git-http-fetch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-push.1.html" target="_blank" rel="external">git-http-push</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-imap-send.1.html" target="_blank" rel="external">git-imap-send</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-index-pack.1.html" target="_blank" rel="external">git-index-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-init.1.html" target="_blank" rel="external">git-init</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-init-db.1.html" target="_blank" rel="external">git-init-db</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-instaweb.1.html" target="_blank" rel="external">git-instaweb</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-log.1.html" target="_blank" rel="external">git-log</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-files.1.html" target="_blank" rel="external">git-ls-files</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-remote.1.html" target="_blank" rel="external">git-ls-remote</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-tree.1.html" target="_blank" rel="external">git-ls-tree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mailinfo.1.html" target="_blank" rel="external">git-mailinfo</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mailsplit.1.html" target="_blank" rel="external">git-mailsplit</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge.1.html" target="_blank" rel="external">git-merge</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-base.1.html" target="_blank" rel="external">git-merge-base</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-file.1.html" target="_blank" rel="external">git-merge-file</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-index.1.html" target="_blank" rel="external">git-merge-index</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-one-file.1.html" target="_blank" rel="external">git-merge-one-file</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mergetool.1.html" target="_blank" rel="external">git-mergetool</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mergetool--lib.1.html" target="_blank" rel="external">git-mergetool--lib</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-tree.1.html" target="_blank" rel="external">git-merge-tree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mktag.1.html" target="_blank" rel="external">git-mktag</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mktree.1.html" target="_blank" rel="external">git-mktree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-mv.1.html" target="_blank" rel="external">git-mv</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-name-rev.1.html" target="_blank" rel="external">git-name-rev</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-notes.1.html" target="_blank" rel="external">git-notes</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-p4.1.html" target="_blank" rel="external">git-p4</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-objects.1.html" target="_blank" rel="external">git-pack-objects</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-redundant.1.html" target="_blank" rel="external">git-pack-redundant</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-refs.1.html" target="_blank" rel="external">git-pack-refs</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-parse-remote.1.html" target="_blank" rel="external">git-parse-remote</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-patch-id.1.html" target="_blank" rel="external">git-patch-id</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-prune.1.html" target="_blank" rel="external">git-prune</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-prune-packed.1.html" target="_blank" rel="external">git-prune-packed</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-pull.1.html" target="_blank" rel="external">git-pull</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-push.1.html" target="_blank" rel="external">git-push</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-quiltimport.1.html" target="_blank" rel="external">git-quiltimport</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-read-tree.1.html" target="_blank" rel="external">git-read-tree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-rebase.1.html" target="_blank" rel="external">git-rebase</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-receive-pack.1.html" target="_blank" rel="external">git-receive-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-reflog.1.html" target="_blank" rel="external">git-reflog</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-relink.1.html" target="_blank" rel="external">git-relink</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote.1.html" target="_blank" rel="external">git-remote</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-ext.1.html" target="_blank" rel="external">git-remote-ext</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-fd.1.html" target="_blank" rel="external">git-remote-fd</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/gitremote-helpers.1.html" target="_blank" rel="external">gitremote-helpers</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-testgit.1.html" target="_blank" rel="external">git-remote-testgit</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-repack.1.html" target="_blank" rel="external">git-repack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-replace.1.html" target="_blank" rel="external">git-replace</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-request-pull.1.html" target="_blank" rel="external">git-request-pull</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-rerere.1.html" target="_blank" rel="external">git-rerere</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-reset.1.html" target="_blank" rel="external">git-reset</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-revert.1.html" target="_blank" rel="external">git-revert</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-rev-list.1.html" target="_blank" rel="external">git-rev-list</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-rev-parse.1.html" target="_blank" rel="external">git-rev-parse</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-rm.1.html" target="_blank" rel="external">git-rm</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-send-pack.1.html" target="_blank" rel="external">git-send-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-shell.1.html" target="_blank" rel="external">git-shell</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-i18n.1.html" target="_blank" rel="external">git-sh-i18n</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-i18n--envsubst.1.html" target="_blank" rel="external">git-sh-i18n--envsubst</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-shortlog.1.html" target="_blank" rel="external">git-shortlog</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-show.1.html" target="_blank" rel="external">git-show</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-branch.1.html" target="_blank" rel="external">git-show-branch</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-index.1.html" target="_blank" rel="external">git-show-index</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-ref.1.html" target="_blank" rel="external">git-show-ref</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-setup.1.html" target="_blank" rel="external">git-sh-setup</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-stage.1.html" target="_blank" rel="external">git-stage</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-stash.1.html" target="_blank" rel="external">git-stash</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-status.1.html" target="_blank" rel="external">git-status</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-stripspace.1.html" target="_blank" rel="external">git-stripspace</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-submodule.1.html" target="_blank" rel="external">git-submodule</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-subtree.1.html" target="_blank" rel="external">git-subtree</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-symbolic-ref.1.html" target="_blank" rel="external">git-symbolic-ref</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-tag.1.html" target="_blank" rel="external">git-tag</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-unpack-file.1.html" target="_blank" rel="external">git-unpack-file</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-unpack-objects.1.html" target="_blank" rel="external">git-unpack-objects</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-index.1.html" target="_blank" rel="external">git-update-index</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-ref.1.html" target="_blank" rel="external">git-update-ref</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-server-info.1.html" target="_blank" rel="external">git-update-server-info</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-upload-archive.1.html" target="_blank" rel="external">git-upload-archive</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-upload-pack.1.html" target="_blank" rel="external">git-upload-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-var.1.html" target="_blank" rel="external">git-var</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-verify-pack.1.html" target="_blank" rel="external">git-verify-pack</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-verify-tag.1.html" target="_blank" rel="external">git-verify-tag</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/gitweb.1.html" target="_blank" rel="external">gitweb</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-web--browse.1.html" target="_blank" rel="external">git-web--browse</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-whatchanged.1.html" target="_blank" rel="external">git-whatchanged</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/git-write-tree.1.html" target="_blank" rel="external">git-write-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git.1.html" target="_blank" rel="external">git</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-add.1.html" target="_blank" rel="external">git-add</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-am.1.html" target="_blank" rel="external">git-am</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-annotate.1.html" target="_blank" rel="external">git-annotate</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-apply.1.html" target="_blank" rel="external">git-apply</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-archive.1.html" target="_blank" rel="external">git-archive</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-bisect.1.html" target="_blank" rel="external">git-bisect</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-blame.1.html" target="_blank" rel="external">git-blame</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-branch.1.html" target="_blank" rel="external">git-branch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-bundle.1.html" target="_blank" rel="external">git-bundle</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-cat-file.1.html" target="_blank" rel="external">git-cat-file</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-attr.1.html" target="_blank" rel="external">git-check-attr</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-ignore.1.html" target="_blank" rel="external">git-check-ignore</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-mailmap.1.html" target="_blank" rel="external">git-check-mailmap</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-checkout.1.html" target="_blank" rel="external">git-checkout</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-checkout-index.1.html" target="_blank" rel="external">git-checkout-index</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-check-ref-format.1.html" target="_blank" rel="external">git-check-ref-format</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-cherry.1.html" target="_blank" rel="external">git-cherry</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-cherry-pick.1.html" target="_blank" rel="external">git-cherry-pick</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-clean.1.html" target="_blank" rel="external">git-clean</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-clone.1.html" target="_blank" rel="external">git-clone</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-column.1.html" target="_blank" rel="external">git-column</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-commit.1.html" target="_blank" rel="external">git-commit</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-commit-tree.1.html" target="_blank" rel="external">git-commit-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-config.1.html" target="_blank" rel="external">git-config</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-count-objects.1.html" target="_blank" rel="external">git-count-objects</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential.1.html" target="_blank" rel="external">git-credential</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-cache.1.html" target="_blank" rel="external">git-credential-cache</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-cache--daemon.1.html" target="_blank" rel="external">git-credential-cache--daemon</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-credential-store.1.html" target="_blank" rel="external">git-credential-store</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-daemon.1.html" target="_blank" rel="external">git-daemon</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-describe.1.html" target="_blank" rel="external">git-describe</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff.1.html" target="_blank" rel="external">git-diff</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-files.1.html" target="_blank" rel="external">git-diff-files</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-index.1.html" target="_blank" rel="external">git-diff-index</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-difftool.1.html" target="_blank" rel="external">git-difftool</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-diff-tree.1.html" target="_blank" rel="external">git-diff-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fast-export.1.html" target="_blank" rel="external">git-fast-export</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fast-import.1.html" target="_blank" rel="external">git-fast-import</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fetch.1.html" target="_blank" rel="external">git-fetch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fetch-pack.1.html" target="_blank" rel="external">git-fetch-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-filter-branch.1.html" target="_blank" rel="external">git-filter-branch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fmt-merge-msg.1.html" target="_blank" rel="external">git-fmt-merge-msg</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-for-each-ref.1.html" target="_blank" rel="external">git-for-each-ref</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-format-patch.1.html" target="_blank" rel="external">git-format-patch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fsck.1.html" target="_blank" rel="external">git-fsck</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-fsck-objects.1.html" target="_blank" rel="external">git-fsck-objects</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-gc.1.html" target="_blank" rel="external">git-gc</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-get-tar-commit-id.1.html" target="_blank" rel="external">git-get-tar-commit-id</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-grep.1.html" target="_blank" rel="external">git-grep</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-hash-object.1.html" target="_blank" rel="external">git-hash-object</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-help.1.html" target="_blank" rel="external">git-help</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-backend.1.html" target="_blank" rel="external">git-http-backend</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-fetch.1.html" target="_blank" rel="external">git-http-fetch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-http-push.1.html" target="_blank" rel="external">git-http-push</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-imap-send.1.html" target="_blank" rel="external">git-imap-send</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-index-pack.1.html" target="_blank" rel="external">git-index-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-init.1.html" target="_blank" rel="external">git-init</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-init-db.1.html" target="_blank" rel="external">git-init-db</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-instaweb.1.html" target="_blank" rel="external">git-instaweb</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-log.1.html" target="_blank" rel="external">git-log</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-files.1.html" target="_blank" rel="external">git-ls-files</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-remote.1.html" target="_blank" rel="external">git-ls-remote</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-ls-tree.1.html" target="_blank" rel="external">git-ls-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mailinfo.1.html" target="_blank" rel="external">git-mailinfo</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mailsplit.1.html" target="_blank" rel="external">git-mailsplit</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge.1.html" target="_blank" rel="external">git-merge</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-base.1.html" target="_blank" rel="external">git-merge-base</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-file.1.html" target="_blank" rel="external">git-merge-file</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-index.1.html" target="_blank" rel="external">git-merge-index</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-one-file.1.html" target="_blank" rel="external">git-merge-one-file</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mergetool.1.html" target="_blank" rel="external">git-mergetool</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mergetool--lib.1.html" target="_blank" rel="external">git-mergetool--lib</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-merge-tree.1.html" target="_blank" rel="external">git-merge-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mktag.1.html" target="_blank" rel="external">git-mktag</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mktree.1.html" target="_blank" rel="external">git-mktree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-mv.1.html" target="_blank" rel="external">git-mv</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-name-rev.1.html" target="_blank" rel="external">git-name-rev</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-notes.1.html" target="_blank" rel="external">git-notes</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-p4.1.html" target="_blank" rel="external">git-p4</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-objects.1.html" target="_blank" rel="external">git-pack-objects</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-redundant.1.html" target="_blank" rel="external">git-pack-redundant</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-pack-refs.1.html" target="_blank" rel="external">git-pack-refs</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-parse-remote.1.html" target="_blank" rel="external">git-parse-remote</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-patch-id.1.html" target="_blank" rel="external">git-patch-id</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-prune.1.html" target="_blank" rel="external">git-prune</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-prune-packed.1.html" target="_blank" rel="external">git-prune-packed</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-pull.1.html" target="_blank" rel="external">git-pull</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-push.1.html" target="_blank" rel="external">git-push</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-quiltimport.1.html" target="_blank" rel="external">git-quiltimport</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-read-tree.1.html" target="_blank" rel="external">git-read-tree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-rebase.1.html" target="_blank" rel="external">git-rebase</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-receive-pack.1.html" target="_blank" rel="external">git-receive-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-reflog.1.html" target="_blank" rel="external">git-reflog</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-relink.1.html" target="_blank" rel="external">git-relink</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote.1.html" target="_blank" rel="external">git-remote</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-ext.1.html" target="_blank" rel="external">git-remote-ext</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-fd.1.html" target="_blank" rel="external">git-remote-fd</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/gitremote-helpers.1.html" target="_blank" rel="external">gitremote-helpers</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-remote-testgit.1.html" target="_blank" rel="external">git-remote-testgit</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-repack.1.html" target="_blank" rel="external">git-repack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-replace.1.html" target="_blank" rel="external">git-replace</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-request-pull.1.html" target="_blank" rel="external">git-request-pull</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-rerere.1.html" target="_blank" rel="external">git-rerere</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-reset.1.html" target="_blank" rel="external">git-reset</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-revert.1.html" target="_blank" rel="external">git-revert</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-rev-list.1.html" target="_blank" rel="external">git-rev-list</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-rev-parse.1.html" target="_blank" rel="external">git-rev-parse</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-rm.1.html" target="_blank" rel="external">git-rm</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-send-pack.1.html" target="_blank" rel="external">git-send-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-shell.1.html" target="_blank" rel="external">git-shell</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-i18n.1.html" target="_blank" rel="external">git-sh-i18n</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-i18n--envsubst.1.html" target="_blank" rel="external">git-sh-i18n--envsubst</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-shortlog.1.html" target="_blank" rel="external">git-shortlog</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-show.1.html" target="_blank" rel="external">git-show</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-branch.1.html" target="_blank" rel="external">git-show-branch</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-index.1.html" target="_blank" rel="external">git-show-index</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-show-ref.1.html" target="_blank" rel="external">git-show-ref</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-sh-setup.1.html" target="_blank" rel="external">git-sh-setup</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-stage.1.html" target="_blank" rel="external">git-stage</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-stash.1.html" target="_blank" rel="external">git-stash</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-status.1.html" target="_blank" rel="external">git-status</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-stripspace.1.html" target="_blank" rel="external">git-stripspace</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-submodule.1.html" target="_blank" rel="external">git-submodule</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-subtree.1.html" target="_blank" rel="external">git-subtree</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-symbolic-ref.1.html" target="_blank" rel="external">git-symbolic-ref</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-tag.1.html" target="_blank" rel="external">git-tag</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-unpack-file.1.html" target="_blank" rel="external">git-unpack-file</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-unpack-objects.1.html" target="_blank" rel="external">git-unpack-objects</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-index.1.html" target="_blank" rel="external">git-update-index</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-ref.1.html" target="_blank" rel="external">git-update-ref</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-update-server-info.1.html" target="_blank" rel="external">git-update-server-info</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-upload-archive.1.html" target="_blank" rel="external">git-upload-archive</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-upload-pack.1.html" target="_blank" rel="external">git-upload-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-var.1.html" target="_blank" rel="external">git-var</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-verify-pack.1.html" target="_blank" rel="external">git-verify-pack</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-verify-tag.1.html" target="_blank" rel="external">git-verify-tag</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/gitweb.1.html" target="_blank" rel="external">gitweb</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-web--browse.1.html" target="_blank" rel="external">git-web--browse</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-whatchanged.1.html" target="_blank" rel="external">git-whatchanged</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/git-write-tree.1.html" target="_blank" rel="external">git-write-tree</a></li>
 </ul>
 <h3 id="man_3">man 3</h3><ul>
-<li>$ man 3 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man3/Git.3pm.html" target="_blank" rel="external">Git</a></li>
-<li>$ man 3 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man3/Git::I18N.3pm.html" target="_blank" rel="external">Git::I18N</a></li>
+<li>$ man 3 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man3/Git.3pm.html" target="_blank" rel="external">Git</a></li>
+<li>$ man 3 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man3/Git::I18N.3pm.html" target="_blank" rel="external">Git::I18N</a></li>
 </ul>
 <h3 id="man_5">man 5</h3><ul>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/gitattributes.5.html" target="_blank" rel="external">gitattributes</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/githooks.5.html" target="_blank" rel="external">githooks</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/gitignore.5.html" target="_blank" rel="external">gitignore</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/gitmodules.5.html" target="_blank" rel="external">gitmodules</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/gitrepository-layout.5.html" target="_blank" rel="external">gitrepository-layout</a></li>
-<li>$ man 5 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/gitweb.conf.5.html" target="_blank" rel="external">gitweb.conf</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/gitattributes.5.html" target="_blank" rel="external">gitattributes</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/githooks.5.html" target="_blank" rel="external">githooks</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/gitignore.5.html" target="_blank" rel="external">gitignore</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/gitmodules.5.html" target="_blank" rel="external">gitmodules</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/gitrepository-layout.5.html" target="_blank" rel="external">gitrepository-layout</a></li>
+<li>$ man 5 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/gitweb.conf.5.html" target="_blank" rel="external">gitweb.conf</a></li>
 </ul>
 <h3 id="man_7">man 7</h3><ul>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitcli.7.html" target="_blank" rel="external">gitcli</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitcore-tutorial.7.html" target="_blank" rel="external">gitcore-tutorial</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitcredentials.7.html" target="_blank" rel="external">gitcredentials</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitcvs-migration.7.html" target="_blank" rel="external">gitcvs-migration</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitdiffcore.7.html" target="_blank" rel="external">gitdiffcore</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitglossary.7.html" target="_blank" rel="external">gitglossary</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitnamespaces.7.html" target="_blank" rel="external">gitnamespaces</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitrevisions.7.html" target="_blank" rel="external">gitrevisions</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gittutorial-2.7.html" target="_blank" rel="external">gittutorial-2</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gittutorial.7.html" target="_blank" rel="external">gittutorial</a></li>
-<li>$ man 7 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man7/gitworkflows.7.html" target="_blank" rel="external">gitworkflows</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitcli.7.html" target="_blank" rel="external">gitcli</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitcore-tutorial.7.html" target="_blank" rel="external">gitcore-tutorial</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitcredentials.7.html" target="_blank" rel="external">gitcredentials</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitcvs-migration.7.html" target="_blank" rel="external">gitcvs-migration</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitdiffcore.7.html" target="_blank" rel="external">gitdiffcore</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitglossary.7.html" target="_blank" rel="external">gitglossary</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitnamespaces.7.html" target="_blank" rel="external">gitnamespaces</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitrevisions.7.html" target="_blank" rel="external">gitrevisions</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gittutorial-2.7.html" target="_blank" rel="external">gittutorial-2</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gittutorial.7.html" target="_blank" rel="external">gittutorial</a></li>
+<li>$ man 7 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man7/gitworkflows.7.html" target="_blank" rel="external">gitworkflows</a></li>
 </ul>
-<h2 id="探索_「package:_git-doc」">探索 「<a href="http://packages.ubuntu.com/trusty/git-doc" target="_blank" rel="external">package: git-doc</a>」</h2><p>先準備等會要工作的環境。</p>
+<h2 id="探索_「package:_git-doc」">探索 「<a href="https://packages.ubuntu.com/trusty/git-doc" target="_blank" rel="external">package: git-doc</a>」</h2><p>先準備等會要工作的環境。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/tmp/git-doc -p</span><br><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-doc</span><br><span class="line">$ mkdir download</span><br></pre></td></tr></table></figure>
-<p>下載「git-doc」的「<a href="http://packages.ubuntu.com/trusty/git-doc" target="_blank" rel="external">package</a>」，並且解開。</p>
+<p>下載「git-doc」的「<a href="https://packages.ubuntu.com/trusty/git-doc" target="_blank" rel="external">package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> ~/tmp/git-doc/download</span><br><span class="line">$ apt-get download git-doc</span><br><span class="line">$ dpkg -x git-doc_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb git-doc</span><br><span class="line">$ dpkg <span class="operator">-e</span> git-doc_1%<span class="number">3</span>a1.<span class="number">9.1</span>-<span class="number">1</span>_all.deb</span><br><span class="line"><span class="comment"># ar xf git-doc_1%3a1.9.1-1_all.deb</span></span><br></pre></td></tr></table></figure>
 <p>觀看「control」檔。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi DEBIAN/control</span><br></pre></td></tr></table></figure>
@@ -412,7 +412,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，探究 fontconfig 相關的套件 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，探究 fontconfig 相關的套件 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/font/fontconfig/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -139,21 +139,21 @@
 					<h1 id="Ubuntu環境下，探究_fontconfig_相關的套件">Ubuntu環境下，探究 fontconfig 相關的套件</h1><h2 id="測試環境">測試環境</h2><p>以下所提的測試環境是在「Xubuntu 14.04 64位元」測試。我使用的界面是英文。所以一些相關的術語是使用英文摟。</p>
 <h2 id="fontconfig_相關的套件">fontconfig 相關的套件</h2><p>Package</p>
 <ul>
-<li><a href="http://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a></li>
-<li><a href="http://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a></li>
-<li><a href="http://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a></li>
-<li><a href="http://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a> （這個套件基本上不算是，只是剛好有相關，順帶一提）</li>
+<li><a href="https://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a></li>
+<li><a href="https://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a></li>
+<li><a href="https://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a></li>
+<li><a href="https://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a> （這個套件基本上不算是，只是剛好有相關，順帶一提）</li>
 </ul>
 <p>Source Package</p>
 <ul>
-<li><a href="http://packages.ubuntu.com/source/trusty/fontconfig" target="_blank" rel="external">fontconfig</a></li>
-<li><a href="http://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a></li>
+<li><a href="https://packages.ubuntu.com/source/trusty/fontconfig" target="_blank" rel="external">fontconfig</a></li>
+<li><a href="https://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a></li>
 </ul>
-<h3 id="剛剛才發現一個「查詢某個檔案或是資料夾，屬於哪個套件」的指令下法。">剛剛才發現一個「查詢某個檔案或是資料夾，屬於哪個套件」的指令下法。</h3><p>原來可以執行下面的指令阿，就可以知道「30-cjk-aliases.conf」是屬於哪個套件。參考<a href="http://os.51cto.com/art/201001/176881.htm" target="_blank" rel="external">這篇</a>提到的。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S <span class="number">30</span>-cjk-aliases.conf</span><br></pre></td></tr></table></figure></p>
-<h2 id="fontconfig">fontconfig</h2><p>在ubuntu手動安裝font。通常會接觸到一個指令「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cache.1.html" target="_blank" rel="external">fc-cache</a>」。「fc-cache」的用法，可以參考「<a href="/blog/read/linux/ubuntu/font/font-noto/">這篇</a>」的說明範例來練習。</p>
+<h3 id="剛剛才發現一個「查詢某個檔案或是資料夾，屬於哪個套件」的指令下法。">剛剛才發現一個「查詢某個檔案或是資料夾，屬於哪個套件」的指令下法。</h3><p>原來可以執行下面的指令阿，就可以知道「30-cjk-aliases.conf」是屬於哪個套件。參考<a href="https://os.51cto.com/art/201001/176881.htm" target="_blank" rel="external">這篇</a>提到的。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S <span class="number">30</span>-cjk-aliases.conf</span><br></pre></td></tr></table></figure></p>
+<h2 id="fontconfig">fontconfig</h2><p>在ubuntu手動安裝font。通常會接觸到一個指令「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cache.1.html" target="_blank" rel="external">fc-cache</a>」。「fc-cache」的用法，可以參考「<a href="/blog/read/linux/ubuntu/font/font-noto/">這篇</a>」的說明範例來練習。</p>
 <p>通常會這樣下。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo <span class="built_in">fc</span>-cache -fv</span><br></pre></td></tr></table></figure>
-<p>而這個指令是屬於「<a href="http://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」這個套件。<br>當然這個套件還包含其他相關的指令。</p>
+<p>而這個指令是屬於「<a href="https://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」這個套件。<br>當然這個套件還包含其他相關的指令。</p>
 <ul>
 <li>fc-cache</li>
 <li>fc-cat</li>
@@ -164,16 +164,16 @@
 <li>fc-scan</li>
 <li>fc-validate</li>
 </ul>
-<p>這裡值得一提的指令「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a>」。</p>
+<p>這裡值得一提的指令「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a>」。</p>
 <p>當你在設定「/etc/fonts/conf.d」裡面的檔的時候，若有寫錯。執行下面的指令，就會告訴你哪裡寫錯了。<br><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match</span><br></pre></td></tr></table></figure></p>
 <p>下面這個指令下法，可以讓你了解系統尋找font的順序。「fc-match」的用法會在另一篇<a href="/blog/read/linux/ubuntu/font/fc-match/">文章</a>來討論。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">fc</span>-match <span class="operator">-s</span> nonospace | less</span><br></pre></td></tr></table></figure>
-<h2 id="fontconfig-config">fontconfig-config</h2><p>通常我們在設定font的時候，也常到「/etc/fonts」去做些修改。<br>而這個資料夾裡面的檔案則是來自於「<a href="http://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a>」這個套件。</p>
+<h2 id="fontconfig-config">fontconfig-config</h2><p>通常我們在設定font的時候，也常到「/etc/fonts」去做些修改。<br>而這個資料夾裡面的檔案則是來自於「<a href="https://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a>」這個套件。</p>
 <p>例如「65-nonlatin.conf」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S <span class="number">65</span>-nonlatin.conf</span><br></pre></td></tr></table></figure>
-<h2 id="language-selector-common">language-selector-common</h2><p>在<a href="http://blog.roodo.com/rocksaying/archives/12397861.html" target="_blank" rel="external">這一頁</a>提到的「30-cjk-aliases.conf」</p>
+<h2 id="language-selector-common">language-selector-common</h2><p>在<a href="https://blog.roodo.com/rocksaying/archives/12397861.html" target="_blank" rel="external">這一頁</a>提到的「30-cjk-aliases.conf」</p>
 <p>正常的檔放在「/etc/fonts/conf.avail/30-cjk-aliases.conf」<br>通常會有一個symbolic link放在「/etc/fonts/conf.d/30-cjk-aliases.conf」。</p>
-<p>這個是屬於「<a href="http://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」這個套件。而不是放在上面提到的「fontconfig-config」。</p>
+<p>這個是屬於「<a href="https://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」這個套件。而不是放在上面提到的「fontconfig-config」。</p>
 <p>這個套件也包含了幾個常看到的檔。</p>
 <ul>
 <li>30-cjk-aliases.conf</li>
@@ -184,11 +184,11 @@
 <li>69-language-selector-zh-tw.conf</li>
 <li>99-language-selector-zh.conf</li>
 </ul>
-<p>額外提的，還有一個套件叫「<a href="http://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，和「<a href="http://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」都是屬於「<a href="http://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a>」這個「原始碼套件(Source Package )」。<br>這個套件，就是我們常看到的「Language Support」哪隻程式。</p>
+<p>額外提的，還有一個套件叫「<a href="https://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，和「<a href="https://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」都是屬於「<a href="https://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a>」這個「原始碼套件(Source Package )」。<br>這個套件，就是我們常看到的「Language Support」哪隻程式。</p>
 <p>在「Xubuntu」，展開「開始選單(Whisker)」，選單右下方有一個按鈕「All Setting」，會跳出「Settings」這隻程式。在「Psersonal」就會看到「Language Support」。</p>
 <p>或是你用的是「Applications Menu」。則是展開後，選擇「Settings Manager」，同樣會跳出會跳出「Settings」這隻程式。</p>
 <p>或是直接在Termianl，執行「xfce4-settings-manager」也行。在「Whisker選單」查詢「xfce4-settings-manager」或是「Settings Manager」，也查的到，基本上你打「se」大概就會跑出來「Settings Manager」了。</p>
-<p>而剛剛提到的「<a href="http://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，裡面有一個程式叫做「gnome-language-selector」，就是剛剛提到的「Language Support」。在「Terminal」下「gnome-language-selector」這個指令就行了，就不用透過剛剛選單的方式。</p>
+<p>而剛剛提到的「<a href="https://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，裡面有一個程式叫做「gnome-language-selector」，就是剛剛提到的「Language Support」。在「Terminal」下「gnome-language-selector」這個指令就行了，就不用透過剛剛選單的方式。</p>
 <h2 id="先驗證上面提到的">先驗證上面提到的</h2><p>先準備一個暫時工作的資料夾</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/tmp/font -p</span><br><span class="line"><span class="built_in">cd</span> ~/tmp/font</span><br></pre></td></tr></table></figure>
 <p>準備好等會所有要工作的資料夾。</p>
@@ -210,14 +210,14 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">fc-cache</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-cat</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-list</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-match</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-pattern</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-query</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-scan</span><span class="class">.1</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">fc-validate</span><span class="class">.1</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
 <p>這些就是上面那些程式的相關文件<br>所以就可以查詢。</p>
 <h3 id="man_1">man 1</h3><ul>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cache.1.html" target="_blank" rel="external">fc-cache</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cat.1.html" target="_blank" rel="external">fc-cat</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-list.1.html" target="_blank" rel="external">fc-list</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-pattern.1.html" target="_blank" rel="external">fc-pattern</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-query.1.html" target="_blank" rel="external">fc-query</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-scan.1.html" target="_blank" rel="external">fc-scan</a></li>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/fc-validate.1.html" target="_blank" rel="external">fc-validate</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cache.1.html" target="_blank" rel="external">fc-cache</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-cat.1.html" target="_blank" rel="external">fc-cat</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-list.1.html" target="_blank" rel="external">fc-list</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-match.1.html" target="_blank" rel="external">fc-match</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-pattern.1.html" target="_blank" rel="external">fc-pattern</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-query.1.html" target="_blank" rel="external">fc-query</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-scan.1.html" target="_blank" rel="external">fc-scan</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/fc-validate.1.html" target="_blank" rel="external">fc-validate</a></li>
 </ul>
 <blockquote>
 <p>注意以上的路徑是在我們目前工作的資料夾裡。當然你也可以對應到「/」底下。<br>因為系統應該有裝「fontconfig」這個套件。所以相對在「/」底下應該都有這樣的檔案。<br>上面的作法，只是要讓你看到「fontconfig」有安裝了什麼檔案在「/」底下。</p>
@@ -232,12 +232,12 @@
 <p>觀看有哪些「Manual」可以查詢。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls fontconfig-config/usr/share/man/man5</span><br></pre></td></tr></table></figure>
 <p>可以看到<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">fonts-conf</span><span class="class">.5</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure></p>
-<p>也就是說安裝了「fontconfig-config」，就會安裝「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man5/fonts-conf.5.html" target="_blank" rel="external">fonts-conf</a>」這個manual。</p>
+<p>也就是說安裝了「fontconfig-config」，就會安裝「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man5/fonts-conf.5.html" target="_blank" rel="external">fonts-conf</a>」這個manual。</p>
 <p>所以可以直接下</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man fonts-conf</span><br></pre></td></tr></table></figure>
 <p>就可以看到相關文件了。內容應該跟剛剛的「fontconfig-user.html」是一樣的。</p>
 <h2 id="下載「fontconfig-config」的「Source_Package」，並解開。">下載「fontconfig-config」的「Source Package」，並解開。</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/tmp/font/fontconfig-config/<span class="keyword">source</span></span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">source</span> fontconfig-config</span><br><span class="line"><span class="keyword">cd</span> fontconfig-<span class="number">2.11</span>.<span class="number">0</span></span><br><span class="line">mc</span><br></pre></td></tr></table></figure>
-<p>你就會看到相關的原始碼檔案了。<br>「<a href="http://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」和「<a href="http://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a>」，都是屬於「<a href="http://packages.ubuntu.com/source/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」這個「Source Package」。</p>
+<p>你就會看到相關的原始碼檔案了。<br>「<a href="https://packages.ubuntu.com/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」和「<a href="https://packages.ubuntu.com/trusty/fontconfig-config" target="_blank" rel="external">fontconfig-config</a>」，都是屬於「<a href="https://packages.ubuntu.com/source/trusty/fontconfig" target="_blank" rel="external">fontconfig</a>」這個「Source Package」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi fontconfig-<span class="number">2.11</span>.<span class="number">0</span>/debian/control</span><br></pre></td></tr></table></figure>
 <p>就可以看到拆成幾個package的相關資訊。</p>
 <h2 id="下載「language-selector-common」_的「package」，並解開。">下載「language-selector-common」 的「package」，並解開。</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/tmp/font/language-selector-common/download</span><br><span class="line">apt-get download language-selector-common</span><br><span class="line">dpkg -x language-selector-common_0.<span class="number">129.2</span>_all.deb language-selector-common</span><br></pre></td></tr></table></figure>
@@ -257,10 +257,10 @@
 <p>可以看到<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">gnome-language-selector</span><span class="class">.1</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure></p>
 <p>所以就可以看相關的文件</p>
 <h3 id="man_1-1">man 1</h3><ul>
-<li>$ man 1 <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/gnome-language-selector.1.html" target="_blank" rel="external">gnome-language-selector</a></li>
+<li>$ man 1 <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/gnome-language-selector.1.html" target="_blank" rel="external">gnome-language-selector</a></li>
 </ul>
 <h2 id="下載_language-selector-gnome_的「Source_Package」，並解開。">下載 language-selector-gnome 的「Source Package」，並解開。</h2><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> ~/tmp/font/<span class="keyword">language</span>-selector-gnome/<span class="keyword">source</span></span><br><span class="line">apt-<span class="built_in">get</span> <span class="keyword">source</span> <span class="keyword">language</span>-selector-gnome</span><br><span class="line"><span class="keyword">cd</span> <span class="keyword">language</span>-selector-<span class="number">0.129</span>.<span class="number">2</span></span><br><span class="line">mc</span><br></pre></td></tr></table></figure>
-<p>「<a href="http://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」和「<a href="http://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，都是屬於「<a href="http://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a>」這個「Source Package」。</p>
+<p>「<a href="https://packages.ubuntu.com/trusty/language-selector-common" target="_blank" rel="external">language-selector-common</a>」和「<a href="https://packages.ubuntu.com/trusty/language-selector-gnome" target="_blank" rel="external">language-selector-gnome</a>」，都是屬於「<a href="https://packages.ubuntu.com/source/trusty/language-selector" target="_blank" rel="external">language-selector</a>」這個「Source Package」。</p>
 
 				</div>
 
@@ -300,7 +300,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

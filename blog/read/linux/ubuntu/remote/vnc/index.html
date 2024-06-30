@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何讓VNC開機自動運行 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何讓VNC開機自動運行 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/remote/vnc/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,7 +136,7 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="Ubuntu環境下，如何讓VNC開機自動運行">Ubuntu環境下，如何讓VNC開機自動運行</h1><h2 id="前言">前言</h2><p>這篇是從回答「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=334586#forumpost334586" target="_blank" rel="external">這篇</a>」，整理而來。</p>
+					<h1 id="Ubuntu環境下，如何讓VNC開機自動運行">Ubuntu環境下，如何讓VNC開機自動運行</h1><h2 id="前言">前言</h2><p>這篇是從回答「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=334586#forumpost334586" target="_blank" rel="external">這篇</a>」，整理而來。</p>
 <h2 id="測試環境">測試環境</h2><ul>
 <li>Lubuntu 14.04 32位元測試的</li>
 </ul>
@@ -162,7 +162,7 @@
 <h2 id="設定開機自動啟動">設定開機自動啟動</h2><p>執行下面的指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d vnc defaults</span><br></pre></td></tr></table></figure>
 <p>可以看到下面訊息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d: warning: /etc/init.d/vnc missing LSB information</span><br><span class="line">update-rc.d: see &lt;http://wiki.debian.org/LSBInitScripts&gt;</span><br><span class="line"> Adding system startup <span class="keyword">for</span> /etc/init.d/vnc ...</span><br><span class="line">   /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d: warning: /etc/init.d/vnc missing LSB information</span><br><span class="line">update-rc.d: see &lt;https://wiki.debian.org/LSBInitScripts&gt;</span><br><span class="line"> Adding system startup <span class="keyword">for</span> /etc/init.d/vnc ...</span><br><span class="line">   /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
 <p>也就是會產生下面幾個檔</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/etc/rc0.d/K20vnc</span><br><span class="line">/etc/rc1.d/K20vnc</span><br><span class="line">/etc/rc6.d/K20vnc</span><br><span class="line">/etc/rc2.d/S20vnc</span><br><span class="line">/etc/rc3.d/S20vnc</span><br><span class="line">/etc/rc4.d/S20vnc</span><br><span class="line">/etc/rc5.d/S20vnc</span><br></pre></td></tr></table></figure>
 <p>查看一下</p>
@@ -174,12 +174,12 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> vnc remove</span><br></pre></td></tr></table></figure>
 <p>另外還有幾篇可以參考的文章</p>
 <ul>
-<li><a href="http://ucnote.logdown.com/posts/168337-raspberry-pi-remote-desktop-using-vnc" target="_blank" rel="external">Raspberry Pi 遠端桌面 — 使用 VNC</a></li>
-<li><a href="http://ubuntuguide.org/wiki/Ubuntu_Trusty_Remote_Access#X11VNC_Server" target="_blank" rel="external">Ubuntu Trusty Remote Access</a> &lt;– 這一篇是用「~/.config/autostart/」這個資料夾 autostart 的機制。</li>
-<li><a href="http://www.debuntu.org/how-to-managing-services-with-update-rc-d/" target="_blank" rel="external">How-To: Managing services with update-rc.d</a></li>
+<li><a href="https://ucnote.logdown.com/posts/168337-raspberry-pi-remote-desktop-using-vnc" target="_blank" rel="external">Raspberry Pi 遠端桌面 — 使用 VNC</a></li>
+<li><a href="https://ubuntuguide.org/wiki/Ubuntu_Trusty_Remote_Access#X11VNC_Server" target="_blank" rel="external">Ubuntu Trusty Remote Access</a> &lt;– 這一篇是用「~/.config/autostart/」這個資料夾 autostart 的機制。</li>
+<li><a href="https://www.debuntu.org/how-to-managing-services-with-update-rc-d/" target="_blank" rel="external">How-To: Managing services with update-rc.d</a></li>
 <li>Ubuntu Wiki / <a href="https://wiki.ubuntu.com/TIPs_of_use_ubuntu" target="_blank" rel="external">TIPs_of_use_ubuntu</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/update-rc.d.8.html" target="_blank" rel="external">update-rc.d</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/insserv.8.html" target="_blank" rel="external">insserv</a></li>
+<li>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/update-rc.d.8.html" target="_blank" rel="external">update-rc.d</a></li>
+<li>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/insserv.8.html" target="_blank" rel="external">insserv</a></li>
 <li>$ less /etc/init.d/README</li>
 <li>$ less /etc/init.d/skeleton</li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/VNC" target="_blank" rel="external">VNC</a></li>
@@ -188,7 +188,7 @@
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UpstartHowto" target="_blank" rel="external">UpstartHowto</a></li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UbuntuBootupHowto" target="_blank" rel="external">UpstartHowto</a></li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/InitScriptList" target="_blank" rel="external">InitScriptList</a></li>
-<li><a href="http://upstart.ubuntu.com/cookbook" target="_blank" rel="external">Upstart Cookbook</a></li>
+<li><a href="https://upstart.ubuntu.com/cookbook" target="_blank" rel="external">Upstart Cookbook</a></li>
 </ul>
 
 				</div>
@@ -229,7 +229,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

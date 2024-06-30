@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" info info 是屬於那個套件 " />
 	<meta name="twitter:description" content=" info info 是屬於那個套件 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/info/doc/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -142,7 +142,7 @@
 <p>應該是少了安裝文件的套件。</p>
 <h2 id="安裝套件">安裝套件</h2><p>執行</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
-<p>安裝「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件完畢後，</p>
+<p>安裝「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件完畢後，</p>
 <p>再執行</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="preprocessor">info</span> <span class="preprocessor">info</span></span><br></pre></td></tr></table></figure>
 <p>就會看到原來預期想要看到的文件內容了。</p>
@@ -172,7 +172,7 @@
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>dpkg -<span class="constant">S</span> /usr/bin/info</span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">info:</span> <span class="regexp">/usr/</span>bin/info</span><br></pre></td></tr></table></figure>
-<p>表示「/usr/bin/info」這個檔，是屬於「<a href="http://packages.ubuntu.com/trusty/info" target="_blank" rel="external">info</a>」這個套件。</p>
+<p>表示「/usr/bin/info」這個檔，是屬於「<a href="https://packages.ubuntu.com/trusty/info" target="_blank" rel="external">info</a>」這個套件。</p>
 <p>然後執行</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache showsrc <span class="preprocessor">info</span></span><br></pre></td></tr></table></figure>
 <p>可以看到</p>
@@ -181,14 +181,14 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="operator"><span class="keyword">cache</span> <span class="keyword">show</span> texinfo | grep Suggests:</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">Suggests</span>: texlive-<span class="keyword">base, </span>texlive-latex-<span class="keyword">base, </span>texlive-generic-recommended, texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
-<p>看到「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件名稱有「doc」，所以猜測可能是我要找的套件</p>
+<p>看到「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件名稱有「doc」，所以猜測可能是我要找的套件</p>
 <p>所以下載該套件，解開來看，看有哪些檔</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download texinfo-doc-nonfree</span><br><span class="line">$ dpkg -x texinfo-doc-nonfree_5<span class="number">.2</span><span class="number">.0</span>-<span class="number">1</span>_all.deb texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
 <p>查詢</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree texinfo-doc-nonfree <span class="string">| grep info.gz</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">├── info<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">├── info-stnd<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">└── texinfo<span class="class">.info</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-<p>果然有，所以就確定安裝「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件了。</p>
+<p>果然有，所以就確定安裝「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件了。</p>
 
 				</div>
 
@@ -226,7 +226,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

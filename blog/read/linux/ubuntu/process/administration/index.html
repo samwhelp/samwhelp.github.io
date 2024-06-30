@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Process &amp; Service " />
 	<meta name="twitter:description" content=" Process &amp; Service " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/process/administration/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,16 +136,16 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="Process_&amp;_Service">Process &amp; Service</h1><h2 id="緣起">緣起</h2><p>這篇是參與<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?topic_id=93282&amp;forum=2&amp;post_id=329440#forumpost329440" target="_blank" rel="external">這則討論</a>，整理而來的。</p>
+					<h1 id="Process_&amp;_Service">Process &amp; Service</h1><h2 id="緣起">緣起</h2><p>這篇是參與<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?topic_id=93282&amp;forum=2&amp;post_id=329440#forumpost329440" target="_blank" rel="external">這則討論</a>，整理而來的。</p>
 <h2 id="若要關閉整個作業系統，請執行下面的指令">若要關閉整個作業系統，請執行下面的指令</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ shutdown -h now</span><br></pre></td></tr></table></figure>
 <h2 id="若要重新開機，可以執行下面的指令">若要重新開機，可以執行下面的指令</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ shutdown -r now</span><br></pre></td></tr></table></figure>
 <h2 id="文件">文件</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/shutdown.8.html" target="_blank" rel="external">shutdown</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/shutdown.8.html" target="_blank" rel="external">shutdown</a></li>
 </ul>
 <h2 id="另外還有三個指令「reboot」,_「halt」,_「poweroff」，請查看manual。">另外還有三個指令「reboot」, 「halt」, 「poweroff」，請查看manual。</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/reboot.8.html" target="_blank" rel="external">reboot</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/halt.8.html" target="_blank" rel="external">halt</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/poweroff.8.html" target="_blank" rel="external">poweroff</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/reboot.8.html" target="_blank" rel="external">reboot</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/halt.8.html" target="_blank" rel="external">halt</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/poweroff.8.html" target="_blank" rel="external">poweroff</a></li>
 </ul>
 <h2 id="若是要關閉「Service」的話">若是要關閉「Service」的話</h2><p>請先查看「/etc/init.d」有哪些「Service」</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls /etc/init.d</span><br></pre></td></tr></table></figure>
@@ -159,7 +159,7 @@
 <p>在Ubuntu，也可以採用下面的指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service apache2 stop</span><br><span class="line">$ sudo service apache2 restart</span><br><span class="line">$ sudo service apache2 start</span><br></pre></td></tr></table></figure>
 <h2 id="文件-1">文件</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man8/service.8.html" target="_blank" rel="external">service</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man8/service.8.html" target="_blank" rel="external">service</a></li>
 </ul>
 <h2 id="若是關閉「Process」的話。">若是關閉「Process」的話。</h2><p>則要使用「ps」知道「Process ID」和搭配「kill」來關閉某個「Process」。<br>或是知道「Process Name」，則可以直接使用「killall」。</p>
 <p>下面只是舉例，通常「apache2」，會使用上面「Service」的方式來管理。</p>
@@ -170,15 +170,15 @@
 <p>使用「killall」的話，則是執行下面的指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo killall -<span class="number">9</span> apache2</span><br></pre></td></tr></table></figure>
 <h2 id="文件-2">文件</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/ps.1.html" target="_blank" rel="external">ps</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/kill.1posix.html" target="_blank" rel="external">kill</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/killall.1.html" target="_blank" rel="external">killall</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/ps.1.html" target="_blank" rel="external">ps</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/kill.1posix.html" target="_blank" rel="external">kill</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/killall.1.html" target="_blank" rel="external">killall</a></li>
 </ul>
 <h2 id="其他參考資料">其他參考資料</h2><ul>
-<li>鳥哥的 Linux 私房菜 / <a href="http://linux.vbird.org/linux_basic/0440processcontrol.php" target="_blank" rel="external">第十七章、程序管理與 SELinux 初探</a></li>
-<li>鳥哥的 Linux 私房菜 / <a href="http://linux.vbird.org/linux_basic/0560daemons.php#whereisdaemon" target="_blank" rel="external">第十八章、認識系統服務 (daemons)</a></li>
-<li>鳥哥的 Linux 私房菜 / <a href="http://linux.vbird.org/linux_basic/0510osloader.php" target="_blank" rel="external">第二十章、開機流程、模組管理與 Loader</a></li>
-<li>鳥哥的 Linux 私房菜 / <a href="http://linux.vbird.org/linux_basic/9999questions.php" target="_blank" rel="external">一些基礎的 Linux 問題</a></li>
+<li>鳥哥的 Linux 私房菜 / <a href="https://linux.vbird.org/linux_basic/0440processcontrol.php" target="_blank" rel="external">第十七章、程序管理與 SELinux 初探</a></li>
+<li>鳥哥的 Linux 私房菜 / <a href="https://linux.vbird.org/linux_basic/0560daemons.php#whereisdaemon" target="_blank" rel="external">第十八章、認識系統服務 (daemons)</a></li>
+<li>鳥哥的 Linux 私房菜 / <a href="https://linux.vbird.org/linux_basic/0510osloader.php" target="_blank" rel="external">第二十章、開機流程、模組管理與 Loader</a></li>
+<li>鳥哥的 Linux 私房菜 / <a href="https://linux.vbird.org/linux_basic/9999questions.php" target="_blank" rel="external">一些基礎的 Linux 問題</a></li>
 </ul>
 
 				</div>
@@ -219,7 +219,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

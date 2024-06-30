@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Opera Portable Howto " />
 	<meta name="twitter:description" content=" Opera Portable Howto " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/tool/browser/opera/portable/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,9 +136,9 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="Opera_Portable_Howto">Opera Portable Howto</h1><h2 id="前言">前言</h2><p>剛從這篇「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?topic_id=92450&amp;forum=11&amp;post_id=328120#forumpost328120" target="_blank" rel="external">討論</a>」得知，原來opera目前有developer版阿，<br>我還在想說在linux的版本怎麼都一直處在12.16。<br>然後連到「<a href="http://www.opera.com/zh-tw/developer" target="_blank" rel="external">這一頁</a>」，下載「Opera Linux版」。<br>發現是「Deb」檔，不是像以前那樣可以下載「.tar.bz」，解開就可以使用了。<br>而且我還特地解開「deb」檔，觀看「DEBIAN/postinst」，果然如我想的<br>有一段會加入這個檔「/etc/apt/sources.list.d/opera-developer.list」內容是「deb <a href="http://deb.opera.com/opera-developer/" target="_blank" rel="external">http://deb.opera.com/opera-developer/</a> stable non-free #Opera Browser (final releases)」。跟安裝「Google Chrome」一樣，都會有這個動作。<br>呵呵，不過無意間，竟然讓我發現一個「<a href="https://gist.github.com/ruario/8416e36372f1a976a713" target="_blank" rel="external">script</a>」檔，可以把這個「deb」檔，解開製作成「portable(standalone)」版。是從「<a href="https://gist.github.com/ruario/99522c94838d0680633c" target="_blank" rel="external">這一頁</a>」看到的</p>
+					<h1 id="Opera_Portable_Howto">Opera Portable Howto</h1><h2 id="前言">前言</h2><p>剛從這篇「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?topic_id=92450&amp;forum=11&amp;post_id=328120#forumpost328120" target="_blank" rel="external">討論</a>」得知，原來opera目前有developer版阿，<br>我還在想說在linux的版本怎麼都一直處在12.16。<br>然後連到「<a href="https://www.opera.com/zh-tw/developer" target="_blank" rel="external">這一頁</a>」，下載「Opera Linux版」。<br>發現是「Deb」檔，不是像以前那樣可以下載「.tar.bz」，解開就可以使用了。<br>而且我還特地解開「deb」檔，觀看「DEBIAN/postinst」，果然如我想的<br>有一段會加入這個檔「/etc/apt/sources.list.d/opera-developer.list」內容是「deb <a href="https://deb.opera.com/opera-developer/" target="_blank" rel="external">https://deb.opera.com/opera-developer/</a> stable non-free #Opera Browser (final releases)」。跟安裝「Google Chrome」一樣，都會有這個動作。<br>呵呵，不過無意間，竟然讓我發現一個「<a href="https://gist.github.com/ruario/8416e36372f1a976a713" target="_blank" rel="external">script</a>」檔，可以把這個「deb」檔，解開製作成「portable(standalone)」版。是從「<a href="https://gist.github.com/ruario/99522c94838d0680633c" target="_blank" rel="external">這一頁</a>」看到的</p>
 <h2 id="步驟">步驟</h2><ul>
-<li>連到「<a href="http://www.opera.com/zh-tw/developer" target="_blank" rel="external">這一頁</a>」，下載「Linux版」。<br>目前只有<a href="http://operasoftware.pc.cdn.bitgravity.com/pub/opera-developer/26.0.1655.0/linux/opera-developer_26.0.1655.0_amd64.deb" target="_blank" rel="external">64位元版</a></li>
+<li>連到「<a href="https://www.opera.com/zh-tw/developer" target="_blank" rel="external">這一頁</a>」，下載「Linux版」。<br>目前只有<a href="https://operasoftware.pc.cdn.bitgravity.com/pub/opera-developer/26.0.1655.0/linux/opera-developer_26.0.1655.0_amd64.deb" target="_blank" rel="external">64位元版</a></li>
 </ul>
 <ul>
 <li>連到「<a href="https://gist.github.com/ruario/8416e36372f1a976a713/" target="_blank" rel="external">這一頁</a>」。下載「standalone-opera.sh」這個「script」。放到剛剛下載的「opera-developer_26.0.1655.0_amd64.deb」同一層。</li>
@@ -156,9 +156,9 @@
 <p>「prefile」會放在「opera-developer_26.0.1655.0_amd64/prefile」</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls opera-developer_26<span class="number">.0</span><span class="number">.1655</span><span class="number">.0</span>_amd64/prefile</span><br></pre></td></tr></table></figure>
 <h2 id="官方網頁">官方網頁</h2><ul>
-<li><a href="http://www.opera.com/developer" target="_blank" rel="external">http://www.opera.com/developer</a></li>
-<li><a href="http://www.opera.com/zh-tw/developer" target="_blank" rel="external">http://www.opera.com/zh-tw/developer</a></li>
-<li><a href="http://blogs.opera.com/desktop/" target="_blank" rel="external">http://blogs.opera.com/desktop/</a></li>
+<li><a href="https://www.opera.com/developer" target="_blank" rel="external">https://www.opera.com/developer</a></li>
+<li><a href="https://www.opera.com/zh-tw/developer" target="_blank" rel="external">https://www.opera.com/zh-tw/developer</a></li>
+<li><a href="https://blogs.opera.com/desktop/" target="_blank" rel="external">https://blogs.opera.com/desktop/</a></li>
 </ul>
 <h2 id="探索「deb」檔">探索「deb」檔</h2><p>解開「deb」檔</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x opera-developer_26.<span class="number">0.1655</span>.<span class="number">0</span>_amd64.deb opera-developer</span><br><span class="line">$ dpkg <span class="operator">-e</span> opera-developer_26.<span class="number">0.1655</span>.<span class="number">0</span>_amd64.deb</span><br><span class="line"><span class="comment"># ar xf opera-developer_26.0.1655.0_amd64.deb</span></span><br></pre></td></tr></table></figure>
@@ -211,7 +211,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

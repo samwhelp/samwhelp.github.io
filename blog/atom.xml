@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="https://www.w3.org/2005/Atom">
   <title><![CDATA[鵝從未在裡面]]></title>
   <subtitle><![CDATA[Everything will be all right in the end.]]></subtitle>
   <link href="/blog/atom.xml" rel="self"/>
-  <link href="http://samwhelp.github.io/blog/"/>
+  <link href="https://samwhelp.github.io/blog/"/>
   <updated>2016-02-12T13:38:09.450Z</updated>
-  <id>http://samwhelp.github.io/blog/</id>
+  <id>https://samwhelp.github.io/blog/</id>
   
   <author>
     <name><![CDATA[samwhelp]]></name>
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
     <title><![CDATA[info info 是屬於那個套件]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/info/doc/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/info/doc/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/info/doc/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/info/doc/</id>
     <published>2016-02-12T13:00:10.000Z</published>
     <updated>2016-02-12T13:38:09.450Z</updated>
     <content type="html"><![CDATA[<h1 id="info_info_是屬於那個套件">info info 是屬於那個套件</h1><h2 id="緣起">緣起</h2><p>執行</p>
@@ -26,7 +26,7 @@
 <p>應該是少了安裝文件的套件。</p>
 <h2 id="安裝套件">安裝套件</h2><p>執行</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
-<p>安裝「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件完畢後，</p>
+<p>安裝「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件完畢後，</p>
 <p>再執行</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="preprocessor">info</span> <span class="preprocessor">info</span></span><br></pre></td></tr></table></figure>
 <p>就會看到原來預期想要看到的文件內容了。</p>
@@ -56,7 +56,7 @@
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>dpkg -<span class="constant">S</span> /usr/bin/info</span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">info:</span> <span class="regexp">/usr/</span>bin/info</span><br></pre></td></tr></table></figure>
-<p>表示「/usr/bin/info」這個檔，是屬於「<a href="http://packages.ubuntu.com/trusty/info" target="_blank" rel="external">info</a>」這個套件。</p>
+<p>表示「/usr/bin/info」這個檔，是屬於「<a href="https://packages.ubuntu.com/trusty/info" target="_blank" rel="external">info</a>」這個套件。</p>
 <p>然後執行</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache showsrc <span class="preprocessor">info</span></span><br></pre></td></tr></table></figure>
 <p>可以看到</p>
@@ -65,45 +65,45 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="operator"><span class="keyword">cache</span> <span class="keyword">show</span> texinfo | grep Suggests:</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">Suggests</span>: texlive-<span class="keyword">base, </span>texlive-latex-<span class="keyword">base, </span>texlive-generic-recommended, texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
-<p>看到「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件名稱有「doc」，所以猜測可能是我要找的套件</p>
+<p>看到「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件名稱有「doc」，所以猜測可能是我要找的套件</p>
 <p>所以下載該套件，解開來看，看有哪些檔</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download texinfo-doc-nonfree</span><br><span class="line">$ dpkg -x texinfo-doc-nonfree_5<span class="number">.2</span><span class="number">.0</span>-<span class="number">1</span>_all.deb texinfo-doc-nonfree</span><br></pre></td></tr></table></figure>
 <p>查詢</p>
 <figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tree texinfo-doc-nonfree <span class="string">| grep info.gz</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">├── info<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">├── info-stnd<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">└── texinfo<span class="class">.info</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-<p>果然有，所以就確定安裝「<a href="http://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件了。</p>
+<p>果然有，所以就確定安裝「<a href="https://packages.ubuntu.com/trusty/texinfo-doc-nonfree" target="_blank" rel="external">texinfo-doc-nonfree</a>」這個套件了。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[info info 是屬於那個套件]]>
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="howto" scheme="http://samwhelp.github.io/blog/find/tag/howto/"/>
+      <category term="howto" scheme="https://samwhelp.github.io/blog/find/tag/howto/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="info" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/info/"/>
+      <category term="info" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/info/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Xubuntu Window Tiling (視窗平鋪)]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/tiling/xubuntu/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/tiling/xubuntu/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/tiling/xubuntu/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/tiling/xubuntu/</id>
     <published>2015-11-26T11:16:52.000Z</published>
     <updated>2015-12-06T21:07:32.747Z</updated>
     <content type="html"><![CDATA[<h1 id="Xubuntu_Window_Tiling_(視窗平鋪)">Xubuntu Window Tiling (視窗平鋪)</h1><h2 id="前言">前言</h2><p>今天研究了一下在「Xubuntu (XFCE)」下，「Window Tiling (視窗平鋪)」的功能。</p>
 <p>一開始找到了兩個方案。</p>
 <ul>
 <li>xfwm4-settings ( Settings / Window Manager / Keyboard / Tile Window * )</li>
-<li><a href="http://ssokolow.com/quicktile/" target="_blank" rel="external">QuickTile</a> (<a href="https://github.com/ssokolow/quicktile" target="_blank" rel="external">GitHub</a>)</li>
+<li><a href="https://ssokolow.com/quicktile/" target="_blank" rel="external">QuickTile</a> (<a href="https://github.com/ssokolow/quicktile" target="_blank" rel="external">GitHub</a>)</li>
 </ul>
 <p>後來又找到一個「Tiling by drag window」，原本就有的功能，<br>有一個設定要調整，請看最下面的說明。</p>
 <ul>
@@ -111,10 +111,10 @@
 </ul>
 <h2 id="找尋過程">找尋過程</h2><p>一開始想說，找看看「Xubuntu(Xfce)」下的快速鍵，<br>我知道的有兩個地方可以設定「快速鍵(Shortcuts)」。</p>
 <ul>
-<li><a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-keyboard-settings.1.html" target="_blank" rel="external">xfce4-keyboard-settings</a> ( Settings / Keyboard / Application Shortcuts )</li>
-<li><a href="http://manpages.ubuntu.com/manpages/trusty/man1/xfwm4-settings.1.html" target="_blank" rel="external">xfwm4-settings</a> ( Settings / Window Manager / Keyboard )</li>
+<li><a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-keyboard-settings.1.html" target="_blank" rel="external">xfce4-keyboard-settings</a> ( Settings / Keyboard / Application Shortcuts )</li>
+<li><a href="https://manpages.ubuntu.com/manpages/trusty/man1/xfwm4-settings.1.html" target="_blank" rel="external">xfwm4-settings</a> ( Settings / Window Manager / Keyboard )</li>
 </ul>
-<p>一開始摸不著頭緒，所以想起<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=328262#forumpost328262" target="_blank" rel="external">以前</a>看過的的一篇文章「<a href="http://www.openfoundry.org/tw/foss-programs/9191-gnomekde-cinnamon-" target="_blank" rel="external">Gnome、KDE 與 Cinnamon 的平鋪視窗控制</a>」</p>
+<p>一開始摸不著頭緒，所以想起<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=328262#forumpost328262" target="_blank" rel="external">以前</a>看過的的一篇文章「<a href="https://www.openfoundry.org/tw/foss-programs/9191-gnomekde-cinnamon-" target="_blank" rel="external">Gnome、KDE 與 Cinnamon 的平鋪視窗控制</a>」</p>
 <p>找到關鍵字「Tiling」，用「<a href="https://www.google.com.tw/#q=xfce+tilingg" target="_blank" rel="external">xfce tilingg</a>」，查了一下，找到上面兩個解決方案。</p>
 <p>後來又找到一個「Tiling by drag window」，原本就有的功能，</p>
 <p>只是因為一個設定的關係變成另一個功能，請看最下面的說明。</p>
@@ -187,7 +187,7 @@
 <figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">[Desktop Entry]</span></span><br><span class="line"><span class="setting">Encoding=<span class="value">UTF-<span class="number">8</span></span></span></span><br><span class="line"><span class="setting">Version=<span class="value"><span class="number">1.0</span></span></span></span><br><span class="line"><span class="setting">Name=<span class="value">QuickTile</span></span></span><br><span class="line"><span class="setting">GenericName=<span class="value">Window-Tiling Helper</span></span></span><br><span class="line"><span class="setting">Type=<span class="value">Application</span></span></span><br><span class="line"><span class="setting">Exec=<span class="value">quicktile.py --daemonize</span></span></span><br><span class="line"><span class="setting">Categories=<span class="value">Utility;</span></span></span><br></pre></td></tr></table></figure>
 <p>你也可以在「Settings / Session and Startup / Application Autostart」</p>
 <p>找到「QuickTile」這一個項目。</p>
-<p>「Settings / Session and Startup」的指令是「<a href="http://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-session-settings.1.html" target="_blank" rel="external">xfce4-session-settings</a>」</p>
+<p>「Settings / Session and Startup」的指令是「<a href="https://manpages.ubuntu.com/manpages/trusty/en/man1/xfce4-session-settings.1.html" target="_blank" rel="external">xfce4-session-settings</a>」</p>
 <p>所以也可以執行下面的指令啟動。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ xfce4-session-settings</span><br></pre></td></tr></table></figure>
 <h2 id="quicktile-py_更多用法">quicktile.py 更多用法</h2><p>直接執行</p>
@@ -212,7 +212,7 @@
 <p>也可以執行</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ quicktile.py show-desktop --debug</span><br></pre></td></tr></table></figure>
 <p>加上「–debug」，可以看到額外的「除錯訊息」。</p>
-<h2 id="Tiling_by_drag_window">Tiling by drag window</h2><p>從「<a href="http://askubuntu.com/questions/483341/how-to-tile-window-by-mouse-to-left-right-edge-in-xfce-like-in-unity" target="_blank" rel="external">這篇討論</a>」，</p>
+<h2 id="Tiling_by_drag_window">Tiling by drag window</h2><p>從「<a href="https://askubuntu.com/questions/483341/how-to-tile-window-by-mouse-to-left-right-edge-in-xfce-like-in-unity" target="_blank" rel="external">這篇討論</a>」，</p>
 <p>發現「Tiling by drag window」的方式。</p>
 <p>一開始我嘗試不出來，所以才先找快速鍵的方式。</p>
 <p>原來設定的方式，導致變成另一個功能，關鍵點如下，</p>
@@ -228,12 +228,12 @@
 <h2 id="Move_window_to_another_workspace">Move window to another workspace</h2><p>視窗移到不同的Workspace，我通常是在視窗標題列按下右鍵，選擇「Move to Another Workspace / n」。</p>
 <p>今天發現「( Settings / Window Manager / Keyboard / )」那也有綁定快速鍵，可以從那裡查詢。</p>
 <h2 id="相關討論">相關討論</h2><ul>
-<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=347738#forumpost347738" target="_blank" rel="external">Xubuntu(XFCE) Window Tiling (視窗平鋪)</a></li>
+<li><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=347738#forumpost347738" target="_blank" rel="external">Xubuntu(XFCE) Window Tiling (視窗平鋪)</a></li>
 <li><a href="https://www.google.com.tw/#q=xfce+windows+snapping" target="_blank" rel="external">xfce windows snapping</a>，也可以查到很多相關資料。例如「<a href="https://www.leaseweb.com/labs/2014/04/new-xfce-features-xubuntu-14-04-trusty-tahr/" target="_blank" rel="external">這篇url</a>」。</li>
 </ul>
 <h2 id="官方文件">官方文件</h2><ul>
-<li>Xfce / <a href="http://www.xfce.org/about/tour410" target="_blank" rel="external">Xfce 4.10 tour</a></li>
-<li><a href="http://docs.xfce.org" target="_blank" rel="external">Xfce Docs</a> / xfwm4 / <a href="http://docs.xfce.org/xfce/xfwm4/preferences" target="_blank" rel="external">preferences</a></li>
+<li>Xfce / <a href="https://www.xfce.org/about/tour410" target="_blank" rel="external">Xfce 4.10 tour</a></li>
+<li><a href="https://docs.xfce.org" target="_blank" rel="external">Xfce Docs</a> / xfwm4 / <a href="https://docs.xfce.org/xfce/xfwm4/preferences" target="_blank" rel="external">preferences</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -241,26 +241,26 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="tiling" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/tiling/"/>
+      <category term="tiling" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/tiling/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Fedora 22 Released]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/fedora/release/22/info/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/fedora/release/22/info/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/fedora/release/22/info/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/fedora/release/22/info/</id>
     <published>2015-05-29T08:48:16.000Z</published>
     <updated>2015-11-26T16:54:35.252Z</updated>
-    <content type="html"><![CDATA[<h1 id="Fedora_22_Released">Fedora 22 Released</h1><h2 id="緣起">緣起</h2><p>在「<a href="http://distrowatch.com/" target="_blank" rel="external">Distrowatch</a>」看到「<a href="http://distrowatch.com/?newsid=08953" target="_blank" rel="external">Fedora 22 Released</a>」的消息。</p>
-<p>詳細請看「<a href="http://fedoramagazine.org/fedora-22-released/" target="_blank" rel="external">這裡</a> 」和「<a href="http://docs.fedoraproject.org/en-US/Fedora/22/html/Release_Notes/index.html" target="_blank" rel="external">Release Notes</a>」</p>
+    <content type="html"><![CDATA[<h1 id="Fedora_22_Released">Fedora 22 Released</h1><h2 id="緣起">緣起</h2><p>在「<a href="https://distrowatch.com/" target="_blank" rel="external">Distrowatch</a>」看到「<a href="https://distrowatch.com/?newsid=08953" target="_blank" rel="external">Fedora 22 Released</a>」的消息。</p>
+<p>詳細請看「<a href="https://fedoramagazine.org/fedora-22-released/" target="_blank" rel="external">這裡</a> 」和「<a href="https://docs.fedoraproject.org/en-US/Fedora/22/html/Release_Notes/index.html" target="_blank" rel="external">Release Notes</a>」</p>
 <p>因為不了解「<a href="https://getfedora.org/" target="_blank" rel="external">Fedora</a>」的生態。<br>所以查了一下，簡單的紀錄下來查到的資料。</p>
 <h2 id="ISO_檔案">ISO 檔案</h2><h3 id="Workstation_-_intro"><a href="https://getfedora.org/en/workstation/download/" target="_blank" rel="external">Workstation</a> - <a href="https://getfedora.org/en/workstation/" target="_blank" rel="external">intro</a></h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Workstation</span>/x86_64/iso/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">Workstation</span>-x86_64-<span class="number">22</span>-<span class="number">3</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Workstation</span>/i386/iso/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">Workstation</span>-i686-<span class="number">22</span>-<span class="number">3</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Workstation</span>/x86_64/iso/<span class="constant">Fedora</span>-<span class="constant">Workstation</span>-netinst-x86_64-<span class="number">22</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Workstation</span>/i386/iso/<span class="constant">Fedora</span>-<span class="constant">Workstation</span>-netinst-i386-<span class="number">22</span>.iso</span><br></pre></td></tr></table></figure>
 <h3 id="Server_-_intro"><a href="https://getfedora.org/en/server/download/" target="_blank" rel="external">Server</a> - <a href="https://getfedora.org/en/server/" target="_blank" rel="external">intro</a></h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Server</span>/x86_64/iso/<span class="constant">Fedora</span>-<span class="constant">Server</span>-<span class="constant">DVD</span>-x86_64-<span class="number">22</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Server</span>/i386/iso/<span class="constant">Fedora</span>-<span class="constant">Server</span>-<span class="constant">DVD</span>-i386-<span class="number">22</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Server</span>/x86_64/iso/<span class="constant">Fedora</span>-<span class="constant">Server</span>-netinst-x86_64-<span class="number">22</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Server</span>/i386/iso/<span class="constant">Fedora</span>-<span class="constant">Server</span>-netinst-i386-<span class="number">22</span>.iso</span><br></pre></td></tr></table></figure>
@@ -269,29 +269,29 @@
 <h3 id="LXDE_-_Intro"><a href="https://spins.fedoraproject.org/lxde/download/index.html" target="_blank" rel="external">LXDE</a> - <a href="https://spins.fedoraproject.org/en/lxde/" target="_blank" rel="external">Intro</a></h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/x86_64/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">LXDE</span>-x86_64-<span class="number">22</span>-<span class="number">3</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/i386/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">LXDE</span>-i686-<span class="number">22</span>-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
 <h3 id="MATE-Compiz_-_Intro"><a href="https://spins.fedoraproject.org/mate-compiz/download/index.html" target="_blank" rel="external">MATE-Compiz</a> - <a href="https://spins.fedoraproject.org/en/mate-compiz/" target="_blank" rel="external">Intro</a></h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/x86_64/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">MATE_Compiz</span>-x86_64-<span class="number">22</span>-<span class="number">3</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/i386/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">MATE_Compiz</span>-i686-<span class="number">22</span>-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
 <h3 id="SoaS_-_Intro"><a href="https://spins.fedoraproject.org/soas/download/index.html" target="_blank" rel="external">SoaS</a> - <a href="https://spins.fedoraproject.org/en/soas/" target="_blank" rel="external">Intro</a></h3><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/x86_64/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">SoaS</span>-x86_64-<span class="number">22</span>-<span class="number">3</span>.iso</span><br><span class="line"><span class="symbol">http:</span>/<span class="regexp">/download.fedoraproject.org/pub</span><span class="regexp">/fedora/linux</span><span class="regexp">/releases/</span><span class="number">22</span>/<span class="constant">Live</span>/i386/<span class="constant">Fedora</span>-<span class="constant">Live</span>-<span class="constant">SoaS</span>-i686-<span class="number">22</span>-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
-<h2 id="關注">關注</h2><p>我比較好奇的是「<a href="http://zh.wikipedia.org/zh-tw/DNF_%28%E8%BD%AF%E4%BB%B6%29" target="_blank" rel="external">DNF</a>」，「DNF」在「Fedora 22」，<a href="http://dnf.baseurl.org/2015/05/11/yum-is-dead-long-live-dnf/" target="_blank" rel="external">作為預設的套件管理器，取代了「YUM」</a>。</p>
+<h2 id="關注">關注</h2><p>我比較好奇的是「<a href="https://zh.wikipedia.org/zh-tw/DNF_%28%E8%BD%AF%E4%BB%B6%29" target="_blank" rel="external">DNF</a>」，「DNF」在「Fedora 22」，<a href="https://dnf.baseurl.org/2015/05/11/yum-is-dead-long-live-dnf/" target="_blank" rel="external">作為預設的套件管理器，取代了「YUM」</a>。</p>
 <p>還有「Wayland」，以及「Systemd」。</p>
 <h2 id="相關連結">相關連結</h2><ul>
 <li><a href="https://getfedora.org/" target="_blank" rel="external">Fedora</a></li>
-<li><a href="http://docs.fedoraproject.org/en-US/index.html" target="_blank" rel="external">Fedora Documentation</a><br><a href="https://spins.fedoraproject.org/en/" target="_blank" rel="external">https://spins.fedoraproject.org/en/</a></li>
-<li><a href="http://spins.fedoraproject.org/" target="_blank" rel="external">Fedora Spins</a></li>
-<li><a href="http://fedoramagazine.org/" target="_blank" rel="external">Fedora Magazine</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/index.html" target="_blank" rel="external">Fedora Documentation</a><br><a href="https://spins.fedoraproject.org/en/" target="_blank" rel="external">https://spins.fedoraproject.org/en/</a></li>
+<li><a href="https://spins.fedoraproject.org/" target="_blank" rel="external">Fedora Spins</a></li>
+<li><a href="https://fedoramagazine.org/" target="_blank" rel="external">Fedora Magazine</a></li>
 </ul>
 <h2 id="DNF_相關文件">DNF 相關文件</h2><ul>
-<li><a href="http://docs.fedoraproject.org/en-US/Fedora/22/html/System_Administrators_Guide/ch-DNF.html" target="_blank" rel="external">http://docs.fedoraproject.org/en-US/Fedora/22/html/System_Administrators_Guide/ch-DNF.html</a></li>
-<li><a href="http://dnf.readthedocs.org/en/latest/index.html" target="_blank" rel="external">http://dnf.readthedocs.org/en/latest/index.html</a></li>
+<li><a href="https://docs.fedoraproject.org/en-US/Fedora/22/html/System_Administrators_Guide/ch-DNF.html" target="_blank" rel="external">https://docs.fedoraproject.org/en-US/Fedora/22/html/System_Administrators_Guide/ch-DNF.html</a></li>
+<li><a href="https://dnf.readthedocs.org/en/latest/index.html" target="_blank" rel="external">https://dnf.readthedocs.org/en/latest/index.html</a></li>
 <li><a href="https://fedoraproject.org/wiki/Features/DNF" target="_blank" rel="external">https://fedoraproject.org/wiki/Features/DNF</a></li>
 <li><a href="https://github.com/rpm-software-management/dnf/wiki" target="_blank" rel="external">https://github.com/rpm-software-management/dnf/wiki</a></li>
-<li><a href="http://dnf.baseurl.org/" target="_blank" rel="external">http://dnf.baseurl.org/</a></li>
-<li>man <a href="http://linuxmanpages.net/manpages/fedora21/man8/dnf.8.html" target="_blank" rel="external">dnf</a></li>
-<li>man <a href="http://linuxmanpages.net/manpages/fedora21/man8/dnf.conf.8.html" target="_blank" rel="external">dnf.conf</a></li>
+<li><a href="https://dnf.baseurl.org/" target="_blank" rel="external">https://dnf.baseurl.org/</a></li>
+<li>man <a href="https://linuxmanpages.net/manpages/fedora21/man8/dnf.8.html" target="_blank" rel="external">dnf</a></li>
+<li>man <a href="https://linuxmanpages.net/manpages/fedora21/man8/dnf.conf.8.html" target="_blank" rel="external">dnf.conf</a></li>
 </ul>
 <h2 id="Wikipedia">Wikipedia</h2><ul>
-<li>Wikipedia (中文) / <a href="http://zh.wikipedia.org/zh-tw/Fedora" target="_blank" rel="external">Fedora</a></li>
-<li>Wikipedia / <a href="http://en.wikipedia.org/wiki/Fedora_%28operating_system%29" target="_blank" rel="external">Fedora</a></li>
+<li>Wikipedia (中文) / <a href="https://zh.wikipedia.org/zh-tw/Fedora" target="_blank" rel="external">Fedora</a></li>
+<li>Wikipedia / <a href="https://en.wikipedia.org/wiki/Fedora_%28operating_system%29" target="_blank" rel="external">Fedora</a></li>
 </ul>
 <h2 id="查詢「fedora_22」">查詢「<a href="https://www.google.com.tw/#lr=lang_zh-TW&amp;tbs=lr:lang_1zh-TW&amp;q=fedora+22" target="_blank" rel="external">fedora 22</a>」</h2><ul>
-<li>部落格 - <a href="http://noteoffreedomsoftware.blogspot.tw/" target="_blank" rel="external">自由法典</a></li>
+<li>部落格 - <a href="https://noteoffreedomsoftware.blogspot.tw/" target="_blank" rel="external">自由法典</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -299,18 +299,18 @@
     
     </summary>
     
-      <category term="release" scheme="http://samwhelp.github.io/blog/find/tag/release/"/>
+      <category term="release" scheme="https://samwhelp.github.io/blog/find/tag/release/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="fedora" scheme="http://samwhelp.github.io/blog/find/category/linux/fedora/"/>
+      <category term="fedora" scheme="https://samwhelp.github.io/blog/find/category/linux/fedora/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何製作「deb檔(Debian Package)」]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-build-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-build-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-build-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-build-package/</id>
     <published>2015-05-06T14:34:21.000Z</published>
     <updated>2015-11-26T16:59:46.084Z</updated>
     <content type="html"><![CDATA[<h1 id="如何製作「deb檔(Debian_Package)」">如何製作「deb檔(Debian Package)」</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
@@ -458,18 +458,18 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-<span class="string">deb:</span> building <span class="keyword">package</span> `<span class="keyword">try</span><span class="string">' in `build/try_0.1_all.deb'</span>.</span><br></pre></td></tr></table></figure>
 <p>也就是會在「build」這個資料夾，產生「try_0.1_all.deb」，<br>格式是「Package_Version_Architecture.deb」。<br>也就是依據剛剛的「try/DEBIAN/control」裡面設定的資料來命名的。<br>當「dpkg -b try」後面接「資料夾」參數時候，就會依照這樣的規則去命名。</p>
 <p>更多的命名規則可以執行下面的指令</p>
-<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></p>
+<p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></p>
 <p>會看到其中有一段</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-b, <span class="comment">--build directory [archive|directory]</span></span><br><span class="line">       Creates <span class="operator">a</span> debian archive <span class="built_in">from</span> <span class="operator">the</span> filesystem tree stored <span class="operator">in</span> <span class="built_in">directory</span>. <span class="built_in">directory</span> must have <span class="operator">a</span> DEBIAN subdirectory,  which</span><br><span class="line">       <span class="operator">contains</span>  <span class="operator">the</span>  control  information  <span class="built_in">files</span> such <span class="keyword">as</span> <span class="operator">the</span> control <span class="built_in">file</span> itself. This <span class="built_in">directory</span> will <span class="operator">not</span> appear <span class="operator">in</span> <span class="operator">the</span> binary</span><br><span class="line">       package<span class="string">'s filesystem archive, but instead the files in it will be put in the binary package'</span>s control information area.</span><br><span class="line"></span><br><span class="line">       Unless you specify <span class="comment">--nocheck, dpkg-deb will read DEBIAN/control and parse it. It will check it  for  syntax  errors  and</span></span><br><span class="line">       other problems, <span class="operator">and</span> display <span class="operator">the</span> name <span class="operator">of</span> <span class="operator">the</span> binary package being built.  dpkg-deb will also check <span class="operator">the</span> permissions <span class="operator">of</span> <span class="operator">the</span></span><br><span class="line">       maintainer scripts <span class="operator">and</span> other <span class="built_in">files</span> found <span class="operator">in</span> <span class="operator">the</span> DEBIAN control information <span class="built_in">directory</span>.</span><br><span class="line"></span><br><span class="line">       If no archive is specified <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="operator">the</span> package <span class="keyword">into</span> <span class="operator">the</span> <span class="built_in">file</span> <span class="built_in">directory</span>.deb.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> archive <span class="built_in">to</span> be created already exists <span class="keyword">it</span> will be overwritten.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> <span class="keyword">second</span> argument is <span class="operator">a</span> <span class="built_in">directory</span> <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="built_in">to</span> <span class="operator">the</span>  <span class="built_in">file</span>  package_version_arch.deb,  <span class="operator">or</span>  package_ver‐</span><br><span class="line">       sion.deb  <span class="keyword">if</span>  no Architecture field is present <span class="operator">in</span> <span class="operator">the</span> package control <span class="built_in">file</span>. When <span class="operator">a</span> target <span class="built_in">directory</span> is specified, rather</span><br><span class="line">       than <span class="operator">a</span> <span class="built_in">file</span>, <span class="operator">the</span> <span class="comment">--nocheck option may not be used (since dpkg-deb needs to read and parse the package  control  file  to</span></span><br><span class="line">       determine which filename <span class="built_in">to</span> use).</span><br></pre></td></tr></table></figure>
 <h3 id="control欄位說明文件">control欄位說明文件</h3><p>執行下面的指令，就可以看到control的欄位說明</p>
-<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/deb-control.5.html" target="_blank" rel="external">deb-control</a></p>
+<p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man5/deb-control.5.html" target="_blank" rel="external">deb-control</a></p>
 <p>可以看到</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">REQUIRED FIELDS</span><br><span class="line">       Package: package-<span class="property">name</span></span><br><span class="line">              The value <span class="keyword">of</span> this field determines <span class="keyword">the</span> package <span class="property">name</span>, <span class="keyword">and</span> <span class="keyword">is</span> used <span class="keyword">to</span> generate <span class="type">file</span> names <span class="keyword">by</span> most installation tools.</span><br><span class="line"></span><br><span class="line">       Version: <span class="property">version</span>-<span class="type">string</span></span><br><span class="line">              Typically, this <span class="keyword">is</span> <span class="keyword">the</span> original package's <span class="property">version</span> <span class="type">number</span> <span class="keyword">in</span> whatever form <span class="keyword">the</span> program's author uses. It may also include</span><br><span class="line">              a Debian revision <span class="type">number</span> (<span class="keyword">for</span> non-native packages). The exact format <span class="keyword">and</span> sorting algorithm  are  described  <span class="keyword">in</span>  deb-ver‐</span><br><span class="line">              sion(<span class="number">5</span>).</span><br><span class="line"></span><br><span class="line">       Maintainer: fullname-email</span><br><span class="line">              Should  be <span class="keyword">in</span> <span class="keyword">the</span> format `Joe Bloggs &lt;jbloggs@foo.com&gt;', <span class="keyword">and</span> <span class="keyword">is</span> typically <span class="keyword">the</span> person who created <span class="keyword">the</span> package, <span class="keyword">as</span> opposed</span><br><span class="line">              <span class="keyword">to</span> <span class="keyword">the</span> author <span class="keyword">of</span> <span class="keyword">the</span> software <span class="keyword">that</span> was packaged.</span><br><span class="line"></span><br><span class="line">       Description: short-description</span><br><span class="line">               long-description</span><br><span class="line">              The format <span class="keyword">for</span> <span class="keyword">the</span> package description <span class="keyword">is</span> a short brief summary <span class="function_start"><span class="keyword">on</span></span> <span class="keyword">the</span> <span class="keyword">first</span> line (<span class="keyword">after</span> <span class="keyword">the</span> <span class="string">"Description"</span>  field).  The</span><br><span class="line">              following  lines  should  be used <span class="keyword">as</span> a longer, more detailed description. Each line <span class="keyword">of</span> <span class="keyword">the</span> long description must be pre‐</span><br><span class="line">              ceded <span class="keyword">by</span> a <span class="constant">space</span>, <span class="keyword">and</span> blank lines <span class="keyword">in</span> <span class="keyword">the</span> long description must <span class="keyword">contain</span> a single '.' following <span class="keyword">the</span> preceding <span class="constant">space</span>.</span><br></pre></td></tr></table></figure>
 <p>和</p>
 <figure class="highlight vhdl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">OPTIONAL FIELDS</span><br><span class="line"></span><br><span class="line">	...略...</span><br><span class="line"></span><br><span class="line">       <span class="keyword">Architecture</span>: arch|<span class="keyword">all</span></span><br><span class="line">              The  <span class="keyword">architecture</span>  specifies  which  <span class="keyword">type</span>  <span class="keyword">of</span>  hardware  this <span class="keyword">package</span> was compiled <span class="keyword">for</span>. Common architectures are `i386',</span><br><span class="line">              `m68k', `sparc', `alpha', `powerpc' etc. Note that the <span class="keyword">all</span> option <span class="keyword">is</span> meant <span class="keyword">for</span> packages that are  <span class="keyword">architecture</span>  indepen‐</span><br><span class="line">              dent. Some examples <span class="keyword">of</span> this are shell <span class="keyword">and</span> Perl scripts, <span class="keyword">and</span> documentation.</span><br><span class="line"></span><br><span class="line">	...略...</span><br></pre></td></tr></table></figure>
 <p>不過我測試安裝的時候，「Architecture」應該是必填，不然會出錯。</p>
 <p>還有執行 「dpkg -l try」會出現四個欄位，<br>「Name」「Version」「Architecture」「Description」。<br>「Architecture」在其中之一。</p>
-<h2 id="更多參考">更多參考</h2><p>這篇我主要是因為閱讀了「<a href="http://blog.roodo.com/rocksaying/archives/11239791.html" target="_blank" rel="external">這篇</a>」後的「啟發」，</p>
+<h2 id="更多參考">更多參考</h2><p>這篇我主要是因為閱讀了「<a href="https://blog.roodo.com/rocksaying/archives/11239791.html" target="_blank" rel="external">這篇</a>」後的「啟發」，</p>
 <p>不然現在的工具都是在上面架上一層。</p>
 <p>先了解這基本的原理後，<br>再來了解，更多的工具的使用，<br>還有怎麼重新編譯「Source Package」。</p>
 <p>還有「DEBIAN」底下的其他檔的功用。</p>
@@ -492,30 +492,30 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[dpkg-deb --build 的使用]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/dpkg-deb-build/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/dpkg-deb-build/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/dpkg-deb-build/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/dpkg-deb-build/</id>
     <published>2015-05-06T14:34:20.000Z</published>
     <updated>2015-11-26T16:59:41.096Z</updated>
     <content type="html"><![CDATA[<h1 id="dpkg-deb_–build_的使用">dpkg-deb –build 的使用</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
 <h2 id="使用範例">使用範例</h2><p>「dpkg-deb –build」的使用範例，請參考『<a href="/blog/read/linux/ubuntu/package/how-to-build-package/">如何製作「deb檔(Debian Package)」</a>』這篇。</p>
-<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></p>
+<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">-b, <span class="comment">--build directory [archive|directory]</span></span><br><span class="line">       Creates <span class="operator">a</span> debian archive <span class="built_in">from</span> <span class="operator">the</span> filesystem tree stored <span class="operator">in</span> <span class="built_in">directory</span>. <span class="built_in">directory</span> must have <span class="operator">a</span> DEBIAN subdirectory,  which</span><br><span class="line">       <span class="operator">contains</span>  <span class="operator">the</span>  control  information  <span class="built_in">files</span> such <span class="keyword">as</span> <span class="operator">the</span> control <span class="built_in">file</span> itself. This <span class="built_in">directory</span> will <span class="operator">not</span> appear <span class="operator">in</span> <span class="operator">the</span> binary</span><br><span class="line">       package<span class="string">'s filesystem archive, but instead the files in it will be put in the binary package'</span>s control information area.</span><br><span class="line"></span><br><span class="line">       Unless you specify <span class="comment">--nocheck, dpkg-deb will read DEBIAN/control and parse it. It will check it  for  syntax  errors  and</span></span><br><span class="line">       other problems, <span class="operator">and</span> display <span class="operator">the</span> name <span class="operator">of</span> <span class="operator">the</span> binary package being built.  dpkg-deb will also check <span class="operator">the</span> permissions <span class="operator">of</span> <span class="operator">the</span></span><br><span class="line">       maintainer scripts <span class="operator">and</span> other <span class="built_in">files</span> found <span class="operator">in</span> <span class="operator">the</span> DEBIAN control information <span class="built_in">directory</span>.</span><br><span class="line"></span><br><span class="line">       If no archive is specified <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="operator">the</span> package <span class="keyword">into</span> <span class="operator">the</span> <span class="built_in">file</span> <span class="built_in">directory</span>.deb.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> archive <span class="built_in">to</span> be created already exists <span class="keyword">it</span> will be overwritten.</span><br><span class="line"></span><br><span class="line">       If <span class="operator">the</span> <span class="keyword">second</span> argument is <span class="operator">a</span> <span class="built_in">directory</span> <span class="keyword">then</span> dpkg-deb will <span class="built_in">write</span> <span class="built_in">to</span> <span class="operator">the</span>  <span class="built_in">file</span>  package_version_arch.deb,  <span class="operator">or</span>  package_ver‐</span><br><span class="line">       sion.deb  <span class="keyword">if</span>  no Architecture field is present <span class="operator">in</span> <span class="operator">the</span> package control <span class="built_in">file</span>. When <span class="operator">a</span> target <span class="built_in">directory</span> is specified, rather</span><br><span class="line">       than <span class="operator">a</span> <span class="built_in">file</span>, <span class="operator">the</span> <span class="comment">--nocheck option may not be used (since dpkg-deb needs to read and parse the package  control  file  to</span></span><br><span class="line">       determine which filename <span class="built_in">to</span> use).</span><br></pre></td></tr></table></figure>
-<p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></p>
+<p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dpkg-deb actions</span><br><span class="line">       See dpkg-deb(<span class="number">1</span>) <span class="keyword">for</span> more information about <span class="operator">the</span> following actions.</span><br><span class="line"></span><br><span class="line">       -b, <span class="comment">--build directory [archive|directory]</span></span><br><span class="line">           Build <span class="operator">a</span> deb package.</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -524,27 +524,27 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apt-get install 的使用]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-install/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-install/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-install/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-install/</id>
     <published>2015-05-06T06:52:17.000Z</published>
     <updated>2015-11-26T16:59:25.248Z</updated>
     <content type="html"><![CDATA[<h1 id="apt-get_install_的使用">apt-get install 的使用</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
 <h2 id="使用範例">使用範例</h2><p>「apt-get install」的使用範例，請參考「<a href="/blog/read/linux/ubuntu/package/how-to-install-package/">如何安裝套件</a>」這篇。</p>
-<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
+<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">install</span><br><span class="line">    install <span class="keyword">is</span> followed <span class="keyword">by</span> one <span class="keyword">or</span> more packages desired <span class="keyword">for</span> installation <span class="keyword">or</span> upgrading. Each package <span class="keyword">is</span> a package <span class="property">name</span>, <span class="keyword">not</span> a</span><br><span class="line">    fully qualified filename (<span class="keyword">for</span> instance, <span class="keyword">in</span> a Debian system, apt-utils would be <span class="keyword">the</span> argument provided, <span class="keyword">not</span></span><br><span class="line">    apt-utils_1<span class="number">.0</span><span class="number">.1</span>ubuntu2_amd64.deb). All packages required <span class="keyword">by</span> <span class="keyword">the</span> package(s) specified <span class="keyword">for</span> installation will also be</span><br><span class="line">    retrieved <span class="keyword">and</span> installed. The /etc/apt/sources.<span class="type">list</span> <span class="type">file</span> <span class="keyword">is</span> used <span class="keyword">to</span> locate <span class="keyword">the</span> desired packages. If a hyphen <span class="keyword">is</span> appended <span class="keyword">to</span></span><br><span class="line">    <span class="keyword">the</span> package <span class="property">name</span> (<span class="keyword">with</span> no intervening <span class="constant">space</span>), <span class="keyword">the</span> identified package will be removed <span class="keyword">if</span> <span class="keyword">it</span> <span class="keyword">is</span> installed. Similarly a plus</span><br><span class="line">    sign can be used <span class="keyword">to</span> designate a package <span class="keyword">to</span> install. These latter features may be used <span class="keyword">to</span> override decisions made <span class="keyword">by</span></span><br><span class="line">    apt-<span class="keyword">get</span>'s conflict resolution system.</span><br><span class="line"></span><br><span class="line">    A specific <span class="property">version</span> <span class="keyword">of</span> a package can be selected <span class="keyword">for</span> installation <span class="keyword">by</span> following <span class="keyword">the</span> package <span class="property">name</span> <span class="keyword">with</span> an <span class="keyword">equals</span> <span class="keyword">and</span> <span class="keyword">the</span></span><br><span class="line">    <span class="property">version</span> <span class="keyword">of</span> <span class="keyword">the</span> package <span class="keyword">to</span> select. This will cause <span class="keyword">that</span> <span class="property">version</span> <span class="keyword">to</span> be located <span class="keyword">and</span> selected <span class="keyword">for</span> install. Alternatively a</span><br><span class="line">    specific distribution can be selected <span class="keyword">by</span> following <span class="keyword">the</span> package <span class="property">name</span> <span class="keyword">with</span> a slash <span class="keyword">and</span> <span class="keyword">the</span> <span class="property">version</span> <span class="keyword">of</span> <span class="keyword">the</span> distribution <span class="keyword">or</span> <span class="keyword">the</span></span><br><span class="line">    Archive <span class="property">name</span> (stable, testing, unstable).</span><br><span class="line"></span><br><span class="line">    Both <span class="keyword">of</span> <span class="keyword">the</span> <span class="property">version</span> selection mechanisms can downgrade packages <span class="keyword">and</span> must be used <span class="keyword">with</span> care.</span><br><span class="line"></span><br><span class="line">    This <span class="keyword">is</span> also <span class="keyword">the</span> target <span class="keyword">to</span> use <span class="keyword">if</span> you want <span class="keyword">to</span> upgrade one <span class="keyword">or</span> more already-installed packages <span class="keyword">without</span> upgrading <span class="keyword">every</span></span><br><span class="line">    package you have <span class="function_start"><span class="keyword">on</span></span> your system. Unlike <span class="keyword">the</span> <span class="string">"upgrade"</span> target, which installs <span class="keyword">the</span> newest <span class="property">version</span> <span class="keyword">of</span> all currently installed</span><br><span class="line">    packages, <span class="string">"install"</span> will install <span class="keyword">the</span> newest <span class="property">version</span> <span class="keyword">of</span> only <span class="keyword">the</span> package(s) specified. Simply provide <span class="keyword">the</span> <span class="property">name</span> <span class="keyword">of</span> <span class="keyword">the</span></span><br><span class="line">    package(s) you wish <span class="keyword">to</span> upgrade, <span class="keyword">and</span> <span class="keyword">if</span> a newer <span class="property">version</span> <span class="keyword">is</span> available, <span class="keyword">it</span> (<span class="keyword">and</span> <span class="keyword">its</span> dependencies, <span class="keyword">as</span> described <span class="keyword">above</span>) will be</span><br><span class="line">    downloaded <span class="keyword">and</span> installed.</span><br><span class="line"></span><br><span class="line">    Finally, <span class="keyword">the</span> apt_preferences(<span class="number">5</span>) mechanism allows you <span class="keyword">to</span> create an alternative installation policy <span class="keyword">for</span> individual packages.</span><br><span class="line"></span><br><span class="line">    If no package matches <span class="keyword">the</span> <span class="keyword">given</span> expression <span class="keyword">and</span> <span class="keyword">the</span> expression <span class="keyword">contains</span> one <span class="keyword">of</span> '.', '?' <span class="keyword">or</span> '*' <span class="keyword">then</span> <span class="keyword">it</span> <span class="keyword">is</span> assumed <span class="keyword">to</span> be a</span><br><span class="line">    POSIX regular expression, <span class="keyword">and</span> <span class="keyword">it</span> <span class="keyword">is</span> applied <span class="keyword">to</span> all package names <span class="keyword">in</span> <span class="keyword">the</span> database. Any matches are <span class="keyword">then</span> installed (<span class="keyword">or</span></span><br><span class="line">    removed). Note <span class="keyword">that</span> matching <span class="keyword">is</span> done <span class="keyword">by</span> substring so 'lo.*' matches 'how-lo' <span class="keyword">and</span> 'lowest'. If this <span class="keyword">is</span> undesired, anchor <span class="keyword">the</span></span><br><span class="line">    regular expression <span class="keyword">with</span> a '^' <span class="keyword">or</span> '$' <span class="property">character</span>, <span class="keyword">or</span> create a more specific regular expression.</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -553,27 +553,27 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何下載「Package」]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-package/</id>
     <published>2015-05-06T06:22:15.000Z</published>
     <updated>2015-11-26T16:59:51.780Z</updated>
     <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何下載「Package」">Ubuntu環境下，如何下載「Package」</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
-<h2 id="前提">前提</h2><p>以「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
-<h2 id="方式一">方式一</h2><p>執行「apt-get download」下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
+<h2 id="前提">前提</h2><p>以「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
+<h2 id="方式一">方式一</h2><p>執行「apt-get download」下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download hello</span><br></pre></td></tr></table></figure>
 <p>顯示下面的訊息</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Get:<span class="number">1</span> http:<span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello amd64 2.8-4 [28.1 kB]</span></span><br><span class="line">Fetched <span class="number">28.1</span> kB in <span class="number">0</span>s (<span class="number">140</span> kB/s)</span><br></pre></td></tr></table></figure>
@@ -604,7 +604,7 @@
 </ul>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get <span class="operator"><span class="keyword">install</span> hello -<span class="keyword">d</span> <span class="comment">--reinstall</span></span></span><br></pre></td></tr></table></figure>
 <h2 id="方式三">方式三</h2><p>直接到下面的頁面，找到網址下載，以下是以「14.04(trusty)」為例。</p>
-<p><a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">http://packages.ubuntu.com/trusty/hello</a></p>
+<p><a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">https://packages.ubuntu.com/trusty/hello</a></p>
 <p>用瀏覽器開啟頁面，</p>
 <p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/packages.ubuntu.com/trusty</span><span class="regexp">/hello</span></span><br></pre></td></tr></table></figure>
@@ -618,27 +618,27 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apt-get download 的使用]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-download/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-download/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-download/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-download/</id>
     <published>2015-05-06T06:21:23.000Z</published>
     <updated>2015-11-26T16:59:19.496Z</updated>
     <content type="html"><![CDATA[<h1 id="apt-get_download_的使用">apt-get download 的使用</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
 <h2 id="使用範例">使用範例</h2><p>「apt-get download」的使用範例，請參考『<a href="/blog/read/linux/ubuntu/package/how-to-download-package/">如何下載「Package」</a>』這篇。</p>
-<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
+<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">download</span><br><span class="line">    download will download <span class="operator">the</span> given binary package <span class="keyword">into</span> <span class="operator">the</span> current <span class="built_in">directory</span>.</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -647,32 +647,32 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何安裝套件]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-install-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-install-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-install-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-install-package/</id>
     <published>2015-05-03T07:32:27.000Z</published>
     <updated>2015-11-26T17:00:35.080Z</updated>
-    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何安裝套件">Ubuntu環境下，如何安裝套件</h1><h2 id="dpkg_安裝">dpkg 安裝</h2><p>在「<a href="https://wiki.debian.org/DebianAndOtherDistros" target="_blank" rel="external">DEB-based</a>」的系統裡，最基本的安裝套件的方式，<br>是透過「<a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a>」這個指令，來安裝「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
-<p>以安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
+    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何安裝套件">Ubuntu環境下，如何安裝套件</h1><h2 id="dpkg_安裝">dpkg 安裝</h2><p>在「<a href="https://wiki.debian.org/DebianAndOtherDistros" target="_blank" rel="external">DEB-based</a>」的系統裡，最基本的安裝套件的方式，<br>是透過「<a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a>」這個指令，來安裝「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
+<p>以安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
 <p>先下載「hello_2.8-4_amd64.deb」這個「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>wget -c <span class="symbol">http:</span>/<span class="regexp">/tw.archive.ubuntu.com/ubuntu</span><span class="regexp">/pool/main</span><span class="regexp">/h/hello</span><span class="regexp">/hello_2.8-4_amd64.deb</span></span><br></pre></td></tr></table></figure>
 <p>利用「dpkg」來安裝「hello_2.8-4_amd64.deb」</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i hello_2<span class="number">.8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>基本上，上面的步驟，應該不會出現相依不足的問題。<br>「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件，相依的套件，應該是很基本的，都已經早就安裝再系統裡了。</p>
-<p>除了可以從「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">網頁</a>」上觀看</p>
+<p>基本上，上面的步驟，應該不會出現相依不足的問題。<br>「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件，相依的套件，應該是很基本的，都已經早就安裝再系統裡了。</p>
+<p>除了可以從「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">網頁</a>」上觀看</p>
 <p>可以執行下面的指令查看相依的資訊。</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -I hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.<span class="keyword">deb</span> | <span class="keyword">grep</span> Depend<span class="variable">s:</span></span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
@@ -691,19 +691,19 @@
 <ul>
 <li>目前實務上，下載「deb」檔來安裝的，有「skype」和「teamviewer」。</li>
 <li>印象中「skype」通常安裝後，需要執行「sudo apt-get install -f」。</li>
-<li>「sudo apt-get install -f」也不是萬靈丹，有時侯系統提示你要執行這個指令，但是卻無法解決問題。<br>這個目前發現的案例是「OpenOffice」和「LibreOffice」，請參考「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339146#forumpost339146" target="_blank" rel="external">這篇</a>」和「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318778#forumpost318778" target="_blank" rel="external">這篇</a>」討論。<br>還有若要補足的套件，不在套件庫上，也是會失靈的。</li>
+<li>「sudo apt-get install -f」也不是萬靈丹，有時侯系統提示你要執行這個指令，但是卻無法解決問題。<br>這個目前發現的案例是「OpenOffice」和「LibreOffice」，請參考「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339146#forumpost339146" target="_blank" rel="external">這篇</a>」和「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318778#forumpost318778" target="_blank" rel="external">這篇</a>」討論。<br>還有若要補足的套件，不在套件庫上，也是會失靈的。</li>
 </ul>
 <h2 id="apt-get_安裝">apt-get 安裝</h2><p>上面的方式是基本的安裝，但有些問題需要被解決，所以又發展了另一套工具「apt」。</p>
-<p>若想要安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
+<p>若想要安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
 <p>只要執行</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install hello</span><br></pre></td></tr></table></figure>
-<p>就會到系統事先設定好的套件庫去下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件下來，</p>
-<p>除了安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件外，還會額外安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」相依的套件。</p>
+<p>就會到系統事先設定好的套件庫去下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件下來，</p>
+<p>除了安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件外，還會額外安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」相依的套件。</p>
 <p>通常執行「sudo apt-get install hello」<br>或是執行「sudo apt-get install hello -d」，<br>從套件庫下載下來的「deb檔」會放在「/var/cache/apt/archives/」這個資料夾</p>
 <p>你可以執行下面的指令查看</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">ls</span> /<span class="keyword">var</span>/cache/apt/archives/hello_2.8-4_amd64.deb -<span class="keyword">l</span></span><br></pre></td></tr></table></figure>
 <h2 id="更多案例">更多案例</h2><ul>
-<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339354#forumpost339354" target="_blank" rel="external">Deepin Music Player無法安裝?</a></li>
+<li><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339354#forumpost339354" target="_blank" rel="external">Deepin Music Player無法安裝?</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -711,28 +711,28 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="howto" scheme="http://samwhelp.github.io/blog/find/tag/howto/"/>
+      <category term="howto" scheme="https://samwhelp.github.io/blog/find/tag/howto/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page)]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/manual/how-to-find-out-manpages-by-a-package/</id>
     <published>2015-05-02T00:50:15.000Z</published>
     <updated>2015-11-26T16:59:06.124Z</updated>
     <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man_page)">Ubuntu環境下，如何查詢某個套件有哪些使用手冊(man page)</h1><h2 id="方式一">方式一</h2><p>從「Debian Reference / Chapter 12. Programming / <a href="https://www.debian.org/doc/manuals/debian-reference/ch12.en.html#_utility_programs_for_shell_script" target="_blank" rel="external">12.1.6. Utility programs for shell script</a>」學到的技巧。</p>
-<p>以「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件為例。</p>
+<p>以「<a href="https://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件為例。</p>
 <p>執行</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> coreutils | grep '/<span class="keyword">man</span>/<span class="keyword">man</span>.*/'</span><br></pre></td></tr></table></figure>
 <p>就會顯示</p>
@@ -741,8 +741,8 @@
 <p>執行</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -<span class="keyword">L</span> corutils | egrep '/usr/share/<span class="keyword">man</span>/<span class="keyword">man</span>.*/.+'</span><br></pre></td></tr></table></figure>
 <h2 id="方式二">方式二</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>cat /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">coreutils</span>.<span class="title">list</span> | <span class="title">grep</span> '/<span class="title">man</span>/<span class="title">man</span>.*/'</span></span><br></pre></td></tr></table></figure>
-<h2 id="方式二-1">方式二</h2><p>我在「<a href="http://samwhelp.github.io/book-ubuntu-exploration/book/content/package/coreutils/info.html">探索套件</a>」的時候，都是用這個方式</p>
-<p>下載「<a href="http://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件。</p>
+<h2 id="方式二-1">方式二</h2><p>我在「<a href="https://samwhelp.github.io/book-ubuntu-exploration/book/content/package/coreutils/info.html">探索套件</a>」的時候，都是用這個方式</p>
+<p>下載「<a href="https://packages.ubuntu.com/trusty/coreutils" target="_blank" rel="external">coreutils</a>」這個套件。</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-<span class="keyword">get</span> download coreutils</span><br></pre></td></tr></table></figure>
 <p>解開剛剛下載的套件檔案</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x coreutils_8<span class="number">.21</span>-<span class="number">1u</span>buntu5<span class="number">.1</span>_amd64.deb coreutils</span><br></pre></td></tr></table></figure>
@@ -759,7 +759,7 @@
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man coreutils<span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
 <p>或是</p>
 <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ man <span class="regexp">/usr/</span>share<span class="regexp">/man/m</span>an8<span class="regexp">/chroot.8.gz</span></span><br></pre></td></tr></table></figure>
-<h3 id="網頁查詢">網頁查詢</h3><p> <a href="http://manpages.ubuntu.com/manpages/trusty/man8/chroot.8.html" target="_blank" rel="external">Ubuntu Manual 網址</a></p>
+<h3 id="網頁查詢">網頁查詢</h3><p> <a href="https://manpages.ubuntu.com/manpages/trusty/man8/chroot.8.html" target="_blank" rel="external">Ubuntu Manual 網址</a></p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
 <p>用瀏覽器查看</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/manpages.ubuntu.com/manpages</span><span class="regexp">/trusty/man</span>8/chroot.<span class="number">8</span>.html</span><br></pre></td></tr></table></figure>
@@ -772,24 +772,24 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="howto" scheme="http://samwhelp.github.io/blog/find/tag/howto/"/>
+      <category term="howto" scheme="https://samwhelp.github.io/blog/find/tag/howto/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="manual" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/manual/"/>
+      <category term="manual" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/manual/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，一些查詢使用手冊相關的技巧]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/manual/index/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/manual/index/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/manual/index/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/manual/index/</id>
     <published>2015-05-02T00:49:14.000Z</published>
     <updated>2015-11-26T16:59:10.524Z</updated>
     <content type="html"><![CDATA[<h1 id="Ubuntu環境下，一些查詢使用手冊相關的技巧">Ubuntu環境下，一些查詢使用手冊相關的技巧</h1><h2 id="列表">列表</h2><ul>
@@ -801,29 +801,29 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="index" scheme="http://samwhelp.github.io/blog/find/tag/index/"/>
+      <category term="index" scheme="https://samwhelp.github.io/blog/find/tag/index/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="manual" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/manual/"/>
+      <category term="manual" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/manual/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[apt-get source 的使用]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-source/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-source/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-source/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/apt-get-source/</id>
     <published>2015-04-30T07:34:27.000Z</published>
     <updated>2015-11-26T16:59:30.356Z</updated>
     <content type="html"><![CDATA[<h1 id="apt-get_source_的使用">apt-get source 的使用</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
 <h2 id="使用範例">使用範例</h2><p>「apt-get source」的使用範例，請參考『<a href="/blog/read/linux/ubuntu/package/how-to-download-source-package/">如何下載「Source Package」</a>』這篇。</p>
-<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
+<h2 id="手冊說明">手冊說明</h2><p>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></p>
 <p>可以看到一段說明</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">source</span><br><span class="line">    source causes apt-<span class="built_in">get</span> <span class="built_in">to</span> fetch source packages. APT will examine <span class="operator">the</span> available packages <span class="built_in">to</span> decide which source package <span class="built_in">to</span></span><br><span class="line">    fetch. It will <span class="keyword">then</span> find <span class="operator">and</span> download <span class="keyword">into</span> <span class="operator">the</span> current <span class="built_in">directory</span> <span class="operator">the</span> newest available <span class="built_in">version</span> <span class="operator">of</span> that source package <span class="keyword">while</span></span><br><span class="line">    respecting <span class="operator">the</span> default release, <span class="built_in">set</span> <span class="operator">with</span> <span class="operator">the</span> option APT::Default-Release, <span class="operator">the</span> -t option <span class="operator">or</span> per package <span class="operator">with</span> <span class="operator">the</span> pkg/release</span><br><span class="line">    syntax, <span class="keyword">if</span> possible.</span><br><span class="line"></span><br><span class="line">    Source packages are tracked separately <span class="built_in">from</span> binary packages via deb-src <span class="keyword">lines</span> <span class="operator">in</span> <span class="operator">the</span> sources.list(<span class="number">5</span>) <span class="built_in">file</span>. This means that</span><br><span class="line">    you will need <span class="built_in">to</span> <span class="built_in">add</span> such <span class="operator">a</span> <span class="built_in">line</span> <span class="keyword">for</span> <span class="keyword">each</span> repository you want <span class="built_in">to</span> <span class="built_in">get</span> sources <span class="built_in">from</span>; otherwise you will probably <span class="built_in">get</span> either</span><br><span class="line">    <span class="operator">the</span> wrong (too old/too <span class="built_in">new</span>) source versions <span class="operator">or</span> <span class="constant">none</span> <span class="keyword">at</span> all.</span><br><span class="line"></span><br><span class="line">    If <span class="operator">the</span> <span class="comment">--compile option is specified then the package will be compiled to a binary .deb using dpkg-buildpackage for the</span></span><br><span class="line">    architecture <span class="keyword">as</span> defined <span class="keyword">by</span> <span class="operator">the</span> <span class="comment">--host-architecture option. If --download-only is specified then the source package will not</span></span><br><span class="line">    be unpacked.</span><br><span class="line"></span><br><span class="line">    A specific source <span class="built_in">version</span> can be retrieved <span class="keyword">by</span> postfixing <span class="operator">the</span> source name <span class="operator">with</span> <span class="operator">an</span> equals <span class="operator">and</span> <span class="keyword">then</span> <span class="operator">the</span> <span class="built_in">version</span> <span class="built_in">to</span> fetch,</span><br><span class="line">    similar <span class="built_in">to</span> <span class="operator">the</span> mechanism used <span class="keyword">for</span> <span class="operator">the</span> package <span class="built_in">files</span>. This enables exact matching <span class="operator">of</span> <span class="operator">the</span> source package name <span class="operator">and</span> <span class="built_in">version</span>,</span><br><span class="line">    implicitly enabling <span class="operator">the</span> APT::Get::Only-Source option.</span><br><span class="line"></span><br><span class="line">    Note that source packages are <span class="operator">not</span> installed <span class="operator">and</span> tracked <span class="operator">in</span> <span class="operator">the</span> dpkg database like binary packages; they are simply</span><br><span class="line">    downloaded <span class="built_in">to</span> <span class="operator">the</span> current <span class="built_in">directory</span>, like source tarballs.</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -832,33 +832,33 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何下載「Source Package」]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-source-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-source-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-source-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-download-source-package/</id>
     <published>2015-04-30T07:34:27.000Z</published>
     <updated>2015-11-26T16:59:59.824Z</updated>
     <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何下載「Source_Package」">Ubuntu環境下，如何下載「Source Package」</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
-<h2 id="前提">前提</h2><p>以「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
-<h2 id="方式一">方式一</h2><p>執行「apt-get source」下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件的「<a href="http://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">Source Package</a>」。</p>
+<h2 id="前提">前提</h2><p>以「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個「Package」為例。</p>
+<h2 id="方式一">方式一</h2><p>執行「apt-get source」下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件的「<a href="https://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">Source Package</a>」。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> hello</span><br></pre></td></tr></table></figure>
 <p>顯示下列的訊息</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Reading <span class="keyword">package</span> lists... Done</span><br><span class="line">Building dependency tree</span><br><span class="line">Reading state information... Done</span><br><span class="line">Need to get <span class="number">711</span> kB of source archives.</span><br><span class="line"><span class="string">Get:</span><span class="number">1</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (dsc) [1,290 B]</span></span><br><span class="line"><span class="string">Get:</span><span class="number">2</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (tar) [697 kB]</span></span><br><span class="line"><span class="string">Get:</span><span class="number">3</span> <span class="string">http:</span><span class="comment">//tw.archive.ubuntu.com/ubuntu/ trusty/main hello 2.8-4 (diff) [12.5 kB]</span></span><br><span class="line">Fetched <span class="number">711</span> kB <span class="keyword">in</span> <span class="number">0</span>s (<span class="number">762</span> kB/s)</span><br><span class="line"><span class="string">sh:</span> <span class="number">1</span>: dpkg-<span class="string">source:</span> not found</span><br><span class="line">Unpack command <span class="string">'dpkg-source -x hello_2.8-4.dsc'</span> failed.</span><br><span class="line">Check <span class="keyword">if</span> the <span class="string">'dpkg-dev'</span> <span class="keyword">package</span> is installed.</span><br><span class="line"><span class="string">E:</span> Child process failed</span><br></pre></td></tr></table></figure>
 <p>其中有一行訊息</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator"><span class="keyword">Check</span> <span class="keyword">if</span> the <span class="string">'dpkg-dev'</span> <span class="keyword">package</span> <span class="keyword">is</span> installed.</span></span><br></pre></td></tr></table></figure>
-<p>從上面的訊息可以知道，少裝了「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件。</p>
+<p>從上面的訊息可以知道，少裝了「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件。</p>
 <p>基本上「hello」的「Source Package」是有下載下來</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>顯示</p>
@@ -866,7 +866,7 @@
 <p>但是是在解開的時候出現問題。</p>
 <p>上面的訊息有一行</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unpack <span class="command"><span class="keyword">command</span> <span class="string">'dpkg-source -x hello_2.8-4.dsc'</span> <span class="title">failed</span>.</span></span><br></pre></td></tr></table></figure>
-<p>所以先安裝「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件</p>
+<p>所以先安裝「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install dpkg-dev</span><br></pre></td></tr></table></figure>
 <p>再執行一次</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get <span class="built_in">source</span> hello</span><br></pre></td></tr></table></figure>
@@ -876,7 +876,7 @@
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">hello-2</span><span class="class">.8</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.debian</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.dsc</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8</span><span class="class">.orig</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-<h2 id="額外一提">額外一提</h2><p>通常安裝「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」這個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">Metapackage</a>」時，就會安裝「<a href="http://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件了。</p>
+<h2 id="額外一提">額外一提</h2><p>通常安裝「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」這個「<a href="https://help.ubuntu.com/community/MetaPackages" target="_blank" rel="external">Metapackage</a>」時，就會安裝「<a href="https://packages.ubuntu.com/trusty/dpkg-dev" target="_blank" rel="external">dpkg-dev</a>」這個套件了。</p>
 <p>可以執行下面的指令驗證看看</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache show build-essential | grep Depends:</span><br></pre></td></tr></table></figure>
 <p>就會顯示</p>
@@ -896,7 +896,7 @@
 <li>Debian Wiki / <a href="https://wiki.debian.org/SourcePackage" target="_blank" rel="external">SourcePackage</a></li>
 </ul>
 <h2 id="方式二">方式二</h2><p>直接到下面的頁面，找到網址下載，以下是以「14.04(trusty)」為例。</p>
-<p><a href="http://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">http://packages.ubuntu.com/source/trusty/hello</a></p>
+<p><a href="https://packages.ubuntu.com/source/trusty/hello" target="_blank" rel="external">https://packages.ubuntu.com/source/trusty/hello</a></p>
 <p>用瀏覽器開啟頁面，</p>
 <p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/packages.ubuntu.com/source</span><span class="regexp">/trusty/hello</span></span><br></pre></td></tr></table></figure>
@@ -926,7 +926,7 @@
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">hello-2</span><span class="class">.8</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.debian</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8-4</span><span class="class">.dsc</span></span><br><span class="line"><span class="tag">hello_2</span><span class="class">.8</span><span class="class">.orig</span><span class="class">.tar</span><span class="class">.gz</span></span><br><span class="line"><span class="tag">list</span><span class="class">.txt</span></span><br></pre></td></tr></table></figure>
 <p>基本上，「方式二」這個流程，跟「方式一」是一樣的，只是利用一個指令就搞定了 :-)</p>
 <p>另外也可以到下面這個網址，觀看hello有哪些檔案。</p>
-<p><a href="http://archive.ubuntu.com/ubuntu/pool/main/h/hello/" target="_blank" rel="external">http://archive.ubuntu.com/ubuntu/pool/main/h/hello/</a></p>
+<p><a href="https://archive.ubuntu.com/ubuntu/pool/main/h/hello/" target="_blank" rel="external">https://archive.ubuntu.com/ubuntu/pool/main/h/hello/</a></p>
 <p>用瀏覽器開啟頁面，</p>
 <p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lynx <span class="symbol">http:</span>/<span class="regexp">/archive.ubuntu.com/ubuntu</span><span class="regexp">/pool/main</span><span class="regexp">/h/hello</span><span class="regexp">/</span></span><br></pre></td></tr></table></figure>
@@ -938,25 +938,25 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/package/how-to-find-out-list-of-files-installed-by-a-package/</id>
     <published>2015-04-27T14:18:32.000Z</published>
     <updated>2015-11-26T17:00:09.636Z</updated>
-    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</h1><h2 id="前提">前提</h2><p>以下以「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
+    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案">Ubuntu環境下，如何查詢某個套件安裝在系統上的所有檔案</h1><h2 id="前提">前提</h2><p>以下以「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
 <h2 id="方式一">方式一</h2><p>執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -L hello</span><br></pre></td></tr></table></figure>
 <p>或是</p>
@@ -975,7 +975,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cat /var/lib/dpkg/info/hello.list | less</span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">/.</span><br><span class="line">/usr</span><br><span class="line"><span class="regexp">/usr/</span>bin</span><br><span class="line"><span class="regexp">/usr/</span>bin/hello</span><br><span class="line"><span class="regexp">/usr/</span>share</span><br><span class="line"><span class="regexp">/usr/</span>share/info</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/info/</span>hello.info.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/doc</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/NEWS</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/copyright</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/doc/</span>hello/changelog.Debian.gz</span><br><span class="line"><span class="regexp">/usr/</span>share/man</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1</span><br><span class="line"><span class="regexp">/usr/</span>share<span class="regexp">/man/</span>man1/hello<span class="number">.1</span>.gz</span><br></pre></td></tr></table></figure>
-<h2 id="方式三">方式三</h2><p>下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
+<h2 id="方式三">方式三</h2><p>下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download hello</span><br></pre></td></tr></table></figure>
 <p>然後執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -c hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
@@ -983,7 +983,7 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg-deb -c hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/bin/</span><br><span class="line">-rwxr-xr-x root/root     <span class="number">22984</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/bin/hello</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/info/</span><br><span class="line">-rw-r--r-- root/root     <span class="number">11729</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/info/hello.info.gz</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/hello/</span><br><span class="line">-rw-r--r-- root/root      <span class="number">3108</span> <span class="number">2012</span>-<span class="number">04</span>-<span class="number">19</span> <span class="number">21</span>:<span class="number">51</span> ./usr/share/doc/hello/NEWS</span><br><span class="line">-rw-r--r-- root/root      <span class="number">2251</span> <span class="number">2012</span>-<span class="number">05</span>-<span class="number">28</span> <span class="number">04</span>:<span class="number">07</span> ./usr/share/doc/hello/copyright</span><br><span class="line">-rw-r--r-- root/root      <span class="number">1180</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/doc/hello/changelog.Debian.gz</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/</span><br><span class="line">drwxr-xr-x root/root         <span class="number">0</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/man1/</span><br><span class="line">-rw-r--r-- root/root       <span class="number">729</span> <span class="number">2013</span>-<span class="number">08</span>-<span class="number">27</span> <span class="number">00</span>:<span class="number">25</span> ./usr/share/man/man1/hello<span class="number">.1</span>.gz</span><br></pre></td></tr></table></figure>
-<h2 id="方式四">方式四</h2><p>下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
+<h2 id="方式四">方式四</h2><p>下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get download hello</span><br></pre></td></tr></table></figure>
 <p>然後執行下面的指令解開套件</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -x hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.deb hello</span><br></pre></td></tr></table></figure>
@@ -994,11 +994,11 @@
 <p>就可以看到</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">hello</span><br><span class="line">└── usr</span><br><span class="line">    ├── bin</span><br><span class="line">    │   └── hello</span><br><span class="line">    └── share</span><br><span class="line">        ├── doc</span><br><span class="line">        │   └── hello</span><br><span class="line">        │       ├── changelog<span class="class">.Debian</span><span class="class">.gz</span></span><br><span class="line">        │       ├── copyright</span><br><span class="line">        │       └── NEWS</span><br><span class="line">        ├── info</span><br><span class="line">        │   └── hello<span class="class">.info</span><span class="class">.gz</span></span><br><span class="line">        └── man</span><br><span class="line">            └── man1</span><br><span class="line">                └── hello.<span class="number">1</span><span class="class">.gz</span></span><br><span class="line"></span><br><span class="line"><span class="number">8</span> directories, <span class="number">6</span> files</span><br></pre></td></tr></table></figure>
 <h2 id="更多參考">更多參考</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/tree.1.html" target="_blank" rel="external">tree</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-deb.1.html" target="_blank" rel="external">dpkg-deb</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/apt-get.8.html" target="_blank" rel="external">apt-get</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/tree.1.html" target="_blank" rel="external">tree</a></li>
 <li>更多的「<a href="/book-ubuntu-exploration/book/content/package/hello/index.html">hello套件探索</a>」</li>
 </ul>
 <h2 id="額外一提">額外一提</h2><p>執行</p>
@@ -1025,36 +1025,36 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="howto" scheme="http://samwhelp.github.io/blog/find/tag/howto/"/>
+      <category term="howto" scheme="https://samwhelp.github.io/blog/find/tag/howto/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="package" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
+      <category term="package" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/package/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Debian 8 "Jessie" Released]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/debian/release/8/info/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/debian/release/8/info/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/debian/release/8/info/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/debian/release/8/info/</id>
     <published>2015-04-26T09:29:16.000Z</published>
     <updated>2015-11-26T16:54:28.348Z</updated>
-    <content type="html"><![CDATA[<p>以下整理，參與「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339036#forumpost339036" target="_blank" rel="external">這篇討論</a>」。</p>
-<p>剛從「<a href="http://distrowatch.com/?newsid=08914" target="_blank" rel="external">DistroWatch</a>」看到 「Debian 8 “Jessie” released」！</p>
+    <content type="html"><![CDATA[<p>以下整理，參與「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339036#forumpost339036" target="_blank" rel="external">這篇討論</a>」。</p>
+<p>剛從「<a href="https://distrowatch.com/?newsid=08914" target="_blank" rel="external">DistroWatch</a>」看到 「Debian 8 “Jessie” released」！</p>
 <p>詳細請閱讀 「<a href="https://www.debian.org/News/2015/20150426" target="_blank" rel="external">Release announcement</a>」和「<a href="https://www.debian.org/releases/jessie/releasenotes" target="_blank" rel="external">Release notes</a>」。</p>
 <h2 id="ISO檔下載頁面">ISO檔下載頁面</h2><ul>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0/</a></li>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0/amd64/iso-dvd/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0/amd64/iso-dvd/</a></li>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0/i386/iso-dvd/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0/i386/iso-dvd/</a></li>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0-live/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0-live/</a></li>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0-live/i386/iso-hybrid/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0-live/i386/iso-hybrid/</a></li>
-<li><a href="http://cdimage.debian.org/debian-cd/8.0.0-live/amd64/iso-hybrid/" target="_blank" rel="external">http://cdimage.debian.org/debian-cd/8.0.0-live/amd64/iso-hybrid/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0/amd64/iso-dvd/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0/amd64/iso-dvd/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0/i386/iso-dvd/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0/i386/iso-dvd/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0-live/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0-live/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0-live/i386/iso-hybrid/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0-live/i386/iso-hybrid/</a></li>
+<li><a href="https://cdimage.debian.org/debian-cd/8.0.0-live/amd64/iso-hybrid/" target="_blank" rel="external">https://cdimage.debian.org/debian-cd/8.0.0-live/amd64/iso-hybrid/</a></li>
 </ul>
 <p>:-)</p>
 <h2 id="Live_64位元">Live 64位元</h2><p>編輯「live.64.list」下載列表</p>
@@ -1064,108 +1064,108 @@
 <p>下載</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c -i iso.<span class="number">64</span>.list</span><br></pre></td></tr></table></figure>
 <p>md5sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
 <p>sha1sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
 <p>sha256sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
 <p>sha512sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/amd64/iso-hybrid/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
 <h2 id="Live_32位元">Live 32位元</h2><p>編輯「live.32.list」下載列表</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi live.<span class="number">32</span>.list</span><br></pre></td></tr></table></figure>
 <p>填入下面內容</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-cinnamon-desktop.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-gnome-desktop.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-kde-desktop.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-lxde-desktop.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-mate-desktop.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-standard.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-xfce-desktop.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-cinnamon-desktop.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-gnome-desktop.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-kde-desktop.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-lxde-desktop.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-mate-desktop.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-standard.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/debian-live-<span class="number">8.0</span>.<span class="number">0</span>-i386-xfce-desktop.iso</span><br></pre></td></tr></table></figure>
 <p>下載</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c -i live.<span class="number">32</span>.list</span><br></pre></td></tr></table></figure>
 <p>md5sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
 <p>sha1sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
 <p>sha256sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
 <p>sha512sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>-live/i386/iso-hybrid/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
 <h2 id="DVD_64位元">DVD 64位元</h2><p>編輯「dvd.64.list」下載列表</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi dvd.<span class="number">64</span>.list</span><br></pre></td></tr></table></figure>
 <p>填入下面內容</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">1</span>.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">2</span>.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">1</span>.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">2</span>.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-amd64-DVD-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
 <p>下載</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c -i dvd.<span class="number">64</span>.list</span><br></pre></td></tr></table></figure>
 <p>md5sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
 <p>sha1sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
 <p>sha256sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
 <p>sha512sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/amd64/iso-dvd/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
 <h2 id="DVD_32位元">DVD 32位元</h2><p>編輯「dvd.32.list」下載列表</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vi dvd.<span class="number">32</span>.list</span><br></pre></td></tr></table></figure>
 <p>填入下面內容</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">1</span>.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">2</span>.iso</span><br><span class="line">http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">1</span>.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">2</span>.iso</span><br><span class="line">https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/debian-<span class="number">8.0</span>.<span class="number">0</span>-i386-DVD-<span class="number">3</span>.iso</span><br></pre></td></tr></table></figure>
 <p>下載</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c -i dvd.<span class="number">32</span>.list</span><br></pre></td></tr></table></figure>
 <p>md5sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
 <p>sha1sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
 <p>sha256sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
 <p>sha512sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://cdimage.debian.org/debian-cd/<span class="number">8.0</span>.<span class="number">0</span>/i386/iso-dvd/SHA512SUMS</span><br><span class="line">sha512sum -c SHA512SUMS</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
     <![CDATA[Debian 8 "Jessie" Released]]>
     
     </summary>
     
-      <category term="release" scheme="http://samwhelp.github.io/blog/find/tag/release/"/>
+      <category term="release" scheme="https://samwhelp.github.io/blog/find/tag/release/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="debian" scheme="http://samwhelp.github.io/blog/find/category/linux/debian/"/>
+      <category term="debian" scheme="https://samwhelp.github.io/blog/find/category/linux/debian/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu 15.04 (Vivid Vervet) Released]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/release/15.04/info/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/release/15.04/info/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/release/15.04/info/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/release/15.04/info/</id>
     <published>2015-04-24T07:12:18.000Z</published>
     <updated>2015-11-26T17:01:03.928Z</updated>
-    <content type="html"><![CDATA[<h1 id="Ubuntu_15-04_(Vivid_Vervet)_Released">Ubuntu 15.04 (Vivid Vervet) Released</h1><p>以下整理，參與「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=338916#forumpost338916" target="_blank" rel="external">這篇討論</a>」。</p>
+    <content type="html"><![CDATA[<h1 id="Ubuntu_15-04_(Vivid_Vervet)_Released">Ubuntu 15.04 (Vivid Vervet) Released</h1><p>以下整理，參與「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=338916#forumpost338916" target="_blank" rel="external">這篇討論</a>」。</p>
 <p>我通常都到下面這兩個地方下載ISO檔。</p>
-<p><a href="http://releases.ubuntu.com/" target="_blank" rel="external">http://releases.ubuntu.com/</a><br><a href="http://cdimage.ubuntu.com/" target="_blank" rel="external">http://cdimage.ubuntu.com/</a></p>
-<h2 id="單一下載">單一下載</h2><p><a href="http://releases.ubuntu.com/15.04/" target="_blank" rel="external">Ubuntu 15.04</a></p>
+<p><a href="https://releases.ubuntu.com/" target="_blank" rel="external">https://releases.ubuntu.com/</a><br><a href="https://cdimage.ubuntu.com/" target="_blank" rel="external">https://cdimage.ubuntu.com/</a></p>
+<h2 id="單一下載">單一下載</h2><p><a href="https://releases.ubuntu.com/15.04/" target="_blank" rel="external">Ubuntu 15.04</a></p>
 <p>下載「ubuntu-15.04-desktop-amd64.iso」</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c http://releases.ubuntu.com/<span class="number">15.04</span>/ubuntu-<span class="number">15.04</span>-desktop-amd64.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c https://releases.ubuntu.com/<span class="number">15.04</span>/ubuntu-<span class="number">15.04</span>-desktop-amd64.iso</span><br></pre></td></tr></table></figure>
 <p>md5sum驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://releases.ubuntu.com/<span class="number">15.04</span>/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://releases.ubuntu.com/<span class="number">15.04</span>/MD5SUMS</span><br><span class="line">md5sum -c MD5SUMS</span><br></pre></td></tr></table></figure>
 <p>sha1sum驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://releases.ubuntu.com/<span class="number">15.04</span>/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://releases.ubuntu.com/<span class="number">15.04</span>/SHA1SUMS</span><br><span class="line">sha1sum -c SHA1SUMS</span><br></pre></td></tr></table></figure>
 <p>sha256sum 驗證</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://releases.ubuntu.com/<span class="number">15.04</span>/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://releases.ubuntu.com/<span class="number">15.04</span>/SHA256SUMS</span><br><span class="line">sha256sum -c SHA256SUMS</span><br></pre></td></tr></table></figure>
 <h2 id="列表下載">列表下載</h2><p>將下面列表，存成「iso.list」</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">http:</span><span class="comment">//releases.ubuntu.com/15.04/ubuntu-15.04-desktop-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//releases.ubuntu.com/15.04/ubuntu-15.04-server-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//cdimage.ubuntu.com/xubuntu/releases/15.04/release/xubuntu-15.04-desktop-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//cdimage.ubuntu.com/lubuntu/releases/15.04/release/lubuntu-15.04-desktop-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//cdimage.ubuntu.com/kubuntu/releases/15.04/release/kubuntu-15.04-desktop-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//cdimage.ubuntu.com/ubuntu-mate/releases/15.04/release/ubuntu-mate-15.04-desktop-amd64.iso</span></span><br><span class="line"><span class="string">http:</span><span class="comment">//cdimage.ubuntu.com/ubuntu-gnome/releases/15.04/release/ubuntu-gnome-15.04-desktop-amd64.iso</span></span><br></pre></td></tr></table></figure>
 <p>執行下面的指令下載</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c -i iso.list</span><br></pre></td></tr></table></figure>
 <h2 id="15-04_(Vivid_Vervet)_ISO檔_網頁列表">15.04 (Vivid Vervet) ISO檔 網頁列表</h2><ul>
-<li><a href="http://releases.ubuntu.com/15.04/" target="_blank" rel="external">Ubuntu</a></li>
-<li><a href="http://cdimage.ubuntu.com/xubuntu/releases/15.04/release/" target="_blank" rel="external">Xubuntu</a></li>
-<li><a href="http://cdimage.ubuntu.com/lubuntu/releases/15.04/release/" target="_blank" rel="external">Lubuntu</a></li>
-<li><a href="http://cdimage.ubuntu.com/kubuntu/releases/15.04/release/" target="_blank" rel="external">Kubuntu</a></li>
-<li><a href="http://cdimage.ubuntu.com/ubuntu-mate/releases/15.04/release/" target="_blank" rel="external">Ubuntu Mate</a></li>
-<li><a href="http://cdimage.ubuntu.com/ubuntu-gnome/releases/15.04/release/" target="_blank" rel="external">Ubuntu Gnome</a></li>
+<li><a href="https://releases.ubuntu.com/15.04/" target="_blank" rel="external">Ubuntu</a></li>
+<li><a href="https://cdimage.ubuntu.com/xubuntu/releases/15.04/release/" target="_blank" rel="external">Xubuntu</a></li>
+<li><a href="https://cdimage.ubuntu.com/lubuntu/releases/15.04/release/" target="_blank" rel="external">Lubuntu</a></li>
+<li><a href="https://cdimage.ubuntu.com/kubuntu/releases/15.04/release/" target="_blank" rel="external">Kubuntu</a></li>
+<li><a href="https://cdimage.ubuntu.com/ubuntu-mate/releases/15.04/release/" target="_blank" rel="external">Ubuntu Mate</a></li>
+<li><a href="https://cdimage.ubuntu.com/ubuntu-gnome/releases/15.04/release/" target="_blank" rel="external">Ubuntu Gnome</a></li>
 </ul>
 <h2 id="15-04_Release_Announcements">15.04  Release Announcements</h2><ul>
 <li><a href="https://wiki.ubuntu.com/VividVervet/ReleaseNotes" target="_blank" rel="external">Ubuntu Vivid Vervet ReleaseNotes</a></li>
-<li><a href="http://xubuntu.org/news/15-04-release/" target="_blank" rel="external">Xubuntu 15.04 released!</a></li>
-<li><a href="http://lubuntu.net/blog/lubuntu-1504-vivid-vervet-released" target="_blank" rel="external">Lubuntu 15.04 Vivid Vervet released</a></li>
-<li><a href="http://www.kubuntu.org/news/kubuntu-15.04" target="_blank" rel="external">Kubuntu 15.04</a></li>
+<li><a href="https://xubuntu.org/news/15-04-release/" target="_blank" rel="external">Xubuntu 15.04 released!</a></li>
+<li><a href="https://lubuntu.net/blog/lubuntu-1504-vivid-vervet-released" target="_blank" rel="external">Lubuntu 15.04 Vivid Vervet released</a></li>
+<li><a href="https://www.kubuntu.org/news/kubuntu-15.04" target="_blank" rel="external">Kubuntu 15.04</a></li>
 <li><a href="https://ubuntu-mate.org/blog/ubuntu-mate-vivid-final-release/" target="_blank" rel="external">Ubuntu MATE 15.04 Final Release</a></li>
-<li><a href="http://ubuntugnome.org/ubuntu-gnome-15-04-is-released/" target="_blank" rel="external">Ubuntu GNOME 15.04 is released</a></li>
+<li><a href="https://ubuntugnome.org/ubuntu-gnome-15-04-is-released/" target="_blank" rel="external">Ubuntu GNOME 15.04 is released</a></li>
 </ul>
-<h2 id="systemd">systemd</h2><p>對「15.04」，我比較好奇的是「<a href="http://packages.ubuntu.com/vivid/systemd" target="_blank" rel="external">systemd</a>」。</p>
+<h2 id="systemd">systemd</h2><p>對「15.04」，我比較好奇的是「<a href="https://packages.ubuntu.com/vivid/systemd" target="_blank" rel="external">systemd</a>」。</p>
 <p>執行</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -S /etc/systemd</span><br></pre></td></tr></table></figure>
 <p>顯示</p>
@@ -1177,9 +1177,9 @@
 <p>更多的「<a href="/book-ubuntu-exploration-15.04/book/content/package/systemd/info.html">探索</a>」。</p>
 <h2 id="更多參考">更多參考</h2><ul>
 <li>Ubuntu Wiki / <a href="https://wiki.ubuntu.com/SystemdForUpstartUsers" target="_blank" rel="external">Systemd For Upstart Users</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/linux/1407_liuming_init1/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 1 部分: sysvinit</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/linux/1407_liuming_init2/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 2 部分: UpStart</a></li>
-<li><a href="http://www.ibm.com/developerworks/cn/linux/1407_liuming_init3/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 3 部分: Systemd</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/1407_liuming_init1/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 1 部分: sysvinit</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/1407_liuming_init2/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 2 部分: UpStart</a></li>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/1407_liuming_init3/" target="_blank" rel="external">淺析 Linux 初始化 init 系統，第 3 部分: Systemd</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -1187,18 +1187,18 @@
     
     </summary>
     
-      <category term="release" scheme="http://samwhelp.github.io/blog/find/tag/release/"/>
+      <category term="release" scheme="https://samwhelp.github.io/blog/find/tag/release/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[gitbook 2.0]]></title>
-    <link href="http://samwhelp.github.io/blog/read/platform/gitbook2/diff/"/>
-    <id>http://samwhelp.github.io/blog/read/platform/gitbook2/diff/</id>
+    <link href="https://samwhelp.github.io/blog/read/platform/gitbook2/diff/"/>
+    <id>https://samwhelp.github.io/blog/read/platform/gitbook2/diff/</id>
     <published>2015-04-23T07:52:13.000Z</published>
     <updated>2015-09-02T02:31:09.000Z</updated>
     <content type="html"><![CDATA[<h1 id="gitbook_2-0">gitbook 2.0</h1><h2 id="緣起">緣起</h2><p>剛依照之前寫的「<a href="/blog/read/platform/gitbook/start/">這篇</a>」，幫朋友安裝gitbook這個指令工具，才發現目前已經改成2.0版了。</p>
@@ -1241,8 +1241,8 @@
 <p>會顯示<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Available Versions:</span><br><span class="line"></span><br><span class="line">     <span class="number">2.0</span><span class="number">.1</span>, <span class="number">2.0</span><span class="number">.0</span>, <span class="number">2.0</span><span class="number">.0</span>-beta<span class="number">.5</span>, <span class="number">2.0</span><span class="number">.0</span>-beta<span class="number">.4</span>, <span class="number">2.0</span><span class="number">.0</span>-beta<span class="number">.3</span>, <span class="number">2.0</span><span class="number">.0</span>-beta<span class="number">.2</span>, <span class="number">2.0</span><span class="number">.0</span>-beta<span class="number">.1</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.9</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.8</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.7</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.6</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.5</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.4</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.3</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.2</span>, <span class="number">2.0</span><span class="number">.0</span>-alpha<span class="number">.1</span></span><br><span class="line"></span><br><span class="line">Tags:</span><br><span class="line"></span><br><span class="line">     latest : <span class="number">2.0</span><span class="number">.1</span></span><br></pre></td></tr></table></figure></p>
 <p>以上初步發現。</p>
 <h2 id="更多參考">更多參考</h2><ul>
-<li>用「<a href="https://www.google.com.tw/#q=gitbook+2.0" target="_blank" rel="external">gitbook 2.0</a>」查詢，可以查到「<a href="http://wastemobile.gitbooks.io/gitbook-chinese/content/" target="_blank" rel="external">GitBook 中文解說- 2.0 搶先預覽</a>」</li>
-<li><a href="http://help.gitbook.com/index.html" target="_blank" rel="external">GitBook Documentation</a> / <a href="https://www.gitbook.com/book/gitbookio/documentation/details" target="_blank" rel="external">detail</a></li>
+<li>用「<a href="https://www.google.com.tw/#q=gitbook+2.0" target="_blank" rel="external">gitbook 2.0</a>」查詢，可以查到「<a href="https://wastemobile.gitbooks.io/gitbook-chinese/content/" target="_blank" rel="external">GitBook 中文解說- 2.0 搶先預覽</a>」</li>
+<li><a href="https://help.gitbook.com/index.html" target="_blank" rel="external">GitBook Documentation</a> / <a href="https://www.gitbook.com/book/gitbookio/documentation/details" target="_blank" rel="external">detail</a></li>
 <li>github / <a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">gitbook</a></li>
 <li>npm / <a href="https://www.npmjs.com/package/gitbook" target="_blank" rel="external">gitbook</a></li>
 </ul>
@@ -1252,28 +1252,28 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="ebook" scheme="http://samwhelp.github.io/blog/find/tag/ebook/"/>
+      <category term="ebook" scheme="https://samwhelp.github.io/blog/find/tag/ebook/"/>
     
-      <category term="gitbook" scheme="http://samwhelp.github.io/blog/find/tag/gitbook/"/>
+      <category term="gitbook" scheme="https://samwhelp.github.io/blog/find/tag/gitbook/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="platform" scheme="http://samwhelp.github.io/blog/find/category/platform/"/>
+      <category term="platform" scheme="https://samwhelp.github.io/blog/find/category/platform/"/>
     
-      <category term="gitbook" scheme="http://samwhelp.github.io/blog/find/category/platform/gitbook/"/>
+      <category term="gitbook" scheme="https://samwhelp.github.io/blog/find/category/platform/gitbook/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，查詢硬碟資訊的指令]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/disk/info/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/disk/info/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/disk/info/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/disk/info/</id>
     <published>2015-03-15T07:37:42.000Z</published>
     <updated>2015-11-26T16:57:59.132Z</updated>
-    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，查詢硬碟資訊的指令">Ubuntu環境下，查詢硬碟資訊的指令</h1><p>在探索套件「<a href="http://samwhelp.github.io/book-ubuntu-exploration/book/content/package/util-linux/index.html">util-linux</a>」，發現一個指令「lsblk」，剛好回覆「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=335910#forumpost335910" target="_blank" rel="external">這篇</a>」，順便整理一下！</p>
-<p>「blkid」則是在「/etc/fstab」的註解發現到的，也是屬於「<a href="http://samwhelp.github.io/book-ubuntu-exploration/book/content/package/util-linux/index.html">util-linux</a>」這個套件。</p>
+    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，查詢硬碟資訊的指令">Ubuntu環境下，查詢硬碟資訊的指令</h1><p>在探索套件「<a href="https://samwhelp.github.io/book-ubuntu-exploration/book/content/package/util-linux/index.html">util-linux</a>」，發現一個指令「lsblk」，剛好回覆「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=335910#forumpost335910" target="_blank" rel="external">這篇</a>」，順便整理一下！</p>
+<p>「blkid」則是在「/etc/fstab」的註解發現到的，也是屬於「<a href="https://samwhelp.github.io/book-ubuntu-exploration/book/content/package/util-linux/index.html">util-linux</a>」這個套件。</p>
 <h2 id="lsblk">lsblk</h2><p>執行</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>lsblk</span><br></pre></td></tr></table></figure>
 <p>顯示</p>
@@ -1298,25 +1298,25 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="ubuntu" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
+      <category term="ubuntu" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/"/>
     
-      <category term="disk" scheme="http://samwhelp.github.io/blog/find/category/linux/ubuntu/disk/"/>
+      <category term="disk" scheme="https://samwhelp.github.io/blog/find/category/linux/ubuntu/disk/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Ubuntu環境下，如何讓VNC開機自動運行]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/ubuntu/remote/vnc/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/ubuntu/remote/vnc/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/ubuntu/remote/vnc/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/ubuntu/remote/vnc/</id>
     <published>2015-03-02T08:42:29.000Z</published>
     <updated>2015-11-26T17:01:09.084Z</updated>
-    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何讓VNC開機自動運行">Ubuntu環境下，如何讓VNC開機自動運行</h1><h2 id="前言">前言</h2><p>這篇是從回答「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=334586#forumpost334586" target="_blank" rel="external">這篇</a>」，整理而來。</p>
+    <content type="html"><![CDATA[<h1 id="Ubuntu環境下，如何讓VNC開機自動運行">Ubuntu環境下，如何讓VNC開機自動運行</h1><h2 id="前言">前言</h2><p>這篇是從回答「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=334586#forumpost334586" target="_blank" rel="external">這篇</a>」，整理而來。</p>
 <h2 id="測試環境">測試環境</h2><ul>
 <li>Lubuntu 14.04 32位元測試的</li>
 </ul>
@@ -1342,7 +1342,7 @@
 <h2 id="設定開機自動啟動">設定開機自動啟動</h2><p>執行下面的指令</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d vnc defaults</span><br></pre></td></tr></table></figure>
 <p>可以看到下面訊息</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d: warning: /etc/init.d/vnc missing LSB information</span><br><span class="line">update-rc.d: see &lt;http://wiki.debian.org/LSBInitScripts&gt;</span><br><span class="line"> Adding system startup <span class="keyword">for</span> /etc/init.d/vnc ...</span><br><span class="line">   /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">update-rc.d: warning: /etc/init.d/vnc missing LSB information</span><br><span class="line">update-rc.d: see &lt;https://wiki.debian.org/LSBInitScripts&gt;</span><br><span class="line"> Adding system startup <span class="keyword">for</span> /etc/init.d/vnc ...</span><br><span class="line">   /etc/rc0.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc1.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc6.d/K20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc2.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc3.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc4.d/S20vnc -&gt; ../init.d/vnc</span><br><span class="line">   /etc/rc5.d/S20vnc -&gt; ../init.d/vnc</span><br></pre></td></tr></table></figure>
 <p>也就是會產生下面幾個檔</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/etc/rc0.d/K20vnc</span><br><span class="line">/etc/rc1.d/K20vnc</span><br><span class="line">/etc/rc6.d/K20vnc</span><br><span class="line">/etc/rc2.d/S20vnc</span><br><span class="line">/etc/rc3.d/S20vnc</span><br><span class="line">/etc/rc4.d/S20vnc</span><br><span class="line">/etc/rc5.d/S20vnc</span><br></pre></td></tr></table></figure>
 <p>查看一下</p>
@@ -1354,12 +1354,12 @@
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo update-rc.d <span class="operator">-f</span> vnc remove</span><br></pre></td></tr></table></figure>
 <p>另外還有幾篇可以參考的文章</p>
 <ul>
-<li><a href="http://ucnote.logdown.com/posts/168337-raspberry-pi-remote-desktop-using-vnc" target="_blank" rel="external">Raspberry Pi 遠端桌面 — 使用 VNC</a></li>
-<li><a href="http://ubuntuguide.org/wiki/Ubuntu_Trusty_Remote_Access#X11VNC_Server" target="_blank" rel="external">Ubuntu Trusty Remote Access</a> &lt;– 這一篇是用「~/.config/autostart/」這個資料夾 autostart 的機制。</li>
-<li><a href="http://www.debuntu.org/how-to-managing-services-with-update-rc-d/" target="_blank" rel="external">How-To: Managing services with update-rc.d</a></li>
+<li><a href="https://ucnote.logdown.com/posts/168337-raspberry-pi-remote-desktop-using-vnc" target="_blank" rel="external">Raspberry Pi 遠端桌面 — 使用 VNC</a></li>
+<li><a href="https://ubuntuguide.org/wiki/Ubuntu_Trusty_Remote_Access#X11VNC_Server" target="_blank" rel="external">Ubuntu Trusty Remote Access</a> &lt;– 這一篇是用「~/.config/autostart/」這個資料夾 autostart 的機制。</li>
+<li><a href="https://www.debuntu.org/how-to-managing-services-with-update-rc-d/" target="_blank" rel="external">How-To: Managing services with update-rc.d</a></li>
 <li>Ubuntu Wiki / <a href="https://wiki.ubuntu.com/TIPs_of_use_ubuntu" target="_blank" rel="external">TIPs_of_use_ubuntu</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/update-rc.d.8.html" target="_blank" rel="external">update-rc.d</a></li>
-<li>$ man <a href="http://manpages.ubuntu.com/manpages/trusty/man8/insserv.8.html" target="_blank" rel="external">insserv</a></li>
+<li>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/update-rc.d.8.html" target="_blank" rel="external">update-rc.d</a></li>
+<li>$ man <a href="https://manpages.ubuntu.com/manpages/trusty/man8/insserv.8.html" target="_blank" rel="external">insserv</a></li>
 <li>$ less /etc/init.d/README</li>
 <li>$ less /etc/init.d/skeleton</li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/VNC" target="_blank" rel="external">VNC</a></li>
@@ -1368,7 +1368,7 @@
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UpstartHowto" target="_blank" rel="external">UpstartHowto</a></li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/UbuntuBootupHowto" target="_blank" rel="external">UpstartHowto</a></li>
 <li>Ubuntu Community Help Wiki / <a href="https://help.ubuntu.com/community/InitScriptList" target="_blank" rel="external">InitScriptList</a></li>
-<li><a href="http://upstart.ubuntu.com/cookbook" target="_blank" rel="external">Upstart Cookbook</a></li>
+<li><a href="https://upstart.ubuntu.com/cookbook" target="_blank" rel="external">Upstart Cookbook</a></li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -1376,30 +1376,30 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="howto" scheme="http://samwhelp.github.io/blog/find/tag/howto/"/>
+      <category term="howto" scheme="https://samwhelp.github.io/blog/find/tag/howto/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="remote" scheme="http://samwhelp.github.io/blog/find/category/linux/remote/"/>
+      <category term="remote" scheme="https://samwhelp.github.io/blog/find/category/linux/remote/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」]]></title>
-    <link href="http://samwhelp.github.io/blog/read/linux/debian/driver/virtualbox-guest-dkms/"/>
-    <id>http://samwhelp.github.io/blog/read/linux/debian/driver/virtualbox-guest-dkms/</id>
+    <link href="https://samwhelp.github.io/blog/read/linux/debian/driver/virtualbox-guest-dkms/"/>
+    <id>https://samwhelp.github.io/blog/read/linux/debian/driver/virtualbox-guest-dkms/</id>
     <published>2015-02-11T05:54:33.000Z</published>
     <updated>2015-11-26T16:54:22.024Z</updated>
     <content type="html"><![CDATA[<h1 id="安裝_Debian_8_(jessie)_在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」">安裝 Debian 8 (jessie) 在「VirtualBox」後，如何安裝「virtualbox-guest-dkms」</h1><h2 id="背景">背景</h2><p>撰寫這篇和測試的時候，Debian 8 (jessie)還在「testing」狀態。</p>
 <h2 id="前言">前言</h2><p>為何要安裝「virtualbox-guest-dkms」，<br>因為一開始「裝在virtualbox裡的系統」，支援的螢幕解析度不高，<br>所以「裝在virtualbox裡的系統」要安裝「額外的驅動程式」。<br>也就是「virtualbox-guest-dkms」。</p>
 <p>另外也請參考「<a href="/blog/read/linux/ubuntu/driver/ubuntu-drivers/">Ubuntu環境下，如何使用下指令的方式查詢「額外驅動程式</a>」這篇的說明。</p>
-<h2 id="下載安裝ISO">下載安裝ISO</h2><p>查詢「<a href="https://www.google.com.tw/#q=debian+8+iso" target="_blank" rel="external">debian 8 iso</a>」，<br>來到「<a href="https://www.debian.org/CD/http-ftp/" target="_blank" rel="external">Downloading Debian CD/DVD images via HTTP/FTP</a>」，<br>裡面有個連結「<a href="http://cdimage.debian.org/cdimage/weekly-builds/" target="_blank" rel="external">Official CD/DVD images of the “testing” distribution (regenerated weekly)</a>」<br>就可以找到「testing」狀態的「<a href="http://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/" target="_blank" rel="external">ISO</a>」。</p>
+<h2 id="下載安裝ISO">下載安裝ISO</h2><p>查詢「<a href="https://www.google.com.tw/#q=debian+8+iso" target="_blank" rel="external">debian 8 iso</a>」，<br>來到「<a href="https://www.debian.org/CD/http-ftp/" target="_blank" rel="external">Downloading Debian CD/DVD images via HTTP/FTP</a>」，<br>裡面有個連結「<a href="https://cdimage.debian.org/cdimage/weekly-builds/" target="_blank" rel="external">Official CD/DVD images of the “testing” distribution (regenerated weekly)</a>」<br>就可以找到「testing」狀態的「<a href="https://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/" target="_blank" rel="external">ISO</a>」。</p>
 <p>下面以「KDE」為例子。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c http://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/debian-testing-i386-kde-CD-<span class="number">1</span>.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget -c https://cdimage.debian.org/cdimage/weekly-builds/i386/iso-cd/debian-testing-i386-kde-CD-<span class="number">1</span>.iso</span><br></pre></td></tr></table></figure>
 <h2 id="安裝到「VirtualBox」">安裝到「VirtualBox」</h2><p>略…不是本篇要提的重點，這個就不提了。</p>
 <h2 id="安裝「virtualbox-guest-dkms」">安裝「virtualbox-guest-dkms」</h2><p>參考「Debian Wiki / VirtualBox / <a href="https://wiki.debian.org/VirtualBox#Debian_.22Jessie.22_.28testing.29" target="_blank" rel="external">Debian “Jessie” (testing)</a>」。</p>
 <p>有一個關鍵的步驟「Add the “contrib” component to /etc/apt/sources.list」。</p>
@@ -1440,15 +1440,15 @@
     
     </summary>
     
-      <category term="basic-skill" scheme="http://samwhelp.github.io/blog/find/tag/basic-skill/"/>
+      <category term="basic-skill" scheme="https://samwhelp.github.io/blog/find/tag/basic-skill/"/>
     
-      <category term="基本功" scheme="http://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
+      <category term="基本功" scheme="https://samwhelp.github.io/blog/find/tag/%E5%9F%BA%E6%9C%AC%E5%8A%9F/"/>
     
-      <category term="linux" scheme="http://samwhelp.github.io/blog/find/category/linux/"/>
+      <category term="linux" scheme="https://samwhelp.github.io/blog/find/category/linux/"/>
     
-      <category term="debian" scheme="http://samwhelp.github.io/blog/find/category/linux/debian/"/>
+      <category term="debian" scheme="https://samwhelp.github.io/blog/find/category/linux/debian/"/>
     
-      <category term="driver" scheme="http://samwhelp.github.io/blog/find/category/linux/debian/driver/"/>
+      <category term="driver" scheme="https://samwhelp.github.io/blog/find/category/linux/debian/driver/"/>
     
   </entry>
   

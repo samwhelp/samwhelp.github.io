@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個檔案，屬於哪個套件 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-find-out-what-package-a-file-belongs-to/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -173,7 +173,7 @@
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>ls /var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>* -1</span></span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">conffiles</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">list</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">md5sums</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postinst</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">postrm</span></span></span><br><span class="line">/var/<span class="class"><span class="keyword">lib</span>/<span class="title">dpkg</span>/<span class="title">info</span>/<span class="title">base</span>-<span class="title">files</span>.<span class="title">preinst</span></span></span><br></pre></td></tr></table></figure>
-<p>你可以下載「<a href="http://packages.ubuntu.com/trusty/base-files" target="_blank" rel="external">base-files</a>」，「<a href="/book-ubuntu-exploration/book/content/package/base-files/info.html">解開來看</a>」。</p>
+<p>你可以下載「<a href="https://packages.ubuntu.com/trusty/base-files" target="_blank" rel="external">base-files</a>」，「<a href="/book-ubuntu-exploration/book/content/package/base-files/info.html">解開來看</a>」。</p>
 <figure class="highlight armasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="label">apt</span>-<span class="preprocessor">get</span> download <span class="keyword">base-files</span><br><span class="line"></span><span class="label">dpkg</span> -e <span class="keyword">base-files_7.2ubuntu5.2_amd64.deb</span><br><span class="line"></span><span class="label">tree</span> DEBIAN</span><br></pre></td></tr></table></figure>
 <p>就會看到</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">DEBIAN</span><br><span class="line">├── conffiles</span><br><span class="line">├── control</span><br><span class="line">├── md5sums</span><br><span class="line">├── postinst</span><br><span class="line">├── postrm</span><br><span class="line">└── preinst</span><br><span class="line"></span><br><span class="line"><span class="number">0</span> directories, <span class="number">6</span> files</span><br></pre></td></tr></table></figure>
@@ -224,12 +224,12 @@
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">bsdmainutils:</span> <span class="regexp">/usr/</span>bin/bsd-write</span><br></pre></td></tr></table></figure>
 <p>最後就找到「bsdmainutils」這個套件。</p>
 <h2 id="參考">參考</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-query.1.html" target="_blank" rel="external">dpkg-query</a></li>
 <li>Debian Wiki / <a href="https://wiki.debian.org/DpkgTriggers" target="_blank" rel="external">DpkgTriggers</a></li>
 <li>vim /usr/share/doc/dpkg-dev/triggers.txt.gz</li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg-trigger.1.html" target="_blank" rel="external">dpkg-trigger</a></li>
-<li>man <a href="http://manpages.ubuntu.com/manpages/trusty/man5/deb-triggers.5.html" target="_blank" rel="external">deb-triggers</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg-trigger.1.html" target="_blank" rel="external">dpkg-trigger</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/trusty/man5/deb-triggers.5.html" target="_blank" rel="external">deb-triggers</a></li>
 </ul>
 
 				</div>
@@ -270,7 +270,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" 如何安裝LXQt " />
 	<meta name="twitter:description" content=" 如何安裝LXQt " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/lxqt/install/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,18 +136,18 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="如何安裝LXQt">如何安裝LXQt</h1><h2 id="前言">前言</h2><p>這篇是從這個「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=333892#forumpost333892" target="_blank" rel="external">討論</a>」整理而來。</p>
+					<h1 id="如何安裝LXQt">如何安裝LXQt</h1><h2 id="前言">前言</h2><p>這篇是從這個「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=333892#forumpost333892" target="_blank" rel="external">討論</a>」整理而來。</p>
 <p>提供一種安裝LXQt的方式當參考 :-)</p>
-<p>無意間逛到「<a href="http://fourdollars.blogspot.tw/2014/09/lubuntu-1404.html" target="_blank" rel="external">Lubuntu 14.04 的最小安裝</a>」這篇的說明，<br>可以解決「在Lubuntu上安裝LXQt，在選單上，會有很多重複的軟體名稱」這個問題。<br>發現這個方法，真的是太讚了。</p>
+<p>無意間逛到「<a href="https://fourdollars.blogspot.tw/2014/09/lubuntu-1404.html" target="_blank" rel="external">Lubuntu 14.04 的最小安裝</a>」這篇的說明，<br>可以解決「在Lubuntu上安裝LXQt，在選單上，會有很多重複的軟體名稱」這個問題。<br>發現這個方法，真的是太讚了。</p>
 <p>以下是安裝步驟</p>
 <h2 id="下載_netboot">下載 netboot</h2><p>1404 - 32位元</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/installer-i386/current/images/netboot/mini.iso -O mini.<span class="number">1404.32</span>.iso</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/installer-i386/current/images/netboot/mini.iso -O mini.<span class="number">1404.32</span>.iso</span><br></pre></td></tr></table></figure>
 <p>1404 - 64位元</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/installer-amd64/current/images/netboot/mini.iso -O mini.<span class="number">1404.64</span>.iso</span><br></pre></td></tr></table></figure>
-<h2 id="安裝「lubuntu_minimal_installation」">安裝「lubuntu minimal installation」</h2><p>以下以裝在Virtualbox為例，我測試的時候是用「1404 - 32位元」，參考「<a href="http://fourdollars.blogspot.tw/2014/09/lubuntu-1404.html" target="_blank" rel="external">Lubuntu 14.04 的最小安裝</a>」這篇來安裝到Virtualbox。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c https://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/installer-amd64/current/images/netboot/mini.iso -O mini.<span class="number">1404.64</span>.iso</span><br></pre></td></tr></table></figure>
+<h2 id="安裝「lubuntu_minimal_installation」">安裝「lubuntu minimal installation」</h2><p>以下以裝在Virtualbox為例，我測試的時候是用「1404 - 32位元」，參考「<a href="https://fourdollars.blogspot.tw/2014/09/lubuntu-1404.html" target="_blank" rel="external">Lubuntu 14.04 的最小安裝</a>」這篇來安裝到Virtualbox。</p>
 <p>在「Virtualbox」安裝好後，先執行下面的安裝，安裝額外驅動程式。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get update</span><br><span class="line">$ sudo apt-get install virtualbox-guest-dkms</span><br></pre></td></tr></table></figure>
-<h2 id="安裝_LXQt">安裝 LXQt</h2><p>然後參考「<a href="http://ubuntuhandbook.org/index.php/2013/12/install-lxqt-via-ppa-in-ubuntu-14-04-13-10/" target="_blank" rel="external">這篇</a>」提到的指令，<br>在剛剛裝好的Lubuntu Minimal，來安裝LXQt。</p>
+<h2 id="安裝_LXQt">安裝 LXQt</h2><p>然後參考「<a href="https://ubuntuhandbook.org/index.php/2013/12/install-lxqt-via-ppa-in-ubuntu-14-04-13-10/" target="_blank" rel="external">這篇</a>」提到的指令，<br>在剛剛裝好的Lubuntu Minimal，來安裝LXQt。</p>
 <p><a href="https://launchpad.net/~lubuntu-dev/+archive/ubuntu/lubuntu-daily" target="_blank" rel="external">PPA連結</a></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install software-properties-common</span><br><span class="line"></span><br><span class="line">sudo add-apt-repository ppa:lubuntu-dev/lubuntu-daily</span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo add-apt-repository ppa:gilir/q-project</span></span><br><span class="line"></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># sudo apt-get upgrade</span></span><br><span class="line"></span><br><span class="line">sudo apt-get install lxqt-metapackage</span><br></pre></td></tr></table></figure>
 <h2 id="重新登入">重新登入</h2><p>安裝好後，重新登入，記得要選擇「LXQt Desktop」這個「Session」登入喔，<br>在登入畫面的右上方可以選，右邊算過來第四個位置。</p>
@@ -190,7 +190,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

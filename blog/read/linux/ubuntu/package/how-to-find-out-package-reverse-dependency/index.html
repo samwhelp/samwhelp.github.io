@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個套件被哪些套件相依 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個套件被哪些套件相依 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-find-out-package-reverse-dependency/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,14 +137,14 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，如何查詢某個套件被哪些套件相依">Ubuntu環境下，如何查詢某個套件被哪些套件相依</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
-<h2 id="前提">前提</h2><p>以下以「<a href="http://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」為範例。</p>
+<h2 id="前提">前提</h2><p>以下以「<a href="https://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」為範例。</p>
 <h2 id="方式">方式</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache rdepends make</span><br></pre></td></tr></table></figure>
 <p>就可以看到列表。</p>
-<h2 id="驗證">驗證</h2><p>從剛剛的「<a href="/blog/read/linux/ubuntu/package/how-to-find-out-package-dependency/">這篇</a>」的範例。<br>「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」相依「<a href="http://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」。</p>
-<p>所以從下面就可以驗證<br>「<a href="http://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」被「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」相依。</p>
+<h2 id="驗證">驗證</h2><p>從剛剛的「<a href="/blog/read/linux/ubuntu/package/how-to-find-out-package-dependency/">這篇</a>」的範例。<br>「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」相依「<a href="https://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」。</p>
+<p>所以從下面就可以驗證<br>「<a href="https://packages.ubuntu.com/trusty/make" target="_blank" rel="external">make</a>」被「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」相依。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache rdepends make | grep build-essential</span><br></pre></td></tr></table></figure>
 <h2 id="參考">參考</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/utopic/en/man8/apt-cache.8.html" target="_blank" rel="external">apt-cache</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/utopic/en/man8/apt-cache.8.html" target="_blank" rel="external">apt-cache</a></li>
 </ul>
 
 				</div>
@@ -185,7 +185,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

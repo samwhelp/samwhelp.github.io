@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，快速開始使用gitbook " />
 	<meta name="twitter:description" content=" Ubuntu環境下，快速開始使用gitbook " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/platform/gitbook/start/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -160,7 +160,7 @@
 <h2 id="建立「忽略設定檔」">建立「忽略設定檔」</h2><p>建立「.gitignore」，請參考「<a href="https://github.com/GitbookIO/gitbook#ignoring-files--folders" target="_blank" rel="external">ignoring-files–folders</a>」這裡的說明。<br>這個步驟非必要。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># https://github.com/github/gitignore/blob/master/GitBook.gitignore</span></span><br><span class="line"></span><br><span class="line">$ wget -c https://raw.githubusercontent.com/github/gitignore/master/GitBook.gitignore -O .gitignore</span><br><span class="line"></span><br><span class="line">$ cat .gitignore</span><br></pre></td></tr></table></figure>
 <p>下載的「.gitignore」的內容如下</p>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Node rules:</span></span><br><span class="line"><span class="preprocessor">## Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)</span></span><br><span class="line">.grunt</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## Dependency directory</span></span><br><span class="line"><span class="preprocessor">## Commenting this out is preferred by some people, see</span></span><br><span class="line"><span class="preprocessor">## https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git</span></span><br><span class="line">node_modules</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Book build output</span></span><br><span class="line">_book</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># eBook build output</span></span><br><span class="line">*.epub</span><br><span class="line">*.mobi</span><br><span class="line">*.pdf</span><br></pre></td></tr></table></figure>
+<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor"># Node rules:</span></span><br><span class="line"><span class="preprocessor">## Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)</span></span><br><span class="line">.grunt</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">## Dependency directory</span></span><br><span class="line"><span class="preprocessor">## Commenting this out is preferred by some people, see</span></span><br><span class="line"><span class="preprocessor">## https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git</span></span><br><span class="line">node_modules</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># Book build output</span></span><br><span class="line">_book</span><br><span class="line"></span><br><span class="line"><span class="preprocessor"># eBook build output</span></span><br><span class="line">*.epub</span><br><span class="line">*.mobi</span><br><span class="line">*.pdf</span><br></pre></td></tr></table></figure>
 <h2 id="建立「README-md」，「SUMMARY-md」這兩個檔案">建立「README.md」，「SUMMARY.md」這兩個檔案</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ touch README.md  SUMMARY.md</span><br></pre></td></tr></table></figure>
 <h2 id="啟動server">啟動server</h2><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>gitbook serve</span><br></pre></td></tr></table></figure>
 <p>會出現現面的訊息</p>
@@ -180,8 +180,8 @@
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">content</span></span><br><span class="line">├── chapter1</span><br><span class="line">│   ├── index<span class="class">.md</span></span><br><span class="line">│   ├── section1<span class="class">.md</span></span><br><span class="line">│   ├── section2<span class="class">.md</span></span><br><span class="line">│   ├── section3<span class="class">.md</span></span><br><span class="line">│   ├── section4<span class="class">.md</span></span><br><span class="line">│   └── section5<span class="class">.md</span></span><br><span class="line">└── chapter2</span><br><span class="line">    ├── index<span class="class">.md</span></span><br><span class="line">    ├── section1<span class="class">.md</span></span><br><span class="line">    ├── section2<span class="class">.md</span></span><br><span class="line">    └── section3.md</span><br></pre></td></tr></table></figure>
 <h2 id="編輯各章節的內容">編輯各章節的內容</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 "</span> &gt; <span class="string">'content/chapter1/index.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 / 第一節 "</span> &gt; <span class="string">'content/chapter1/section1.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 / 第二節 "</span> &gt; <span class="string">'content/chapter1/section2.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 / 第三節 "</span> &gt; <span class="string">'content/chapter1/section3.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 / 第四節 "</span> &gt; <span class="string">'content/chapter1/section4.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第一章 / 第五節 "</span> &gt; <span class="string">'content/chapter1/section5.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第二章 "</span> &gt; <span class="string">'content/chapter2/index.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第二章 / 第一節"</span> &gt; <span class="string">'content/chapter2/section1.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第二章 / 第二節 "</span> &gt; <span class="string">'content/chapter2/section2.md'</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">"# 第二章 / 第五節 "</span> &gt; <span class="string">'content/chapter2/section3.md'</span></span><br></pre></td></tr></table></figure>
 <p>一樣基於Live reload，直接就可以在瀏覽器看到變化。</p>
-<h2 id="產生其他格式">產生其他格式</h2><p>在執行下面的指令前需要「<a href="http://manpages.ubuntu.com/manpages/precise/en/man1/ebook-convert.1.html" target="_blank" rel="external">ebook-convert</a>」這個「<a href="http://manual.calibre-ebook.com/cli/ebook-convert.html" target="_blank" rel="external">工具</a>」，是屬於「<a href="http://packages.ubuntu.com/trusty/calibre" target="_blank" rel="external">calibre</a>」這個套件。</p>
-<p>安裝「<a href="http://packages.ubuntu.com/trusty/calibre" target="_blank" rel="external">calibre</a>」。</p>
+<h2 id="產生其他格式">產生其他格式</h2><p>在執行下面的指令前需要「<a href="https://manpages.ubuntu.com/manpages/precise/en/man1/ebook-convert.1.html" target="_blank" rel="external">ebook-convert</a>」這個「<a href="https://manual.calibre-ebook.com/cli/ebook-convert.html" target="_blank" rel="external">工具</a>」，是屬於「<a href="https://packages.ubuntu.com/trusty/calibre" target="_blank" rel="external">calibre</a>」這個套件。</p>
+<p>安裝「<a href="https://packages.ubuntu.com/trusty/calibre" target="_blank" rel="external">calibre</a>」。</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install calibre</span><br></pre></td></tr></table></figure>
 <p>測試「ebook-convert」是否存在。</p>
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ebook-<span class="built_in">convert</span> <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
@@ -200,16 +200,16 @@
 <p>加入「console.log(‘command: %s’, command);」來印出來「gitbook」如何下「ebook-convert」指令。</p>
 <h2 id="gitbook相關網址">gitbook相關網址</h2><ul>
 <li><a href="https://www.gitbook.com" target="_blank" rel="external">GitBook</a></li>
-<li><a href="http://help.gitbook.io/index.html" target="_blank" rel="external">GitBook Documentation</a></li>
+<li><a href="https://help.gitbook.io/index.html" target="_blank" rel="external">GitBook Documentation</a></li>
 <li><a href="https://github.com/GitbookIO/gitbook" target="_blank" rel="external">GitBook On GitHub</a></li>
 </ul>
 <h2 id="參考文章">參考文章</h2><ul>
-<li><a href="http://wcc723.github.io/design/2014/09/04/gitbook-install/" target="_blank" rel="external">http://wcc723.github.io/design/2014/09/04/gitbook-install/</a></li>
-<li><a href="http://weijutu.blogspot.tw/2014/06/gitbook-gitbook.html" target="_blank" rel="external">http://weijutu.blogspot.tw/2014/06/gitbook-gitbook.html</a></li>
-<li><a href="http://blog.caesarchi.com/2014/05/gitbook.html" target="_blank" rel="external">http://blog.caesarchi.com/2014/05/gitbook.html</a></li>
-<li><a href="http://www.codedata.com.tw/social-coding/gitbook-self-publishing/" target="_blank" rel="external">http://www.codedata.com.tw/social-coding/gitbook-self-publishing/</a></li>
-<li><a href="http://blog.lyhdev.com/2014/12/gitbook-plantuml-markdown-uml.html" target="_blank" rel="external">http://blog.lyhdev.com/2014/12/gitbook-plantuml-markdown-uml.html</a></li>
-<li><a href="http://lee-w-blog.logdown.com/posts/252100-gitbook-on-command-line" target="_blank" rel="external">http://lee-w-blog.logdown.com/posts/252100-gitbook-on-command-line</a></li>
+<li><a href="https://wcc723.github.io/design/2014/09/04/gitbook-install/" target="_blank" rel="external">https://wcc723.github.io/design/2014/09/04/gitbook-install/</a></li>
+<li><a href="https://weijutu.blogspot.tw/2014/06/gitbook-gitbook.html" target="_blank" rel="external">https://weijutu.blogspot.tw/2014/06/gitbook-gitbook.html</a></li>
+<li><a href="https://blog.caesarchi.com/2014/05/gitbook.html" target="_blank" rel="external">https://blog.caesarchi.com/2014/05/gitbook.html</a></li>
+<li><a href="https://www.codedata.com.tw/social-coding/gitbook-self-publishing/" target="_blank" rel="external">https://www.codedata.com.tw/social-coding/gitbook-self-publishing/</a></li>
+<li><a href="https://blog.lyhdev.com/2014/12/gitbook-plantuml-markdown-uml.html" target="_blank" rel="external">https://blog.lyhdev.com/2014/12/gitbook-plantuml-markdown-uml.html</a></li>
+<li><a href="https://lee-w-blog.logdown.com/posts/252100-gitbook-on-command-line" target="_blank" rel="external">https://lee-w-blog.logdown.com/posts/252100-gitbook-on-command-line</a></li>
 </ul>
 
 				</div>
@@ -250,7 +250,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

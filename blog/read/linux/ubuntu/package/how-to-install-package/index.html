@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何安裝套件 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何安裝套件 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-install-package/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -136,14 +136,14 @@
 
 
 				<div class="content" itemprop="articleBody">
-					<h1 id="Ubuntu環境下，如何安裝套件">Ubuntu環境下，如何安裝套件</h1><h2 id="dpkg_安裝">dpkg 安裝</h2><p>在「<a href="https://wiki.debian.org/DebianAndOtherDistros" target="_blank" rel="external">DEB-based</a>」的系統裡，最基本的安裝套件的方式，<br>是透過「<a href="http://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a>」這個指令，來安裝「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
-<p>以安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
+					<h1 id="Ubuntu環境下，如何安裝套件">Ubuntu環境下，如何安裝套件</h1><h2 id="dpkg_安裝">dpkg 安裝</h2><p>在「<a href="https://wiki.debian.org/DebianAndOtherDistros" target="_blank" rel="external">DEB-based</a>」的系統裡，最基本的安裝套件的方式，<br>是透過「<a href="https://manpages.ubuntu.com/manpages/trusty/man1/dpkg.1.html" target="_blank" rel="external">dpkg</a>」這個指令，來安裝「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
+<p>以安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件為例。</p>
 <p>先下載「hello_2.8-4_amd64.deb」這個「<a href="https://wiki.debian.org/DebianPackage" target="_blank" rel="external">Debian Package</a>」。</p>
 <figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>wget -c <span class="symbol">http:</span>/<span class="regexp">/tw.archive.ubuntu.com/ubuntu</span><span class="regexp">/pool/main</span><span class="regexp">/h/hello</span><span class="regexp">/hello_2.8-4_amd64.deb</span></span><br></pre></td></tr></table></figure>
 <p>利用「dpkg」來安裝「hello_2.8-4_amd64.deb」</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo dpkg -i hello_2<span class="number">.8</span>-<span class="number">4</span>_amd64.deb</span><br></pre></td></tr></table></figure>
-<p>基本上，上面的步驟，應該不會出現相依不足的問題。<br>「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件，相依的套件，應該是很基本的，都已經早就安裝再系統裡了。</p>
-<p>除了可以從「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">網頁</a>」上觀看</p>
+<p>基本上，上面的步驟，應該不會出現相依不足的問題。<br>「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件，相依的套件，應該是很基本的，都已經早就安裝再系統裡了。</p>
+<p>除了可以從「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">網頁</a>」上觀看</p>
 <p>可以執行下面的指令查看相依的資訊。</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ dpkg -I hello_2.<span class="number">8</span>-<span class="number">4</span>_amd64.<span class="keyword">deb</span> | <span class="keyword">grep</span> Depend<span class="variable">s:</span></span><br></pre></td></tr></table></figure>
 <p>會顯示</p>
@@ -162,19 +162,19 @@
 <ul>
 <li>目前實務上，下載「deb」檔來安裝的，有「skype」和「teamviewer」。</li>
 <li>印象中「skype」通常安裝後，需要執行「sudo apt-get install -f」。</li>
-<li>「sudo apt-get install -f」也不是萬靈丹，有時侯系統提示你要執行這個指令，但是卻無法解決問題。<br>這個目前發現的案例是「OpenOffice」和「LibreOffice」，請參考「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339146#forumpost339146" target="_blank" rel="external">這篇</a>」和「<a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318778#forumpost318778" target="_blank" rel="external">這篇</a>」討論。<br>還有若要補足的套件，不在套件庫上，也是會失靈的。</li>
+<li>「sudo apt-get install -f」也不是萬靈丹，有時侯系統提示你要執行這個指令，但是卻無法解決問題。<br>這個目前發現的案例是「OpenOffice」和「LibreOffice」，請參考「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339146#forumpost339146" target="_blank" rel="external">這篇</a>」和「<a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=318778#forumpost318778" target="_blank" rel="external">這篇</a>」討論。<br>還有若要補足的套件，不在套件庫上，也是會失靈的。</li>
 </ul>
 <h2 id="apt-get_安裝">apt-get 安裝</h2><p>上面的方式是基本的安裝，但有些問題需要被解決，所以又發展了另一套工具「apt」。</p>
-<p>若想要安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
+<p>若想要安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件。</p>
 <p>只要執行</p>
 <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-<span class="keyword">get</span> install hello</span><br></pre></td></tr></table></figure>
-<p>就會到系統事先設定好的套件庫去下載「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件下來，</p>
-<p>除了安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件外，還會額外安裝「<a href="http://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」相依的套件。</p>
+<p>就會到系統事先設定好的套件庫去下載「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件下來，</p>
+<p>除了安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」這個套件外，還會額外安裝「<a href="https://packages.ubuntu.com/trusty/hello" target="_blank" rel="external">hello</a>」相依的套件。</p>
 <p>通常執行「sudo apt-get install hello」<br>或是執行「sudo apt-get install hello -d」，<br>從套件庫下載下來的「deb檔」會放在「/var/cache/apt/archives/」這個資料夾</p>
 <p>你可以執行下面的指令查看</p>
 <figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="keyword">ls</span> /<span class="keyword">var</span>/cache/apt/archives/hello_2.8-4_amd64.deb -<span class="keyword">l</span></span><br></pre></td></tr></table></figure>
 <h2 id="更多案例">更多案例</h2><ul>
-<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339354#forumpost339354" target="_blank" rel="external">Deepin Music Player無法安裝?</a></li>
+<li><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=339354#forumpost339354" target="_blank" rel="external">Deepin Music Player無法安裝?</a></li>
 </ul>
 
 				</div>
@@ -215,7 +215,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 

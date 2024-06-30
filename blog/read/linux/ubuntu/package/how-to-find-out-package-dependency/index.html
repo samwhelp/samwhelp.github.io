@@ -18,13 +18,13 @@
 	<meta property="og:description" content=" Ubuntu環境下，如何查詢某個套件相依哪些套件 " />
 	<meta name="twitter:description" content=" Ubuntu環境下，如何查詢某個套件相依哪些套件 " />
 
-	<link rel="icon" type="image/x-icon" href="http://samwhelp.github.io/blog/asset/img/favicon.png">
+	<link rel="icon" type="image/x-icon" href="https://samwhelp.github.io/blog/asset/img/favicon.png">
 
-	<link rel="image_src" href="http://samwhelp.github.io/blog/asset/img/logo.png" >
-	<meta property="og:image" content="http://samwhelp.github.io/blog/asset/img/logo.png" />
+	<link rel="image_src" href="https://samwhelp.github.io/blog/asset/img/logo.png" >
+	<meta property="og:image" content="https://samwhelp.github.io/blog/asset/img/logo.png" />
 
 	
-	<link href="http://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
+	<link href="https://samwhelp.github.io/blog/atom.xml" title="鵝從未在裡面" type="application/atom+xml" rel="alternative">
 	
 
 	<link rel="canonical" href="/blog/read/linux/ubuntu/package/how-to-find-out-package-dependency/index.html">
@@ -110,7 +110,7 @@
 
 		
 		<div class="row content-post">
-			<article itemscope itemtype="http://schema.org/Article">
+			<article itemscope itemtype="https://schema.org/Article">
 
 				
 
@@ -137,23 +137,23 @@
 
 				<div class="content" itemprop="articleBody">
 					<h1 id="Ubuntu環境下，如何查詢某個套件相依哪些套件">Ubuntu環境下，如何查詢某個套件相依哪些套件</h1><h2 id="測試環境">測試環境</h2><p>以下測試是在「Xubuntu 14.04 64位元」。</p>
-<h2 id="前提">前提</h2><p>以下以「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」為範例。</p>
+<h2 id="前提">前提</h2><p>以下以「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">build-essential</a>」為範例。</p>
 <h2 id="方式一">方式一</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache show build-essential | grep ^Depends</span><br></pre></td></tr></table></figure>
 <p>就會看到</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Depends: libc6-dev | libc-dev, gcc (&gt;= <span class="number">4</span>:<span class="number">4.4</span><span class="number">.3</span>), g++ (&gt;= <span class="number">4</span>:<span class="number">4.4</span><span class="number">.3</span>), make, dpkg-dev (&gt;= <span class="number">1.13</span><span class="number">.5</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="方式二">方式二</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lynx http://packages.ubuntu.com/trusty/build-essential</span><br></pre></td></tr></table></figure>
+<h2 id="方式二">方式二</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ lynx https://packages.ubuntu.com/trusty/build-essential</span><br></pre></td></tr></table></figure>
 <p>在頁面「Other Packages Related to build-essential」哪裡有列表紀錄。</p>
 <h2 id="方式三">方式三</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache depends build-essential</span><br></pre></td></tr></table></figure>
 <h2 id="方式四">方式四</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ apt-cache showpkg build-essential</span><br></pre></td></tr></table></figure>
 <p>找到「Dependencies:」那，就可以看到。</p>
-<h2 id="方法五">方法五</h2><p>下載「<a href="http://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">Binary Package</a>」，並且解開。</p>
+<h2 id="方法五">方法五</h2><p>下載「<a href="https://packages.ubuntu.com/trusty/build-essential" target="_blank" rel="external">Binary Package</a>」，並且解開。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/Downloads</span><br><span class="line">mkdir build-essential/download -p</span><br><span class="line"><span class="built_in">cd</span> build-essential/download</span><br><span class="line">apt-get download build-essential</span><br><span class="line">dpkg <span class="operator">-e</span> build-essential_11.<span class="number">6</span>ubuntu6_amd64.deb</span><br><span class="line">cat DEBIAN/control| grep ^Depends</span><br></pre></td></tr></table></figure>
 <p>就會看到</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Depends: libc6-dev | libc-dev, gcc (&gt;= <span class="number">4</span>:<span class="number">4.4</span><span class="number">.3</span>), g++ (&gt;= <span class="number">4</span>:<span class="number">4.4</span><span class="number">.3</span>), make, dpkg-dev (&gt;= <span class="number">1.13</span><span class="number">.5</span>)</span><br></pre></td></tr></table></figure>
 <p>這個方法，基本上跟「方法一」是一樣的。在「方法二」也可以看到類似的列表。</p>
 <h2 id="參考">參考</h2><ul>
-<li>man <a href="http://manpages.ubuntu.com/manpages/utopic/en/man8/apt-cache.8.html" target="_blank" rel="external">apt-cache</a></li>
-<li><a href="http://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=331336#forumpost331336" target="_blank" rel="external">回覆: no-ip 自動轉址安裝及設定方法(正確的方式嗎?)</a></li>
+<li>man <a href="https://manpages.ubuntu.com/manpages/utopic/en/man8/apt-cache.8.html" target="_blank" rel="external">apt-cache</a></li>
+<li><a href="https://www.ubuntu-tw.org/modules/newbb/viewtopic.php?post_id=331336#forumpost331336" target="_blank" rel="external">回覆: no-ip 自動轉址安裝及設定方法(正確的方式嗎?)</a></li>
 <li><a href="/blog/read/linux/ubuntu/package/apt-get/">apt-get的使用</a></li>
 </ul>
 
@@ -195,7 +195,7 @@
 
 			<p class="cr">&copy; 2016 samwhelp </p>
 
-			<p class="theme">Powered: <a href="http://hexo.io/"  target="_blank">Hexo</a></p>
+			<p class="theme">Powered: <a href="https://hexo.io/"  target="_blank">Hexo</a></p>
 
 		</div>
 
